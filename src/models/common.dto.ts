@@ -14,7 +14,7 @@ export const Nullable = <T extends S.Schema.Any>(self: T): S.NullOr<T> => S.Unio
 
 export const ISO8601String = S.transform(S.NullishOr(S.String), Nullable(S.String), {
   decode: (input) => {
-    if (input === undefined) {
+    if (input === undefined || input === null) {
       return null
     }
     if (dayjs(input).isValid()) {

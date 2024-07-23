@@ -1,7 +1,7 @@
-import { OpenAPIHono as Hono } from '@hono/zod-openapi'
 import dayjs from 'dayjs'
 import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
+import { Hono } from 'hono'
 import { cache } from 'hono/cache'
 import { cors } from 'hono/cors'
 import { csrf } from 'hono/csrf'
