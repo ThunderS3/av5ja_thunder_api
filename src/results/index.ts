@@ -1,4 +1,4 @@
-import { CoopResult } from '@/models/result.dto'
+import { CoopResult } from '@/schema/result.dto'
 import type { Bindings } from '@/utils/bindings'
 import { decode } from '@/utils/decode'
 import { Effect, Either } from 'effect'

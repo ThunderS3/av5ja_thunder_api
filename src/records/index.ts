@@ -1,5 +1,5 @@
-import { CoopRecord } from '@/models/coop_record.dto'
-import { WeaponRecord } from '@/models/weapon_record.dto'
+import { CoopRecord } from '@/schema/coop_record.dto'
+import { WeaponRecord } from '@/schema/weapon_record.dto'
 import type { Bindings } from '@/utils/bindings'
 import { decode } from '@/utils/decode'
 import dayjs from 'dayjs'

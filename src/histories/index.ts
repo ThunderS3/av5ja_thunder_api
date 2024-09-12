@@ -1,4 +1,4 @@
-import { CoopHistory } from '@/models/history.dto'
+import { CoopHistory } from '@/schema/history.dto'
 import type { Bindings } from '@/utils/bindings'
 import { decode } from '@/utils/decode'
 import { Console, Effect, Either } from 'effect'

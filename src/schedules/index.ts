@@ -1,4 +1,4 @@
-import { CoopSchedule } from '@/models/schedule.dto'
+import { CoopSchedule } from '@/schema/schedule.dto'
 import type { Bindings } from '@/utils/bindings'
 import { decode } from '@/utils/decode'
 import dayjs from 'dayjs'
