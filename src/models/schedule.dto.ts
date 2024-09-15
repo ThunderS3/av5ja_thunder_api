@@ -32,78 +32,72 @@ export const NodeList = (Node: z.AnyZodObject) =>
     nodes: z.array(Node)
   })
 
-export namespace Oatmealdome {
-  export const Schedule = z
+export const Schedule = z
+  .object({
+    bigBoss: z
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      .preprocess((input: any) => {
+        switch (input) {
+          case 'SakeJaw':
+            return CoopBossInfo.Id.SakeJaw
+          case 'SakeRope':
+            return CoopBossInfo.Id.SakeRope
+          case 'SakelienGiant':
+            return CoopBossInfo.Id.SakelienGiant
+          case 'Triple':
+            return CoopBossInfo.Id.Triple
+          default:
+            return null
+        }
+      }, z.nativeEnum(CoopBossInfo.Id))
+      .nullable(),
+    startTime: z
+      .string()
+      .datetime()
+      .transform((date) => dayjs(date).utc().toDate()),
+    endTime: z
+      .string()
+      .datetime()
+      .transform((date) => dayjs(date).utc().toDate()),
+    stage: z.nativeEnum(CoopStage.Id),
+    weapons: z.array(z.nativeEnum(WeaponInfoMain.Id)).length(4),
+    rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id))
+  })
+  .transform((object) => {
+    const { bigBoss, stage, weapons, ...schedule } = object
+    const key: string = `${dayjs(object.startTime).toISOString()}:${dayjs(object.endTime).toISOString()}`
+    return {
+      ...schedule,
+      key: key,
+      id: createHash('md5').update(key).digest('hex'),
+      weaponList: object.weapons,
+      bossId: object.bigBoss,
+      stageId: object.stage,
+      mode: object.bigBoss === null ? CoopMode.LIMITED : CoopMode.REGULAR,
+      rule: object.bigBoss === null ? CoopRule.TEAM_CONTEST : object.stage >= 100 ? CoopRule.BIG_RUN : CoopRule.REGULAR
+    }
+  })
+
+export const Phase = z.preprocess(
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  (input: any) => {
+    return camelcaseKeys(input)
+  },
+  z
     .object({
-      bigBoss: z
-        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-        .preprocess((input: any) => {
-          switch (input) {
-            case 'SakeJaw':
-              return CoopBossInfo.Id.SakeJaw
-            case 'SakeRope':
-              return CoopBossInfo.Id.SakeRope
-            case 'SakelienGiant':
-              return CoopBossInfo.Id.SakelienGiant
-            case 'Triple':
-              return CoopBossInfo.Id.Triple
-            default:
-              return null
-          }
-        }, z.nativeEnum(CoopBossInfo.Id))
-        .nullable(),
-      startTime: z
-        .string()
-        .datetime()
-        .transform((date) => dayjs(date).utc().toDate()),
-      endTime: z
-        .string()
-        .datetime()
-        .transform((date) => dayjs(date).utc().toDate()),
-      stage: z.nativeEnum(CoopStage.Id),
-      weapons: z.array(z.nativeEnum(WeaponInfoMain.Id)).length(4),
-      rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id))
+      normal: z.array(Schedule),
+      bigRun: z.array(Schedule),
+      teamContest: z.array(Schedule)
     })
     .transform((object) => {
-      const { bigBoss, stage, weapons, ...schedule } = object
       return {
-        ...schedule,
-        id: createHash('md5')
-          .update(`${dayjs(object.startTime).toISOString()}:${dayjs(object.endTime).toISOString()}`)
-          .digest('hex'),
-        weaponList: object.weapons,
-        bossId: object.bigBoss,
-        stageId: object.stage,
-        mode: object.bigBoss === null ? CoopMode.LIMITED : CoopMode.REGULAR,
-        rule:
-          object.bigBoss === null ? CoopRule.TEAM_CONTEST : object.stage >= 100 ? CoopRule.BIG_RUN : CoopRule.REGULAR
+        ...object,
+        get schedules(): Schedule[] {
+          return object.normal.concat(object.bigRun).concat(object.teamContest)
+        }
       }
     })
+)
 
-  export const Response = z.preprocess(
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-    (input: any) => {
-      return camelcaseKeys(input)
-    },
-    z
-      .object({
-        normal: z.array(Schedule),
-        bigRun: z.array(Schedule),
-        teamContest: z.array(Schedule)
-      })
-      .transform((object) => {
-        return {
-          ...object,
-          get schedules() {
-            return []
-          },
-          get hash(): string {
-            return ''
-          }
-        }
-      })
-  )
-
-  export type Response = z.infer<typeof Response>
-  export type Schedule = z.infer<typeof Schedule>
-}
+export type Phase = z.infer<typeof Phase>
+export type Schedule = z.infer<typeof Schedule>
