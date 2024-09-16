@@ -2,11 +2,12 @@
   "histories": [
     {
       "schedule": {
-        "id": "103c5441a163fd2b0320751f27c9c577",
+        "id": "24a943851703ade14563cbbbd17e6e39",
         "startTime": "2024-04-06T16:00:00.000Z",
         "endTime": "2024-04-08T08:00:00.000Z",
         "mode": "REGULAR",
         "rule": "REGULAR",
+        "bossId": null,
         "stageId": 9,
         "rareWeapons": [],
         "weaponList": [-1, -1, -1, -1]

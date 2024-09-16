@@ -41,8 +41,5 @@
     "formatter": {
       "trailingCommas": "none"
     }
-  },
-  "files": {
-    "maxSize": 5000000
   }
 }

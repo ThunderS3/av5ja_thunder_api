@@ -2,32 +2,50 @@
   "histories": [
     {
       "schedule": {
-        "id": "103c5441a163fd2b0320751f27c9c577",
+        "id": "24a943851703ade14563cbbbd17e6e39",
         "startTime": "2024-04-06T16:00:00.000Z",
         "endTime": "2024-04-08T08:00:00.000Z",
         "mode": "REGULAR",
         "rule": "REGULAR",
+        "bossId": null,
         "stageId": 9,
         "rareWeapons": [],
         "weaponList": [-1, -1, -1, -1]
       },
       "results": [
         {
-          "id": "a45b3f22a13149f6000218c1811d5767",
+          "id": {
+            "type": "CoopHistoryDetail",
+            "prefix": "u",
+            "nplnUserId": "a7grz65rxkvhfsbwmxmm",
+            "playTime": "2024-04-06T17:57:52.000Z",
+            "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
+          },
+          "hash": "6d82e12ff59f3592fe5829fa3407d7c6",
           "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee",
           "schedule": {
-            "id": "103c5441a163fd2b0320751f27c9c577",
+            "id": "24a943851703ade14563cbbbd17e6e39",
             "startTime": "2024-04-06T16:00:00.000Z",
             "endTime": "2024-04-08T08:00:00.000Z",
             "mode": "REGULAR",
             "rule": "REGULAR",
+            "bossId": null,
             "stageId": 9,
             "rareWeapons": [],
             "weaponList": [-1, -1, -1, -1]
           },
           "scale": [11, 2, 0],
           "myResult": {
-            "id": "6dae617855fda353cb4497a125f95849",
+            "hash": "40a741c354083b35f99d695930b7d16f",
+            "id": {
+              "type": "CoopPlayer",
+              "prefix": "u",
+              "nplnUserId": "a7grz65rxkvhfsbwmxmm",
+              "suffix": "u",
+              "hostNplnUserId": "a7grz65rxkvhfsbwmxmm",
+              "playTime": "2024-04-06T17:57:52.000Z",
+              "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
+            },
             "byname": "Splatlandian Youth",
             "name": "アウラ のうひんしろ",
             "nameId": "1012",
@@ -67,7 +85,16 @@
           },
           "otherResults": [
             {
-              "id": "3138b358a9a7a07ad7786a33707fcb0d",
+              "hash": "4f5567d8c26ea51a65c53fcd148f9793",
+              "id": {
+                "type": "CoopPlayer",
+                "prefix": "u",
+                "nplnUserId": "qeup3z2uqf4kru6hanmm",
+                "suffix": "u",
+                "hostNplnUserId": "a7grz65rxkvhfsbwmxmm",
+                "playTime": "2024-04-06T17:57:52.000Z",
+                "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
+              },
               "byname": "Brand-New Seafood",
               "name": "ちくわ",
               "nameId": "7069",
@@ -121,7 +148,16 @@
               "jobRate": null
             },
             {
-              "id": "3ba0d24f6be18c85d56f93f89f55eab4",
+              "hash": "0270baa41ad5fd334368576080fa905a",
+              "id": {
+                "type": "CoopPlayer",
+                "prefix": "u",
+                "nplnUserId": "qloffovesrnzgiovanmm",
+                "suffix": "u",
+                "hostNplnUserId": "a7grz65rxkvhfsbwmxmm",
+                "playTime": "2024-04-06T17:57:52.000Z",
+                "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
+              },
               "byname": "Limited-Edition Inkbrush User",
               "name": "ゲストCCCCCもち",
               "nameId": "4152",
@@ -175,7 +211,16 @@
               "jobRate": null
             },
             {
-              "id": "f01c934715e86a96df0221fe8f7145a9",
+              "hash": "2e1831a8eec4116861a67be83673e949",
+              "id": {
+                "type": "CoopPlayer",
+                "prefix": "u",
+                "nplnUserId": "agypbuve73vt3o3pnnmm",
+                "suffix": "u",
+                "hostNplnUserId": "a7grz65rxkvhfsbwmxmm",
+                "playTime": "2024-04-06T17:57:52.000Z",
+                "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
+              },
               "byname": "Big Honkin' Dried Fish",
               "name": "ねぶそく",
               "nameId": "9138",
@@ -250,9 +295,9 @@
               "quotaNum": 27,
               "goldenIkuraPopNum": 66,
               "goldenIkuraNum": 42,
-              "waveId": 1,
+              "id": 1,
               "isClear": true,
-              "id": "322f97d371c376f6608523f009190877"
+              "hash": "fcfa40cc4412c47f0577c9185436aad2"
             },
             {
               "waterLevel": 1,
@@ -260,9 +305,9 @@
               "quotaNum": 29,
               "goldenIkuraPopNum": 60,
               "goldenIkuraNum": 32,
-              "waveId": 2,
+              "id": 2,
               "isClear": true,
-              "id": "fef00683272177d277d0873c10f8c4b2"
+              "hash": "8cdf02e3d53499d5fc2266fb86c98c32"
             },
             {
               "waterLevel": 1,
@@ -270,9 +315,9 @@
               "quotaNum": 31,
               "goldenIkuraPopNum": 49,
               "goldenIkuraNum": 38,
-              "waveId": 3,
+              "id": 3,
               "isClear": true,
-              "id": "0978e31c1e3518085537ce75f864181e"
+              "hash": "dc59f9b0e558ffb39c04410756bbd0f2"
             },
             {
               "waterLevel": 1,
@@ -280,9 +325,9 @@
               "quotaNum": null,
               "goldenIkuraPopNum": 30,
               "goldenIkuraNum": null,
-              "waveId": 4,
+              "id": 4,
               "isClear": true,
-              "id": "203cacf9d982ece13f58f94f25bb071c"
+              "hash": "0e442dcad519d4579b5150eb248dbbb8"
             }
           ]
         }

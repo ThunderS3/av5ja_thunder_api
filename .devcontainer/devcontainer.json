@@ -1,20 +1,22 @@
 {
   "name": "Hono",
   "dockerComposeFile": ["docker-compose.yaml"],
-  "service": "node",
-  "workspaceFolder": "/home/vscode/app",
+  "service": "hono",
+  "workspaceFolder": "/home/bun/app",
   "shutdownAction": "stopCompose",
-  "remoteUser": "vscode",
+  "remoteUser": "bun",
   "mounts": [
-    "source=${env:HOME}/home/vscode/.ssh,target=/.ssh,type=bind,consistency=cached,readonly"
+    "source=${env:HOME}/home/bun/.ssh,target=/.ssh,type=bind,consistency=cached,readonly"
   ],
   "features": {
     "ghcr.io/devcontainers/features/git:1": {
       "version": "2.37.0"
     },
-    "ghcr.io/shyim/devcontainers-features/bun:0": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
+    },
+    "ghcr.io/devcontainers/features/node:1.5.0": {
+      "version": "20.16.0"
     },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
       "moby": false,
