@@ -7,24 +7,12 @@ import { WeaponInfoMain } from '@/enums/weapon/main'
 import { camelcaseKeys } from '@/utils/camelcase_keys'
 import { z } from '@hono/zod-openapi'
 import dayjs from 'dayjs'
-
-export const ImageURL = <T>(S: T) =>
-  z
-    .object({
-      image: z.object({
-        url: z.string()
-      })
-    })
-    .transform((object) => {
-      return {
-        ...object
-      }
-    })
+import { ImageURL } from './image_url.dto'
 
 export const Node = z.object({
   startTime: z.date(),
   endTime: z.date(),
-  coopStage: ImageURL('CoopStage')
+  coopStage: ImageURL
 })
 
 export const NodeList = (Node: z.AnyZodObject) =>

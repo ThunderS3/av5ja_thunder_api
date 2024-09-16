@@ -1,30 +1,40 @@
-import { CoopHistory } from '@/schema/history.dto'
+import { HTTPMethod } from '@/enums/method'
+import { CoopHistoryModel } from '@/models/coop_history.dto'
+import { CoopRecordModel } from '@/models/coop_record.dto'
 import type { Bindings } from '@/utils/bindings'
-import { decode } from '@/utils/decode'
-import { Console, Effect, Either } from 'effect'
-import { Hono } from 'hono'
+import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import { HTTPException } from 'hono/http-exception'
 
-export const histories = new Hono<{ Bindings: Bindings }>()
+export const app = new Hono<{ Bindings: Bindings }>()
 
-/**
- * @todo
- * Either.match使いたいけど使い方がよくわかっていない
- */
-histories.post('/', async (c, next) => {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const body: any = await c.req.json()
-  // @ts-ignore
-  const result = decode(CoopHistory.Query, body)
-
-  if (Either.isLeft(result)) {
-    // @ts-ignore
-    throw new HTTPException(400, { message: 'Bad Request', res: c.res, cause: result.left.error.errors })
+app.openapi(
+  createRoute({
+    method: HTTPMethod.POST,
+    security: [{ AuthorizationApiKey: [] }],
+    path: '/',
+    tags: ['履歴'],
+    summary: '作成',
+    description: 'サーモンランの履歴を追加します',
+    request: {
+      body: {
+        content: {
+          'application/json': {
+            schema: CoopHistoryModel
+          }
+        }
+      }
+    },
+    responses: {
+      200: {
+        type: 'application/json',
+        description: 'アセットURL一覧'
+      }
+    }
+  }),
+  async (c) => {
+    const body = c.req.valid('json')
+    console.log(body)
+    // return c.status(201)
+    return c.json(body, 201)
   }
-  if (Either.isRight(result)) {
-    // @ts-ignore
-    return c.json(new CoopHistory.Response(result.right.data.coopResult.historyGroups.nodes))
-  }
-})
-
-histories.patch('/', async (c) => {})
+)
