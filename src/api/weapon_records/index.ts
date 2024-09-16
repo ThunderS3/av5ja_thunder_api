@@ -1,6 +1,5 @@
 import { HTTPMethod } from '@/enums/method'
-import { CoopRecordModel } from '@/models/coop_record.dto'
-import { CoopWeaponRecordModel } from '@/models/coop_weapon_record.dto'
+import { CoopWeaponRecordModel, ImageURLModel } from '@/models/coop_weapon_record.dto'
 import type { Bindings } from '@/utils/bindings'
 import { OpenAPIHono as Hono, createRoute } from '@hono/zod-openapi'
 
@@ -24,13 +23,17 @@ app.openapi(
     },
     responses: {
       200: {
-        type: 'application/json',
-        description: 'アセットURL一覧'
+        content: {
+          'application/json': {
+            schema: ImageURLModel
+          }
+        },
+        description: 'ブキ記録'
       }
     }
   }),
   async (c) => {
-    const body = c.req.valid('json')
-    return c.json(body, 201)
+    const body: CoopWeaponRecordModel = c.req.valid('json')
+    return c.json(ImageURLModel.parse({ assetURLs: body.assetURLs }))
   }
 )
