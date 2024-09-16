@@ -8,7 +8,7 @@ import { cors } from 'hono/cors'
 import { csrf } from 'hono/csrf'
 import { HTTPException } from 'hono/http-exception'
 import { logger } from 'hono/logger'
-import { histories } from './histories'
+import { app as histories } from './histories'
 import { app as records } from './records'
 import { results } from './results'
 import { app as schedules } from './schedules'
@@ -44,7 +44,7 @@ app.onError((error, c) => {
 })
 app.route('/v3/schedules', schedules)
 // app.route('/v3/results', results)
-// app.route('/v1/histories', histories)
+app.route('/v1/histories', histories)
 app.route('/v1/records', records)
 app.route('/v1/version', version)
 
