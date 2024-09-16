@@ -11,7 +11,9 @@ const update = async (env: Bindings): Promise<void> => {
     throw new HTTPException(response.status as StatusCode, { message: response.statusText })
   }
   const schedules: Schedule[] = Phase.parse(await response.json()).schedules
-  await Promise.all(schedules.map(async (schedule) => env.Schedule.put(schedule.key, JSON.stringify(schedule))))
+  // console.log('[OATMEALDOME]: URL', url.href)
+  // console.log('[OATMEALDOME]: DATA', schedules)
+  await Promise.all(schedules.map(async (schedule) => env.Schedule.put(schedule.key, JSON.stringify(schedule.data))))
 }
 
 export const scheduled = async (event: ScheduledController, env: Bindings, ctx: ExecutionContext): Promise<void> => {

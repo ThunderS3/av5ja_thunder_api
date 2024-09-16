@@ -1,31 +1,50 @@
-import { CoopSchedule } from '@/schema/schedule.dto'
+import { HTTPMethod } from '@/enums/method'
 import type { Bindings } from '@/utils/bindings'
-import { decode } from '@/utils/decode'
-import dayjs from 'dayjs'
-import { Hono } from 'hono'
+import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { HTTPException } from 'hono/http-exception'
 
-export const schedules = new Hono<{ Bindings: Bindings }>()
+export const app = new Hono<{ Bindings: Bindings }>()
 
-schedules.get('/', async (c) => {
-  const keys: string[] = (await c.env.Schedule.list()).keys.map((key) => key.name)
-  const schedules = (await Promise.all(keys.map((key) => c.env.Schedule.get(key))))
-    .filter((value) => value !== null)
-    .map((value) => JSON.parse(value))
-    .sort((a, b) => dayjs(b.startTime).utc().unix() - dayjs(a.startTime).utc().unix())
-  return c.json({ schedules: schedules })
-})
+app.openapi(
+  createRoute({
+    method: HTTPMethod.GET,
+    security: [{ AuthorizationApiKey: [] }],
+    path: '/',
+    tags: ['スケジュール'],
+    summary: '一覧取得',
+    description: 'スケジュール一覧を取得します',
+    request: {},
+    responses: {
+      200: {
+        type: 'application/json',
+        description: '購読データ'
+      }
+    }
+  }),
+  async (c) => {
+    const keys: string[] = (await c.env.Schedule.list({ limit: 50 })).keys.map((schedule) => schedule.name)
+    const schedules = await Promise.all(keys.map(async (key) => c.env.Schedule.get(key, { type: 'json' })))
+    return c.json(schedules)
+  }
+)
 
-// schedules.post('/', async (c) => {
-//   const body: any = await c.req.json()
-
-//   // @ts-ignore
-//   const result = decode(CoopSchedule.Data, body)
-//   return c.json({})
-// })
-
-// schedules.patch('/', async (c) => {
-//   /// リザルト書き込み
-//   const result: ScheduleDto[] = await getSchedules()
-//   await Promise.all(result.map((schedule) => c.env.Schedule.put(schedule.key, JSON.stringify(schedule))))
-//   return c.json({ message: 'Schedules updated.' })
-// })
+app.openapi(
+  createRoute({
+    method: HTTPMethod.DELETE,
+    path: '/',
+    tags: ['スケジュール'],
+    summary: '一括削除',
+    description: 'スケジュールを一括削除します',
+    request: {},
+    responses: {
+      204: {
+        description: '削除成功'
+      }
+    }
+  }),
+  async (c) => {
+    const keys: string[] = (await c.env.Schedule.list({ limit: 50 })).keys.map((schedule) => schedule.name)
+    c.executionCtx.waitUntil(Promise.all(keys.map(async (key) => c.env.Schedule.delete(key))))
+    return c.json({})
+  }
+)
