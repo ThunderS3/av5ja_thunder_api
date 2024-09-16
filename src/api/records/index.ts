@@ -16,20 +16,32 @@ app.openapi(
       body: {
         content: {
           'application/json': {
-            schema: CoopRecordModel
+            schema: CoopRecordModel.Req
           }
         }
       }
     },
     responses: {
       200: {
-        type: 'application/json',
-        description: 'アセットURL一覧'
+        content: {
+          'application/json': {
+            schema: CoopRecordModel.Res
+          }
+        },
+        description: 'ブキ記録'
       }
     }
   }),
   async (c) => {
-    const body = c.req.valid('json')
-    return c.json(body, 201)
+    const body: CoopRecordModel.Req = c.req.valid('json')
+    return c.json(
+      CoopRecordModel.Res.parse({
+        stageRecords: body.stageRecords,
+        enemyRecords: body.enemyRecords,
+        bossRecords: body.bossRecords,
+        assetURLs: body.assetURLs
+      }),
+      200
+    )
   }
 )

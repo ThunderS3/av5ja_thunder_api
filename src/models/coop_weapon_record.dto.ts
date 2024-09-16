@@ -15,6 +15,20 @@ export const CoopWeaponRecordModel = Data(
       })
     )
   })
-)
+).transform((object) => {
+  return {
+    ...object,
+    get assetURLs(): string[] {
+      return Array.from(
+        new Set(object.data.weaponRecords.nodes.flatMap((node) => [node.specialWeapon.image.url, node.image2d.url]))
+      )
+    }
+  }
+})
 
+export const ImageURLModel = z.object({
+  assetURLs: z.array(z.string().url())
+})
+
+export type ImageURLModel = z.infer<typeof ImageURLModel>
 export type CoopWeaponRecordModel = z.infer<typeof CoopWeaponRecordModel>
