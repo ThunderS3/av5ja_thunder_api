@@ -69,12 +69,18 @@ export const Schedule = z
     return {
       ...schedule,
       key: key,
-      id: createHash('md5').update(key).digest('hex'),
-      weaponList: object.weapons,
-      bossId: object.bigBoss,
-      stageId: object.stage,
-      mode: object.bigBoss === null ? CoopMode.LIMITED : CoopMode.REGULAR,
-      rule: object.bigBoss === null ? CoopRule.TEAM_CONTEST : object.stage >= 100 ? CoopRule.BIG_RUN : CoopRule.REGULAR
+      data: {
+        id: createHash('md5').update(key).digest('hex'),
+        startTime: object.startTime,
+        endTime: object.endTime,
+        rareWeapons: object.rareWeapons,
+        weaponList: object.weapons,
+        bossId: object.bigBoss,
+        stageId: object.stage,
+        mode: object.bigBoss === null ? CoopMode.LIMITED : CoopMode.REGULAR,
+        rule:
+          object.bigBoss === null ? CoopRule.TEAM_CONTEST : object.stage >= 100 ? CoopRule.BIG_RUN : CoopRule.REGULAR
+      }
     }
   })
 

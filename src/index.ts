@@ -11,7 +11,7 @@ import { logger } from 'hono/logger'
 import { histories } from './histories'
 import { records } from './records'
 import { results } from './results'
-import { schedules } from './schedules'
+import { app as schedules } from './schedules'
 import type { Bindings } from './utils/bindings'
 import { scheduled } from './utils/handler/scheduled'
 import { reference, specification } from './utils/openapi'
@@ -42,8 +42,7 @@ app.onError((error, c) => {
   }
   return c.json({ message: 'Internal Server Error' }, 500)
 })
-
-// app.route('/v3/schedules', schedules)
+app.route('/v3/schedules', schedules)
 // app.route('/v3/results', results)
 // app.route('/v1/histories', histories)
 // app.route('/v1/records', records)
