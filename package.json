@@ -1,0 +1,47 @@
+{
+  "name": "thunder_api",
+  "version": "6.0.0",
+  "description": "Unofficial Splatoon3 API",
+  "author": "@tkgstrator",
+  "private": true,
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "scripts": {
+    "dev": "wrangler dev --test-scheduled --port 18787",
+    "start": "bun dist/index.js",
+    "prepare": "husky",
+    "deploy": "bunx wrangler deploy"
+  },
+  "dependencies": {
+    "@scalar/hono-api-reference": "^0.5.145",
+    "dayjs": "^1.11.11",
+    "hono": "^4.3.7",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
+    "@hono/zod-openapi": "^0.14.1",
+    "@types/bun": "^1.1.3",
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^20.13.0",
+    "commitizen": "^4.3.0",
+    "commitlint": "^19.3.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "rimraf": "^5.0.7",
+    "wrangler": "3.17.0"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
