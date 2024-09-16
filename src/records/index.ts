@@ -1,49 +1,39 @@
-import { CoopRecord } from '@/schema/coop_record.dto'
-import { WeaponRecord } from '@/schema/weapon_record.dto'
+import { HTTPMethod } from '@/enums/method'
+import { CoopRecordModel } from '@/models/coop_record.dto'
 import type { Bindings } from '@/utils/bindings'
-import { decode } from '@/utils/decode'
-import dayjs from 'dayjs'
-import { Effect, Either } from 'effect'
-import { Hono } from 'hono'
+import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { HTTPException } from 'hono/http-exception'
 
-export const records = new Hono<{ Bindings: Bindings }>()
+export const app = new Hono<{ Bindings: Bindings }>()
 
-/**
- * @todo
- * Either.match使いたいけど使い方がよくわかっていない
- */
-records.post('/', async (c) => {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const body: any = await c.req.json()
-  // @ts-ignore
-  const result = decode(CoopRecord.Query, body)
-
-  if (Either.isLeft(result)) {
-    // @ts-ignore
-    throw new HTTPException(400, { message: 'Bad Request', res: c.res, cause: result.left.error.errors })
+app.openapi(
+  createRoute({
+    method: HTTPMethod.POST,
+    security: [{ AuthorizationApiKey: [] }],
+    path: '/',
+    tags: ['記録'],
+    summary: '作成',
+    description: 'サーモンランのレコードを追加します',
+    request: {
+      body: {
+        content: {
+          'application/json': {
+            schema: CoopRecordModel
+          }
+        }
+      }
+    },
+    responses: {
+      200: {
+        type: 'application/json',
+        description: 'アセットURL一覧'
+      }
+    }
+  }),
+  async (c) => {
+    const body = c.req.valid('json')
+    console.log(body)
+    // return c.status(201)
+    return c.json(body, 201)
   }
-  if (Either.isRight(result)) {
-    // @ts-ignore
-    return c.json(new CoopRecord.Response(result.right.data.coopRecord))
-  }
-})
-
-/**
- * @todo
- * Either.match使いたいけど使い方がよくわかっていない
- */
-records.post('/weapons', async (c) => {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const body: any = await c.req.json()
-  // @ts-ignore
-  const result = decode(WeaponRecord.Query, body)
-
-  if (Either.isLeft(result)) {
-    // @ts-ignore
-    throw new HTTPException(400, { message: 'Bad Request', res: c.res, cause: result.left.error.errors })
-  }
-  if (Either.isRight(result)) {
-    // @ts-ignore
-    return c.json(new WeaponRecord.Response(result.right.data.weaponRecords.nodes))
-  }
-})
+)
