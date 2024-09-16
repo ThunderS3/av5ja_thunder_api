@@ -13,11 +13,11 @@ export const RawId = <T extends z.EnumLike>(S: T) =>
     const pattern: RegExp = /-([0-9-]+)$/
     const match: RegExpMatchArray | null = atob(input as string).match(pattern)
     if (match === null) {
-      throw new HTTPException(400, { message: 'Base64にデコードできない文字列が含まれています' })
+      return input
     }
     const value: number = Number.parseInt(match[1], 10)
     if (Number.isNaN(value)) {
-      throw new HTTPException(400, { message: '数値に変換できる文字列が含まれていません' })
+      return input
     }
     return value
   }, z.nativeEnum(S))

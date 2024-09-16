@@ -13,7 +13,7 @@ export const CoopHistoryModel = Data(
           startTime: z.string().datetime().nullable(),
           endTime: z.string().datetime().nullable(),
           mode: z.nativeEnum(CoopMode),
-          playCount: z.number().int().min(0),
+          playCount: z.number().int().min(0).nullable(),
           rule: z.nativeEnum(CoopRule),
           historyDetails: NodeList(
             z.object({
