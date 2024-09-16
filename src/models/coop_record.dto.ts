@@ -1,8 +1,7 @@
 import { CoopGrade } from '@/enums/coop/coop_grade'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { CoopTrophy } from '@/enums/coop/coop_trophy'
-import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
-import { endTime } from 'hono/timing'
+import { z } from '@hono/zod-openapi'
 import { ImageURL, RawId } from './image_url.dto'
 
 export const Data = <T extends z.AnyZodObject>(S: T) => {
@@ -34,10 +33,10 @@ export const CoopRecordModel = Data(
     coopRecord: z.object({
       stageHighestRecords: z.array(
         z.object({
-          coopStage: CoopStageModel,
-          grade: z.object({
-            id: RawId(CoopGrade.Id)
-          }),
+          // coopStage: CoopStageModel,
+          // grade: z.object({
+          //   id: RawId(CoopGrade.Id)
+          // }),
           gradePoint: z.number().int().min(0).max(999)
         })
       ),
@@ -49,10 +48,10 @@ export const CoopRecordModel = Data(
                 startTime: z.string().datetime(),
                 endTime: z.string().datetime(),
                 trophy: z.nativeEnum(CoopTrophy),
-                coopStage: CoopStageModel,
-                highestGrade: z.object({
-                  id: RawId(CoopGrade.Id)
-                }),
+                // coopStage: CoopStageModel,
+                // highestGrade: z.object({
+                //   id: RawId(CoopGrade.Id)
+                // }),
                 highestGradePoint: z.number().int().min(0).max(999),
                 highestJobScore: z.number().int().min(0).max(999),
                 rankPercentile: z.number().int().min(0).max(100).nullable()

@@ -16,7 +16,6 @@ export const RawId = <T extends z.EnumLike>(S: T) =>
       throw new HTTPException(400, { message: 'Base64にデコードできない文字列が含まれています' })
     }
     const value: number = Number.parseInt(match[1], 10)
-    console.log(value)
     if (Number.isNaN(value)) {
       throw new HTTPException(400, { message: '数値に変換できる文字列が含まれていません' })
     }
