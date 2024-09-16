@@ -8,14 +8,15 @@ import { cors } from 'hono/cors'
 import { csrf } from 'hono/csrf'
 import { HTTPException } from 'hono/http-exception'
 import { logger } from 'hono/logger'
-import { app as histories } from './histories'
-import { app as records } from './records'
-import { app as results } from './results'
-import { app as schedules } from './schedules'
+import { app as histories } from './api/histories'
+import { app as records } from './api/records'
+import { app as results } from './api/results'
+import { app as schedules } from './api/schedules'
+import { app as version } from './api/version'
+import { app as weapon_records } from './api/weapon_records'
 import type { Bindings } from './utils/bindings'
 import { scheduled } from './utils/handler/scheduled'
 import { reference, specification } from './utils/openapi'
-import { app as version } from './version'
 
 const app = new Hono<{ Bindings: Bindings }>()
 
@@ -46,6 +47,7 @@ app.route('/v3/schedules', schedules)
 app.route('/v3/results', results)
 app.route('/v1/histories', histories)
 app.route('/v1/records', records)
+app.route('/v1/weapon_records', weapon_records)
 app.route('/v1/version', version)
 
 export default {

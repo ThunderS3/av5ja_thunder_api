@@ -10,8 +10,8 @@ app.openapi(
     method: HTTPMethod.POST,
     path: '/',
     tags: ['記録'],
-    summary: '作成',
-    description: 'サーモンランのレコードを追加します',
+    summary: 'サーモンラン記録',
+    description: 'アセットのURL一覧を返します',
     request: {
       body: {
         content: {
