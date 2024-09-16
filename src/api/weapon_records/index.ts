@@ -1,8 +1,7 @@
 import { HTTPMethod } from '@/enums/method'
-import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
-import { BadRequestResponse } from '@/utils/bad_request.response'
+import { CoopRecordModel } from '@/models/coop_record.dto'
+import { CoopWeaponRecordModel } from '@/models/coop_weapon_record.dto'
 import type { Bindings } from '@/utils/bindings'
-import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()
@@ -10,32 +9,28 @@ export const app = new Hono<{ Bindings: Bindings }>()
 app.openapi(
   createRoute({
     method: HTTPMethod.POST,
-    middleware: [resource],
     path: '/',
     tags: ['記録'],
-    deprecated: true,
-    summary: 'ブキ',
-    description: 'ブキのURLを登録します',
+    summary: 'ブキ記録',
+    description: 'アセットのURL一覧を返します',
     request: {
       body: {
         content: {
           'application/json': {
-            schema: WeaponRecord.Request.openapi({
-              description: 'WeaponRecordQuery'
-            })
+            schema: CoopWeaponRecordModel
           }
         }
       }
     },
     responses: {
-      204: {
-        description: 'ブキ記録'
-      },
-      ...BadRequestResponse()
+      200: {
+        type: 'application/json',
+        description: 'アセットURL一覧'
+      }
     }
   }),
   async (c) => {
-    const body: WeaponRecordQuery = new WeaponRecordQuery(await c.req.json())
-    return new Response(null, { status: 204 })
+    const body = c.req.valid('json')
+    return c.json(body, 201)
   }
 )

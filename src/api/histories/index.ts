@@ -1,9 +1,9 @@
 import { HTTPMethod } from '@/enums/method'
-import { CoopHistory, CoopHistoryQuery } from '@/models/coop_history.dto'
-import { BadRequestResponse } from '@/utils/bad_request.response'
+import { CoopHistoryModel } from '@/models/coop_history.dto'
+import { CoopRecordModel } from '@/models/coop_record.dto'
 import type { Bindings } from '@/utils/bindings'
-import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { HTTPException } from 'hono/http-exception'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -11,36 +11,30 @@ app.openapi(
   createRoute({
     method: HTTPMethod.POST,
     security: [{ AuthorizationApiKey: [] }],
-    middleware: [resource],
     path: '/',
-    tags: ['リザルト'],
-    summary: '一覧',
-    description: 'リザルト一覧を返します',
+    tags: ['履歴'],
+    summary: '作成',
+    description: 'サーモンランの履歴を追加します',
     request: {
       body: {
         content: {
           'application/json': {
-            schema: CoopHistory.Request.openapi({
-              description: 'CoopHistoryQuery'
-            })
+            schema: CoopHistoryModel
           }
         }
       }
     },
     responses: {
       200: {
-        content: {
-          'application/json': {
-            schema: CoopHistory.Response
-          }
-        },
-        description: 'リザルト一覧'
-      },
-      ...BadRequestResponse()
+        type: 'application/json',
+        description: 'アセットURL一覧'
+      }
     }
   }),
   async (c) => {
-    c.req.valid('json')
-    return c.json(new CoopHistoryQuery(await c.req.json()))
+    const body = c.req.valid('json')
+    console.log(body)
+    // return c.status(201)
+    return c.json(body, 201)
   }
 )
