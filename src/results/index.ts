@@ -1,44 +1,36 @@
-import { CoopResult } from '@/schema/result.dto'
+import { HTTPMethod } from '@/enums/method'
+import { CoopResultModel } from '@/models/coop_result.dto'
 import type { Bindings } from '@/utils/bindings'
-import { decode } from '@/utils/decode'
-import { Effect, Either } from 'effect'
-import { Hono } from 'hono'
+import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { HTTPException } from 'hono/http-exception'
 
-export const results = new Hono<{ Bindings: Bindings }>()
+export const app = new Hono<{ Bindings: Bindings }>()
 
-results.get('/', async (c) => {
-  const keys: string[] = (await c.env.Result.list()).keys.map((key) => key.name)
-  const values: object[] = (await Promise.all(keys.map((key) => c.env.Result.get(key))))
-    .filter((value) => value !== null)
-    .map((value) => JSON.parse(value))
-  return c.json({ results: values })
-})
-
-results.get('/:key', async (c) => {
-  const nplnUserId: string = c.req.param('key')
-  const keys: string[] = (await c.env.Result.list({ prefix: nplnUserId })).keys.map((key) => key.name)
-  const values: object[] = (await Promise.all(keys.map((key) => c.env.Result.get(key))))
-    .filter((value) => value !== null)
-    .map((value) => JSON.parse(value))
-  return c.json({ results: values })
-})
-
-/**
- * @todo
- * Either.match使いたいけど使い方がよくわかっていない
- */
-results.post('/', async (c) => {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const body: any = await c.req.json()
-  // @ts-ignore
-  const result = decode(CoopResult.Query, body)
-
-  if (Either.isLeft(result)) {
-    // @ts-ignore
-    throw new HTTPException(400, { message: 'Bad Request', res: c.res, cause: result.left.error.errors })
+app.openapi(
+  createRoute({
+    method: HTTPMethod.POST,
+    path: '/',
+    tags: ['リザルト'],
+    summary: '作成',
+    description: 'リザルトを作成します',
+    request: {
+      body: {
+        content: {
+          'application/json': {
+            schema: CoopResultModel
+          }
+        }
+      }
+    },
+    responses: {
+      200: {
+        type: 'application/json',
+        description: '結果'
+      }
+    }
+  }),
+  async (c) => {
+    const body = c.req.valid('json')
+    return c.json(body)
   }
-  if (Either.isRight(result)) {
-    // @ts-ignore
-    return c.json(new CoopResult.Response(result.right))
-  }
-})
+)
