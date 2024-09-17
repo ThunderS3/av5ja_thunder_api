@@ -1,4 +1,4 @@
-import { OpenAPIHono as Hono } from '@hono/zod-openapi'
+import { OpenAPIHono as Hono, z } from '@hono/zod-openapi'
 import { apiReference } from '@scalar/hono-api-reference'
 import dayjs from 'dayjs'
 import timezone from 'dayjs/plugin/timezone'
@@ -8,6 +8,7 @@ import { cors } from 'hono/cors'
 import { csrf } from 'hono/csrf'
 import { HTTPException } from 'hono/http-exception'
 import { logger } from 'hono/logger'
+import { ZodError } from 'zod'
 import { app as histories } from './api/histories'
 import { app as records } from './api/records'
 import { app as results } from './api/results'
@@ -40,6 +41,9 @@ app.notFound((c) => c.redirect('docs'))
 app.onError((error, c) => {
   if (error instanceof HTTPException) {
     return c.json({ message: error.message, description: error.cause }, error.status)
+  }
+  if (error instanceof ZodError) {
+    return c.json({ message: JSON.parse(error.message), description: error.cause }, 400)
   }
   return c.json({ message: 'Internal Server Error' }, 500)
 })

@@ -8,7 +8,7 @@ describe('Histories', () => {
     const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
     for (const file of files) {
       const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
-      CoopHistoryModel.parse(JSON.parse(data))
+      CoopHistoryModel.Req.parse(JSON.parse(data))
     }
   })
 })

@@ -1,36 +1,62 @@
 import { CoopMode } from '@/enums/coop/coop_mode'
 import { CoopRule } from '@/enums/coop/coop_rule'
-import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { CoopStage } from '@/enums/coop/coop_stage'
+import { z } from '@hono/zod-openapi'
+import dayjs from 'dayjs'
 import { endTime, startTime } from 'hono/timing'
+import { CoopHistoryDetailId } from './coop_history_id.dto'
 import { Data } from './coop_record.dto'
-import { NodeList } from './schedule.dto'
+import { RawId } from './image_url.dto'
+import { CoopScheduleModel, NodeList } from './schedule.dto'
 
-export const CoopHistoryModel = Data(
-  z.object({
-    coopResult: z.object({
-      historyGroups: NodeList(
-        z.object({
-          startTime: z.string().datetime().nullable(),
-          endTime: z.string().datetime().nullable(),
-          mode: z.nativeEnum(CoopMode),
-          playCount: z.number().int().min(0).nullable(),
-          rule: z.nativeEnum(CoopRule),
-          historyDetails: NodeList(
-            z.object({
-              id: z.string(),
-              weapons: z.array(
-                z.object({
-                  image: z.object({
-                    url: z.string().url()
+export namespace CoopHistoryModel {
+  export const Req = Data(
+    z.object({
+      coopResult: z.object({
+        historyGroups: NodeList(
+          z.object({
+            startTime: z
+              .string()
+              .datetime()
+              .nullable()
+              .transform((value) => (value === null ? null : dayjs(value).toISOString())),
+            endTime: z
+              .string()
+              .datetime()
+              .nullable()
+              .transform((value) => (value === null ? null : dayjs(value).toISOString())),
+            mode: z.nativeEnum(CoopMode),
+            playCount: z.number().int().min(0).nullable(),
+            rule: z.nativeEnum(CoopRule),
+            historyDetails: NodeList(
+              z.object({
+                id: CoopHistoryDetailId,
+                weapons: z.array(
+                  z.object({
+                    image: z.object({
+                      url: z.string().url()
+                    })
                   })
+                ),
+                coopStage: z.object({
+                  id: RawId(CoopStage.Id)
                 })
-              )
-            })
-          )
-        })
-      )
+              })
+            )
+          })
+        )
+      })
     })
-  })
-)
+  )
 
-export type CoopHistoryModel = z.infer<typeof CoopHistoryModel>
+  export const Res = z.object({
+    histories: z.array(
+      z.object({
+        schedule: CoopScheduleModel,
+        results: z.array(CoopHistoryDetailId)
+      })
+    )
+  })
+
+  export type Req = z.infer<typeof Req>
+}
