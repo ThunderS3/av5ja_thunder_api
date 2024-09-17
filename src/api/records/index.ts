@@ -38,7 +38,6 @@ app.openapi(
       CoopRecordModel.Res.parse({
         stageRecords: body.stageRecords,
         enemyRecords: body.enemyRecords,
-        bossRecords: body.bossRecords,
         assetURLs: body.assetURLs
       }),
       200

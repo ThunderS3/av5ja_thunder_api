@@ -65,6 +65,7 @@ app.openapi(
     path: '/',
     tags: ['情報'],
     summary: 'バージョン',
+    description: 'Nintendo Switch OnlineとSplatNet3のバージョン情報を返します',
     responses: {
       200: {
         content: {
