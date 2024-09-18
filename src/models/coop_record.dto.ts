@@ -144,7 +144,14 @@ export namespace CoopRecordModel {
         .map((record) => record.coopStage.image.url)
         .concat(object.data.coopRecord.bigRunRecord.assetURLs)
         .concat(object.data.coopRecord.defeatEnemyRecords.map((enemyRecord) => enemyRecord.enemy.image.url))
-        .concat(object.data.coopRecord.defeatBossRecords.map((bossRecord) => bossRecord.enemy.image.url))
+        .concat(object.data.coopRecord.defeatBossRecords.map((bossRecord) => bossRecord.enemy.image.url)),
+      get res(): CoopRecordModel.Res {
+        return CoopRecordModel.Res.parse({
+          stageRecords: (this as Res).stageRecords,
+          enemyRecords: (this as Res).enemyRecords,
+          assetURLs: (this as Res).assetURLs
+        })
+      }
     }
   })
 

@@ -4,6 +4,9 @@ import dayjs from 'dayjs'
 export const CoopHistoryDetailId = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   (input: any) => {
+    if (typeof input !== 'string') {
+      return input
+    }
     const text: string = atob(input)
     const pattern: RegExp = /^([A-Za-z]+)-([A-Za-z])-([A-Za-z0-9]+):([0-9T]+)_([0-9a-f-]+)$/
     const match: RegExpMatchArray | null = text.match(pattern)
@@ -27,3 +30,5 @@ export const CoopHistoryDetailId = z.preprocess(
     uuid: z.string().uuid()
   })
 )
+
+export type CoopHistoryDetailId = z.infer<typeof CoopHistoryDetailId>

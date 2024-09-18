@@ -15,22 +15,42 @@ export const Node = z.object({
   coopStage: ImageURL
 })
 
-export const NodeList = <T extends z.AnyZodObject>(N: T) =>
+export const NodeList = <T extends z.ZodEffects<z.AnyZodObject> | z.AnyZodObject>(N: T) =>
   z.object({
     nodes: z.array(N)
   })
 
-export const CoopScheduleModel = z.object({
-  id: z.string(),
-  startTime: z.string().datetime().nullable(),
-  endTime: z.string().datetime().nullable(),
-  mode: z.nativeEnum(CoopMode),
-  rule: z.nativeEnum(CoopRule),
-  bossId: z.nativeEnum(CoopBossInfo.Id).nullable(),
-  stageId: z.nativeEnum(CoopStage.Id),
-  weaponList: z.array(z.nativeEnum(WeaponInfoMain.Id)).min(0).max(4),
-  rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id))
-})
+export const CoopScheduleModel = z.preprocess(
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  (input: any) => {
+    input.bossId = undefined
+    return input
+  },
+  z
+    .object({
+      startTime: z.string().datetime().nullable(),
+      endTime: z.string().datetime().nullable(),
+      mode: z.nativeEnum(CoopMode),
+      rule: z.nativeEnum(CoopRule),
+      bossId: z.nativeEnum(CoopBossInfo.Id).optional().nullable(),
+      stageId: z.nativeEnum(CoopStage.Id),
+      weaponList: z.array(z.nativeEnum(WeaponInfoMain.Id)).min(0).max(4),
+      rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id))
+    })
+    .transform((object) => {
+      return {
+        id:
+          object.startTime === null && object.endTime === null
+            ? createHash('md5')
+                .update(`${object.mode}-${object.rule}-${object.stageId}-${object.weaponList.join(',')}`)
+                .digest('hex')
+            : createHash('md5').update(`${object.startTime}:${object.endTime}`).digest('hex'),
+        ...object
+      }
+    })
+)
+// .superRefine((object) => { object.bossId = object.bossId === undefined ? undefined : object.bossId
+// })
 
 export const Schedule = z
   .object({
