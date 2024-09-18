@@ -7,7 +7,6 @@
         "endTime": "2024-03-21T00:00:00.000Z",
         "mode": "REGULAR",
         "rule": "REGULAR",
-        "bossId": null,
         "stageId": 1,
         "rareWeapons": [],
         "weaponList": [40, 400, 3050, 2070]
@@ -141,7 +140,6 @@
         "endTime": "2024-03-11T00:00:00.000Z",
         "mode": "REGULAR",
         "rule": "BIG_RUN",
-        "bossId": null,
         "stageId": 106,
         "rareWeapons": [],
         "weaponList": [-1, -1, -1, -1]
