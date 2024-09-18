@@ -7,10 +7,8 @@ describe('CoopHistoryQuery', () => {
   test('Parse', () => {
     const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
     for (const file of files) {
-      it('JSON => CoopHistoryQuery', () => {
-        const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
-        expect(() => new CoopHistoryQuery(JSON.parse(data))).not.toThrow()
-      })
+      const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
+      expect(() => new CoopHistoryQuery(JSON.parse(data))).not.toThrow()
     }
   })
 
