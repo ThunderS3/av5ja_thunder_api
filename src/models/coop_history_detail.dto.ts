@@ -11,11 +11,12 @@ import { z } from '@hono/zod-openapi'
 import { idText } from 'typescript'
 import { CoopData } from './common/coop_data.dto'
 import { CoopGradeModel } from './common/coop_grade.dto'
+import { CoopHistoryDetailId } from './common/coop_history_detail_id.dto'
+import { CoopPlayerId } from './common/coop_player_id.dto'
 import { CoopStageModel } from './common/coop_stage.dto'
 import { DateTime } from './common/datetime.dto'
 import { ImageURL } from './common/image_url.dto'
 import { RawId } from './common/raw_id.dto'
-import { CoopHistoryDetailId } from './coop_history_id.dto'
 
 const BossResultModel = z
   .object({
@@ -92,7 +93,7 @@ const NameplateModel = z.object({
 const CoopPlayerModel = z.object({
   byname: z.string(),
   nameId: z.string(),
-  id: z.string(),
+  id: CoopPlayerId,
   nameplate: NameplateModel,
   uniform: z.object({
     // id: RawId(CoopUniform.Id)

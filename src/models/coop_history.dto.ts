@@ -3,11 +3,11 @@ import { CoopRule } from '@/enums/coop/coop_rule'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { z } from '@hono/zod-openapi'
 import { CoopData } from './common/coop_data.dto'
+import { CoopHistoryDetailId } from './common/coop_history_detail_id.dto'
 import { DateTime } from './common/datetime.dto'
 import { ImageURL } from './common/image_url.dto'
 import { NodeList } from './common/node_list.dto'
 import { RawId } from './common/raw_id.dto'
-import { CoopHistoryDetailId } from './coop_history_id.dto'
 
 const HistoryDetail = z.object({
   id: CoopHistoryDetailId,
