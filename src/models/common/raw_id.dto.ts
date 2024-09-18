@@ -1,11 +1,4 @@
 import { z } from '@hono/zod-openapi'
-import { HTTPException } from 'hono/http-exception'
-
-export const ImageURL = z.object({
-  image: z.object({
-    url: z.string().url()
-  })
-})
 
 export const RawId = <T extends z.EnumLike>(S: T) =>
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -21,3 +14,5 @@ export const RawId = <T extends z.EnumLike>(S: T) =>
     }
     return value
   }, z.nativeEnum(S))
+
+export type RawId<T extends z.EnumLike> = z.infer<ReturnType<typeof RawId<T>>>

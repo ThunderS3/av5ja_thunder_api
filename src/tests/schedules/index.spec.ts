@@ -1,19 +1,16 @@
-import { describe, expect, it, test } from 'bun:test'
+import { describe, expect, test } from 'bun:test'
 import { readFileSync, readdirSync } from 'node:fs'
 import path from 'node:path'
-import { CoopHistoryQuery } from '@/models/coop_history.dto'
+import { CoopScheduleQuery } from '@/models/coop_schedule.dto'
 
-describe('CoopHistoryQuery', () => {
+describe('CoopScheduleQuery', () => {
   test('Parse', () => {
     const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
     for (const file of files) {
-      it('JSON => CoopHistoryQuery', () => {
-        const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
-        expect(() => new CoopHistoryQuery(JSON.parse(data))).not.toThrow()
-      })
+      const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
+      new CoopScheduleQuery(JSON.parse(data))
     }
   })
-
   // test('Equality', () => {
   //   const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
   //   for (const file of files) {
