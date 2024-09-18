@@ -1,5 +1,5 @@
 import { HTTPMethod } from '@/enums/method'
-import { CoopWeaponRecordModel, ImageURLModel } from '@/models/coop_weapon_record.dto'
+import { CoopWeaponRecordModel, ImageURLModel } from '@/models/weapon_record.dto'
 import type { Bindings } from '@/utils/bindings'
 import { OpenAPIHono as Hono, createRoute } from '@hono/zod-openapi'
 

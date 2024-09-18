@@ -1,4 +1,4 @@
-import { Phase, type Schedule } from '@/models/schedule.dto'
+import { Phase, type Schedule } from '@/models/coop_schedule.dto'
 import { HTTPException } from 'hono/http-exception'
 import type { StatusCode } from 'hono/utils/http-status'
 import type { Bindings } from '../bindings'

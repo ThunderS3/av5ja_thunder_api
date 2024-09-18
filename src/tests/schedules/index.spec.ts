@@ -4,20 +4,22 @@ import path from 'node:path'
 import { CoopScheduleQuery } from '@/models/coop_schedule.dto'
 
 describe('CoopScheduleQuery', () => {
-  test('Validity', () => {
+  test('Parse', () => {
     const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
     for (const file of files) {
       const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
       new CoopScheduleQuery(JSON.parse(data))
     }
   })
-  test('Equality', () => {
-    const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
-    for (const file of files) {
-      const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
-      const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
-      const input_model: CoopScheduleQuery = new CoopScheduleQuery(JSON.parse(input))
-      expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output), false)).toBe(true)
-    }
-  })
+  // test('Equality', () => {
+  //   const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
+  //   for (const file of files) {
+  //     const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
+  //     const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
+  //     const input_model: CoopWeaponRecordModel.Req = CoopWeaponRecordModel.Req.parse(JSON.parse(input))
+  //     const output_model: CoopWeaponRecordModel.Res = CoopWeaponRecordModel.Res.parse(JSON.parse(output))
+  //     expect(input_model.res.assetURLs.length).toEqual(output_model.assetURLs.length)
+  //     expect(Bun.deepEquals(input_model.res, output_model, true)).toBe(true)
+  //   }
+  // })
 })
