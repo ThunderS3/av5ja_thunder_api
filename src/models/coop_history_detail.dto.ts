@@ -17,6 +17,7 @@ import { CoopStageModel } from './common/coop_stage.dto'
 import { DateTime } from './common/datetime.dto'
 import { ImageURL } from './common/image_url.dto'
 import { RawId } from './common/raw_id.dto'
+import { WeaponInfoMainHash } from './common/weapon_hash.dto'
 
 const BossResultModel = z
   .object({
@@ -107,7 +108,7 @@ const CoopPlayerResultModel = z.object({
   goldenAssistCount: z.number().int().min(0),
   rescuedCount: z.number().int().min(0),
   goldenDeliverCount: z.number().int().min(0),
-  weapons: z.array(WeaponInfoMainModel),
+  weapons: z.array(WeaponInfoMainHash),
   deliverCount: z.number().int().min(0),
   defeatEnemyCount: z.number().int().min(0),
   specialWeapon: z.object({ weaponId: z.nativeEnum(WeaponInfoSpecial.Id).nullable() }),
@@ -143,7 +144,7 @@ const CoopHistoryDetailModel = z.object({
   scenarioCode: z.string().nullable(),
   smellMeter: z.number().int().min(0).max(5).nullable(),
   waveResults: z.array(WaveResultModel),
-  weapons: z.array(WeaponInfoMainModel)
+  weapons: z.array(WeaponInfoMainHash)
 })
 
 export const Request = CoopData(
