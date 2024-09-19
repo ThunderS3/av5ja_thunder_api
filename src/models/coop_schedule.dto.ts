@@ -9,14 +9,44 @@ import { camelcaseKeys } from '@/utils/camelcase_keys'
 import { z } from '@hono/zod-openapi'
 import { DateTime } from './common/datetime.dto'
 
-const ScheduleModel = z.object({
-  bigBoss: z.string().optional(),
-  startTime: DateTime,
-  endTime: DateTime,
-  stage: z.nativeEnum(CoopStage.Id),
-  weapons: z.array(z.nativeEnum(WeaponInfoMain.Id)),
-  rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id))
-})
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const BigBossModel = z.preprocess((input: any) => {
+  switch (input) {
+    case 'SakeJaw':
+      return CoopBossInfo.Id.SakeJaw
+    case 'SakeRope':
+      return CoopBossInfo.Id.SakeRope
+    case 'SakelienGiant':
+      return CoopBossInfo.Id.SakelienGiant
+    case 'Triple':
+      return CoopBossInfo.Id.Triple
+    case 'Random':
+      return CoopBossInfo.Id.Random
+    default:
+      return null
+  }
+}, z.nativeEnum(CoopBossInfo.Id).nullable())
+
+const ScheduleModel = (mode: CoopMode, rule: CoopRule) =>
+  z
+    .object({
+      bigBoss: BigBossModel,
+      startTime: DateTime,
+      endTime: DateTime,
+      stage: z.nativeEnum(CoopStage.Id),
+      weapons: z.array(z.nativeEnum(WeaponInfoMain.Id)),
+      rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id))
+    })
+    .transform((object) => {
+      return {
+        ...object,
+        weaponList: object.weapons,
+        bossId: object.bigBoss,
+        stageId: object.stage,
+        mode: mode,
+        rule: rule
+      }
+    })
 
 export const Request = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -24,12 +54,16 @@ export const Request = z.preprocess(
     return camelcaseKeys(input)
   },
   z.object({
-    normal: z.array(ScheduleModel),
-    bigRun: z.array(ScheduleModel),
-    teamContest: z.array(ScheduleModel)
+    normal: z.array(ScheduleModel(CoopMode.REGULAR, CoopRule.REGULAR)),
+    bigRun: z.array(ScheduleModel(CoopMode.REGULAR, CoopRule.BIG_RUN)),
+    teamContest: z.array(ScheduleModel(CoopMode.LIMITED, CoopRule.TEAM_CONTEST))
   })
 )
 
+/**
+ * サーモンランのスケジュール
+ * 自動でIDを生成する
+ */
 export const Response = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   (input: any) => {
@@ -62,13 +96,22 @@ export const Response = z.preprocess(
 
 export class CoopScheduleQuery {
   private readonly request: Request
-  // private readonly response: Response
+  private readonly response: Response[]
+
+  private get schedules(): ScheduleModel[] {
+    return [...this.request.normal, ...this.request.bigRun, ...this.request.teamContest]
+  }
 
   constructor(data: object) {
     this.request = Request.parse(data)
-    // this.response = Response.parse({})
+    this.response = this.schedules.map((schedule) => Response.parse(schedule))
+  }
+
+  toJSON(): object {
+    return this.response
   }
 }
 
+type ScheduleModel = z.infer<ReturnType<typeof ScheduleModel>>
 type Request = z.infer<typeof Request>
 type Response = z.infer<typeof Response>
