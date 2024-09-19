@@ -8,10 +8,11 @@ import { DateTime } from './common/datetime.dto'
 import { ImageURL } from './common/image_url.dto'
 import { NodeList } from './common/node_list.dto'
 import { RawId } from './common/raw_id.dto'
+import { WeaponInfoMainHash } from './common/weapon_hash.dto'
 
 const HistoryDetail = z.object({
   id: CoopHistoryDetailId,
-  weapons: z.array(ImageURL),
+  weapons: z.array(WeaponInfoMainHash),
   coopStage: z.object({
     id: RawId(CoopStage.Id)
   })
