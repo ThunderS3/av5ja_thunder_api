@@ -17,7 +17,9 @@ export const Request = CoopData(
   })
 )
 
-export const Response = z.object({})
+export const Response = z.object({
+  assetURLs: z.array(z.string().url())
+})
 
 export class WeaponRecordQuery {
   private readonly request: Request
@@ -25,7 +27,21 @@ export class WeaponRecordQuery {
 
   constructor(data: object) {
     this.request = Request.parse(data)
-    this.response = Response.parse({})
+    this.response = Response.parse({
+      assetURLs: Array.from(
+        new Set(
+          this.request.data.weaponRecords.nodes.flatMap((record) => [
+            record.image2d.url,
+            record.subWeapon.image.url,
+            record.specialWeapon.image.url
+          ])
+        )
+      )
+    })
+  }
+
+  toJSON(): object {
+    return this.response
   }
 }
 

@@ -1,14 +1,34 @@
 {
-  "id": "998f51770f67ad689a62c018c7b7f951",
+  "hash": "998f51770f67ad689a62c018c7b7f951",
+  "id": {
+    "type": "CoopHistoryDetail",
+    "nplnUserId": "azdswcyquqxwekbm7mmm",
+    "playTime": "2024-06-22T15:56:49.000Z",
+    "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
+  },
   "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47",
-  "scale": [null, null, null],
+  "scale": [
+    null,
+    null,
+    null
+  ],
   "myResult": {
-    "id": "9e1acb10dcda55fa13d22d90ff0731e0",
+    "hash": "9e1acb10dcda55fa13d22d90ff0731e0",
+    "id": {
+      "type": "CoopPlayer",
+      "nplnUserId": "azdswcyquqxwekbm7mmm",
+      "playTime": "2024-06-22T15:56:49.000Z",
+      "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
+    },
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
     "nameplate": {
-      "badges": [6000100, 4000100, 6000105],
+      "badges": [
+        6000100,
+        4000100,
+        6000105
+      ],
       "background": {
         "id": 15042,
         "textColor": {
@@ -21,7 +41,9 @@
     },
     "uniform": 20,
     "species": "INKLING",
-    "weaponList": [4020],
+    "weaponList": [
+      4020
+    ],
     "isMyself": true,
     "nplnUserId": "azdswcyquqxwekbm7mmm",
     "specialId": 20010,
@@ -30,25 +52,52 @@
     "goldenIkuraAssistNum": 0,
     "helpCount": 0,
     "deadCount": 0,
-    "bossKillCounts": [1, 0, 0, 0, 1, 2, 1, 1, 2, 0, 0, 0, 0, 0],
+    "bossKillCounts": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      2,
+      1,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
     "bossKillCountsTotal": 8,
     "jobScore": 34,
     "gradeId": 8,
     "kumaPoint": 107,
     "gradePoint": 890,
     "smellMeter": 0,
-    "specialCounts": [1],
+    "specialCounts": [
+      1
+    ],
     "jobBonus": 0,
     "jobRate": 3.15
   },
   "otherResults": [
     {
-      "id": "ccfea6fbca6477f0c55ae142de2821e3",
+      "hash": "ccfea6fbca6477f0c55ae142de2821e3",
+      "id": {
+        "type": "CoopPlayer",
+        "nplnUserId": "acyteio7d5tnfv2xkomm",
+        "playTime": "2024-06-22T15:56:49.000Z",
+        "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
+      },
       "byname": "Ink-Covered Grandma",
       "name": "ーニミ",
       "nameId": "1659",
       "nameplate": {
-        "badges": [5000013, 5000063, 5200042],
+        "badges": [
+          5000013,
+          5000063,
+          5200042
+        ],
         "background": {
           "id": 11033,
           "textColor": {
@@ -61,7 +110,9 @@
       },
       "uniform": 20,
       "species": "OCTOLING",
-      "weaponList": [60],
+      "weaponList": [
+        60
+      ],
       "isMyself": false,
       "nplnUserId": "acyteio7d5tnfv2xkomm",
       "specialId": 20006,
@@ -92,17 +143,29 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [0],
+      "specialCounts": [
+        0
+      ],
       "jobBonus": null,
       "jobRate": null
     },
     {
-      "id": "ddc6e86415dba8079ea0ac29f8e8adf7",
+      "hash": "ddc6e86415dba8079ea0ac29f8e8adf7",
+      "id": {
+        "type": "CoopPlayer",
+        "nplnUserId": "axtvsd7eri36e4xvlrsm",
+        "playTime": "2024-06-22T15:56:49.000Z",
+        "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
+      },
       "byname": "Low-Rolling Cool Guy",
       "name": "Lín",
       "nameId": "9794",
       "nameplate": {
-        "badges": [null, null, 4100700],
+        "badges": [
+          null,
+          null,
+          4100700
+        ],
         "background": {
           "id": 2103,
           "textColor": {
@@ -115,7 +178,9 @@
       },
       "uniform": 10,
       "species": "INKLING",
-      "weaponList": [4020],
+      "weaponList": [
+        4020
+      ],
       "isMyself": false,
       "nplnUserId": "axtvsd7eri36e4xvlrsm",
       "specialId": 20012,
@@ -146,17 +211,29 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [0],
+      "specialCounts": [
+        0
+      ],
       "jobBonus": null,
       "jobRate": null
     },
     {
-      "id": "6297f8541b2309639d8ee8cb4a7cdced",
+      "hash": "6297f8541b2309639d8ee8cb4a7cdced",
+      "id": {
+        "type": "CoopPlayer",
+        "nplnUserId": "q3p32ish266yxrtipnmm",
+        "playTime": "2024-06-22T15:56:49.000Z",
+        "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
+      },
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
       "nameplate": {
-        "badges": [1011001, 5211000, 1011011],
+        "badges": [
+          1011001,
+          5211000,
+          1011011
+        ],
         "background": {
           "id": 15023,
           "textColor": {
@@ -169,7 +246,9 @@
       },
       "uniform": 9,
       "species": "OCTOLING",
-      "weaponList": [210],
+      "weaponList": [
+        210
+      ],
       "isMyself": false,
       "nplnUserId": "q3p32ish266yxrtipnmm",
       "specialId": 20009,
@@ -200,7 +279,9 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [0],
+      "specialCounts": [
+        0
+      ],
       "jobBonus": null,
       "jobRate": null
     }
@@ -212,8 +293,38 @@
     "isBossDefeated": null
   },
   "playTime": "2024-06-22T15:56:49.000Z",
-  "bossCounts": [2, 3, 2, 1, 5, 4, 2, 3, 5, 2, 1, 0, 0, 0],
-  "bossKillCounts": [2, 2, 2, 1, 5, 3, 2, 2, 3, 2, 1, 0, 0, 0],
+  "bossCounts": [
+    2,
+    3,
+    2,
+    1,
+    5,
+    4,
+    2,
+    3,
+    5,
+    2,
+    1,
+    0,
+    0,
+    0
+  ],
+  "bossKillCounts": [
+    2,
+    2,
+    2,
+    1,
+    5,
+    3,
+    2,
+    2,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0
+  ],
   "dangerRate": 3.33,
   "ikuraNum": 1041,
   "goldenIkuraNum": 29,
@@ -221,13 +332,13 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "id": "4ba963118e12f137a9f0e7505805e603",
+      "hash": "4ba963118e12f137a9f0e7505805e603",
       "waterLevel": 0,
       "eventType": 0,
       "quotaNum": 30,
       "goldenIkuraPopNum": 75,
       "goldenIkuraNum": 29,
-      "waveId": 1,
+      "id": 1,
       "isClear": false
     }
   ]

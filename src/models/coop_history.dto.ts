@@ -35,26 +35,27 @@ const HistoryGroup = z
       weaponList: result.weapons,
       stageId: result.coopStage.id,
       rareWeapons: [],
-      bossId: undefined
+      bossId: data.mode === CoopMode.PRIVATE_CUSTOM || data.mode === CoopMode.PRIVATE_SCENARIO ? null : undefined
     }
   })
 
-const CoopHistoryModel = z.object({
+const CoopResultModel = z.object({
   historyGroups: NodeList(HistoryGroup)
 })
 
 export const Request = CoopData(
   z.object({
-    coopResult: CoopHistoryModel
+    coopResult: CoopResultModel
   })
 )
+
+const CoopHistoryModel = z.object({
+  schedule: CoopScheduleModel,
+  results: z.array(CoopHistoryDetailId)
+})
+
 export const Response = z.object({
-  histories: z.array(
-    z.object({
-      schedule: CoopScheduleModel,
-      results: z.array(CoopHistoryDetailId)
-    })
-  )
+  histories: z.array(CoopHistoryModel)
 })
 
 export class CoopHistoryQuery {
@@ -73,6 +74,10 @@ export class CoopHistoryQuery {
     })
   }
 
+  get histories(): CoopHistoryModel[] {
+    return this.response.histories
+  }
+
   private get historyGroups(): HistoryGroup[] {
     return this.request.data.coopResult.historyGroups.nodes
   }
@@ -82,12 +87,7 @@ export class CoopHistoryQuery {
   }
 }
 
-declare module './coop_history.dto' {
-  interface HistoryGroup {
-    weaponList: WeaponInfoMain.Id[]
-  }
-}
-
+type CoopHistoryModel = z.infer<typeof CoopHistoryModel>
 type HistoryDetail = z.infer<typeof HistoryDetail>
 type HistoryGroup = z.infer<typeof HistoryGroup>
 type Request = z.infer<typeof Request>

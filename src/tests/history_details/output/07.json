@@ -1,14 +1,34 @@
 {
-  "id": "de7d2059ab6e31dc3f229524cfdacffa",
+  "hash": "de7d2059ab6e31dc3f229524cfdacffa",
+  "id": {
+    "type": "CoopHistoryDetail",
+    "nplnUserId": "q3usp72dqoznovbi3dvm",
+    "playTime": "2024-09-10T15:50:20.000Z",
+    "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
+  },
   "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786",
-  "scale": [null, null, null],
+  "scale": [
+    null,
+    null,
+    null
+  ],
   "myResult": {
-    "id": "9f0bdd2b4dd872dad602154fd5eb5be0",
+    "hash": "9f0bdd2b4dd872dad602154fd5eb5be0",
+    "id": {
+      "type": "CoopPlayer",
+      "nplnUserId": "q3usp72dqoznovbi3dvm",
+      "playTime": "2024-09-10T15:50:20.000Z",
+      "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
+    },
     "byname": "やわらかい若者",
     "name": "ピルクルミラクルケア",
     "nameId": "2951",
     "nameplate": {
-      "badges": [4100200, 3000000, 4100500],
+      "badges": [
+        4100200,
+        3000000,
+        4100500
+      ],
       "background": {
         "id": 15001,
         "textColor": {
@@ -21,7 +41,11 @@
     },
     "uniform": 21,
     "species": "INKLING",
-    "weaponList": [100, 1030, 310],
+    "weaponList": [
+      100,
+      1030,
+      310
+    ],
     "isMyself": true,
     "nplnUserId": "q3usp72dqoznovbi3dvm",
     "specialId": 20012,
@@ -30,25 +54,54 @@
     "goldenIkuraAssistNum": 0,
     "helpCount": 3,
     "deadCount": 1,
-    "bossKillCounts": [0, 2, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 2, 0],
+    "bossKillCounts": [
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
     "bossKillCountsTotal": 7,
     "jobScore": 98,
     "gradeId": 8,
     "kumaPoint": 275,
     "gradePoint": 40,
     "smellMeter": 3,
-    "specialCounts": [0, 0, 2],
+    "specialCounts": [
+      0,
+      0,
+      2
+    ],
     "jobBonus": 50,
     "jobRate": 2.3
   },
   "otherResults": [
     {
-      "id": "e8abd69de3666ac73fa714a7daa0d232",
+      "hash": "e8abd69de3666ac73fa714a7daa0d232",
+      "id": {
+        "type": "CoopPlayer",
+        "nplnUserId": "qopsverpvsr4ds7f7omm",
+        "playTime": "2024-09-10T15:50:20.000Z",
+        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
+      },
       "byname": "サーモンランの気分",
       "name": "みゅしゃん",
       "nameId": "2910",
       "nameplate": {
-        "badges": [6000100, 6000101, 6000102],
+        "badges": [
+          6000100,
+          6000101,
+          6000102
+        ],
         "background": {
           "id": 2001,
           "textColor": {
@@ -61,7 +114,11 @@
       },
       "uniform": 21,
       "species": "OCTOLING",
-      "weaponList": [1030, 2030, 100],
+      "weaponList": [
+        1030,
+        2030,
+        100
+      ],
       "isMyself": false,
       "nplnUserId": "qopsverpvsr4ds7f7omm",
       "specialId": 20009,
@@ -92,17 +149,31 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [1, 0, 1],
+      "specialCounts": [
+        1,
+        0,
+        1
+      ],
       "jobBonus": null,
       "jobRate": null
     },
     {
-      "id": "e5ff514da3592139d0e5e733bf1598fa",
+      "hash": "e5ff514da3592139d0e5e733bf1598fa",
+      "id": {
+        "type": "CoopPlayer",
+        "nplnUserId": "qjss357se6tlkhphanmm",
+        "playTime": "2024-09-10T15:50:20.000Z",
+        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
+      },
       "byname": "インドアなプログラマー",
       "name": "Goomy",
       "nameId": "1168",
       "nameplate": {
-        "badges": [1000711, 4000171, 1050301],
+        "badges": [
+          1000711,
+          4000171,
+          1050301
+        ],
         "background": {
           "id": 15012,
           "textColor": {
@@ -115,7 +186,11 @@
       },
       "uniform": 10,
       "species": "INKLING",
-      "weaponList": [2030, 310, 1030],
+      "weaponList": [
+        2030,
+        310,
+        1030
+      ],
       "isMyself": false,
       "nplnUserId": "qjss357se6tlkhphanmm",
       "specialId": 20017,
@@ -146,17 +221,31 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [1, 0, 1],
+      "specialCounts": [
+        1,
+        0,
+        1
+      ],
       "jobBonus": null,
       "jobRate": null
     },
     {
-      "id": "2b71233e9c2e3072d9076cc2580c53a7",
+      "hash": "2b71233e9c2e3072d9076cc2580c53a7",
+      "id": {
+        "type": "CoopPlayer",
+        "nplnUserId": "qbdkcbysqpmoidju4zmm",
+        "playTime": "2024-09-10T15:50:20.000Z",
+        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
+      },
       "byname": "となりのおねえさん",
       "name": "なまはむちゃん",
       "nameId": "1824",
       "nameplate": {
-        "badges": [5211000, 4100300, 3000000],
+        "badges": [
+          5211000,
+          4100300,
+          3000000
+        ],
         "background": {
           "id": 18001,
           "textColor": {
@@ -169,7 +258,11 @@
       },
       "uniform": 4,
       "species": "INKLING",
-      "weaponList": [310, 100, 2030],
+      "weaponList": [
+        310,
+        100,
+        2030
+      ],
       "isMyself": false,
       "nplnUserId": "qbdkcbysqpmoidju4zmm",
       "specialId": 20006,
@@ -200,7 +293,11 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [0, 0, 1],
+      "specialCounts": [
+        0,
+        0,
+        1
+      ],
       "jobBonus": null,
       "jobRate": null
     }
@@ -212,8 +309,38 @@
     "isBossDefeated": null
   },
   "playTime": "2024-09-10T15:50:20.000Z",
-  "bossCounts": [2, 5, 1, 2, 4, 3, 4, 5, 7, 0, 5, 0, 8, 0],
-  "bossKillCounts": [2, 4, 1, 2, 3, 3, 3, 5, 6, 0, 5, 0, 7, 0],
+  "bossCounts": [
+    2,
+    5,
+    1,
+    2,
+    4,
+    3,
+    4,
+    5,
+    7,
+    0,
+    5,
+    0,
+    8,
+    0
+  ],
+  "bossKillCounts": [
+    2,
+    4,
+    1,
+    2,
+    3,
+    3,
+    3,
+    5,
+    6,
+    0,
+    5,
+    0,
+    7,
+    0
+  ],
   "dangerRate": 1.65,
   "ikuraNum": 3008,
   "goldenIkuraNum": 83,
@@ -221,33 +348,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "id": "b2ba82a8309aacfe0407892d0aa523af",
+      "hash": "b2ba82a8309aacfe0407892d0aa523af",
       "waterLevel": 1,
       "eventType": 3,
       "quotaNum": 22,
       "goldenIkuraPopNum": 30,
       "goldenIkuraNum": 26,
-      "waveId": 1,
+      "id": 1,
       "isClear": true
     },
     {
-      "id": "cc8f9b9988f28ed84b5b64cc6c128075",
+      "hash": "cc8f9b9988f28ed84b5b64cc6c128075",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 24,
       "goldenIkuraPopNum": 45,
       "goldenIkuraNum": 26,
-      "waveId": 2,
+      "id": 2,
       "isClear": true
     },
     {
-      "id": "444d226c43b004ba8d6b02e4b6fdfc67",
+      "hash": "444d226c43b004ba8d6b02e4b6fdfc67",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 26,
       "goldenIkuraPopNum": 54,
       "goldenIkuraNum": 31,
-      "waveId": 3,
+      "id": 3,
       "isClear": true
     }
   ]

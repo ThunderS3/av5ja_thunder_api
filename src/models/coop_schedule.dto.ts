@@ -96,7 +96,9 @@ export const Response = z.preprocess(
 
 export class CoopScheduleQuery {
   private readonly request: Request
-  private readonly response: Response[]
+  private readonly response: {
+    schedules: Response[]
+  }
 
   private get schedules(): ScheduleModel[] {
     return [...this.request.normal, ...this.request.bigRun, ...this.request.teamContest]
@@ -104,7 +106,9 @@ export class CoopScheduleQuery {
 
   constructor(data: object) {
     this.request = Request.parse(data)
-    this.response = this.schedules.map((schedule) => Response.parse(schedule))
+    this.response = {
+      schedules: this.schedules.map((schedule) => Response.parse(schedule))
+    }
   }
 
   toJSON(): object {
