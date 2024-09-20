@@ -19,10 +19,10 @@ export namespace CoopEnemyInfo {
 
 export namespace CoopBossInfo {
   export enum Id {
-    Random = 31,
-    Triple = 30,
     SakelienGiant = 23,
     SakeRope = 24,
-    SakeJaw = 25
+    SakeJaw = 25,
+    Triple = 30,
+    Random = 31
   }
 }

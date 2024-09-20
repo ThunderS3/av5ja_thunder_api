@@ -1,6 +1,5 @@
 import { z } from '@hono/zod-openapi'
 import dayjs from 'dayjs'
-import { raw } from 'hono/html'
 
 export const CoopHistoryDetailId = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
