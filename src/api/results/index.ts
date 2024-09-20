@@ -1,8 +1,7 @@
 import { HTTPMethod } from '@/enums/method'
-import { CoopResultModel } from '@/models/coop_result.dto'
+import { CoopResult, CoopResultQuery } from '@/models/coop_result.dto'
 import type { Bindings } from '@/utils/bindings'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
-import { HTTPException } from 'hono/http-exception'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -17,20 +16,24 @@ app.openapi(
       body: {
         content: {
           'application/json': {
-            schema: CoopResultModel
+            schema: CoopResult.Request
           }
         }
       }
     },
     responses: {
       200: {
-        type: 'application/json',
+        content: {
+          'application/json': {
+            schema: CoopResult.Response
+          }
+        },
         description: '結果'
       }
     }
   }),
   async (c) => {
-    const body = c.req.valid('json')
-    return c.json(body)
+    c.req.valid('json')
+    return c.json(new CoopResultQuery(await c.req.json()))
   }
 )

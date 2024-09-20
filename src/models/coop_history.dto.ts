@@ -41,29 +41,33 @@ const HistoryGroup = z
 const CoopResultModel = z.object({
   historyGroups: NodeList(HistoryGroup)
 })
-
-export const Request = CoopData(
-  z.object({
-    coopResult: CoopResultModel
-  })
-)
-
 const CoopHistoryModel = z.object({
   schedule: CoopScheduleModel,
   results: z.array(CoopHistoryDetailId)
 })
 
-export const Response = z.object({
-  histories: z.array(CoopHistoryModel)
-})
+export namespace CoopHistory {
+  export const Request = CoopData(
+    z.object({
+      coopResult: CoopResultModel
+    })
+  )
+
+  export const Response = z.object({
+    histories: z.array(CoopHistoryModel)
+  })
+
+  export type Request = z.infer<typeof Request>
+  export type Response = z.infer<typeof Response>
+}
 
 export class CoopHistoryQuery {
-  private readonly request: Request
-  private readonly response: Response
+  private readonly request: CoopHistory.Request
+  private readonly response: CoopHistory.Response
 
   constructor(data: object) {
-    this.request = Request.parse(data)
-    this.response = Response.parse({
+    this.request = CoopHistory.Request.parse(data)
+    this.response = CoopHistory.Response.parse({
       histories: this.historyGroups.map((historyGroup) => {
         return {
           schedule: historyGroup,
@@ -81,7 +85,7 @@ export class CoopHistoryQuery {
     return this.request.data.coopResult.historyGroups.nodes
   }
 
-  toJSON() {
+  toJSON(): CoopHistory.Response {
     return this.response
   }
 }
@@ -89,5 +93,3 @@ export class CoopHistoryQuery {
 type CoopHistoryModel = z.infer<typeof CoopHistoryModel>
 type HistoryDetail = z.infer<typeof HistoryDetail>
 type HistoryGroup = z.infer<typeof HistoryGroup>
-type Request = z.infer<typeof Request>
-type Response = z.infer<typeof Response>

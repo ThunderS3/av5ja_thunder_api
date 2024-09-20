@@ -66,32 +66,35 @@ const CoopRecordModel = z.object({
   defeatBossRecords: z.array(DefeatEnemyModel)
 })
 
-export const Request = CoopData(
-  z.object({
-    coopRecord: CoopRecordModel
-  })
-)
+export namespace CoopRecord {
+  export const Request = CoopData(
+    z.object({
+      coopRecord: CoopRecordModel
+    })
+  )
 
-export const Response = z.object({
-  stageRecords: z.array(CoopStageRecordModel),
-  enemyRecords: z.array(EnemyRecordModel),
-  assetURLs: z.array(z.string().url())
-})
+  export const Response = z.object({
+    stageRecords: z.array(CoopStageRecordModel),
+    enemyRecords: z.array(EnemyRecordModel)
+  })
+
+  export type Request = z.infer<typeof Request>
+  export type Response = z.infer<typeof Response>
+}
 
 export class CoopRecordQuery {
-  private readonly request: Request
-  private readonly response: Response
+  private readonly request: CoopRecord.Request
+  private readonly response: CoopRecord.Response
 
   constructor(data: object) {
-    this.request = Request.parse(data)
-    this.response = Response.parse({
+    this.request = CoopRecord.Request.parse(data)
+    this.response = CoopRecord.Response.parse({
       stageRecords: this.stageRecords,
-      enemyRecords: this.enemyRecords,
-      assetURLs: this.assetURLs
+      enemyRecords: this.enemyRecords
     })
   }
 
-  toJSON(): object {
+  toJSON(): CoopRecord.Response {
     return this.response
   }
 
@@ -135,7 +138,7 @@ export class CoopRecordQuery {
         startTime: edge.node.startTime,
         endTime: edge.node.endTime,
         goldenIkuraNum: edge.node.highestJobScore,
-        grade: edge.node.highestGrade.id,
+        grade: edge.node.highestGrade?.id,
         gradePoint: edge.node.highestGradePoint,
         rank: edge.node.rankPercentile,
         stageId: edge.node.coopStage.id,
@@ -150,7 +153,7 @@ export class CoopRecordQuery {
         startTime: null,
         endTime: null,
         goldenIkuraNum: null,
-        grade: record.grade.id,
+        grade: record.grade?.id,
         gradePoint: record.gradePoint,
         rank: null,
         stageId: record.coopStage.id,
@@ -163,5 +166,3 @@ export class CoopRecordQuery {
 type CoopRecordModel = z.infer<typeof CoopRecordModel>
 type EnemyRecordModel = z.infer<typeof EnemyRecordModel>
 type CoopStageRecordModel = z.infer<typeof CoopStageRecordModel>
-type Request = z.infer<typeof Request>
-type Response = z.infer<typeof Response>

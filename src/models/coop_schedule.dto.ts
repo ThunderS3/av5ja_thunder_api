@@ -98,16 +98,17 @@ export class CoopScheduleQuery {
   private readonly response: {
     schedules: Response[]
   }
-
-  private get schedules(): ScheduleModel[] {
-    return [...this.request.normal, ...this.request.bigRun, ...this.request.teamContest]
-  }
-
-  constructor(data: object) {
+  constructor(data: object | unknown) {
     this.request = Request.parse(data)
     this.response = {
-      schedules: this.schedules.map((schedule) => Response.parse(schedule))
+      schedules: [...this.request.normal, ...this.request.bigRun, ...this.request.teamContest].map((schedule) =>
+        Response.parse(schedule)
+      )
     }
+  }
+
+  get schedules(): Response[] {
+    return this.response.schedules
   }
 
   toJSON(): object {

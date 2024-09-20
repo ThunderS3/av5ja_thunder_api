@@ -45,9 +45,10 @@ app.onError((error, c) => {
   if (error instanceof ZodError) {
     return c.json({ message: JSON.parse(error.message), description: error.cause }, 400)
   }
+  console.error(error)
   return c.json({ message: 'Internal Server Error' }, 500)
 })
-app.route('/v3/schedules', schedules)
+// app.route('/v3/schedules', schedules)
 app.route('/v3/results', results)
 app.route('/v1/histories', histories)
 app.route('/v1/records', records)
