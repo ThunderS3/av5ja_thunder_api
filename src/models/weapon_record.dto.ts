@@ -3,6 +3,7 @@ import { CoopData } from './common/coop_data.dto'
 import { ImageURL } from './common/image_url.dto'
 import { NodeList } from './common/node_list.dto'
 import { S3URL } from './common/s3_url.dto'
+import type { ResourceQuery } from './resource.interface'
 
 const WeaponRecordModel = z
   .object({
@@ -35,7 +36,7 @@ export namespace WeaponRecord {
   export type Response = z.infer<typeof Response>
 }
 
-export class WeaponRecordQuery {
+export class WeaponRecordQuery implements ResourceQuery {
   private readonly request: WeaponRecord.Request
   private readonly response: WeaponRecord.Response
 

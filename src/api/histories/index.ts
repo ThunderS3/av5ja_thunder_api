@@ -2,6 +2,7 @@ import { HTTPMethod } from '@/enums/method'
 import { CoopHistory, CoopHistoryQuery } from '@/models/coop_history.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
+import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()
@@ -10,6 +11,7 @@ app.openapi(
   createRoute({
     method: HTTPMethod.POST,
     security: [{ AuthorizationApiKey: [] }],
+    middleware: [resource],
     path: '/',
     tags: ['リザルト'],
     summary: '一覧',
@@ -39,8 +41,6 @@ app.openapi(
   }),
   async (c) => {
     c.req.valid('json')
-    const body: CoopHistoryQuery = new CoopHistoryQuery(await c.req.json())
-    console.log('[COOP HISTORY]:', body.assetURLs.length)
-    return c.json(body)
+    return c.json(new CoopHistoryQuery(await c.req.json()))
   }
 )

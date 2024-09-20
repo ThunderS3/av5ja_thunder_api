@@ -2,6 +2,7 @@ import { HTTPMethod } from '@/enums/method'
 import { CoopResult, CoopResultQuery } from '@/models/coop_result.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
+import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()
@@ -9,6 +10,7 @@ export const app = new Hono<{ Bindings: Bindings }>()
 app.openapi(
   createRoute({
     method: HTTPMethod.POST,
+    middleware: [resource],
     path: '/',
     tags: ['リザルト'],
     summary: '一覧詳細',
@@ -38,8 +40,6 @@ app.openapi(
   }),
   async (c) => {
     c.req.valid('json')
-    const body: CoopResultQuery = new CoopResultQuery(await c.req.json())
-    console.log('[COOP RESULT]:', body.assetURLs.length)
-    return c.json(body)
+    return c.json(new CoopResultQuery(await c.req.json()))
   }
 )

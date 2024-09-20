@@ -83,7 +83,7 @@ export namespace CoopRecord {
   export type Response = z.infer<typeof Response>
 }
 
-export class CoopRecordQuery {
+export class CoopRecordQuery implements ResourceQuery {
   private readonly request: CoopRecord.Request
   private readonly response: CoopRecord.Response
 

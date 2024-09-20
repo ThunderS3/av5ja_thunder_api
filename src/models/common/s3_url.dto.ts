@@ -6,14 +6,15 @@ export const S3URL = z.preprocess(
   (input: any) => {
     const url: URL = new URL(input)
     const expires: string | null = url.searchParams.get('Expires')
-    const expires_in: number = expires === null ? 0 : Number.parseInt(expires, 10) * 1000
+    const expires_in: number = expires === null ? 0 : Number.parseInt(expires, 10)
     const pattern: RegExp = /([a-f0-9]{64})/
     const match: RegExpMatchArray | null = url.pathname.match(pattern)
     return {
       protocol: url.protocol,
       hostname: url.hostname,
       pathname: url.pathname,
-      expires_in: dayjs(expires_in).toISOString(),
+      expiration: expires_in,
+      expires_in: dayjs(expires_in * 1000).toISOString(),
       searchParams: Object.fromEntries(url.searchParams),
       raw_value: input,
       key: match === null ? null : match[0]
@@ -24,6 +25,7 @@ export const S3URL = z.preprocess(
     hostname: z.string(),
     pathname: z.string(),
     expires_in: z.string().datetime(),
+    expiration: z.number().int(),
     raw_value: z.string().url(),
     key: z.string()
   })

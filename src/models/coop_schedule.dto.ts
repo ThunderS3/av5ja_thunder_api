@@ -7,6 +7,7 @@ import { WeaponInfoMain } from '@/enums/weapon/main'
 import { camelcaseKeys } from '@/utils/camelcase_keys'
 import { z } from '@hono/zod-openapi'
 import { DateTime } from './common/datetime.dto'
+import type { Resource } from './resource.interface'
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 const BigBossModel = z.preprocess((input: any) => {

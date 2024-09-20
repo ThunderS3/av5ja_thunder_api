@@ -19,6 +19,7 @@ import { RawId, RawInt } from './common/raw_id.dto'
 import { S3URL } from './common/s3_url.dto'
 import { WeaponInfoMainHash } from './common/weapon_hash.dto'
 import { CoopSchedule } from './coop_schedule.dto'
+import type { ResourceQuery } from './resource.interface'
 
 const BossResultModel = z
   .object({
@@ -107,7 +108,10 @@ const CoopPlayerResultModel = z.object({
   weapons: z.array(WeaponInfoMainHash),
   deliverCount: z.number().int().min(0),
   defeatEnemyCount: z.number().int().min(0),
-  specialWeapon: z.object({ weaponId: z.nativeEnum(WeaponInfoSpecial.Id).nullable() }),
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  specialWeapon: z.preprocess((input: any) => {
+    return input === null ? null : input.weaponId
+  }, z.nativeEnum(WeaponInfoSpecial.Id).nullable()),
   rescueCount: z.number().int().min(0)
 })
 
@@ -199,7 +203,7 @@ export namespace CoopHistoryDetail {
     })
 
   export const JobResult = z.object({
-    failureWave: z.number().int().min(0).max(5).nullable(),
+    failureWave: z.number().int().min(-1).max(5).nullable(),
     isClear: z.boolean(),
     bossId: z.nativeEnum(CoopBossInfo.Id).nullable(),
     isBossDefeated: z.boolean().nullable()
@@ -252,7 +256,7 @@ export namespace CoopHistoryDetail {
   export type Response = z.infer<typeof Response>
 }
 
-export class CoopHistoryDetailQuery {
+export class CoopHistoryDetailQuery implements ResourceQuery {
   private readonly request: CoopHistoryDetail.Request
   private readonly response: CoopHistoryDetail.Response
 
@@ -286,9 +290,13 @@ export class CoopHistoryDetailQuery {
   }
 
   get assetURLs(): S3URL[] {
-    return Array.from(new Set(this.memberResults.flatMap((member) => member.weapons.map((weapon) => weapon.url)))).map(
-      (url) => S3URL.parse(url)
-    )
+    return Array.from(
+      new Set(
+        this.memberResults
+          .flatMap((member) => member.weapons.map((weapon) => weapon.url))
+          .concat(this.coopHistoryDetail.enemyResults.map((result) => result.enemy.image.url))
+      )
+    ).map((url) => S3URL.parse(url))
   }
 
   private get waveResults(): CoopHistoryDetail.WaveResult[] {
@@ -354,10 +362,8 @@ export class CoopHistoryDetailQuery {
       kumaPoint: this.coopHistoryDetail.jobPoint,
       nplnUserId: result.player.id.nplnUserId,
       smellMeter: this.coopHistoryDetail.smellMeter,
-      specialCounts: this.specialCounts.map(
-        (counts) => counts.filter((id) => id === result.specialWeapon.weaponId).length
-      ),
-      specialId: result.specialWeapon.weaponId,
+      specialCounts: this.specialCounts.map((counts) => counts.filter((id) => id === result.specialWeapon).length),
+      specialId: result.specialWeapon,
       species: result.player.species,
       uniform: result.player.uniform.id,
       weaponList: result.weapons.map((weapon) => weapon.id)
@@ -398,10 +404,8 @@ export class CoopHistoryDetailQuery {
         kumaPoint: null,
         nplnUserId: result.player.id.nplnUserId,
         smellMeter: null,
-        specialCounts: this.specialCounts.map(
-          (counts) => counts.filter((id) => id === result.specialWeapon.weaponId).length
-        ),
-        specialId: result.specialWeapon.weaponId,
+        specialCounts: this.specialCounts.map((counts) => counts.filter((id) => id === result.specialWeapon).length),
+        specialId: result.specialWeapon,
         species: result.player.species,
         uniform: result.player.uniform.id,
         weaponList: result.weapons.map((weapon) => weapon.id)
