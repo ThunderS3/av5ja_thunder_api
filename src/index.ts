@@ -11,6 +11,7 @@ import { logger } from 'hono/logger'
 import { ZodError } from 'zod'
 import { app as histories } from './api/histories'
 import { app as records } from './api/records'
+import { app as resources } from './api/resources'
 import { app as results } from './api/results'
 import { app as schedules } from './api/schedules'
 import { app as version } from './api/version'
@@ -49,6 +50,7 @@ app.onError((error, c) => {
   return c.json({ message: 'Internal Server Error' }, 500)
 })
 // app.route('/v3/schedules', schedules)
+app.route('/v1/resouces', resources)
 app.route('/v3/results', results)
 app.route('/v1/histories', histories)
 app.route('/v1/records', records)

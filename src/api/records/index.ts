@@ -10,13 +10,15 @@ app.openapi(
     method: HTTPMethod.POST,
     path: '/',
     tags: ['記録'],
-    summary: 'サーモンラン記録',
-    description: 'アセットのURL一覧を返します',
+    summary: 'サーモンラン',
+    description: 'ステージ記録、オオモノシャケ、オカシラシャケの記録を返します',
     request: {
       body: {
         content: {
           'application/json': {
-            schema: CoopRecord.Request
+            schema: CoopRecord.Request.openapi({
+              description: 'CoopRecordQuery'
+            })
           }
         }
       }
@@ -34,6 +36,8 @@ app.openapi(
   }),
   async (c) => {
     c.req.valid('json')
-    return c.json(new CoopRecordQuery(await c.req.json()))
+    const body: CoopRecordQuery = new CoopRecordQuery(await c.req.json())
+    console.log('[COOP RECORD]:', body.assetURLs.length)
+    return c.json(body)
   }
 )

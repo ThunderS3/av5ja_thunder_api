@@ -1,7 +1,7 @@
 {
   "name": "thunder_api",
   "version": "6.0.0",
-  "description": "Unofficial Splatoon3 API",
+  "description": "SplatNet3から取得したJSONをパースしてSplatNet2形式などの扱いやすいフォーマットに変換してくれるAPIです",
   "author": "@tkgstrator",
   "private": true,
   "license": "MIT",

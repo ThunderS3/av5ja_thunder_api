@@ -2,14 +2,23 @@ import { z } from '@hono/zod-openapi'
 import { CoopData } from './common/coop_data.dto'
 import { ImageURL } from './common/image_url.dto'
 import { NodeList } from './common/node_list.dto'
+import { S3URL } from './common/s3_url.dto'
 
-const WeaponRecordModel = z.object({
-  subWeapon: ImageURL,
-  specialWeapon: ImageURL,
-  image2d: z.object({
-    url: z.string().url()
+const WeaponRecordModel = z
+  .object({
+    weaponId: z.number().int(),
+    subWeapon: ImageURL,
+    specialWeapon: ImageURL,
+    image2d: z.object({
+      url: z.string().url()
+    })
   })
-})
+  .transform((data) => {
+    return {
+      ...data,
+      coopAddition: (data.weaponId & 1) === 0
+    }
+  })
 
 export namespace WeaponRecord {
   export const Request = CoopData(
@@ -19,7 +28,7 @@ export namespace WeaponRecord {
   )
 
   export const Response = z.object({
-    assetURLs: z.array(z.string().url())
+    assetURLs: z.array(S3URL)
   })
 
   export type Request = z.infer<typeof Request>
@@ -35,7 +44,7 @@ export class WeaponRecordQuery {
     this.response = WeaponRecord.Response.parse({
       assetURLs: Array.from(
         new Set(
-          this.request.data.weaponRecords.nodes.flatMap((record) => [
+          this.weaponRecords.flatMap((record) => [
             record.image2d.url,
             record.subWeapon.image.url,
             record.specialWeapon.image.url
@@ -45,7 +54,17 @@ export class WeaponRecordQuery {
     })
   }
 
+  private get weaponRecords(): WeaponRecordModel[] {
+    return this.request.data.weaponRecords.nodes.filter((node) => node.coopAddition)
+  }
+
+  get assetURLs(): S3URL[] {
+    return this.response.assetURLs
+  }
+
   toJSON(): object {
     return this.response
   }
 }
+
+type WeaponRecordModel = z.infer<typeof WeaponRecordModel>

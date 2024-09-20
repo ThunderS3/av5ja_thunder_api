@@ -7,8 +7,9 @@ import { CoopHistoryDetailId } from './common/coop_history_detail_id.dto'
 import { DateTime } from './common/datetime.dto'
 import { NodeList } from './common/node_list.dto'
 import { RawId } from './common/raw_id.dto'
+import { S3URL } from './common/s3_url.dto'
 import { WeaponInfoMainHash } from './common/weapon_hash.dto'
-import { Response as CoopScheduleModel } from './coop_schedule.dto'
+import { CoopSchedule } from './coop_schedule.dto'
 
 const HistoryDetail = z.object({
   id: CoopHistoryDetailId,
@@ -31,7 +32,7 @@ const HistoryGroup = z
     const result: HistoryDetail = data.historyDetails.nodes[0]
     return {
       ...data,
-      weaponList: result.weapons,
+      weaponList: result.weapons.map((weapon) => weapon.id),
       stageId: result.coopStage.id,
       rareWeapons: [],
       bossId: data.mode === CoopMode.PRIVATE_CUSTOM || data.mode === CoopMode.PRIVATE_SCENARIO ? null : undefined
@@ -42,7 +43,7 @@ const CoopResultModel = z.object({
   historyGroups: NodeList(HistoryGroup)
 })
 const CoopHistoryModel = z.object({
-  schedule: CoopScheduleModel,
+  schedule: CoopSchedule.Response,
   results: z.array(CoopHistoryDetailId)
 })
 
@@ -75,6 +76,20 @@ export class CoopHistoryQuery {
         }
       })
     })
+  }
+
+  private get historyDetails(): HistoryDetail[] {
+    return this.historyGroups.flatMap((group) => group.historyDetails.nodes)
+  }
+
+  /**
+   * 画像のURL
+   */
+  get assetURLs(): S3URL[] {
+    console.log('[COOP HISTORY QUERY]')
+    return Array.from(
+      new Set(this.historyDetails.flatMap((historyDetail) => historyDetail.weapons.map((weapon) => weapon.url)))
+    ).map((url) => S3URL.parse(url))
   }
 
   get histories(): CoopHistoryModel[] {

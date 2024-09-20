@@ -8,6 +8,7 @@ import { CoopGradeModel } from './common/coop_grade.dto'
 import { CoopStageModel } from './common/coop_stage.dto'
 import { DateTime } from './common/datetime.dto'
 import { ImageURL } from './common/image_url.dto'
+import { S3URL } from './common/s3_url.dto'
 
 const DefeatEnemyModel = z.object({
   enemy: z
@@ -98,16 +99,17 @@ export class CoopRecordQuery {
     return this.response
   }
 
-  private get coopRecord(): CoopRecordModel {
-    return this.request.data.coopRecord
-  }
-
-  private get assetURLs(): string[] {
+  get assetURLs(): S3URL[] {
     return this.coopRecord.stageHighestRecords
       .map((record) => record.coopStage.image.url)
       .concat(this.coopRecord.bigRunRecord.records.edges.map((edge) => edge.node.coopStage.image.url))
       .concat(this.coopRecord.defeatEnemyRecords.flatMap((record) => record.enemy.image.url))
       .concat(this.coopRecord.defeatBossRecords.flatMap((record) => record.enemy.image.url))
+      .map((url) => S3URL.parse(url))
+  }
+
+  private get coopRecord(): CoopRecordModel {
+    return this.request.data.coopRecord
   }
 
   private get enemyRecords(): EnemyRecordModel[] {
