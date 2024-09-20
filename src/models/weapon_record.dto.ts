@@ -11,23 +11,28 @@ const WeaponRecordModel = z.object({
   })
 })
 
-export const Request = CoopData(
-  z.object({
-    weaponRecords: NodeList(WeaponRecordModel)
-  })
-)
+export namespace WeaponRecord {
+  export const Request = CoopData(
+    z.object({
+      weaponRecords: NodeList(WeaponRecordModel)
+    })
+  )
 
-export const Response = z.object({
-  assetURLs: z.array(z.string().url())
-})
+  export const Response = z.object({
+    assetURLs: z.array(z.string().url())
+  })
+
+  export type Request = z.infer<typeof Request>
+  export type Response = z.infer<typeof Response>
+}
 
 export class WeaponRecordQuery {
-  private readonly request: Request
-  private readonly response: Response
+  private readonly request: WeaponRecord.Request
+  private readonly response: WeaponRecord.Response
 
   constructor(data: object) {
-    this.request = Request.parse(data)
-    this.response = Response.parse({
+    this.request = WeaponRecord.Request.parse(data)
+    this.response = WeaponRecord.Response.parse({
       assetURLs: Array.from(
         new Set(
           this.request.data.weaponRecords.nodes.flatMap((record) => [
@@ -44,6 +49,3 @@ export class WeaponRecordQuery {
     return this.response
   }
 }
-
-type Request = z.infer<typeof Request>
-type Response = z.infer<typeof Response>

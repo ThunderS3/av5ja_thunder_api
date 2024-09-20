@@ -1,4 +1,4 @@
-import { Phase, type Schedule } from '@/models/coop_schedule.dto'
+import { CoopScheduleQuery } from '@/models/coop_schedule.dto'
 import { HTTPException } from 'hono/http-exception'
 import type { StatusCode } from 'hono/utils/http-status'
 import type { Bindings } from '../bindings'
@@ -10,10 +10,9 @@ const update = async (env: Bindings): Promise<void> => {
   if (!response.ok) {
     throw new HTTPException(response.status as StatusCode, { message: response.statusText })
   }
-  const schedules: Schedule[] = Phase.parse(await response.json()).schedules
-  // console.log('[OATMEALDOME]: URL', url.href)
-  // console.log('[OATMEALDOME]: DATA', schedules)
-  await Promise.all(schedules.map(async (schedule) => env.Schedule.put(schedule.key, JSON.stringify(schedule.data))))
+  const schedules = new CoopScheduleQuery(await response.json()).schedules
+  console.log(schedules)
+  // await Promise.all(schedules.map(async (schedule) => env.Schedule.put(schedule.key, JSON.stringify(schedule.data))))
 }
 
 export const scheduled = async (event: ScheduledController, env: Bindings, ctx: ExecutionContext): Promise<void> => {

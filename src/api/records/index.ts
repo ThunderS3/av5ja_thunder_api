@@ -1,7 +1,7 @@
 import { HTTPMethod } from '@/enums/method'
-import { CoopRecordModel } from '@/models/coop_record.dto'
+import { CoopRecord, CoopRecordQuery } from '@/models/coop_record.dto'
 import type { Bindings } from '@/utils/bindings'
-import { OpenAPIHono as Hono, createRoute } from '@hono/zod-openapi'
+import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -16,31 +16,24 @@ app.openapi(
       body: {
         content: {
           'application/json': {
-            schema: CoopRecordModel.Req
+            schema: CoopRecord.Request
           }
         }
       }
     },
     responses: {
-      200: {
+      201: {
         content: {
           'application/json': {
-            schema: CoopRecordModel.Res
+            schema: CoopRecord.Response
           }
         },
-        description: 'ブキ記録'
+        description: 'サーモンラン記録'
       }
     }
   }),
   async (c) => {
-    const body: CoopRecordModel.Req = c.req.valid('json')
-    return c.json(
-      CoopRecordModel.Res.parse({
-        stageRecords: body.stageRecords,
-        enemyRecords: body.enemyRecords,
-        assetURLs: body.assetURLs
-      }),
-      200
-    )
+    c.req.valid('json')
+    return c.json(new CoopRecordQuery(await c.req.json()))
   }
 )
