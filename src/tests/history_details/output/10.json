@@ -7,11 +7,7 @@
     "uuid": "d3393163-5768-4563-a486-74c5524c2b99"
   },
   "uuid": "d3393163-5768-4563-a486-74c5524c2b99",
-  "scale": [
-    null,
-    null,
-    null
-  ],
+  "scale": [null, null, null],
   "myResult": {
     "hash": "46d952531b8cf6e9d8567a546c9089cd",
     "id": {
@@ -24,11 +20,7 @@
     "name": "´ω` Waffle",
     "nameId": "3191",
     "nameplate": {
-      "badges": [
-        6000100,
-        4000100,
-        6000105
-      ],
+      "badges": [6000100, 4000100, 6000105],
       "background": {
         "id": 15042,
         "textColor": {
@@ -41,11 +33,7 @@
     },
     "uniform": 20,
     "species": "INKLING",
-    "weaponList": [
-      60,
-      210,
-      1030
-    ],
+    "weaponList": [60, 210, 1030],
     "isMyself": true,
     "nplnUserId": "azdswcyquqxwekbm7mmm",
     "specialId": 20013,
@@ -54,33 +42,14 @@
     "goldenIkuraAssistNum": 0,
     "helpCount": 3,
     "deadCount": 1,
-    "bossKillCounts": [
-      4,
-      0,
-      5,
-      0,
-      2,
-      3,
-      1,
-      1,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
+    "bossKillCounts": [4, 0, 5, 0, 2, 3, 1, 1, 2, 0, 0, 0, 0, 0],
     "bossKillCountsTotal": 18,
     "jobScore": 132,
     "gradeId": 8,
     "kumaPoint": 446,
     "gradePoint": 740,
     "smellMeter": 1,
-    "specialCounts": [
-      0,
-      1,
-      1
-    ],
+    "specialCounts": [0, 1, 1],
     "jobBonus": 50,
     "jobRate": 3
   },
@@ -97,11 +66,7 @@
       "name": "Joeèéêëēęě",
       "nameId": "1200",
       "nameplate": {
-        "badges": [
-          1011001,
-          5211000,
-          1011011
-        ],
+        "badges": [1011001, 5211000, 1011011],
         "background": {
           "id": 15023,
           "textColor": {
@@ -114,11 +79,7 @@
       },
       "uniform": 15,
       "species": "OCTOLING",
-      "weaponList": [
-        210,
-        4020,
-        60
-      ],
+      "weaponList": [210, 4020, 60],
       "isMyself": false,
       "nplnUserId": "q3p32ish266yxrtipnmm",
       "specialId": 20010,
@@ -149,11 +110,7 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [
-        0,
-        0,
-        1
-      ],
+      "specialCounts": [0, 0, 1],
       "jobBonus": null,
       "jobRate": null
     },
@@ -169,11 +126,7 @@
       "name": "Alvin",
       "nameId": "6806",
       "nameplate": {
-        "badges": [
-          5211000,
-          5200082,
-          5200042
-        ],
+        "badges": [5211000, 5200082, 5200042],
         "background": {
           "id": 15021,
           "textColor": {
@@ -186,11 +139,7 @@
       },
       "uniform": 20,
       "species": "INKLING",
-      "weaponList": [
-        90,
-        60,
-        4020
-      ],
+      "weaponList": [90, 60, 4020],
       "isMyself": false,
       "nplnUserId": "qntjfxnsmuwseqbtbomm",
       "specialId": 20017,
@@ -221,11 +170,7 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [
-        1,
-        0,
-        1
-      ],
+      "specialCounts": [1, 0, 1],
       "jobBonus": null,
       "jobRate": null
     },
@@ -241,11 +186,7 @@
       "name": "Tamatoes",
       "nameId": "2601",
       "nameplate": {
-        "badges": [
-          5210200,
-          5200041,
-          5200042
-        ],
+        "badges": [5210200, 5200041, 5200042],
         "background": {
           "id": 17002,
           "textColor": {
@@ -258,11 +199,7 @@
       },
       "uniform": 18,
       "species": "OCTOLING",
-      "weaponList": [
-        4020,
-        1120,
-        210
-      ],
+      "weaponList": [4020, 1120, 210],
       "isMyself": false,
       "nplnUserId": "qd3ycbkmraqlpl5mwymm",
       "specialId": 20014,
@@ -293,11 +230,7 @@
       "kumaPoint": null,
       "gradePoint": null,
       "smellMeter": null,
-      "specialCounts": [
-        0,
-        1,
-        1
-      ],
+      "specialCounts": [0, 1, 1],
       "jobBonus": null,
       "jobRate": null
     }
@@ -309,38 +242,8 @@
     "isBossDefeated": null
   },
   "playTime": "2024-06-22T12:18:58.000Z",
-  "bossCounts": [
-    15,
-    6,
-    9,
-    9,
-    7,
-    6,
-    7,
-    9,
-    10,
-    1,
-    5,
-    0,
-    0,
-    0
-  ],
-  "bossKillCounts": [
-    15,
-    6,
-    9,
-    9,
-    7,
-    5,
-    7,
-    9,
-    9,
-    1,
-    5,
-    0,
-    0,
-    0
-  ],
+  "bossCounts": [15, 6, 9, 9, 7, 6, 7, 9, 10, 1, 5, 0, 0, 0],
+  "bossKillCounts": [15, 6, 9, 9, 7, 5, 7, 9, 9, 1, 5, 0, 0, 0],
   "dangerRate": 2.91,
   "ikuraNum": 3466,
   "goldenIkuraNum": 115,
