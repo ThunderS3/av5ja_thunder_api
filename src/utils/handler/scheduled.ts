@@ -1,7 +1,8 @@
-import { CoopScheduleQuery } from '@/models/coop_schedule.dto'
+import { type CoopSchedule, CoopScheduleQuery } from '@/models/coop_schedule.dto'
 import { HTTPException } from 'hono/http-exception'
 import type { StatusCode } from 'hono/utils/http-status'
 import type { Bindings } from '../bindings'
+import dummy from './dummy.json'
 
 const update = async (env: Bindings): Promise<void> => {
   const url: URL = new URL('/api/v1/three/coop/phases', 'https://splatoon.oatmealdome.me')
@@ -11,15 +12,36 @@ const update = async (env: Bindings): Promise<void> => {
     throw new HTTPException(response.status as StatusCode, { message: response.statusText })
   }
   const schedules = new CoopScheduleQuery(await response.json()).schedules
-  console.log(schedules)
-  // await Promise.all(schedules.map(async (schedule) => env.Schedule.put(schedule.key, JSON.stringify(schedule.data))))
+  // 個別にデータ追加
+  // 本来は不要な処理だが、念の為バックアップをとっておく
+  await Promise.all(
+    schedules.map(async (schedule) =>
+      env.Schedule.put(`${schedule.startTime}:${schedule.endTime}`, JSON.stringify(schedule))
+    )
+  )
+  // キャッシュの更新
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  const cache: any | null = await env.Cache.get('api.splatnet3.com/v3/schedules', { type: 'json' })
+  if (cache === null) {
+    // キャッシュがなければダミーデータを追加
+    await env.Cache.put('api.splatnet3.com/v3/schedules', JSON.stringify(dummy.schedules))
+    return
+  }
+  const update_cache: CoopSchedule.Response[] = Array.from(
+    new Map([...cache, ...schedules].map((obj) => [obj.id, obj])).values()
+  )
+  // console.log('[SCHEDULES DUMMY]:', dummy.schedules.length)
+  // console.log('[SCHEDULES CACHE OLD]:', cache.length)
+  // console.log('[SCHEDULES CACHE NEW]:', update_cache.length)
+  await env.Cache.put('api.splatnet3.com/v3/schedules', JSON.stringify(update_cache))
 }
 
 export const scheduled = async (event: ScheduledController, env: Bindings, ctx: ExecutionContext): Promise<void> => {
-  console.log(event.cron)
-  console.log(await env.Schedule.list({ limit: 10 }))
   switch (event.cron) {
-    default:
+    case '*/30 0 * * *':
       ctx.waitUntil(update(env))
+      break
+    default:
+      break
   }
 }
