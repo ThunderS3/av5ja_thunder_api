@@ -1,5 +1,5 @@
 import { describe, expect, it, test } from 'bun:test'
-import { readFileSync, readdirSync } from 'node:fs'
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { CoopResultQuery } from '@/models/coop_result.dto'
 

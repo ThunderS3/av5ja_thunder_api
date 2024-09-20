@@ -334,7 +334,7 @@ export class CoopHistoryDetailQuery {
       deadCount: result.rescuedCount,
       goldenIkuraAssistNum: result.goldenAssistCount,
       goldenIkuraNum: result.goldenDeliverCount,
-      gradeId: this.coopHistoryDetail.afterGrade.id,
+      gradeId: this.coopHistoryDetail.afterGrade?.id || null,
       gradePoint: this.coopHistoryDetail.afterGradePoint,
       helpCount: result.rescueCount,
       ikuraNum: result.deliverCount,
