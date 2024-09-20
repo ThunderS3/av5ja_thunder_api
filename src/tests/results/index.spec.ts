@@ -4,22 +4,20 @@ import path from 'node:path'
 import { CoopResultQuery } from '@/models/coop_result.dto'
 
 describe('CoopResultQuery', () => {
-  test('Parse', () => {
+  test('Validity', () => {
     const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
     for (const file of files) {
       const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
       expect(() => new CoopResultQuery(JSON.parse(data))).not.toThrow()
     }
   })
-  // test('Equality', () => {
-  //   const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
-  //   for (const file of files) {
-  //     const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
-  //     const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
-  //     const input_model: CoopWeaponRecordModel.Req = CoopWeaponRecordModel.Req.parse(JSON.parse(input))
-  //     const output_model: CoopWeaponRecordModel.Res = CoopWeaponRecordModel.Res.parse(JSON.parse(output))
-  //     expect(input_model.res.assetURLs.length).toEqual(output_model.assetURLs.length)
-  //     expect(Bun.deepEquals(input_model.res, output_model, true)).toBe(true)
-  //   }
-  // })
+  test('Equality', () => {
+    const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
+    for (const file of files) {
+      const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
+      const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
+      const input_model: CoopResultQuery = new CoopResultQuery(JSON.parse(input))
+      expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output))).toBe(true)
+    }
+  })
 })
