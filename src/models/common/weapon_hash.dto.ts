@@ -1,4 +1,4 @@
-import { Hash2Id, WeaponInfoMain } from '@/enums/weapon/main'
+import { Hash2Id } from '@/enums/weapon/main'
 import { HTTPException } from 'hono/http-exception'
 import { ImageURL } from './image_url.dto'
 

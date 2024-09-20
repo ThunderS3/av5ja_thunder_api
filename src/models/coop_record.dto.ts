@@ -2,16 +2,12 @@ import { CoopBossInfo, CoopEnemyInfo } from '@/enums/coop/coop_enemy'
 import { CoopGrade } from '@/enums/coop/coop_grade'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { CoopTrophy } from '@/enums/coop/coop_trophy'
-import type { CoopRecord } from '@/schema/coop_record.dto'
 import { z } from '@hono/zod-openapi'
-import dayjs from 'dayjs'
-import { startTime } from 'hono/timing'
 import { CoopData } from './common/coop_data.dto'
 import { CoopGradeModel } from './common/coop_grade.dto'
 import { CoopStageModel } from './common/coop_stage.dto'
 import { DateTime } from './common/datetime.dto'
 import { ImageURL } from './common/image_url.dto'
-import { RawId } from './common/raw_id.dto'
 
 const DefeatEnemyModel = z.object({
   enemy: z

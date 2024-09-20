@@ -1,7 +1,6 @@
 import { CoopMode } from '@/enums/coop/coop_mode'
 import { CoopRule } from '@/enums/coop/coop_rule'
 import { CoopStage } from '@/enums/coop/coop_stage'
-import type { WeaponInfoMain } from '@/enums/weapon/main'
 import { z } from '@hono/zod-openapi'
 import { CoopData } from './common/coop_data.dto'
 import { CoopHistoryDetailId } from './common/coop_history_detail_id.dto'
