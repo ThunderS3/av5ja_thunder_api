@@ -16,8 +16,9 @@ import { CoopStageModel } from './common/coop_stage.dto'
 import { DateTime } from './common/datetime.dto'
 import { ImageURL } from './common/image_url.dto'
 import { RawId, RawInt } from './common/raw_id.dto'
+import { S3URL } from './common/s3_url.dto'
 import { WeaponInfoMainHash } from './common/weapon_hash.dto'
-import { Response as CoopScheduleModel } from './coop_schedule.dto'
+import { CoopSchedule } from './coop_schedule.dto'
 
 const BossResultModel = z
   .object({
@@ -143,13 +144,13 @@ const CoopHistoryDetailModel = z.object({
   weapons: z.array(WeaponInfoMainHash)
 })
 
-export const Request = CoopData(
-  z.object({
-    coopHistoryDetail: CoopHistoryDetailModel
-  })
-)
+export namespace CoopHistoryDetail {
+  export const Request = CoopData(
+    z.object({
+      coopHistoryDetail: CoopHistoryDetailModel
+    })
+  )
 
-namespace CoopHistoryDetail {
   export const CoopPlayerResult = z
     .object({
       id: CoopPlayerId,
@@ -215,47 +216,49 @@ namespace CoopHistoryDetail {
     isClear: z.boolean()
   })
 
+  /**
+   * サーモンランのリザルトフォーマット
+   */
+  export const Response = z
+    .object({
+      id: CoopHistoryDetailId,
+      uuid: z.string(),
+      schedule: CoopSchedule.Response.optional(),
+      scale: z.array(z.number().int().min(0).max(39).nullable()),
+      myResult: CoopHistoryDetail.CoopPlayerResult,
+      otherResults: z.array(CoopHistoryDetail.CoopPlayerResult),
+      jobResult: CoopHistoryDetail.JobResult,
+      playTime: DateTime,
+      bossCounts: z.array(z.number().int().min(0)).length(14),
+      bossKillCounts: z.array(z.number().int().min(0)).length(14),
+      dangerRate: z.number().min(0).max(3.33),
+      ikuraNum: z.number().int().min(0),
+      goldenIkuraNum: z.number().int().min(0),
+      goldenIkuraAssistNum: z.number().int().min(0),
+      scenarioCode: z.string().nullable(),
+      waveDetails: z.array(CoopHistoryDetail.WaveResult)
+    })
+    .transform((data) => {
+      return {
+        hash: createHash('md5').update(`${data.playTime}:${data.uuid}`).digest('hex'),
+        ...data
+      }
+    })
+
   export type CoopPlayerResult = z.infer<typeof CoopPlayerResult>
   export type JobResult = z.infer<typeof JobResult>
   export type WaveResult = z.infer<typeof WaveResult>
+  export type Request = z.infer<typeof Request>
+  export type Response = z.infer<typeof Response>
 }
 
-/**
- * サーモンランのリザルトフォーマット
- */
-export const Response = z
-  .object({
-    id: CoopHistoryDetailId,
-    uuid: z.string(),
-    schedule: CoopScheduleModel.optional(),
-    scale: z.array(z.number().int().min(0).max(39).nullable()),
-    myResult: CoopHistoryDetail.CoopPlayerResult,
-    otherResults: z.array(CoopHistoryDetail.CoopPlayerResult),
-    jobResult: CoopHistoryDetail.JobResult,
-    playTime: DateTime,
-    bossCounts: z.array(z.number().int().min(0)).length(14),
-    bossKillCounts: z.array(z.number().int().min(0)).length(14),
-    dangerRate: z.number().min(0).max(3.33),
-    ikuraNum: z.number().int().min(0),
-    goldenIkuraNum: z.number().int().min(0),
-    goldenIkuraAssistNum: z.number().int().min(0),
-    scenarioCode: z.string().nullable(),
-    waveDetails: z.array(CoopHistoryDetail.WaveResult)
-  })
-  .transform((data) => {
-    return {
-      hash: createHash('md5').update(`${data.playTime}:${data.uuid}`).digest('hex'),
-      ...data
-    }
-  })
-
 export class CoopHistoryDetailQuery {
-  private readonly request: Request
-  private readonly response: Response
+  private readonly request: CoopHistoryDetail.Request
+  private readonly response: CoopHistoryDetail.Response
 
   constructor(data: object) {
-    this.request = Request.parse(data)
-    this.response = Response.parse({
+    this.request = CoopHistoryDetail.Request.parse(data)
+    this.response = CoopHistoryDetail.Response.parse({
       id: this.coopHistoryDetail.id,
       uuid: this.coopHistoryDetail.id.uuid,
       playTime: this.coopHistoryDetail.id.playTime,
@@ -274,12 +277,18 @@ export class CoopHistoryDetailQuery {
     })
   }
 
-  get result(): Response {
+  toJSON(): CoopHistoryDetail.Response {
     return this.response
   }
 
-  toJSON(): object {
+  get result(): CoopHistoryDetail.Response {
     return this.response
+  }
+
+  get assetURLs(): S3URL[] {
+    return Array.from(new Set(this.memberResults.flatMap((member) => member.weapons.map((weapon) => weapon.url)))).map(
+      (url) => S3URL.parse(url)
+    )
   }
 
   private get waveResults(): CoopHistoryDetail.WaveResult[] {
@@ -351,7 +360,7 @@ export class CoopHistoryDetailQuery {
       specialId: result.specialWeapon.weaponId,
       species: result.player.species,
       uniform: result.player.uniform.id,
-      weaponList: result.weapons
+      weaponList: result.weapons.map((weapon) => weapon.id)
     })
   }
 
@@ -395,7 +404,7 @@ export class CoopHistoryDetailQuery {
         specialId: result.specialWeapon.weaponId,
         species: result.player.species,
         uniform: result.player.uniform.id,
-        weaponList: result.weapons
+        weaponList: result.weapons.map((weapon) => weapon.id)
       })
     )
   }
@@ -444,5 +453,3 @@ export class CoopHistoryDetailQuery {
 type CoopPlayerResultModel = z.infer<typeof CoopPlayerResultModel>
 type EnemyResultModel = z.infer<typeof EnemyResultModel>
 type CoopHistoryDetailModel = z.infer<typeof CoopHistoryDetailModel>
-type Request = z.infer<typeof Request>
-type Response = z.infer<typeof Response>

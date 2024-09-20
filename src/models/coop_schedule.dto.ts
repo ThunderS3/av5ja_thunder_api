@@ -47,67 +47,73 @@ const ScheduleModel = (mode: CoopMode, rule: CoopRule) =>
       }
     })
 
-export const Request = z.preprocess(
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  (input: any) => {
-    return camelcaseKeys(input)
-  },
-  z.object({
-    normal: z.array(ScheduleModel(CoopMode.REGULAR, CoopRule.REGULAR)),
-    bigRun: z.array(ScheduleModel(CoopMode.REGULAR, CoopRule.BIG_RUN)),
-    teamContest: z.array(ScheduleModel(CoopMode.LIMITED, CoopRule.TEAM_CONTEST))
-  })
-)
+export namespace CoopSchedule {
+  export const Request = z.preprocess(
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    (input: any) => {
+      return camelcaseKeys(input)
+    },
+    z.object({
+      normal: z.array(ScheduleModel(CoopMode.REGULAR, CoopRule.REGULAR)),
+      bigRun: z.array(ScheduleModel(CoopMode.REGULAR, CoopRule.BIG_RUN)),
+      teamContest: z.array(ScheduleModel(CoopMode.LIMITED, CoopRule.TEAM_CONTEST))
+    })
+  )
 
-/**
- * サーモンランのスケジュール
- * 自動でIDを生成する
- */
-export const Response = z.preprocess(
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  (input: any) => {
-    if (input.bossId === undefined) input.bossId = undefined
-    return input
-  },
-  z
-    .object({
-      startTime: DateTime,
-      endTime: DateTime,
-      mode: z.nativeEnum(CoopMode),
-      rule: z.nativeEnum(CoopRule),
-      bossId: z.nativeEnum(CoopBossInfo.Id).nullish(),
-      stageId: z.nativeEnum(CoopStage.Id),
-      rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id)),
-      weaponList: z.array(z.nativeEnum(WeaponInfoMain.Id))
-    })
-    .transform((object) => {
-      return {
-        id:
-          object.startTime === null || object.endTime === null
-            ? createHash('md5')
-                .update(`${object.mode}-${object.rule}-${object.stageId}-${object.weaponList.join(',')}`)
-                .digest('hex')
-            : createHash('md5').update(`${object.startTime}:${object.endTime}`).digest('hex'),
-        ...object
-      }
-    })
-)
+  /**
+   * サーモンランのスケジュール
+   * 自動でIDを生成する
+   */
+  export const Response = z.preprocess(
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    (input: any) => {
+      if (input === null) return input
+      if (input.bossId === undefined) input.bossId = undefined
+      return input
+    },
+    z
+      .object({
+        startTime: DateTime,
+        endTime: DateTime,
+        mode: z.nativeEnum(CoopMode),
+        rule: z.nativeEnum(CoopRule),
+        bossId: z.nativeEnum(CoopBossInfo.Id).nullish(),
+        stageId: z.nativeEnum(CoopStage.Id),
+        rareWeapons: z.array(z.nativeEnum(WeaponInfoMain.Id)),
+        weaponList: z.array(z.nativeEnum(WeaponInfoMain.Id))
+      })
+      .transform((object) => {
+        return {
+          id:
+            object.startTime === null || object.endTime === null
+              ? createHash('md5')
+                  .update(`${object.mode}-${object.rule}-${object.stageId}-${object.weaponList.join(',')}`)
+                  .digest('hex')
+              : createHash('md5').update(`${object.startTime}:${object.endTime}`).digest('hex'),
+          ...object
+        }
+      })
+  )
+
+  export type Request = z.infer<typeof Request>
+  export type Response = z.infer<typeof Response>
+}
 
 export class CoopScheduleQuery {
-  private readonly request: Request
+  private readonly request: CoopSchedule.Request
   private readonly response: {
-    schedules: Response[]
+    schedules: CoopSchedule.Response[]
   }
   constructor(data: object | unknown) {
-    this.request = Request.parse(data)
+    this.request = CoopSchedule.Request.parse(data)
     this.response = {
       schedules: [...this.request.normal, ...this.request.bigRun, ...this.request.teamContest].map((schedule) =>
-        Response.parse(schedule)
+        CoopSchedule.Response.parse(schedule)
       )
     }
   }
 
-  get schedules(): Response[] {
+  get schedules(): CoopSchedule.Response[] {
     return this.response.schedules
   }
 
@@ -117,5 +123,3 @@ export class CoopScheduleQuery {
 }
 
 type ScheduleModel = z.infer<ReturnType<typeof ScheduleModel>>
-type Request = z.infer<typeof Request>
-type Response = z.infer<typeof Response>

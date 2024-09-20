@@ -1,6 +1,9 @@
 import { z } from '@hono/zod-openapi'
-import { Response as CoopHistoryDetailModel, CoopHistoryDetailQuery } from './coop_history_detail.dto'
-import { Response as CoopScheduleModel } from './coop_schedule.dto'
+import { CoopHistoryDetailId } from './common/coop_history_detail_id.dto'
+import { S3URL } from './common/s3_url.dto'
+import { CoopHistory } from './coop_history.dto'
+import { CoopHistoryDetail, CoopHistoryDetailQuery } from './coop_history_detail.dto'
+import { CoopSchedule } from './coop_schedule.dto'
 
 export namespace CoopResult {
   /**
@@ -21,8 +24,8 @@ export namespace CoopResult {
   export const Response = z.object({
     histories: z.array(
       z.object({
-        schedule: CoopScheduleModel,
-        results: z.array(CoopHistoryDetailModel)
+        schedule: CoopSchedule.Response,
+        results: z.array(CoopHistoryDetail.Response)
       })
     )
   })
@@ -37,10 +40,9 @@ export class CoopResultQuery {
 
   constructor(data: object) {
     this.request = CoopResult.Request.parse(data)
-    // console.log(JSON.stringify(this.request, null, 2))
     this.response = CoopResult.Response.parse({
       histories: this.request.histories.map((history) => ({
-        schedule: CoopScheduleModel.parse(history.schedule),
+        schedule: CoopSchedule.Response.parse(history.schedule),
         results: history.results.map((result) => {
           return {
             ...new CoopHistoryDetailQuery(result).result,
@@ -53,5 +55,15 @@ export class CoopResultQuery {
 
   toJSON(): CoopResult.Response {
     return this.response
+  }
+
+  get assetURLs(): S3URL[] {
+    return Array.from(
+      new Set(
+        this.request.histories.flatMap((history) =>
+          history.results.flatMap((result) => new CoopHistoryDetailQuery(result).assetURLs.map((url) => url.raw_value))
+        )
+      )
+    ).map((url) => S3URL.parse(url))
   }
 }

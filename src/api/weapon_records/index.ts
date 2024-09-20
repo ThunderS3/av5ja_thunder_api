@@ -1,5 +1,6 @@
 import { HTTPMethod } from '@/enums/method'
-import { WeaponRecord } from '@/models/weapon_record.dto'
+import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
+import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
 import { OpenAPIHono as Hono, createRoute } from '@hono/zod-openapi'
 
@@ -10,13 +11,16 @@ app.openapi(
     method: HTTPMethod.POST,
     path: '/',
     tags: ['記録'],
-    summary: 'ブキ記録',
-    description: 'アセットのURL一覧を登録します',
+    deprecated: true,
+    summary: 'ブキ',
+    description: 'ブキのURLを登録します',
     request: {
       body: {
         content: {
           'application/json': {
-            schema: WeaponRecord.Request
+            schema: WeaponRecord.Request.openapi({
+              description: 'WeaponRecordQuery'
+            })
           }
         }
       }
@@ -24,11 +28,14 @@ app.openapi(
     responses: {
       204: {
         description: 'ブキ記録'
-      }
+      },
+      ...BadRequestResponse()
     }
   }),
   async (c) => {
-    const body: WeaponRecord.Request = c.req.valid('json')
+    c.req.valid('json')
+    const body: WeaponRecordQuery = new WeaponRecordQuery(await c.req.json())
+    console.log('[WEAPON RECORD]:', body.assetURLs.length)
     return new Response(null, { status: 204 })
   }
 )
