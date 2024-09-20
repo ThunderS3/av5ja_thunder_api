@@ -1,4 +1,5 @@
 import { HTTPMethod } from '@/enums/method'
+import { S3URL } from '@/models/common/s3_url.dto'
 import type { Bindings } from '@/utils/bindings'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import { HTTPException } from 'hono/http-exception'
@@ -25,6 +26,11 @@ app.openapi(
     }
   }),
   async (c) => {
-    return c.json({})
+    const keys: string[] = (await c.env.Resource.list({ limit: 200 })).keys.map((key) => key.name)
+    const assetURLs: S3URL[] = (await Promise.all(keys.map((key) => c.env.Resource.get(key, { type: 'text' }))))
+      .filter((value) => value !== null)
+      .sort()
+      .map((value) => S3URL.parse(value))
+    return c.json(assetURLs.map((url) => url.raw_value))
   }
 )

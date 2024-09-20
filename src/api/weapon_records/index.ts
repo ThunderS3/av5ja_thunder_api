@@ -2,6 +2,7 @@ import { HTTPMethod } from '@/enums/method'
 import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
+import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()
@@ -9,6 +10,7 @@ export const app = new Hono<{ Bindings: Bindings }>()
 app.openapi(
   createRoute({
     method: HTTPMethod.POST,
+    middleware: [resource],
     path: '/',
     tags: ['記録'],
     deprecated: true,
@@ -33,9 +35,7 @@ app.openapi(
     }
   }),
   async (c) => {
-    c.req.valid('json')
     const body: WeaponRecordQuery = new WeaponRecordQuery(await c.req.json())
-    console.log('[WEAPON RECORD]:', body.assetURLs.length)
     return new Response(null, { status: 204 })
   }
 )

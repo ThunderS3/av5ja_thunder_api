@@ -10,6 +10,7 @@ import { RawId } from './common/raw_id.dto'
 import { S3URL } from './common/s3_url.dto'
 import { WeaponInfoMainHash } from './common/weapon_hash.dto'
 import { CoopSchedule } from './coop_schedule.dto'
+import type { ResourceQuery } from './resource.interface'
 
 const HistoryDetail = z.object({
   id: CoopHistoryDetailId,
@@ -62,7 +63,7 @@ export namespace CoopHistory {
   export type Response = z.infer<typeof Response>
 }
 
-export class CoopHistoryQuery {
+export class CoopHistoryQuery implements ResourceQuery {
   private readonly request: CoopHistory.Request
   private readonly response: CoopHistory.Response
 

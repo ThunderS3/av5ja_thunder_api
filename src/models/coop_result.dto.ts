@@ -4,6 +4,7 @@ import { S3URL } from './common/s3_url.dto'
 import { CoopHistory } from './coop_history.dto'
 import { CoopHistoryDetail, CoopHistoryDetailQuery } from './coop_history_detail.dto'
 import { CoopSchedule } from './coop_schedule.dto'
+import type { ResourceQuery } from './resource.interface'
 
 export namespace CoopResult {
   /**
@@ -34,7 +35,7 @@ export namespace CoopResult {
   export type Response = z.infer<typeof Response>
 }
 
-export class CoopResultQuery {
+export class CoopResultQuery implements ResourceQuery {
   private readonly request: CoopResult.Request
   private readonly response: CoopResult.Response
 
