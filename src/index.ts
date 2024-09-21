@@ -41,9 +41,11 @@ app.doc('/specification', specification)
 app.notFound((c) => c.redirect('/docs'))
 app.onError((error, c) => {
   if (error instanceof HTTPException) {
+    console.error(error.message)
     return c.json({ message: error.message, description: error.cause }, error.status)
   }
   if (error instanceof ZodError) {
+    console.error(JSON.parse(error.message))
     return c.json({ message: JSON.parse(error.message), description: error.cause }, 400)
   }
   return c.json({ message: 'Internal Server Error' }, 500)

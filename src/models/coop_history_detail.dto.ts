@@ -133,7 +133,7 @@ const CoopHistoryDetailModel = z.object({
   enemyResults: z.array(EnemyResultModel),
   id: CoopHistoryDetailId,
   jobBonus: z.number().int().min(0).max(100).nullable(),
-  jobPoint: z.number().int().min(0).max(999).nullable(),
+  jobPoint: z.number().int().min(0).nullable(),
   jobRate: z.number().min(0).max(3.25).nullable(),
   jobScore: z.number().int().min(0).max(999).nullable(),
   memberResults: z.array(CoopPlayerResultModel),
@@ -295,6 +295,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
         this.memberResults
           .flatMap((member) => member.weapons.map((weapon) => weapon.url))
           .concat(this.coopHistoryDetail.enemyResults.map((result) => result.enemy.image.url))
+          .concat(this.coopHistoryDetail.coopStage.image.url)
       )
     ).map((url) => S3URL.parse(url))
   }

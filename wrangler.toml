@@ -2,8 +2,6 @@ name = "av5ja"
 main = "src/index.ts"
 compatibility_flags = ["nodejs_compat"]
 compatibility_date = "2024-05-13"
-send_metrics = true
-
 kv_namespaces = [
   { binding = "Resource", id = "369c64604b50419bb6d6bb724f361d27", preview_id = "04f5bdd8edd24aee9c5394f6a9bdf1c1" },
   { binding = "Schedule", id = "c520e398008648e2a3a7769cc5c739de", preview_id = "e09c635e09c04d3aa4a43d409aa0a841" },
@@ -13,3 +11,22 @@ kv_namespaces = [
 
 [triggers]
 crons = ["*/30 0 * * *"]
+
+[env]
+send_metrics = true
+kv_namespaces = [
+  { binding = "Resource", id = "369c64604b50419bb6d6bb724f361d27", preview_id = "04f5bdd8edd24aee9c5394f6a9bdf1c1" },
+  { binding = "Schedule", id = "c520e398008648e2a3a7769cc5c739de", preview_id = "e09c635e09c04d3aa4a43d409aa0a841" },
+  { binding = "Result", id = "4e90622a3c6f4d4eb7480c7b025bea0b", preview_id = "d162c2534873462498aa44c69e98b4ad" },
+  { binding = "Cache", id = "f3821b86b53d49788aa330e04ddca891", preview_id = "afe7eed588ed489288ff26369ccaa124" },
+]
+
+[env.dev]
+send_metrics = true
+workers_dev = true
+kv_namespaces = [
+  { binding = "Resource", id = "369c64604b50419bb6d6bb724f361d27", preview_id = "04f5bdd8edd24aee9c5394f6a9bdf1c1" },
+  { binding = "Schedule", id = "c520e398008648e2a3a7769cc5c739de", preview_id = "e09c635e09c04d3aa4a43d409aa0a841" },
+  { binding = "Result", id = "4e90622a3c6f4d4eb7480c7b025bea0b", preview_id = "d162c2534873462498aa44c69e98b4ad" },
+  { binding = "Cache", id = "f3821b86b53d49788aa330e04ddca891", preview_id = "afe7eed588ed489288ff26369ccaa124" },
+]

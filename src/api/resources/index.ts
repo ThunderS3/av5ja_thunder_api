@@ -34,3 +34,30 @@ app.openapi(
     return c.json(assetURLs.map((url) => url.raw_value))
   }
 )
+
+app.openapi(
+  createRoute({
+    method: HTTPMethod.DELETE,
+    path: '/',
+    tags: ['情報'],
+    summary: 'リソース',
+    description: 'アセット一覧のURLを全削除します',
+    responses: {
+      204: {
+        description: '成功'
+      }
+    }
+  }),
+  async (c) => {
+    try {
+      console.log(c.env.Resource)
+      const keys: string[] = (await c.env.Resource.list({ limit: 200 })).keys.map((key) => key.name)
+      console.log(keys)
+      // await Promise.all(keys.map((key) => c.env.Resource.delete(key)))
+      return new Response(null, { status: 204 })
+    } catch (error) {
+      console.error(error)
+      return new Response(null, { status: 204 })
+    }
+  }
+)

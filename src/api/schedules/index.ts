@@ -1,6 +1,8 @@
 import { HTTPMethod } from '@/enums/method'
 import { CoopSchedule } from '@/models/coop_schedule.dto'
+import { StageSchedule, StageScheduleQuery } from '@/models/stage_schedule.dto'
 import type { Bindings } from '@/utils/bindings'
+import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import type { Context } from 'hono'
 
@@ -41,6 +43,45 @@ app.openapi(
   async (c) => {
     const schedules: CoopSchedule.Response[] = await get_schedules(c)
     return c.json({ schedules: schedules })
+  }
+)
+
+app.openapi(
+  createRoute({
+    method: HTTPMethod.POST,
+    security: [{ AuthorizationApiKey: [] }],
+    middleware: [resource],
+    deprecated: true,
+    path: '/',
+    tags: ['スケジュール'],
+    summary: '一覧取得',
+    description: 'スケジュール一覧を追加します',
+    request: {
+      body: {
+        content: {
+          'application/json': {
+            schema: StageSchedule.Request
+          }
+        }
+      }
+    },
+    responses: {
+      200: {
+        content: {
+          'application/json': {
+            schema: z.object({
+              schedules: z.array(CoopSchedule.Response)
+            })
+          }
+        },
+        description: 'スケジュール一覧'
+      }
+    }
+  }),
+  async (c) => {
+    c.req.valid('json')
+    const body: StageScheduleQuery = new StageScheduleQuery(await c.req.json())
+    return c.json(body)
   }
 )
 
