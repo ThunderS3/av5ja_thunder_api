@@ -24,7 +24,6 @@ const get_hash = async (): Promise<string> => {
 
 const get_revision = async (hash: string): Promise<string> => {
   const url: URL = new URL(`static/js/main.${hash}.js`, 'https://api.lp1.av5ja.srv.nintendo.net')
-  console.log(url.href)
   const response = await fetch(url.href)
   if (!response.ok) {
     throw new HTTPException(response.status as StatusCode, { message: response.statusText })

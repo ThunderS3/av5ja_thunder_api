@@ -87,7 +87,6 @@ export class CoopHistoryQuery implements ResourceQuery {
    * 画像のURL
    */
   get assetURLs(): S3URL[] {
-    console.log('[COOP HISTORY QUERY]')
     return Array.from(
       new Set(this.historyDetails.flatMap((historyDetail) => historyDetail.weapons.map((weapon) => weapon.url)))
     ).map((url) => S3URL.parse(url))
