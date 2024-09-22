@@ -53,7 +53,6 @@ export const resource = createMiddleware(async (c, next) => {
           return []
       }
     })()
-    console.log(assetURLs)
     c.executionCtx.waitUntil(Promise.all(assetURLs.map((url) => write_cache(c, url))))
   }
   await next()

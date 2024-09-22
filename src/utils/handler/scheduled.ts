@@ -30,9 +30,6 @@ const update = async (env: Bindings): Promise<void> => {
   const update_cache: CoopSchedule.Response[] = Array.from(
     new Map([...cache, ...schedules].map((obj) => [obj.id, obj])).values()
   )
-  // console.log('[SCHEDULES DUMMY]:', dummy.schedules.length)
-  // console.log('[SCHEDULES CACHE OLD]:', cache.length)
-  // console.log('[SCHEDULES CACHE NEW]:', update_cache.length)
   await env.Cache.put('api.splatnet3.com/v3/schedules', JSON.stringify(update_cache))
 }
 

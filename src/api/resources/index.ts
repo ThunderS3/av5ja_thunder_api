@@ -50,9 +50,7 @@ app.openapi(
   }),
   async (c) => {
     try {
-      console.log(c.env.Resource)
       const keys: string[] = (await c.env.Resource.list({ limit: 200 })).keys.map((key) => key.name)
-      console.log(keys)
       // await Promise.all(keys.map((key) => c.env.Resource.delete(key)))
       return new Response(null, { status: 204 })
     } catch (error) {
