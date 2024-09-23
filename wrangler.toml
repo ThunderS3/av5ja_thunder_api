@@ -10,7 +10,7 @@ kv_namespaces = [
 ]
 
 [triggers]
-crons = ["*/30 0 * * *"]
+crons = ["*/30 * * * *"]
 
 [env]
 send_metrics = true
