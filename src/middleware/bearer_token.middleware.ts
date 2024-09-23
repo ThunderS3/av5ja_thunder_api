@@ -10,11 +10,5 @@ import { AlgorithmTypes } from 'hono/utils/jwt/jwa'
  * @returns
  */
 export const bearerToken = async (c: Context<{ Bindings: Bindings }>, next: Next) => {
-  return jwt({
-    secret: c.env.JWT_SECRET_KEY,
-    cookie: {
-      key: 'iksm_session'
-    },
-    alg: AlgorithmTypes.HS256
-  })(c, next)
+  return jwt({ secret: c.env.JWT_SECRET_KEY, alg: AlgorithmTypes.HS256 })(c, next)
 }

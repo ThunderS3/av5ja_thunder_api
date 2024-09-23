@@ -35,7 +35,7 @@ const update = async (env: Bindings): Promise<void> => {
 
 export const scheduled = async (event: ScheduledController, env: Bindings, ctx: ExecutionContext): Promise<void> => {
   switch (event.cron) {
-    case '*/30 0 * * *':
+    case '*/30 * * * *':
       ctx.waitUntil(update(env))
       break
     default:

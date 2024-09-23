@@ -7,6 +7,7 @@ import { cache } from 'hono/cache'
 import { cors } from 'hono/cors'
 import { csrf } from 'hono/csrf'
 import { HTTPException } from 'hono/http-exception'
+import { type JwtVariables as Variables, jwt } from 'hono/jwt'
 import { logger } from 'hono/logger'
 import { ZodError } from 'zod'
 import { app as histories } from './api/histories'
@@ -20,7 +21,14 @@ import type { Bindings } from './utils/bindings'
 import { scheduled } from './utils/handler/scheduled'
 import { reference, specification } from './utils/openapi'
 
-const app = new Hono<{ Bindings: Bindings }>()
+const app = new Hono<{ Bindings: Bindings; Variables: Variables }>()
+
+app.openAPIRegistry.registerComponent('securitySchemes', 'Bearer', {
+  type: 'http',
+  scheme: 'bearer',
+  in: 'header',
+  description: 'Bearer Token'
+})
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -30,13 +38,13 @@ app.use(logger())
 app.use(csrf())
 app.use('*', cors())
 app.get('/docs', apiReference(reference))
-// app.get(
-//   '*',
-//   cache({
-//     cacheName: 'av5ja',
-//     cacheControl: 'max-age=600'
-//   })
-// )
+app.get(
+  '*',
+  cache({
+    cacheName: async (c) => c.req.url,
+    cacheControl: 'max-age=600'
+  })
+)
 app.doc('/specification', specification)
 app.notFound((c) => c.redirect('/docs'))
 app.onError((error, c) => {

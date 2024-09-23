@@ -58,6 +58,10 @@ export class CoopResultQuery implements ResourceQuery {
     return this.response
   }
 
+  get results(): CoopHistoryDetail.Response[] {
+    return this.response.histories.flatMap((history) => history.results)
+  }
+
   get assetURLs(): S3URL[] {
     return Array.from(
       new Set(
