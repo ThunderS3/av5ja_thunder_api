@@ -1,4 +1,5 @@
 import { HTTPMethod } from '@/enums/method'
+import { bearerToken } from '@/middleware/bearer_token.middleware'
 import { S3URL } from '@/models/common/s3_url.dto'
 import type { Bindings } from '@/utils/bindings'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
@@ -16,7 +17,7 @@ app.openapi(
       200: {
         content: {
           'application/json': {
-            schema: z.object({})
+            schema: z.array(z.string().url())
           }
         },
         description: 'バージョン'
@@ -36,6 +37,7 @@ app.openapi(
 app.openapi(
   createRoute({
     method: HTTPMethod.DELETE,
+    middleware: [bearerToken],
     path: '/',
     tags: ['情報'],
     summary: 'リソース',
@@ -47,13 +49,8 @@ app.openapi(
     }
   }),
   async (c) => {
-    try {
-      const keys: string[] = (await c.env.RESOURCES.list({ limit: 200 })).keys.map((key) => key.name)
-      // await Promise.all(keys.map((key) => c.env.Resource.delete(key)))
-      return new Response(null, { status: 204 })
-    } catch (error) {
-      console.error(error)
-      return new Response(null, { status: 204 })
-    }
+    const keys: string[] = (await c.env.RESOURCES.list({ limit: 200 })).keys.map((key) => key.name)
+    await Promise.all(keys.map((key) => c.env.RESOURCES.delete(key)))
+    return new Response(null, { status: 204 })
   }
 )
