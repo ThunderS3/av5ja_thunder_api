@@ -10,18 +10,20 @@ import { HTTPException } from 'hono/http-exception'
 import { type JwtVariables as Variables, jwt } from 'hono/jwt'
 import { logger } from 'hono/logger'
 import { ZodError } from 'zod'
+import { app as auth } from './api/auth'
 import { app as histories } from './api/histories'
 import { app as records } from './api/records'
 import { app as resources } from './api/resources'
 import { app as results } from './api/results'
 import { app as schedules } from './api/schedules'
-import { app as token } from './api/token'
+import { app as users } from './api/users'
 import { app as version } from './api/version'
 import { app as weapon_records } from './api/weapon_records'
 import type { Bindings } from './utils/bindings'
 import { scheduled } from './utils/handler/scheduled'
 import { reference, specification } from './utils/openapi'
 
+const isProduction: boolean = process.env.NODE_ENV === 'production'
 const app = new Hono<{ Bindings: Bindings; Variables: Variables }>()
 
 app.openAPIRegistry.registerComponent('securitySchemes', 'Bearer', {
@@ -38,16 +40,19 @@ dayjs.tz.setDefault('Asia/Tokyo')
 app.use(logger())
 app.use(csrf())
 app.use('*', cors())
-app.get('/docs', apiReference(reference))
-app.get(
-  '*',
-  cache({
-    cacheName: async (c) => c.req.url,
-    cacheControl: 'max-age=600'
-  })
-)
-app.doc('/specification', specification)
-app.notFound((c) => c.redirect('/docs'))
+if (isProduction) {
+  app.get(
+    '*',
+    cache({
+      cacheName: async (c) => c.req.url,
+      cacheControl: 'max-age=600'
+    })
+  )
+} else {
+  app.get('/docs', apiReference(reference))
+  app.doc('/specification', specification)
+  app.notFound((c) => c.redirect('/docs'))
+}
 app.onError((error, c) => {
   if (error instanceof HTTPException) {
     console.error(error.message)
@@ -66,7 +71,8 @@ app.route('/v1/histories', histories)
 app.route('/v1/records', records)
 app.route('/v1/weapon_records', weapon_records)
 app.route('/v1/version', version)
-app.route('/v1', token)
+app.route('/v1/auth', auth)
+app.route('/v1/users', users)
 
 export default {
   port: 3000,

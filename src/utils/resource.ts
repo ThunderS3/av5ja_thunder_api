@@ -16,21 +16,24 @@ import type { Bindings } from './bindings'
  * @param url
  */
 const write_cache = async (c: Context<{ Bindings: Bindings }>, url: S3URL) => {
-  const cache: string | null = await c.env.Resource.get(url.key, { type: 'text' })
+  const cache: string | null = await c.env.RESOURCES.get(url.key, { type: 'text' })
   // 以下の条件を満たすとき、データを上書きする
   // - キャッシュが存在しない
   // - 新しく書き込もうとしたデータのほうが有効期限が長い
   if (cache === null) {
     console.info('[RESOURCE CREATE]:', null, '-->', url.version, url.key)
-    await c.env.Resource.put(url.key, url.raw_value, { expiration: url.expiration })
+    await c.env.RESOURCES.put(url.key, url.raw_value, { expiration: url.expiration })
   }
   const data: S3URL = S3URL.parse(cache)
   if (data.expiration < url.expiration || data.version < url.version) {
     console.info('[RESOURCE UPDATE]:', data.version, '-->', url.version, url.key)
-    await c.env.Resource.put(url.key, url.raw_value, { expiration: url.expiration })
+    await c.env.RESOURCES.put(url.key, url.raw_value, { expiration: url.expiration })
   }
 }
 
+/**
+ * 指定されたエンドポイントがコールされた場合、JSONを解析してリソースのURLをキャッシュに書き込む
+ */
 export const resource = createMiddleware(async (c, next) => {
   const url: URL = new URL(c.req.url)
   const lastPath: string = url.pathname.split('/').slice(-1)[0]

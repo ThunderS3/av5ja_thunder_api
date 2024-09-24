@@ -2,8 +2,6 @@ import { HTTPMethod } from '@/enums/method'
 import { S3URL } from '@/models/common/s3_url.dto'
 import type { Bindings } from '@/utils/bindings'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
-import { HTTPException } from 'hono/http-exception'
-import type { StatusCode } from 'hono/utils/http-status'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -26,8 +24,8 @@ app.openapi(
     }
   }),
   async (c) => {
-    const keys: string[] = (await c.env.Resource.list({ limit: 200 })).keys.map((key) => key.name)
-    const assetURLs: S3URL[] = (await Promise.all(keys.map((key) => c.env.Resource.get(key, { type: 'text' }))))
+    const keys: string[] = (await c.env.RESOURCES.list({ limit: 200 })).keys.map((key) => key.name)
+    const assetURLs: S3URL[] = (await Promise.all(keys.map((key) => c.env.RESOURCES.get(key, { type: 'text' }))))
       .filter((value) => value !== null)
       .sort()
       .map((value) => S3URL.parse(value))
@@ -50,7 +48,7 @@ app.openapi(
   }),
   async (c) => {
     try {
-      const keys: string[] = (await c.env.Resource.list({ limit: 200 })).keys.map((key) => key.name)
+      const keys: string[] = (await c.env.RESOURCES.list({ limit: 200 })).keys.map((key) => key.name)
       // await Promise.all(keys.map((key) => c.env.Resource.delete(key)))
       return new Response(null, { status: 204 })
     } catch (error) {

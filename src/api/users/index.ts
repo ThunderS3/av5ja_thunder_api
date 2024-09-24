@@ -1,9 +1,9 @@
 import { HTTPMethod } from '@/enums/method'
 import { bearerToken } from '@/middleware/bearer_token.middleware'
-import { Thunder } from '@/models/user.dto'
 import type { Bindings } from '@/utils/bindings'
-import { KV } from '@/utils/kv'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { HTTPException } from 'hono/http-exception'
+import type { StatusCode } from 'hono/utils/http-status'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -19,7 +19,7 @@ app.openapi(
       200: {
         content: {
           'application/json': {
-            schema: Thunder.User
+            // schema: VersionModel
           }
         },
         description: 'バージョン'
@@ -27,7 +27,6 @@ app.openapi(
     }
   }),
   async (c) => {
-    const { sub } = c.get('jwtPayload')
-    return c.json(await KV.USER.get(c, sub))
+    return c.json({})
   }
 )
