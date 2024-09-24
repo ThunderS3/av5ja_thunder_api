@@ -20,7 +20,7 @@ app.openapi(
             schema: z.array(z.string().url())
           }
         },
-        description: 'バージョン'
+        description: 'アセットURLの一覧'
       }
     }
   }),
