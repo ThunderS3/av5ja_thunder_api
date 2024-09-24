@@ -1,33 +1,40 @@
 import { HTTPMethod } from '@/enums/method'
 import { Discord } from '@/models/common/discord_token.dto'
 import type { z } from '@hono/zod-openapi'
+import dayjs, { type Dayjs } from 'dayjs'
 import type { Context } from 'hono'
 import { HTTPException } from 'hono/http-exception'
+import { jwt, sign } from 'hono/jwt'
 import type { StatusCode } from 'hono/utils/http-status'
+import { AlgorithmTypes } from 'hono/utils/jwt/jwa'
+import type { JWTPayload } from 'hono/utils/jwt/types'
+import { v4 as uuidv4 } from 'uuid'
 import type { Bindings } from './bindings'
-import { KV } from './kv'
 
 export namespace DiscordOAuth {
-  /**
-   * 既にユーザーがいればそのユーザーのデータを, なければ新規作成して返す
-   * @param c
-   * @param code
-   * @returns
-   */
   export const create_token = async (c: Context<{ Bindings: Bindings }>, code: string): Promise<string> => {
     const token = await get_token(c, code)
-    console.info('[DISCORD TOKEN]:', token)
     const user = await get_user(c, token)
-    console.info('[DISCORD USER]:', user)
-    return KV.USER.token(c, (await KV.USER.get(c, user.id)) || (await KV.USER.set(c, user)))
+    const current_time: Dayjs = dayjs()
+    const payload: JWTPayload = {
+      aud: c.env.DISCORD_CLIENT_ID,
+      exp: current_time.add(12, 'hour').unix(),
+      iat: current_time.unix(),
+      iss: new URL(c.req.url).hostname,
+      jti: uuidv4(),
+      nbf: current_time.unix(),
+      sub: user.id,
+      typ: 'access_token',
+      usr: {
+        nsa_id: null,
+        npln_user_id: null,
+        membership: false,
+        expires_in: null
+      }
+    }
+    return sign(payload, c.env.JWT_SECRET_KEY, AlgorithmTypes.HS256)
   }
 
-  /**
-   * Discordの認証用トークンを取得する
-   * @param c
-   * @param code
-   * @returns
-   */
   const get_token = async (c: Context<{ Bindings: Bindings }>, code: string): Promise<Discord.Token> => {
     return await request(Discord.Token, c, {
       method: HTTPMethod.POST,
@@ -37,17 +44,11 @@ export namespace DiscordOAuth {
         client_secret: c.env.DISCORD_CLIENT_SECRET,
         code: code,
         grant_type: 'authorization_code',
-        redirect_uri: c.env.DISCORD_REDIRECT_URI
+        redirect_uri: 'http://localhost:18787/v1/_token'
       })
     })
   }
 
-  /**
-   * Discordのユーザーデータを取得する
-   * @param c
-   * @param token
-   * @returns
-   */
   const get_user = async (c: Context<{ Bindings: Bindings }>, token: Discord.Token): Promise<Discord.User> => {
     return await request(Discord.User, c, {
       method: HTTPMethod.GET,
@@ -58,13 +59,6 @@ export namespace DiscordOAuth {
     })
   }
 
-  /**
-   * Discordへのリクエストを実行するWrapperコード
-   * @param S
-   * @param c
-   * @param options
-   * @returns
-   */
   const request = async (
     S: z.ZodTypeAny,
     c: Context<{ Bindings: Bindings }>,
@@ -97,10 +91,7 @@ export namespace DiscordOAuth {
             : JSON.stringify(options.body)
     })
     if (response.ok) {
-      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-      const data: any = await response.json()
-      console.info('[FETCH RESPONSE]:', data)
-      return S.parse(data)
+      return S.parse(await response.json())
     }
     throw new HTTPException(response.status as StatusCode, { message: response.statusText })
   }
