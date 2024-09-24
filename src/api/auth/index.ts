@@ -89,7 +89,7 @@ app.openapi(
     setCookie(c, 'iksm_session', token, {
       httpOnly: true,
       secure: true,
-      sameSite: 'Strict'
+      sameSite: 'Lax'
     })
     return c.redirect(c.env.APP_REDIRECT_URI)
   }
