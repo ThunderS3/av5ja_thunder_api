@@ -8,6 +8,7 @@ import { DiscordOAuth } from '@/utils/discord_oauth'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import dayjs, { type Dayjs } from 'dayjs'
 import type { Context } from 'hono'
+import { setCookie } from 'hono/cookie'
 import { HTTPException } from 'hono/http-exception'
 import { decode, sign, verify } from 'hono/jwt'
 import type { StatusCode } from 'hono/utils/http-status'
@@ -67,7 +68,7 @@ app.openapi(
 app.openapi(
   createRoute({
     method: HTTPMethod.GET,
-    path: '/_token',
+    path: '/callback',
     tags: ['トークン'],
     summary: 'アカウント作成',
     description: 'Discord OAuth2を利用してアカウントを作成します',
@@ -77,83 +78,23 @@ app.openapi(
       })
     },
     responses: {
-      201: {
-        content: {
-          'application/json': {
-            schema: z.object({
-              access_token: z.string()
-            })
-          }
-        },
-        description: '個人認証トークン'
+      302: {
+        description: 'リダイレクト'
       }
     }
   }),
   async (c) => {
     const { code } = c.req.valid('query')
-    return c.json({ access_token: await DiscordOAuth.create_token(c, code) })
+    const token: string = await DiscordOAuth.create_token(c, code)
+    console.log(token)
+    setCookie(c, 'iksm_session', token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'Strict'
+    })
+    return c.redirect('http://localhost:3000')
   }
 )
-
-const get_token = async (c: Context<{ Bindings: Bindings }>, code: string): Promise<Discord.Token> => {
-  const url: URL = new URL('api/v10/oauth2/token', 'https://discord.com/')
-  console.log(url.href)
-  const response = await fetch(url.href, {
-    method: HTTPMethod.POST,
-    headers: new Headers({
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }),
-    body: new URLSearchParams({
-      client_id: c.env.DISCORD_CLIENT_ID,
-      client_secret: c.env.DISCORD_CLIENT_SECRET,
-      code: code,
-      grant_type: 'authorization_code',
-      redirect_uri: 'http://localhost:18787/v1/_token'
-    })
-  })
-  if (response.ok) {
-    return Discord.Token.parse(await response.json())
-  }
-  throw new HTTPException(response.status as StatusCode, { message: response.statusText })
-}
-
-const get_user_roles = async (
-  c: Context<{ Bindings: Bindings }>,
-  token: Discord.Token,
-  user: Discord.User,
-  guild_id: string
-): Promise<string[]> => {
-  // const url: URL = new URL(`api/v10/guilds/${guild_id}/members/${user.id}`, 'https://discord.com/')
-  const url: URL = new URL(`api/v10/users/@me/guilds/${guild_id}/member`, 'https://discord.com/')
-  console.log(url.href)
-  const response = await fetch(url.href, {
-    method: HTTPMethod.GET,
-    headers: new Headers({
-      Authorization: `Bearer ${token.access_token}`,
-      'Content-Type': 'application/json'
-    })
-  })
-  if (response.ok) {
-    console.log(await response.json())
-  }
-  console.log(await response.json())
-  throw new HTTPException(response.status as StatusCode, { message: response.statusText })
-}
-
-const get_user = async (c: Context<{ Bindings: Bindings }>, token: Discord.Token): Promise<Discord.User> => {
-  const url: URL = new URL('api/v10/users/@me', 'https://discord.com/')
-  const response = await fetch(url.href, {
-    method: HTTPMethod.GET,
-    headers: new Headers({
-      Authorization: `Bearer ${token.access_token}`,
-      'Content-Type': 'application/json'
-    })
-  })
-  if (response.ok) {
-    return Discord.User.parse(await response.json())
-  }
-  throw new HTTPException(response.status as StatusCode, { message: response.statusText })
-}
 
 const get_npln_user_id = async (
   c: Context<{ Bindings: Bindings }>,

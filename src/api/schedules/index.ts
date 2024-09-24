@@ -10,7 +10,7 @@ export const app = new Hono<{ Bindings: Bindings }>()
 
 const get_schedules = async (c: Context<{ Bindings: Bindings }>): Promise<CoopSchedule.Response[]> => {
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const body: any | null = await c.env.Cache.get('api.splatnet3.com/v3/schedules', { type: 'json' })
+  const body: any | null = await c.env.CACHES.get('api.splatnet3.com/v3/schedules', { type: 'json' })
   if (body === null) {
     return []
   }

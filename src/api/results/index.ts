@@ -103,7 +103,7 @@ app.openapi(
   async (c) => {
     const { npln_user_id } = c.get('jwtPayload')
     const { cursor, limit } = c.req.valid('query')
-    const result: KVNamespaceListResult<string, string> = await c.env.Result.list({
+    const result: KVNamespaceListResult<string, string> = await c.env.RESULTS.list({
       prefix: npln_user_id,
       limit: limit,
       cursor: cursor
@@ -111,7 +111,7 @@ app.openapi(
     const keys: string[] = result.keys.map((key) => key.name)
     const results: CoopHistoryDetail.Response[] = z
       .array(CoopHistoryDetail.Response)
-      .parse(await Promise.all(keys.map((key) => c.env.Result.get(key, { type: 'json' }))))
+      .parse(await Promise.all(keys.map((key) => c.env.RESULTS.get(key, { type: 'json' }))))
     return c.json({
       // biome-ignore lint/suspicious/noExplicitAny: <explanation>
       cursor: (result as any)?.cursor || null,
@@ -133,7 +133,9 @@ const write_results = async <T extends CoopHistoryDetail.Response>(
 ) => {
   c.executionCtx.waitUntil(
     Promise.all(
-      results.map((result) => c.env.Result.put(`${result.id.nplnUserId}:${result.id.playTime}`, JSON.stringify(result)))
+      results.map((result) =>
+        c.env.RESULTS.put(`${result.id.nplnUserId}:${result.id.playTime}`, JSON.stringify(result))
+      )
     )
   )
 }

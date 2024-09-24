@@ -14,7 +14,9 @@ import type { Bindings } from './bindings'
 export namespace DiscordOAuth {
   export const create_token = async (c: Context<{ Bindings: Bindings }>, code: string): Promise<string> => {
     const token = await get_token(c, code)
+    console.info('[DISCORD TOKEN]:', token)
     const user = await get_user(c, token)
+    console.info('[DISCORD USER]:', user)
     const current_time: Dayjs = dayjs()
     const payload: JWTPayload = {
       aud: c.env.DISCORD_CLIENT_ID,
@@ -44,7 +46,7 @@ export namespace DiscordOAuth {
         client_secret: c.env.DISCORD_CLIENT_SECRET,
         code: code,
         grant_type: 'authorization_code',
-        redirect_uri: 'http://localhost:18787/v1/_token'
+        redirect_uri: 'http://localhost:18787/v1/auth/callback'
       })
     })
   }
