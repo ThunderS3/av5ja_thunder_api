@@ -39,7 +39,13 @@ dayjs.tz.setDefault('Asia/Tokyo')
 
 app.use(logger())
 app.use(csrf())
-app.use('*', cors())
+app.use(
+  '*',
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+  })
+)
 if (isProduction) {
   app.get(
     '*',
