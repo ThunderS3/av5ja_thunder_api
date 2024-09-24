@@ -67,7 +67,7 @@ export class CoopHistoryQuery implements ResourceQuery {
   private readonly request: CoopHistory.Request
   private readonly response: CoopHistory.Response
 
-  constructor(data: object) {
+  constructor(data: object | unknown) {
     this.request = CoopHistory.Request.parse(data)
     this.response = CoopHistory.Response.parse({
       histories: this.historyGroups.map((historyGroup) => {
