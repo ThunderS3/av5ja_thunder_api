@@ -22,7 +22,8 @@ const get_hash = async (): Promise<string> => {
   return match[1]
 }
 
-const get_revision = async (hash: string): Promise<string> => {
+export const get_revision = async (): Promise<string> => {
+  const hash: string = await get_hash()
   const url: URL = new URL(`static/js/main.${hash}.js`, 'https://api.lp1.av5ja.srv.nintendo.net')
   const response = await fetch(url.href)
   if (!response.ok) {
@@ -77,8 +78,7 @@ app.openapi(
     }
   }),
   async (c) => {
-    const hash: string = await get_hash()
-    const revision: string = await get_revision(hash)
+    const revision: string = await get_revision()
     const version: LookupModel = await get_version()
     return c.json(VersionModel.parse({ revision: revision, version: version.version }))
   }

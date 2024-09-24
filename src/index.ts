@@ -15,6 +15,7 @@ import { app as records } from './api/records'
 import { app as resources } from './api/resources'
 import { app as results } from './api/results'
 import { app as schedules } from './api/schedules'
+import { app as token } from './api/token'
 import { app as version } from './api/version'
 import { app as weapon_records } from './api/weapon_records'
 import type { Bindings } from './utils/bindings'
@@ -65,6 +66,7 @@ app.route('/v1/histories', histories)
 app.route('/v1/records', records)
 app.route('/v1/weapon_records', weapon_records)
 app.route('/v1/version', version)
+app.route('/v1', token)
 
 export default {
   port: 3000,
