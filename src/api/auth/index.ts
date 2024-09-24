@@ -86,13 +86,12 @@ app.openapi(
   async (c) => {
     const { code } = c.req.valid('query')
     const token: string = await DiscordOAuth.create_token(c, code)
-    console.log(token)
     setCookie(c, 'iksm_session', token, {
       httpOnly: true,
       secure: true,
       sameSite: 'Strict'
     })
-    return c.redirect('http://localhost:3000')
+    return c.redirect(c.env.APP_REDIRECT_URI)
   }
 )
 
