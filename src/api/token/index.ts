@@ -4,6 +4,7 @@ import { Discord } from '@/models/common/discord_token.dto'
 import { CertificateList, JWTToken, type Key, Payload } from '@/models/common/json_web_token.dto'
 import { CoopHistory, CoopHistoryQuery } from '@/models/coop_history.dto'
 import type { Bindings } from '@/utils/bindings'
+import { DiscordOAuth } from '@/utils/discord_oauth'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import dayjs, { type Dayjs } from 'dayjs'
 import type { Context } from 'hono'
@@ -80,7 +81,7 @@ app.openapi(
         content: {
           'application/json': {
             schema: z.object({
-              id_token: z.string()
+              access_token: z.string()
             })
           }
         },
@@ -90,14 +91,7 @@ app.openapi(
   }),
   async (c) => {
     const { code } = c.req.valid('query')
-    const token: Discord.Token = await get_token(c, code)
-    console.log(token)
-    const user: Discord.User = await get_user(c, token)
-    console.log(user)
-    const guild_id: string = c.env.DISCORD_GUILD_ID
-    const roles: string[] = await get_user_roles(c, token, user, guild_id)
-    console.log(roles)
-    return c.json({ code: code })
+    return c.json({ access_token: await DiscordOAuth.create_token(c, code) })
   }
 )
 
