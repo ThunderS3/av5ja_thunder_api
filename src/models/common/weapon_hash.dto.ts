@@ -1,8 +1,6 @@
 import { Hash2Id } from '@/enums/weapon/main'
-import { z } from '@hono/zod-openapi'
 import { HTTPException } from 'hono/http-exception'
 import { ImageURL } from './image_url.dto'
-import { S3URL } from './s3_url.dto'
 
 export const WeaponInfoMainHash = ImageURL.transform((object) => {
   const pattern: RegExp = /\/([a-f0-9]{64})_/

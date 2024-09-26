@@ -108,10 +108,21 @@ const CoopPlayerResultModel = z.object({
   weapons: z.array(WeaponInfoMainHash),
   deliverCount: z.number().int().min(0),
   defeatEnemyCount: z.number().int().min(0),
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  specialWeapon: z.preprocess((input: any) => {
-    return input === null ? null : input.weaponId
-  }, z.nativeEnum(WeaponInfoSpecial.Id).nullable()),
+  specialWeapon: z.preprocess(
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    (input: any) => {
+      return input === null
+        ? null
+        : {
+            id: input.weaponId,
+            url: input.image.url
+          }
+    },
+    z.object({
+      url: z.string().url(),
+      id: z.nativeEnum(WeaponInfoSpecial.Id).nullable()
+    })
+  ),
   rescueCount: z.number().int().min(0)
 })
 
@@ -294,6 +305,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
       new Set(
         this.memberResults
           .flatMap((member) => member.weapons.map((weapon) => weapon.url))
+          .concat(this.memberResults.map((member) => member.specialWeapon?.url).filter((url) => url !== null))
           .concat(this.coopHistoryDetail.enemyResults.map((result) => result.enemy.image.url))
           .concat(this.coopHistoryDetail.coopStage.image.url)
       )
@@ -363,8 +375,8 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
       kumaPoint: this.coopHistoryDetail.jobPoint,
       nplnUserId: result.player.id.nplnUserId,
       smellMeter: this.coopHistoryDetail.smellMeter,
-      specialCounts: this.specialCounts.map((counts) => counts.filter((id) => id === result.specialWeapon).length),
-      specialId: result.specialWeapon,
+      specialCounts: this.specialCounts.map((counts) => counts.filter((id) => id === result.specialWeapon.id).length),
+      specialId: result.specialWeapon.id,
       species: result.player.species,
       uniform: result.player.uniform.id,
       weaponList: result.weapons.map((weapon) => weapon.id)
@@ -405,8 +417,8 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
         kumaPoint: null,
         nplnUserId: result.player.id.nplnUserId,
         smellMeter: null,
-        specialCounts: this.specialCounts.map((counts) => counts.filter((id) => id === result.specialWeapon).length),
-        specialId: result.specialWeapon,
+        specialCounts: this.specialCounts.map((counts) => counts.filter((id) => id === result.specialWeapon.id).length),
+        specialId: result.specialWeapon.id,
         species: result.player.species,
         uniform: result.player.uniform.id,
         weaponList: result.weapons.map((weapon) => weapon.id)

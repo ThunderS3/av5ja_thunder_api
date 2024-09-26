@@ -29,9 +29,7 @@ export namespace CoopEnemyInfo {
     SakeArtillery = '2c7a648b4c73f291b5ede9c55f33d4e3f99c263d3a27ef3d2eb2a96d328d66ac',
     SakeSaucer = '2185696079cc39328cd69f0570e219f09b61d4a56508260fe97b16347ae8a55f',
     SakelienGolden = 'a35aa2982499e9a404fdb81f72fbaf553bc47f7682cc67f9b8c32ca9910e2cbf',
-    Sakedozer = '8cd6dd3e1bb480e2897afdb434315bc78876204a0995c1552084e1d3edfe0536',
-    SakeBigMouth = 'f0dd8c7eb5c2e96f347564cac71affe055f6c45a3339145ecc81287f800759d2',
-    SakelienGiant = '75f39ca054c76c0c33cd71177780708e679d088c874a66101e9b76b001df8254'
+    Sakedozer = '8cd6dd3e1bb480e2897afdb434315bc78876204a0995c1552084e1d3edfe0536'
   }
 }
 

@@ -1,4 +1,4 @@
-import { CoopEnemyInfo } from '@/enums/coop/coop_enemy'
+import { CoopBossInfo, CoopEnemyInfo } from '@/enums/coop/coop_enemy'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { ImageType } from '@/enums/image_type'
 import { WeaponInfoMain } from '@/enums/weapon/main'
@@ -77,7 +77,9 @@ export namespace KV {
         case ImageType.StageInfo:
           return CoopStage.Hash[CoopStage.Id[raw_id] as keyof typeof CoopStage.Hash]
         case ImageType.EnemyInfo:
-          return CoopEnemyInfo.Hash[CoopEnemyInfo.Id[raw_id] as keyof typeof CoopEnemyInfo.Hash]
+          return raw_id >= 20
+            ? CoopBossInfo.Hash[CoopBossInfo.Id[raw_id] as keyof typeof CoopBossInfo.Id]
+            : CoopEnemyInfo.Hash[CoopEnemyInfo.Id[raw_id] as keyof typeof CoopEnemyInfo.Hash]
         default:
           return ''
       }
