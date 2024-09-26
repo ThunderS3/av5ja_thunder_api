@@ -12,6 +12,7 @@ import { logger } from 'hono/logger'
 import { ZodError } from 'zod'
 import { app as auth } from './api/auth'
 import { app as histories } from './api/histories'
+import { app as imgs } from './api/imgs'
 import { app as records } from './api/records'
 import { app as resources } from './api/resources'
 import { app as results } from './api/results'
@@ -42,7 +43,7 @@ app.use(csrf())
 app.use(
   '*',
   cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://web.splatnet3.com'],
     credentials: true
   })
 )
@@ -79,6 +80,7 @@ app.route('/v1/weapon_records', weapon_records)
 app.route('/v1/version', version)
 app.route('/v1/auth', auth)
 app.route('/v1/users', users)
+app.route('/v1/imgs', imgs)
 
 export default {
   port: 3000,

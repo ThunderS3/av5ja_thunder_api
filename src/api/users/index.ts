@@ -1,6 +1,6 @@
 import { HTTPMethod } from '@/enums/method'
 import { bearerToken } from '@/middleware/bearer_token.middleware'
-import { User } from '@/models/user.dto'
+import { Thunder } from '@/models/user.dto'
 import type { Bindings } from '@/utils/bindings'
 import { KV } from '@/utils/kv'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
@@ -19,7 +19,7 @@ app.openapi(
       200: {
         content: {
           'application/json': {
-            schema: User
+            schema: Thunder.User
           }
         },
         description: 'バージョン'

@@ -7,6 +7,7 @@ import type { Bindings } from '@/utils/bindings'
 import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import type { Context } from 'hono'
+import { HTTPException } from 'hono/http-exception'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -89,7 +90,8 @@ app.openapi(
               results: z.array(CoopHistoryDetail.Response).openapi({
                 description: 'リザルト'
               }),
-              count: z.number().int().min(1).max(200).openapi({
+              count: z.number().int().min(1).max(200).default(100).openapi({
+                default: 100,
                 description: '取得件数'
               })
             })
@@ -102,6 +104,9 @@ app.openapi(
   }),
   async (c) => {
     const { npln_user_id } = c.get('jwtPayload')
+    if (npln_user_id === undefined) {
+      throw new HTTPException(404, { message: 'Not Found.' })
+    }
     const { cursor, limit } = c.req.valid('query')
     const result: KVNamespaceListResult<string, string> = await c.env.RESULTS.list({
       prefix: npln_user_id,

@@ -1,5 +1,5 @@
 {
-  "name": "Hono",
+  "name": "Thunder API",
   "dockerComposeFile": ["docker-compose.yaml"],
   "service": "hono",
   "workspaceFolder": "/home/bun/app",
