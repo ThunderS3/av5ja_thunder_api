@@ -7,6 +7,20 @@ import type { StatusCode } from 'hono/utils/http-status'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
+const get_game_version = async (): Promise<string> => {
+  const url: URL = new URL('https://leanny.github.io/splat3/versions.json')
+  const response = await fetch(url.href)
+  if (!response.ok) {
+    throw new HTTPException(response.status as StatusCode, { message: response.statusText })
+  }
+  return z
+    .array(z.string())
+    .parse(await response.json())
+    .slice(-1)[0]
+    .split('')
+    .join('.')
+}
+
 const get_hash = async (): Promise<string> => {
   const url: URL = new URL('https://api.lp1.av5ja.srv.nintendo.net')
   const response = await fetch(url.href)
@@ -78,8 +92,7 @@ app.openapi(
     }
   }),
   async (c) => {
-    const revision: string = await get_revision()
-    const version: LookupModel = await get_version()
-    return c.json(VersionModel.parse({ revision: revision, version: version.version }))
+    const [revision, version, game_version] = await Promise.all([get_revision(), get_version(), get_game_version()])
+    return c.json(VersionModel.parse({ game: game_version, app: version.version, web: revision }))
   }
 )
