@@ -66,11 +66,11 @@ export namespace KV {
   }
 
   export namespace RESOURCE {
-    const find_hash = (type: ImageType, raw_id: number): string => {
+    const find_hash = (type: ImageType, raw_id: number): string | undefined => {
       switch (type) {
         case ImageType.WeaponInfoMain:
           return WeaponInfoMain.Hash[
-            WeaponInfoMain.Id[raw_id < 20000 ? raw_id + 20000 : raw_id] as keyof typeof WeaponInfoMain.Hash
+            WeaponInfoMain.Id[raw_id > 20000 ? raw_id - 20000 : raw_id] as keyof typeof WeaponInfoMain.Hash
           ]
         case ImageType.WeaponInfoSpecial:
           return WeaponInfoSpecial.Hash[WeaponInfoSpecial.Id[raw_id] as keyof typeof WeaponInfoSpecial.Hash]
@@ -86,7 +86,11 @@ export namespace KV {
     }
 
     export const get = async (c: Context<{ Bindings: Bindings }>, type: ImageType, raw_id: number): Promise<string> => {
-      const hash: string = find_hash(type, raw_id)
+      const hash: string | undefined = find_hash(type, raw_id)
+      if (hash === undefined) {
+        throw new HTTPException(400, { message: 'Bad Request.' })
+      }
+      console.log('HASH:', hash)
       const text: string | null = await c.env.RESOURCES.get(hash, { type: 'text' })
       if (text === null) {
         throw new HTTPException(404, { message: 'Not Found.' })

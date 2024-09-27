@@ -1,8 +1,9 @@
 import { z } from '@hono/zod-openapi'
 
 export const VersionModel = z.object({
-  version: z.string().openapi({ description: 'バージョン', example: '2.10.0' }),
-  revision: z.string().openapi({ description: 'リビジョン', example: '6.0.0-9f87c815' })
+  game: z.string().openapi({ description: 'ゲームバージョン', example: '9.1.0' }),
+  app: z.string().openapi({ description: 'アプリバージョン', example: '2.10.0' }),
+  web: z.string().openapi({ description: 'ウェブバージョン', example: '6.0.0-9f87c815' })
 })
 
 export const LookupModel = z
