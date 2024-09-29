@@ -73,7 +73,7 @@ export namespace KV {
       switch (type) {
         case ImageType.WeaponInfoMain:
           return WeaponInfoMain.Hash[
-            WeaponInfoMain.Id[raw_id > 20000 ? raw_id - 20000 : raw_id] as keyof typeof WeaponInfoMain.Hash
+            WeaponInfoMain.Id[raw_id % 1000 !== 900 ? raw_id - 20000 : raw_id] as keyof typeof WeaponInfoMain.Hash
           ]
         case ImageType.WeaponInfoSpecial:
           return WeaponInfoSpecial.Hash[WeaponInfoSpecial.Id[raw_id] as keyof typeof WeaponInfoSpecial.Hash]
