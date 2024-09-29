@@ -1,21 +1,9 @@
 {
-  "hash": "866c358b58a5a27007171f2eb405df8f",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T16:26:49.000Z",
-    "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-  },
+  "id": "866c358b58a5a27007171f2eb405df8f",
   "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "5dee4591f2b60dafca5eed6a9693cbef",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T16:26:49.000Z",
-      "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-    },
+    "id": "5dee4591f2b60dafca5eed6a9693cbef",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "86721a40248157fc9c602f1e4cc72267",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-22T16:26:49.000Z",
-        "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-      },
+      "id": "86721a40248157fc9c602f1e4cc72267",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "dacfa87518e789d4844e128ceda09f1a",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "acyteio7d5tnfv2xkomm",
-        "playTime": "2024-06-22T16:26:49.000Z",
-        "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-      },
+      "id": "dacfa87518e789d4844e128ceda09f1a",
       "byname": "Ink-Covered Grandma",
       "name": "ーニミ",
       "nameId": "1659",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "29fc079e96f2c5a02f67c75a178ff24e",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "a3v3s3x76psxpkxhanmm",
-        "playTime": "2024-06-22T16:26:49.000Z",
-        "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-      },
+      "id": "29fc079e96f2c5a02f67c75a178ff24e",
       "byname": "Lonely Mirror",
       "name": "player",
       "nameId": "2651",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "fcffb9d4d7daaa82b3dc60d67c3f922d",
+      "id": "fcffb9d4d7daaa82b3dc60d67c3f922d",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 30,
       "goldenIkuraPopNum": 78,
       "goldenIkuraNum": 43,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "c01f16130fc9e83f042983f26205b992",
+      "id": "c01f16130fc9e83f042983f26205b992",
       "waterLevel": 2,
       "eventType": 5,
       "quotaNum": 32,
       "goldenIkuraPopNum": 96,
       "goldenIkuraNum": 41,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "a35253c7930867c129c544d428cabb47",
+      "id": "a35253c7930867c129c544d428cabb47",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 35,
       "goldenIkuraPopNum": 84,
       "goldenIkuraNum": 42,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

@@ -1,21 +1,9 @@
 {
-  "hash": "22b7fd9e88b1c87eaf43c0d107e8b131",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "a7carxobziesqto4cnmm",
-    "playTime": "2024-07-10T07:07:57.000Z",
-    "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-  },
+  "id": "22b7fd9e88b1c87eaf43c0d107e8b131",
   "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "61a221ac41a920ea5007102431b3473a",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "a7carxobziesqto4cnmm",
-      "playTime": "2024-07-10T07:07:57.000Z",
-      "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-    },
+    "id": "61a221ac41a920ea5007102431b3473a",
     "byname": "At-Work Uncle",
     "name": "オギコ",
     "nameId": "1783",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "1318d4b595bfcd1b4497195e21fa0c74",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "am4qcbysqpmoidt6pcnm",
-        "playTime": "2024-07-10T07:07:57.000Z",
-        "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-      },
+      "id": "1318d4b595bfcd1b4497195e21fa0c74",
       "byname": "Late-Summer Worker",
       "name": "せみせみ",
       "nameId": "4399",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "0423ea3276f30d28838c2ac848748860",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "auri3cxqgph2gi4mmntm",
-        "playTime": "2024-07-10T07:07:57.000Z",
-        "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-      },
+      "id": "0423ea3276f30d28838c2ac848748860",
       "byname": "Shell-Out Prizewinner",
       "name": "ヤバオ",
       "nameId": "1616",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "ffe934877c2d8b6f6354f15b1a1facee",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "arsp22qltugdq2aswqmm",
-        "playTime": "2024-07-10T07:07:57.000Z",
-        "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-      },
+      "id": "ffe934877c2d8b6f6354f15b1a1facee",
       "byname": "Fluffy Toni Kensa Model",
       "name": "ひつじ",
       "nameId": "1492",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "9054b56c5cc4a0eb26fe09c07767837f",
+      "id": "9054b56c5cc4a0eb26fe09c07767837f",
       "waterLevel": 2,
       "eventType": 8,
       "quotaNum": 26,
       "goldenIkuraPopNum": 64,
       "goldenIkuraNum": 46,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "40968981e500d41355f40dd78ea67b65",
+      "id": "40968981e500d41355f40dd78ea67b65",
       "waterLevel": 0,
       "eventType": 7,
       "quotaNum": 28,
       "goldenIkuraPopNum": 40,
       "goldenIkuraNum": 40,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "c2c3ee34cda13915df717f6968f845c4",
+      "id": "c2c3ee34cda13915df717f6968f845c4",
       "waterLevel": 1,
       "eventType": 3,
       "quotaNum": 30,
       "goldenIkuraPopNum": 60,
       "goldenIkuraNum": 59,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

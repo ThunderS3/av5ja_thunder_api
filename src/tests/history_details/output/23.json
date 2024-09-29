@@ -1,21 +1,9 @@
 {
-  "hash": "9f29f2f75ca85591d9054d403ff51409",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T15:31:19.000Z",
-    "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-  },
+  "id": "9f29f2f75ca85591d9054d403ff51409",
   "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "ee3f9702ca7f62b15c67e770ee7cb952",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T15:31:19.000Z",
-      "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-    },
+    "id": "ee3f9702ca7f62b15c67e770ee7cb952",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "8670c4c0ceada6ac689c2c692afa3503",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "acyteio7d5tnfv2xkomm",
-        "playTime": "2024-06-22T15:31:19.000Z",
-        "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-      },
+      "id": "8670c4c0ceada6ac689c2c692afa3503",
       "byname": "Ink-Covered Grandma",
       "name": "ーニミ",
       "nameId": "1659",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "ee6950e356b9fe8ec123b386588d98a2",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-22T15:31:19.000Z",
-        "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-      },
+      "id": "ee6950e356b9fe8ec123b386588d98a2",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "f69aecd737596ae9cde0ae26831ef06e",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qhjnjqyvrul6yhbckwnm",
-        "playTime": "2024-06-22T15:31:19.000Z",
-        "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-      },
+      "id": "f69aecd737596ae9cde0ae26831ef06e",
       "byname": "Intuitive Spirit",
       "name": "Elfiņ Levi",
       "nameId": "2023",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "17f84849f79e4226f2713b15b37ab70f",
+      "id": "17f84849f79e4226f2713b15b37ab70f",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 29,
       "goldenIkuraPopNum": 72,
       "goldenIkuraNum": 31,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "f0c84d17eb649a8b4802f3576358dc71",
+      "id": "f0c84d17eb649a8b4802f3576358dc71",
       "waterLevel": 0,
       "eventType": 6,
       "quotaNum": 31,
       "goldenIkuraPopNum": 84,
       "goldenIkuraNum": 40,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "5b1d11736a3a33f203e2384aae8bda32",
+      "id": "5b1d11736a3a33f203e2384aae8bda32",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 34,
       "goldenIkuraPopNum": 84,
       "goldenIkuraNum": 37,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

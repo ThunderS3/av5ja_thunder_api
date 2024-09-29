@@ -1,21 +1,9 @@
 {
-  "hash": "611c2ae66d635ec5dda47292a3a3dea0",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T11:30:50.000Z",
-    "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-  },
+  "id": "611c2ae66d635ec5dda47292a3a3dea0",
   "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "7f93da2e96d3e588567cd2d9a9a831d1",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T11:30:50.000Z",
-      "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-    },
+    "id": "7f93da2e96d3e588567cd2d9a9a831d1",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "b08360db325ef88ca835ad832ba0ead6",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "alt2jnyghvzbaauzhnmm",
-        "playTime": "2024-06-22T11:30:50.000Z",
-        "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-      },
+      "id": "b08360db325ef88ca835ad832ba0ead6",
       "byname": "AKA Palette",
       "name": "Σ Palette",
       "nameId": "2731",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "2e7dbefa47d15229dbfa4b03dc2e6728",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qntjfxnsmuwseqbtbomm",
-        "playTime": "2024-06-22T11:30:50.000Z",
-        "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-      },
+      "id": "2e7dbefa47d15229dbfa4b03dc2e6728",
       "byname": "Splendid Bird",
       "name": "Alvin",
       "nameId": "6806",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "9a1ec107c1204893efa463181d3b5b57",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qd3ycbkmraqlpl5mwymm",
-        "playTime": "2024-06-22T11:30:50.000Z",
-        "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-      },
+      "id": "9a1ec107c1204893efa463181d3b5b57",
       "byname": "Dapper Harlequin",
       "name": "Tamatoes",
       "nameId": "2601",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "2630a33bef22901e176e2d555cb942b0",
+      "id": "2630a33bef22901e176e2d555cb942b0",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 28,
       "goldenIkuraPopNum": 72,
       "goldenIkuraNum": 47,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "7d2292fab5577e8fbdcf46a7de871f42",
+      "id": "7d2292fab5577e8fbdcf46a7de871f42",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 30,
       "goldenIkuraPopNum": 75,
       "goldenIkuraNum": 31,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "3e7b961ca564a7245b1c6045d8d9c9e7",
+      "id": "3e7b961ca564a7245b1c6045d8d9c9e7",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 32,
       "goldenIkuraPopNum": 87,
       "goldenIkuraNum": 49,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

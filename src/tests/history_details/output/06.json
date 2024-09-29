@@ -1,21 +1,9 @@
 {
-  "hash": "d6127e7f0fdabcdfd5d8dd27664f896e",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "a7carxobziesqto4cnmm",
-    "playTime": "2024-07-10T07:15:11.000Z",
-    "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-  },
+  "id": "d6127e7f0fdabcdfd5d8dd27664f896e",
   "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "10de314e84924984d1c1247a08a70254",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "a7carxobziesqto4cnmm",
-      "playTime": "2024-07-10T07:15:11.000Z",
-      "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-    },
+    "id": "10de314e84924984d1c1247a08a70254",
     "byname": "At-Work Uncle",
     "name": "オギコ",
     "nameId": "1783",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "684f8b51eb37252d3da7dd509e93a29b",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "auri3cxqgph2gi4mmntm",
-        "playTime": "2024-07-10T07:15:11.000Z",
-        "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-      },
+      "id": "684f8b51eb37252d3da7dd509e93a29b",
       "byname": "Shell-Out Prizewinner",
       "name": "ヤバオ",
       "nameId": "1616",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "782fe78dfa9899d4c09fcd4d167f3356",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "am4qcbysqpmoidt6pcnm",
-        "playTime": "2024-07-10T07:15:11.000Z",
-        "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-      },
+      "id": "782fe78dfa9899d4c09fcd4d167f3356",
       "byname": "Late-Summer Worker",
       "name": "せみせみ",
       "nameId": "4399",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "5a0d9fb2f2b60e52ca9f01777c7fe4d3",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "akjt2ish266yxrghanmm",
-        "playTime": "2024-07-10T07:15:11.000Z",
-        "uuid": "c1ba894a-2c8d-44de-a637-ac5d1e91af4e"
-      },
+      "id": "5a0d9fb2f2b60e52ca9f01777c7fe4d3",
       "byname": "Today's Fried Chicken",
       "name": "さささ",
       "nameId": "3204",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "74e4a6e837685946db06cbf53317d608",
+      "id": "74e4a6e837685946db06cbf53317d608",
       "waterLevel": 0,
       "eventType": 6,
       "quotaNum": 27,
       "goldenIkuraPopNum": 66,
       "goldenIkuraNum": 43,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "89c8f6116a79a95c00a73ea58eaf0395",
+      "id": "89c8f6116a79a95c00a73ea58eaf0395",
       "waterLevel": 1,
       "eventType": 4,
       "quotaNum": 29,
       "goldenIkuraPopNum": 50,
       "goldenIkuraNum": 30,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "245f3970613a5e940587d3ed38f0d77a",
+      "id": "245f3970613a5e940587d3ed38f0d77a",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 31,
       "goldenIkuraPopNum": 66,
       "goldenIkuraNum": 36,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

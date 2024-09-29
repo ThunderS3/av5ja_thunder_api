@@ -1,21 +1,9 @@
 {
-  "hash": "de7d2059ab6e31dc3f229524cfdacffa",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "q3usp72dqoznovbi3dvm",
-    "playTime": "2024-09-10T15:50:20.000Z",
-    "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-  },
+  "id": "de7d2059ab6e31dc3f229524cfdacffa",
   "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "9f0bdd2b4dd872dad602154fd5eb5be0",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "q3usp72dqoznovbi3dvm",
-      "playTime": "2024-09-10T15:50:20.000Z",
-      "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-    },
+    "id": "9f0bdd2b4dd872dad602154fd5eb5be0",
     "byname": "やわらかい若者",
     "name": "ピルクルミラクルケア",
     "nameId": "2951",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "e8abd69de3666ac73fa714a7daa0d232",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qopsverpvsr4ds7f7omm",
-        "playTime": "2024-09-10T15:50:20.000Z",
-        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-      },
+      "id": "e8abd69de3666ac73fa714a7daa0d232",
       "byname": "サーモンランの気分",
       "name": "みゅしゃん",
       "nameId": "2910",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "e5ff514da3592139d0e5e733bf1598fa",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qjss357se6tlkhphanmm",
-        "playTime": "2024-09-10T15:50:20.000Z",
-        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-      },
+      "id": "e5ff514da3592139d0e5e733bf1598fa",
       "byname": "インドアなプログラマー",
       "name": "Goomy",
       "nameId": "1168",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "2b71233e9c2e3072d9076cc2580c53a7",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qbdkcbysqpmoidju4zmm",
-        "playTime": "2024-09-10T15:50:20.000Z",
-        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-      },
+      "id": "2b71233e9c2e3072d9076cc2580c53a7",
       "byname": "となりのおねえさん",
       "name": "なまはむちゃん",
       "nameId": "1824",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "b2ba82a8309aacfe0407892d0aa523af",
+      "id": "b2ba82a8309aacfe0407892d0aa523af",
       "waterLevel": 1,
       "eventType": 3,
       "quotaNum": 22,
       "goldenIkuraPopNum": 30,
       "goldenIkuraNum": 26,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "cc8f9b9988f28ed84b5b64cc6c128075",
+      "id": "cc8f9b9988f28ed84b5b64cc6c128075",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 24,
       "goldenIkuraPopNum": 45,
       "goldenIkuraNum": 26,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "444d226c43b004ba8d6b02e4b6fdfc67",
+      "id": "444d226c43b004ba8d6b02e4b6fdfc67",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 26,
       "goldenIkuraPopNum": 54,
       "goldenIkuraNum": 31,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

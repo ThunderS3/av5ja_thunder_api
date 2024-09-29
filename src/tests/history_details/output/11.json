@@ -1,21 +1,9 @@
 {
-  "hash": "13facc28aea8f4ed05347e7bc1d0f29d",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-21T17:05:07.000Z",
-    "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-  },
+  "id": "13facc28aea8f4ed05347e7bc1d0f29d",
   "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "8f996c8d1ad43593121a6e44f3a2341b",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-21T17:05:07.000Z",
-      "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-    },
+    "id": "8f996c8d1ad43593121a6e44f3a2341b",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "010e57a62706e2628987bb620edc2f67",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-21T17:05:07.000Z",
-        "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-      },
+      "id": "010e57a62706e2628987bb620edc2f67",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "14f300667130a0b04488c72524cc9fec",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "aoxyvohcadfnz2q4ulrm",
-        "playTime": "2024-06-21T17:05:07.000Z",
-        "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-      },
+      "id": "14f300667130a0b04488c72524cc9fec",
       "byname": "Cute Magician",
       "name": "Evp-kun",
       "nameId": "1083",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "222801dc9c9aa697a1eaa666ff8e3eab",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qpjbe4hvsrfu72gmgkrm",
-        "playTime": "2024-06-21T17:05:07.000Z",
-        "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-      },
+      "id": "222801dc9c9aa697a1eaa666ff8e3eab",
       "byname": "Fan-Favorite Maniac",
       "name": "yaoi",
       "nameId": "1892",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "ea8c5746c54df8782e7ff0e0a79ad9e7",
+      "id": "ea8c5746c54df8782e7ff0e0a79ad9e7",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 27,
       "goldenIkuraPopNum": 66,
       "goldenIkuraNum": 48,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "14b0903dd164ecd0d66639fc81bf5e81",
+      "id": "14b0903dd164ecd0d66639fc81bf5e81",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 29,
       "goldenIkuraPopNum": 69,
       "goldenIkuraNum": 35,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "76dd92c9086de2be7495a39da0b6d3c8",
+      "id": "76dd92c9086de2be7495a39da0b6d3c8",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 31,
       "goldenIkuraPopNum": 75,
       "goldenIkuraNum": 31,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

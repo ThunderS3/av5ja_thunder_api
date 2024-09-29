@@ -14,7 +14,7 @@
       },
       "results": [
         {
-          "hash": "6535158b4e92adc52457bb7d326e4d07",
+          "id": "6535158b4e92adc52457bb7d326e4d07",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -35,7 +35,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "63b8aa56134b224584a78661ff3b6152",
+            "id": "63b8aa56134b224584a78661ff3b6152",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -81,7 +81,7 @@
           },
           "otherResults": [
             {
-              "hash": "36757990aee6f521a3be3d61ef9f6ff6",
+              "id": "36757990aee6f521a3be3d61ef9f6ff6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avji6jn73btyjsphanmm",
@@ -157,23 +157,23 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "3c35554fa371c3a2d30975fce5493381",
+              "id": "3c35554fa371c3a2d30975fce5493381",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 13,
               "goldenIkuraPopNum": 36,
               "goldenIkuraNum": 13,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "0bc8244d33aacdd9426909d2ef9a4305",
+              "id": "0bc8244d33aacdd9426909d2ef9a4305",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 14,
               "goldenIkuraPopNum": 42,
               "goldenIkuraNum": 1,
-              "id": 2,
+              "waveId": 2,
               "isClear": false
             }
           ]
@@ -194,7 +194,7 @@
       },
       "results": [
         {
-          "hash": "c68cb0aa797f6791e1904577903837c2",
+          "id": "c68cb0aa797f6791e1904577903837c2",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -215,7 +215,7 @@
           },
           "scale": [11, 0, 0],
           "myResult": {
-            "hash": "1eb7987a335d9c48e500ea819177cec1",
+            "id": "1eb7987a335d9c48e500ea819177cec1",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -261,7 +261,7 @@
           },
           "otherResults": [
             {
-              "hash": "fdac1041cac788402462b576ad324641",
+              "id": "fdac1041cac788402462b576ad324641",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q2dvi2wdok3y5gkacnmm",
@@ -321,7 +321,7 @@
               "jobRate": null
             },
             {
-              "hash": "6721aeded713358395231992729ca02c",
+              "id": "6721aeded713358395231992729ca02c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q5kzrtqdgmmtqvh2swmm",
@@ -381,7 +381,7 @@
               "jobRate": null
             },
             {
-              "hash": "688865848a05753dcd3e23430529dc61",
+              "id": "688865848a05753dcd3e23430529dc61",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "aex6ozblwlu2m474domm",
@@ -394,7 +394,7 @@
               "nameplate": {
                 "badges": [5220000, 3101500, 6000003],
                 "background": {
-                  "id": 1,
+                  "waveId": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -457,49 +457,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "82ff80dbea1999c03d44b6eca67eef48",
+              "id": "82ff80dbea1999c03d44b6eca67eef48",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 53,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "0d5927e8f3029960960bd4a6bd5a5d0e",
+              "id": "0d5927e8f3029960960bd4a6bd5a5d0e",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 49,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "097a5c5cd3144ba625cb6a51f2f5c24c",
+              "id": "097a5c5cd3144ba625cb6a51f2f5c24c",
               "waterLevel": 0,
               "eventType": 7,
               "quotaNum": 32,
               "goldenIkuraPopNum": 88,
               "goldenIkuraNum": 54,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "cd083c6e7dc8972617d0a62c31cda123",
+              "id": "cd083c6e7dc8972617d0a62c31cda123",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 45,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "f0f4fc2f3acde95eac0b116728b2d56e",
+          "id": "f0f4fc2f3acde95eac0b116728b2d56e",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -520,7 +520,7 @@
           },
           "scale": [8, 2, 1],
           "myResult": {
-            "hash": "3c5d7b8357e9076c7ccbf71bdd53d2de",
+            "id": "3c5d7b8357e9076c7ccbf71bdd53d2de",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -566,7 +566,7 @@
           },
           "otherResults": [
             {
-              "hash": "920e9af2e470858de7ab3d12043c4e08",
+              "id": "920e9af2e470858de7ab3d12043c4e08",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qx7tsoviv75um2h2byom",
@@ -626,7 +626,7 @@
               "jobRate": null
             },
             {
-              "hash": "6b14479fbafc3c97deae39cf78aa3894",
+              "id": "6b14479fbafc3c97deae39cf78aa3894",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a3d6qxobziesq3yianmm",
@@ -686,7 +686,7 @@
               "jobRate": null
             },
             {
-              "hash": "c9672a2521d820b7859976e2e0df5980",
+              "id": "c9672a2521d820b7859976e2e0df5980",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "atfygmsq5cfs7kudonmm",
@@ -762,49 +762,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "aa37934567590c65b1440292d67ec576",
+              "id": "aa37934567590c65b1440292d67ec576",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 40,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "1d2cb0e4b6df9a18b96b0c34b1d7ddb4",
+              "id": "1d2cb0e4b6df9a18b96b0c34b1d7ddb4",
               "waterLevel": 1,
               "eventType": 4,
               "quotaNum": 31,
               "goldenIkuraPopNum": 65,
               "goldenIkuraNum": 44,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "284cacb77e597999e0cd5c2b71c2fb62",
+              "id": "284cacb77e597999e0cd5c2b71c2fb62",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 98,
               "goldenIkuraNum": 52,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "6c228501776768c42010b3ef998ef0ed",
+              "id": "6c228501776768c42010b3ef998ef0ed",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 51,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "abbcce7bb2095abd68e54a39a591ee05",
+          "id": "abbcce7bb2095abd68e54a39a591ee05",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -825,7 +825,7 @@
           },
           "scale": [8, 3, 1],
           "myResult": {
-            "hash": "9acfef3b97266578e89a45a33cfdc4a4",
+            "id": "9acfef3b97266578e89a45a33cfdc4a4",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -871,7 +871,7 @@
           },
           "otherResults": [
             {
-              "hash": "817bfa8e179859c3b6ca60c3a4b19ce9",
+              "id": "817bfa8e179859c3b6ca60c3a4b19ce9",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "atc6eirwzcp5waovwnmm",
@@ -931,7 +931,7 @@
               "jobRate": null
             },
             {
-              "hash": "46075817aefa6013c4476ccba82d40ae",
+              "id": "46075817aefa6013c4476ccba82d40ae",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qsn7oa6u6is5dia2asom",
@@ -991,7 +991,7 @@
               "jobRate": null
             },
             {
-              "hash": "fea550a3cc41051563ff35e2b443a7c5",
+              "id": "fea550a3cc41051563ff35e2b443a7c5",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "albcmqn2fwgscrbyx6mm",
@@ -1067,49 +1067,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "7874df03b9385891f48d96e6a76b4eb5",
+              "id": "7874df03b9385891f48d96e6a76b4eb5",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 69,
               "goldenIkuraNum": 55,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "ea5770c7e70c743697041fba9a060100",
+              "id": "ea5770c7e70c743697041fba9a060100",
               "waterLevel": 1,
               "eventType": 1,
               "quotaNum": 30,
               "goldenIkuraPopNum": 39,
               "goldenIkuraNum": 34,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "d8c6c6c0b02c01b2cf74674a35f17a29",
+              "id": "d8c6c6c0b02c01b2cf74674a35f17a29",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 52,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "72cf30568841f07bcc447fa186d1c645",
+              "id": "72cf30568841f07bcc447fa186d1c645",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 54,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "d70c253b0c7ddca3fbe6cdc7c8629406",
+          "id": "d70c253b0c7ddca3fbe6cdc7c8629406",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -1130,7 +1130,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "07e1dce6cd93f402848a24b6acf7b0e8",
+            "id": "07e1dce6cd93f402848a24b6acf7b0e8",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -1176,7 +1176,7 @@
           },
           "otherResults": [
             {
-              "hash": "d71c4f10c36ed22864e95081e9963459",
+              "id": "d71c4f10c36ed22864e95081e9963459",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qz26kzvwvc27id3hanmm",
@@ -1236,7 +1236,7 @@
               "jobRate": null
             },
             {
-              "hash": "a04b6510d84308c29d85a81315329e5d",
+              "id": "a04b6510d84308c29d85a81315329e5d",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qsn7oa6u6is5dia2asom",
@@ -1296,7 +1296,7 @@
               "jobRate": null
             },
             {
-              "hash": "bd1723325b6b3feee49fe53289e525e1",
+              "id": "bd1723325b6b3feee49fe53289e525e1",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qtaciypciea6j3junnmm",
@@ -1372,39 +1372,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "411dcab8657e2fc04adafbeabb08e0e9",
+              "id": "411dcab8657e2fc04adafbeabb08e0e9",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 52,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "d681fbdf430df008b34f42d18d10cf63",
+              "id": "d681fbdf430df008b34f42d18d10cf63",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 51,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "94baa8dc91697dd97fa6eb840bd01aba",
+              "id": "94baa8dc91697dd97fa6eb840bd01aba",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 93,
               "goldenIkuraNum": 51,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "8bb9cb1a437edadf4ff12186bd5d87b2",
+          "id": "8bb9cb1a437edadf4ff12186bd5d87b2",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -1425,7 +1425,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "16480f1f6bc2ca2dbd0b29daecdb23cb",
+            "id": "16480f1f6bc2ca2dbd0b29daecdb23cb",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -1471,7 +1471,7 @@
           },
           "otherResults": [
             {
-              "hash": "a131e7ad08e478a6c01a5fa3aa21f1ff",
+              "id": "a131e7ad08e478a6c01a5fa3aa21f1ff",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "awtoeirwzcp5wi3hanmm",
@@ -1531,7 +1531,7 @@
               "jobRate": null
             },
             {
-              "hash": "c0d2fdb9c4cf01d7edbf1356cd89accc",
+              "id": "c0d2fdb9c4cf01d7edbf1356cd89accc",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a5iruox6afilfq77fnmm",
@@ -1591,7 +1591,7 @@
               "jobRate": null
             },
             {
-              "hash": "09aa7955b9c3da3a74c97a25df1063ee",
+              "id": "09aa7955b9c3da3a74c97a25df1063ee",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "awmhmzvwvc27itgafvmm",
@@ -1667,39 +1667,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "49ce70ed5597539bf7a05acdf0566ce2",
+              "id": "49ce70ed5597539bf7a05acdf0566ce2",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 69,
               "goldenIkuraNum": 53,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "1ba75183ee34aacebc8b534bede04ed5",
+              "id": "1ba75183ee34aacebc8b534bede04ed5",
               "waterLevel": 2,
               "eventType": 5,
               "quotaNum": 29,
               "goldenIkuraPopNum": 99,
               "goldenIkuraNum": 72,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "ae001d9c97bb404a08264384d04a6089",
+              "id": "ae001d9c97bb404a08264384d04a6089",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 46,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "ccdbf5aa0a484fca95aae7988f71ae07",
+          "id": "ccdbf5aa0a484fca95aae7988f71ae07",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -1720,7 +1720,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "2d6da128761cc779b98c810e766a4401",
+            "id": "2d6da128761cc779b98c810e766a4401",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -1766,7 +1766,7 @@
           },
           "otherResults": [
             {
-              "hash": "3fc36213166765acd37adaafa462733a",
+              "id": "3fc36213166765acd37adaafa462733a",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "atfygmsq5cfs7kudonmm",
@@ -1826,7 +1826,7 @@
               "jobRate": null
             },
             {
-              "hash": "247d6d052e4e900a9ee54b00956f9f0b",
+              "id": "247d6d052e4e900a9ee54b00956f9f0b",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a3d6qxobziesq3yianmm",
@@ -1886,7 +1886,7 @@
               "jobRate": null
             },
             {
-              "hash": "3de57d7da32e624ef84affe73de6f9a0",
+              "id": "3de57d7da32e624ef84affe73de6f9a0",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qk2l2oxkx7ytviaqnbnm",
@@ -1962,39 +1962,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "6df6874a4db4a7db8926a54af24951b6",
+              "id": "6df6874a4db4a7db8926a54af24951b6",
               "waterLevel": 1,
               "eventType": 1,
               "quotaNum": 29,
               "goldenIkuraPopNum": 42,
               "goldenIkuraNum": 33,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "166c7f799b7a98381b5b64badcb98151",
+              "id": "166c7f799b7a98381b5b64badcb98151",
               "waterLevel": 1,
               "eventType": 4,
               "quotaNum": 31,
               "goldenIkuraPopNum": 60,
               "goldenIkuraNum": 49,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "c72b50d5dd8ed76e866d5f31f2394914",
+              "id": "c72b50d5dd8ed76e866d5f31f2394914",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 91,
               "goldenIkuraNum": 50,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "49c15b82c0baa061043d4f7885a97301",
+          "id": "49c15b82c0baa061043d4f7885a97301",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2015,7 +2015,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "23ff1478d72771b2d6f37d258e3fef85",
+            "id": "23ff1478d72771b2d6f37d258e3fef85",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2061,7 +2061,7 @@
           },
           "otherResults": [
             {
-              "hash": "1224210ed602feb7d82deb8092bda841",
+              "id": "1224210ed602feb7d82deb8092bda841",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a3d6qxobziesq3yianmm",
@@ -2121,7 +2121,7 @@
               "jobRate": null
             },
             {
-              "hash": "9e0ac45113fdd52814740fb2dbb9eafb",
+              "id": "9e0ac45113fdd52814740fb2dbb9eafb",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qv4o3z2uqf4kr4ahanmm",
@@ -2134,7 +2134,7 @@
               "nameplate": {
                 "badges": [null, 3003001, null],
                 "background": {
-                  "id": 1,
+                  "waveId": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -2181,7 +2181,7 @@
               "jobRate": null
             },
             {
-              "hash": "f106941c3b727f13850effe0a98d808c",
+              "id": "f106941c3b727f13850effe0a98d808c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qx7tsoviv75um2h2byom",
@@ -2257,39 +2257,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "8ce44a0e652b6201ec374fc6f29d0ff9",
+              "id": "8ce44a0e652b6201ec374fc6f29d0ff9",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 32,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "e4764b9f959a1921d1d92a4ef048ca64",
+              "id": "e4764b9f959a1921d1d92a4ef048ca64",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 38,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "1016da8ccc4ab148de88da60b997b76f",
+              "id": "1016da8ccc4ab148de88da60b997b76f",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 63,
               "goldenIkuraNum": 34,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "63c5517be792d0ca4c340821ed2ff02f",
+          "id": "63c5517be792d0ca4c340821ed2ff02f",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2310,7 +2310,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "b48655faad796773ee3c13a4bffca7cb",
+            "id": "b48655faad796773ee3c13a4bffca7cb",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2356,7 +2356,7 @@
           },
           "otherResults": [
             {
-              "hash": "9ee653203c6e6240e259fe95cdd92f3e",
+              "id": "9ee653203c6e6240e259fe95cdd92f3e",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qz26kzvwvc27id3hanmm",
@@ -2416,7 +2416,7 @@
               "jobRate": null
             },
             {
-              "hash": "262d966d66f930f00c930b3592ef4c2d",
+              "id": "262d966d66f930f00c930b3592ef4c2d",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qsn7oa6u6is5dia2asom",
@@ -2476,7 +2476,7 @@
               "jobRate": null
             },
             {
-              "hash": "7ae4cb25c4e2285548bd18020f4335b3",
+              "id": "7ae4cb25c4e2285548bd18020f4335b3",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a626323svr7w4zkianmm",
@@ -2552,39 +2552,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "599819abeb9b172a94802e7b3f38067e",
+              "id": "599819abeb9b172a94802e7b3f38067e",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 43,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "a679f67bab27a3ee1f588773f738fcba",
+              "id": "a679f67bab27a3ee1f588773f738fcba",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 57,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "6ab9ac6ba3148bb15c88ef0d128e772a",
+              "id": "6ab9ac6ba3148bb15c88ef0d128e772a",
               "waterLevel": 2,
               "eventType": 5,
               "quotaNum": 33,
               "goldenIkuraPopNum": 105,
               "goldenIkuraNum": 69,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "6327e6df2e7efc74ee3d2aceca1d9bcb",
+          "id": "6327e6df2e7efc74ee3d2aceca1d9bcb",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2605,7 +2605,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "c5f7616bd859c357eca0abdd2b5d5fa0",
+            "id": "c5f7616bd859c357eca0abdd2b5d5fa0",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2651,7 +2651,7 @@
           },
           "otherResults": [
             {
-              "hash": "1dc5a5fae87f5471a7397ceb32e64e4e",
+              "id": "1dc5a5fae87f5471a7397ceb32e64e4e",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qual543tmcu3yjepntmm",
@@ -2711,7 +2711,7 @@
               "jobRate": null
             },
             {
-              "hash": "74d52341aca149095968b420fed694fe",
+              "id": "74d52341aca149095968b420fed694fe",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qasdypsazn3uicpannmm",
@@ -2771,7 +2771,7 @@
               "jobRate": null
             },
             {
-              "hash": "2e01af716342ccb8d2a07e6d738f4464",
+              "id": "2e01af716342ccb8d2a07e6d738f4464",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qnvegovesrnzgamqvrmm",
@@ -2847,39 +2847,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "6b7e2d2b6823adaad72fd2dacc31474a",
+              "id": "6b7e2d2b6823adaad72fd2dacc31474a",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 69,
               "goldenIkuraNum": 51,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "7a6fb407d9defc9ea1ea814e9e4a6c09",
+              "id": "7a6fb407d9defc9ea1ea814e9e4a6c09",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 56,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "5144f107be899faef322b83b0f73bf76",
+              "id": "5144f107be899faef322b83b0f73bf76",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 47,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "8111145365da8abec0827619ca76c5ed",
+          "id": "8111145365da8abec0827619ca76c5ed",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2900,7 +2900,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "a55b97390b502bea3f492b06371fe338",
+            "id": "a55b97390b502bea3f492b06371fe338",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -2946,7 +2946,7 @@
           },
           "otherResults": [
             {
-              "hash": "0588db0bd33b86573429c532bf536b0a",
+              "id": "0588db0bd33b86573429c532bf536b0a",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qx7tsoviv75um2h2byom",
@@ -3006,7 +3006,7 @@
               "jobRate": null
             },
             {
-              "hash": "5ef5a7d270678a94ad2e8b7dbb5bd293",
+              "id": "5ef5a7d270678a94ad2e8b7dbb5bd293",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a3d6qxobziesq3yianmm",
@@ -3066,7 +3066,7 @@
               "jobRate": null
             },
             {
-              "hash": "23faade5c68a72b3dc6dc49e3ae53d09",
+              "id": "23faade5c68a72b3dc6dc49e3ae53d09",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "atfygmsq5cfs7kudonmm",
@@ -3142,39 +3142,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "f1c112412e5bbc6ec439a4a364fefce9",
+              "id": "f1c112412e5bbc6ec439a4a364fefce9",
               "waterLevel": 1,
               "eventType": 2,
               "quotaNum": 29,
               "goldenIkuraPopNum": 58,
               "goldenIkuraNum": 44,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "1be06905d88471fa904fe44c0a512c6a",
+              "id": "1be06905d88471fa904fe44c0a512c6a",
               "waterLevel": 2,
               "eventType": 4,
               "quotaNum": 31,
               "goldenIkuraPopNum": 94,
               "goldenIkuraNum": 71,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "fc83cf82540fe04a66e12621d7ba62f6",
+              "id": "fc83cf82540fe04a66e12621d7ba62f6",
               "waterLevel": 2,
               "eventType": 2,
               "quotaNum": 34,
               "goldenIkuraPopNum": 55,
               "goldenIkuraNum": 46,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "cc82df29ca6a31144877759210dc0e0d",
+          "id": "cc82df29ca6a31144877759210dc0e0d",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -3195,7 +3195,7 @@
           },
           "scale": [8, 2, 0],
           "myResult": {
-            "hash": "0d58710c403f2e7f6fb6a3674bb17df8",
+            "id": "0d58710c403f2e7f6fb6a3674bb17df8",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -3241,7 +3241,7 @@
           },
           "otherResults": [
             {
-              "hash": "c89bfe1d1fa55cff5dd54941ed2e0a0b",
+              "id": "c89bfe1d1fa55cff5dd54941ed2e0a0b",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qm5xgam6r5acpskkanmm",
@@ -3301,7 +3301,7 @@
               "jobRate": null
             },
             {
-              "hash": "a2b25fa331b57f00256de18fa44d1789",
+              "id": "a2b25fa331b57f00256de18fa44d1789",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a3d6qxobziesq3yianmm",
@@ -3361,7 +3361,7 @@
               "jobRate": null
             },
             {
-              "hash": "689448243d8487e991109c5223961233",
+              "id": "689448243d8487e991109c5223961233",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qx7tsoviv75um2h2byom",
@@ -3437,49 +3437,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "07b03f1a7b20268216891a82a6acad88",
+              "id": "07b03f1a7b20268216891a82a6acad88",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 29,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 53,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "9b25e23fd77b4f492d0a2beda8a63e6e",
+              "id": "9b25e23fd77b4f492d0a2beda8a63e6e",
               "waterLevel": 1,
               "eventType": 1,
               "quotaNum": 31,
               "goldenIkuraPopNum": 45,
               "goldenIkuraNum": 36,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "09081e2ae22b1365a598016028313886",
+              "id": "09081e2ae22b1365a598016028313886",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 93,
               "goldenIkuraNum": 40,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "deb5a0f356b26dfe069d48e2f50499c5",
+              "id": "deb5a0f356b26dfe069d48e2f50499c5",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 57,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "ee99072d111038b26ea7d1cb34bd2dfd",
+          "id": "ee99072d111038b26ea7d1cb34bd2dfd",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -3500,7 +3500,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "b2d310bf3553359f189cd70fa0e3adff",
+            "id": "b2d310bf3553359f189cd70fa0e3adff",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -3546,7 +3546,7 @@
           },
           "otherResults": [
             {
-              "hash": "4bbb36c6a00b312512aff516e9e0241c",
+              "id": "4bbb36c6a00b312512aff516e9e0241c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "am3ppcadcx77rw3hanmm",
@@ -3606,7 +3606,7 @@
               "jobRate": null
             },
             {
-              "hash": "48aa899e09a4bcb5d821d6aca2f1f03a",
+              "id": "48aa899e09a4bcb5d821d6aca2f1f03a",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q2dvi2wdok3y5gkacnmm",
@@ -3666,7 +3666,7 @@
               "jobRate": null
             },
             {
-              "hash": "f600a6b7f5b6f11f4028f324f3695f96",
+              "id": "f600a6b7f5b6f11f4028f324f3695f96",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a3aiidum7puiueo7jfsm",
@@ -3742,39 +3742,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "1abfd7ce8ad0eb6de37983007065a191",
+              "id": "1abfd7ce8ad0eb6de37983007065a191",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 49,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "1865fe71124c5f73293810aa7fa300ad",
+              "id": "1865fe71124c5f73293810aa7fa300ad",
               "waterLevel": 2,
               "eventType": 3,
               "quotaNum": 29,
               "goldenIkuraPopNum": 55,
               "goldenIkuraNum": 47,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "e0ac47e888b6236c561aa291cffe012b",
+              "id": "e0ac47e888b6236c561aa291cffe012b",
               "waterLevel": 1,
               "eventType": 8,
               "quotaNum": 32,
               "goldenIkuraPopNum": 90,
               "goldenIkuraNum": 49,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "06770e689d8b8f934d34a8d967b7a945",
+          "id": "06770e689d8b8f934d34a8d967b7a945",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -3795,7 +3795,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "2163206c7bd435f5112716da904346b0",
+            "id": "2163206c7bd435f5112716da904346b0",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -3841,7 +3841,7 @@
           },
           "otherResults": [
             {
-              "hash": "f66d8da74b4cdd4000f03621349631a4",
+              "id": "f66d8da74b4cdd4000f03621349631a4",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "aerwjnyghvzbayfhanmm",
@@ -3901,7 +3901,7 @@
               "jobRate": null
             },
             {
-              "hash": "cfc10c61adfca28692ebc6b6687a5b4c",
+              "id": "cfc10c61adfca28692ebc6b6687a5b4c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qsn7oa6u6is5dia2asom",
@@ -3961,7 +3961,7 @@
               "jobRate": null
             },
             {
-              "hash": "695fec4bbacb4cb3869df51e4bee2dda",
+              "id": "695fec4bbacb4cb3869df51e4bee2dda",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "amvswcyquqxwesxhanmm",
@@ -4037,39 +4037,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "45172205065010fd463c49e35a0a49cb",
+              "id": "45172205065010fd463c49e35a0a49cb",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 53,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "7aea0254988eecd04339791669ad0d4c",
+              "id": "7aea0254988eecd04339791669ad0d4c",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 40,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "d4c3ea0194bbee66655cb9e581708895",
+              "id": "d4c3ea0194bbee66655cb9e581708895",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 49,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "b77c2ee1c89b05f19ebe540b5f9dc8ca",
+          "id": "b77c2ee1c89b05f19ebe540b5f9dc8ca",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -4090,7 +4090,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "8ec4a4128f89529798dfaf30e64a1b97",
+            "id": "8ec4a4128f89529798dfaf30e64a1b97",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -4136,7 +4136,7 @@
           },
           "otherResults": [
             {
-              "hash": "15bd5f46729c9ac09b68ed275a890d48",
+              "id": "15bd5f46729c9ac09b68ed275a890d48",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "awkzpiurqakjn45zanmm",
@@ -4196,7 +4196,7 @@
               "jobRate": null
             },
             {
-              "hash": "bc30df3bd7028934c7649d99dbce4b31",
+              "id": "bc30df3bd7028934c7649d99dbce4b31",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ad2irxobziesqd6csnmm",
@@ -4256,7 +4256,7 @@
               "jobRate": null
             },
             {
-              "hash": "a285d6bd95c1c8191cbe697f761b00ac",
+              "id": "a285d6bd95c1c8191cbe697f761b00ac",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "axrqn3umrfntl5vxhnmm",
@@ -4332,39 +4332,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "23fd620b5f5fff1ae1976f0453d2b634",
+              "id": "23fd620b5f5fff1ae1976f0453d2b634",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 66,
               "goldenIkuraNum": 30,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "1063f47b912fcae6d09728ac58e520dd",
+              "id": "1063f47b912fcae6d09728ac58e520dd",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 41,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "49940eba3db22e5c1136e00bdbf712ad",
+              "id": "49940eba3db22e5c1136e00bdbf712ad",
               "waterLevel": 1,
               "eventType": 1,
               "quotaNum": 31,
               "goldenIkuraPopNum": 48,
               "goldenIkuraNum": 44,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "f56bc0c68681b8378bbbdedded4cd501",
+          "id": "f56bc0c68681b8378bbbdedded4cd501",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -4385,7 +4385,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "e206f9cc6e7d1015e861c9e5c489ec46",
+            "id": "e206f9cc6e7d1015e861c9e5c489ec46",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -4431,7 +4431,7 @@
           },
           "otherResults": [
             {
-              "hash": "6cf3ddffb86b2f0f5c1fcacb187cdcb2",
+              "id": "6cf3ddffb86b2f0f5c1fcacb187cdcb2",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "amvswcyquqxwesxhanmm",
@@ -4491,7 +4491,7 @@
               "jobRate": null
             },
             {
-              "hash": "23bcb99eebb760f8f822be6d63cb02d6",
+              "id": "23bcb99eebb760f8f822be6d63cb02d6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qsn7oa6u6is5dia2asom",
@@ -4551,7 +4551,7 @@
               "jobRate": null
             },
             {
-              "hash": "0cfa084d722b9ad897418be06095982c",
+              "id": "0cfa084d722b9ad897418be06095982c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "aztzskgujfdm6tvfbnmm",
@@ -4627,39 +4627,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "96bf5770cbdc6cb641674f6126b54fba",
+              "id": "96bf5770cbdc6cb641674f6126b54fba",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 40,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "58a6e940bc34e4075a10760309ff1d7f",
+              "id": "58a6e940bc34e4075a10760309ff1d7f",
               "waterLevel": 0,
               "eventType": 7,
               "quotaNum": 30,
               "goldenIkuraPopNum": 92,
               "goldenIkuraNum": 58,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "8e12d378288a2dbbb88b233b637fce39",
+              "id": "8e12d378288a2dbbb88b233b637fce39",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 33,
               "goldenIkuraPopNum": 90,
               "goldenIkuraNum": 63,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "8c6bb9fbc9bd9872fb3c471c47060eb6",
+          "id": "8c6bb9fbc9bd9872fb3c471c47060eb6",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -4680,7 +4680,7 @@
           },
           "scale": [9, 1, 0],
           "myResult": {
-            "hash": "184f7982e5116ef0c7b5c2aee5ada6e4",
+            "id": "184f7982e5116ef0c7b5c2aee5ada6e4",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -4726,7 +4726,7 @@
           },
           "otherResults": [
             {
-              "hash": "fdc676060b614a4e28dcc1ea733a6b49",
+              "id": "fdc676060b614a4e28dcc1ea733a6b49",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qtaciypciea6j3junnmm",
@@ -4786,7 +4786,7 @@
               "jobRate": null
             },
             {
-              "hash": "d06d0c0f3986f1a739651a692acaf0ae",
+              "id": "d06d0c0f3986f1a739651a692acaf0ae",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qsn7oa6u6is5dia2asom",
@@ -4846,7 +4846,7 @@
               "jobRate": null
             },
             {
-              "hash": "19d96ac6c353b6de4bb042e906e9b227",
+              "id": "19d96ac6c353b6de4bb042e906e9b227",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a4vbj4kdafo5zuyahnmm",
@@ -4922,49 +4922,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "7faf6fc9221b03cde2b2ec1a2246f8b2",
+              "id": "7faf6fc9221b03cde2b2ec1a2246f8b2",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 52,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "a1a095fc75b05cf76eceec283ceeb1e4",
+              "id": "a1a095fc75b05cf76eceec283ceeb1e4",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 66,
               "goldenIkuraNum": 31,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "fb24e2f519e5f668b8ff203e1ee0d468",
+              "id": "fb24e2f519e5f668b8ff203e1ee0d468",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 54,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "0085105e7b333e9e4fc022c5d463df0e",
+              "id": "0085105e7b333e9e4fc022c5d463df0e",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 63,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "411593a41d1bf57c7b80c3c48d978acd",
+          "id": "411593a41d1bf57c7b80c3c48d978acd",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -4985,7 +4985,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "b587773eb7c0561b7b70786880d04ea5",
+            "id": "b587773eb7c0561b7b70786880d04ea5",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -5031,7 +5031,7 @@
           },
           "otherResults": [
             {
-              "hash": "4341a8aa9f02b4ebd71c07b762cf7005",
+              "id": "4341a8aa9f02b4ebd71c07b762cf7005",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ax56dio7d5tnf5voanmm",
@@ -5091,7 +5091,7 @@
               "jobRate": null
             },
             {
-              "hash": "e6c471738c74da4b06dc8cc87feeead0",
+              "id": "e6c471738c74da4b06dc8cc87feeead0",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qdu3hmtkxzy66jfadbnm",
@@ -5104,7 +5104,7 @@
               "nameplate": {
                 "badges": [5211000, null, null],
                 "background": {
-                  "id": 1,
+                  "waveId": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -5151,7 +5151,7 @@
               "jobRate": null
             },
             {
-              "hash": "144f81e4ad36e789e99c24ac69c75386",
+              "id": "144f81e4ad36e789e99c24ac69c75386",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qwbx76nhst35rypianmm",
@@ -5227,39 +5227,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "7323ed3e4c31f3287d3392f0196c3994",
+              "id": "7323ed3e4c31f3287d3392f0196c3994",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 69,
               "goldenIkuraNum": 50,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "47746cc9c401258bf077ec7aede41824",
+              "id": "47746cc9c401258bf077ec7aede41824",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 34,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "a0b0cf7faac05e93deb1d7ebc1eb6434",
+              "id": "a0b0cf7faac05e93deb1d7ebc1eb6434",
               "waterLevel": 0,
               "eventType": 4,
               "quotaNum": 31,
               "goldenIkuraPopNum": 55,
               "goldenIkuraNum": 47,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "a6b521ab555ebd6fc0c90d37f4b3fc93",
+          "id": "a6b521ab555ebd6fc0c90d37f4b3fc93",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -5280,7 +5280,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "9634aa2e90c15080e63180e3dcb1cf5c",
+            "id": "9634aa2e90c15080e63180e3dcb1cf5c",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -5326,7 +5326,7 @@
           },
           "otherResults": [
             {
-              "hash": "d2cf8f1bf7f1d60eb2e3c2ffaf23e5b9",
+              "id": "d2cf8f1bf7f1d60eb2e3c2ffaf23e5b9",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkq4lbzzyam5goukanmm",
@@ -5386,7 +5386,7 @@
               "jobRate": null
             },
             {
-              "hash": "bbddd12b12dce5775931892743269a17",
+              "id": "bbddd12b12dce5775931892743269a17",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "abtyjfnus4hatsa6snmm",
@@ -5446,7 +5446,7 @@
               "jobRate": null
             },
             {
-              "hash": "d055bce65eebddcd569231ee786d41cb",
+              "id": "d055bce65eebddcd569231ee786d41cb",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "asauwd4vm44hxy46nnmm",
@@ -5522,39 +5522,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "27fe6eff18e703855cf241c4a1c84af7",
+              "id": "27fe6eff18e703855cf241c4a1c84af7",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 64,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "ab112c778a07481ed8f1f846d3f4eaa1",
+              "id": "ab112c778a07481ed8f1f846d3f4eaa1",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 45,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "7ff443506a44c77477e1bf4b5c5c07d9",
+              "id": "7ff443506a44c77477e1bf4b5c5c07d9",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 90,
               "goldenIkuraNum": 65,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "c662521216bfcef9075a063cc9bcbf3e",
+          "id": "c662521216bfcef9075a063cc9bcbf3e",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -5575,7 +5575,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "372718e7643ef31905e2485ce8f57de4",
+            "id": "372718e7643ef31905e2485ce8f57de4",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -5621,7 +5621,7 @@
           },
           "otherResults": [
             {
-              "hash": "0b01ba286f0301308da851ad16054f0c",
+              "id": "0b01ba286f0301308da851ad16054f0c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a7rxaatzqusro2lhanmm",
@@ -5681,7 +5681,7 @@
               "jobRate": null
             },
             {
-              "hash": "e74633f1e77addc31240b79b66905acb",
+              "id": "e74633f1e77addc31240b79b66905acb",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "atfygmsq5cfs7kudonmm",
@@ -5741,7 +5741,7 @@
               "jobRate": null
             },
             {
-              "hash": "51c5766930f6451896c445bdef7a10f7",
+              "id": "51c5766930f6451896c445bdef7a10f7",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ato3nnax573ypqltntom",
@@ -5817,39 +5817,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "411658508e9e9ebe90e873ac2b39a54e",
+              "id": "411658508e9e9ebe90e873ac2b39a54e",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 49,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "7ff5ef7d119bd9b83b260c74dad6fe87",
+              "id": "7ff5ef7d119bd9b83b260c74dad6fe87",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 61,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "fa786db2012870612b33adb7cf12ae63",
+              "id": "fa786db2012870612b33adb7cf12ae63",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 41,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "631b0a043dd3c03e4c678c74f3ae7555",
+          "id": "631b0a043dd3c03e4c678c74f3ae7555",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -5870,7 +5870,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "2d1c8efbd444ea0083062743450d48e5",
+            "id": "2d1c8efbd444ea0083062743450d48e5",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -5916,7 +5916,7 @@
           },
           "otherResults": [
             {
-              "hash": "935819b39ead4401bfd0e8a86e1c42b9",
+              "id": "935819b39ead4401bfd0e8a86e1c42b9",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "acusuox6afilfqnclnmm",
@@ -5976,7 +5976,7 @@
               "jobRate": null
             },
             {
-              "hash": "66e6ffe9b91cdc09863d574fab95c91b",
+              "id": "66e6ffe9b91cdc09863d574fab95c91b",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q376aawlahtwhepdfnmm",
@@ -6036,7 +6036,7 @@
               "jobRate": null
             },
             {
-              "hash": "8a2c3fa8146d9541cc4316936a105583",
+              "id": "8a2c3fa8146d9541cc4316936a105583",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "atnvwcyquqxwekjmdnmm",
@@ -6112,39 +6112,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "faf2f2ddf5fdf8a61527ec4d4aee7d19",
+              "id": "faf2f2ddf5fdf8a61527ec4d4aee7d19",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 42,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "cdb98678d279e0b7d94b938b9f157818",
+              "id": "cdb98678d279e0b7d94b938b9f157818",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 47,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "18b2617eb8ba42d487969124b27a1680",
+              "id": "18b2617eb8ba42d487969124b27a1680",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 52,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "87caa6e95d410cdc95fd522f2cf3e557",
+          "id": "87caa6e95d410cdc95fd522f2cf3e557",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -6165,7 +6165,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "65c166b56735219c946e53ad01e97636",
+            "id": "65c166b56735219c946e53ad01e97636",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -6211,7 +6211,7 @@
           },
           "otherResults": [
             {
-              "hash": "efa60e67ca984f1c91335c601fe6d968",
+              "id": "efa60e67ca984f1c91335c601fe6d968",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qdqsallawfh7r7a7aanm",
@@ -6271,7 +6271,7 @@
               "jobRate": null
             },
             {
-              "hash": "a5e27cd0f3d7239674e9c8ef838c01a8",
+              "id": "a5e27cd0f3d7239674e9c8ef838c01a8",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a7rxaatzqusro2lhanmm",
@@ -6331,7 +6331,7 @@
               "jobRate": null
             },
             {
-              "hash": "19033c24d8b52c6774454f491a55e89a",
+              "id": "19033c24d8b52c6774454f491a55e89a",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qx7tsoviv75um2h2byom",
@@ -6407,39 +6407,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "8777c591fa2e5ae91718ff0b1d8a6bc0",
+              "id": "8777c591fa2e5ae91718ff0b1d8a6bc0",
               "waterLevel": 1,
               "eventType": 4,
               "quotaNum": 29,
               "goldenIkuraPopNum": 55,
               "goldenIkuraNum": 37,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "a057db343287c01ed79a2692229f8664",
+              "id": "a057db343287c01ed79a2692229f8664",
               "waterLevel": 1,
               "eventType": 2,
               "quotaNum": 31,
               "goldenIkuraPopNum": 55,
               "goldenIkuraNum": 49,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "cd270404c5ff9eaf710b9e58976df35a",
+              "id": "cd270404c5ff9eaf710b9e58976df35a",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 93,
               "goldenIkuraNum": 49,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "6573487f11cacdbe13117b596186db13",
+          "id": "6573487f11cacdbe13117b596186db13",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -6460,7 +6460,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "ed8bdb296bb5ed6f261782475061e5bc",
+            "id": "ed8bdb296bb5ed6f261782475061e5bc",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -6506,7 +6506,7 @@
           },
           "otherResults": [
             {
-              "hash": "73db7e1c3354f97d151a903541b584a6",
+              "id": "73db7e1c3354f97d151a903541b584a6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "aivhxp7t65u3tjtnanmm",
@@ -6566,7 +6566,7 @@
               "jobRate": null
             },
             {
-              "hash": "a838a03dd1925f974b8c784d34d0f717",
+              "id": "a838a03dd1925f974b8c784d34d0f717",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeei4vbcjzybamh3vomm",
@@ -6626,7 +6626,7 @@
               "jobRate": null
             },
             {
-              "hash": "48e66a8e5e58ed769813e50eac22982d",
+              "id": "48e66a8e5e58ed769813e50eac22982d",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q5vzxbbonesl2lfn5tmm",
@@ -6702,39 +6702,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "39cfb7ac7958f1ac027a272106eed2c0",
+              "id": "39cfb7ac7958f1ac027a272106eed2c0",
               "waterLevel": 0,
               "eventType": 7,
               "quotaNum": 27,
               "goldenIkuraPopNum": 88,
               "goldenIkuraNum": 54,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "579b669af3d5c175ed2a931a34c869d7",
+              "id": "579b669af3d5c175ed2a931a34c869d7",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 45,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "5b5f94c981455324a8f6829137797512",
+              "id": "5b5f94c981455324a8f6829137797512",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 59,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "589fb73513d26a514afadd38844efb27",
+          "id": "589fb73513d26a514afadd38844efb27",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -6755,7 +6755,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "0a3054971457185fbf54ae4f1f58ec55",
+            "id": "0a3054971457185fbf54ae4f1f58ec55",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -6801,7 +6801,7 @@
           },
           "otherResults": [
             {
-              "hash": "a7a0c83fafb3bb204ad10dbbde0fda6e",
+              "id": "a7a0c83fafb3bb204ad10dbbde0fda6e",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ac6bpzblwlu2m4abromm",
@@ -6861,7 +6861,7 @@
               "jobRate": null
             },
             {
-              "hash": "677689e0cda5a0019bb44e8d7ade1a72",
+              "id": "677689e0cda5a0019bb44e8d7ade1a72",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ayxxsgqmwphseqchgtnm",
@@ -6921,7 +6921,7 @@
               "jobRate": null
             },
             {
-              "hash": "a0d4dc43d0485cbffdd9381e2497d344",
+              "id": "a0d4dc43d0485cbffdd9381e2497d344",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qartqiurqakjn4nrrpmm",
@@ -6997,39 +6997,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "d327dccdd4231f843691e706a5fc5753",
+              "id": "d327dccdd4231f843691e706a5fc5753",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 30,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "7dcbf9f4a19181c82288b17df6990dbf",
+              "id": "7dcbf9f4a19181c82288b17df6990dbf",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 43,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "22384f59da82f406731397eeff0f65ed",
+              "id": "22384f59da82f406731397eeff0f65ed",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 90,
               "goldenIkuraNum": 38,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "109a608d0ad919aad5bc4e13c5446022",
+          "id": "109a608d0ad919aad5bc4e13c5446022",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7050,7 +7050,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "06f9104ad8bf497c1852a37dcea6fcd0",
+            "id": "06f9104ad8bf497c1852a37dcea6fcd0",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7096,7 +7096,7 @@
           },
           "otherResults": [
             {
-              "hash": "81e1b0a7103d35e6ef36be3fa53fd273",
+              "id": "81e1b0a7103d35e6ef36be3fa53fd273",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "agehoyyieljlmafhanmm",
@@ -7156,7 +7156,7 @@
               "jobRate": null
             },
             {
-              "hash": "c2a264bfdc1b25b566be5f713a0d1c6c",
+              "id": "c2a264bfdc1b25b566be5f713a0d1c6c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "aklzha3ncq3g4ro2vkwm",
@@ -7216,7 +7216,7 @@
               "jobRate": null
             },
             {
-              "hash": "940f571ce87e603e8d5360346d9fdde4",
+              "id": "940f571ce87e603e8d5360346d9fdde4",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ag6uqqnqnytmjpnfyqmm",
@@ -7292,39 +7292,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "246c9b90345ef3a8b2d9e576b4d3cfa2",
+              "id": "246c9b90345ef3a8b2d9e576b4d3cfa2",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 49,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "aa2e7e1e392a738b1c378185d3cd3dd2",
+              "id": "aa2e7e1e392a738b1c378185d3cd3dd2",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 34,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "d9cf79f010c96d8bc7944319b25c918b",
+              "id": "d9cf79f010c96d8bc7944319b25c918b",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 33,
-              "id": 3,
+              "waveId": 3,
               "isClear": false
             }
           ]
         },
         {
-          "hash": "cdf31c0a08321ccc52bc7902cc09434e",
+          "id": "cdf31c0a08321ccc52bc7902cc09434e",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7345,7 +7345,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "dd572949a174645b88c260834e1d6135",
+            "id": "dd572949a174645b88c260834e1d6135",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7391,7 +7391,7 @@
           },
           "otherResults": [
             {
-              "hash": "d7efdf7081bf887210c1ac86ecd62a5e",
+              "id": "d7efdf7081bf887210c1ac86ecd62a5e",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avdcixsyk5ufqorntnmm",
@@ -7451,7 +7451,7 @@
               "jobRate": null
             },
             {
-              "hash": "1f05bbd13e72d60be2c228d108d1ee89",
+              "id": "1f05bbd13e72d60be2c228d108d1ee89",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a4t7n3umrfntl5draomm",
@@ -7511,7 +7511,7 @@
               "jobRate": null
             },
             {
-              "hash": "7e2c8eea37f81d1402488dfd510dbc88",
+              "id": "7e2c8eea37f81d1402488dfd510dbc88",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ax56dio7d5tnf5voanmm",
@@ -7587,33 +7587,33 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "be1e05a7cc6b563c3f942e3f8f781001",
+              "id": "be1e05a7cc6b563c3f942e3f8f781001",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 69,
               "goldenIkuraNum": 52,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "c014128b92169e9d51c3c57239306e9d",
+              "id": "c014128b92169e9d51c3c57239306e9d",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 46,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "0acc742463ada75e510f10fa4c201cec",
+              "id": "0acc742463ada75e510f10fa4c201cec",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 56,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
@@ -7634,7 +7634,7 @@
       },
       "results": [
         {
-          "hash": "3b2bb143113720d1904bdd6e5b9ab1db",
+          "id": "3b2bb143113720d1904bdd6e5b9ab1db",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7655,7 +7655,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "3cb5a1ff5ab9deadee9ffab5da73fc8c",
+            "id": "3cb5a1ff5ab9deadee9ffab5da73fc8c",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7701,7 +7701,7 @@
           },
           "otherResults": [
             {
-              "hash": "207d5535d43090d2fbb4e4064c28a34b",
+              "id": "207d5535d43090d2fbb4e4064c28a34b",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qvjsm3jeoznmomuagnmm",
@@ -7761,7 +7761,7 @@
               "jobRate": null
             },
             {
-              "hash": "ae16280af973e5049fe0996ca83b88ab",
+              "id": "ae16280af973e5049fe0996ca83b88ab",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "afdiuj7rhknjqtpmlnmm",
@@ -7821,7 +7821,7 @@
               "jobRate": null
             },
             {
-              "hash": "a68e3114cf30094fdb6858d37c8bfb2f",
+              "id": "a68e3114cf30094fdb6858d37c8bfb2f",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qjza523svr7w4rb5jsmm",
@@ -7897,39 +7897,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "c1d2fd85552eed00e8846f37a444b437",
+              "id": "c1d2fd85552eed00e8846f37a444b437",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 90,
               "goldenIkuraNum": 57,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "fa4aa2a46076c83646dd213ca4d86472",
+              "id": "fa4aa2a46076c83646dd213ca4d86472",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 96,
               "goldenIkuraNum": 81,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "1c5f1d86a3d371fc437ddb26c126c03b",
+              "id": "1c5f1d86a3d371fc437ddb26c126c03b",
               "waterLevel": 1,
               "eventType": 4,
               "quotaNum": 35,
               "goldenIkuraPopNum": 57,
               "goldenIkuraNum": 48,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "3e717fb884973534b8ed79fbf6b056a2",
+          "id": "3e717fb884973534b8ed79fbf6b056a2",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7950,7 +7950,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "62946f7a1947262470ba75d35e5487eb",
+            "id": "62946f7a1947262470ba75d35e5487eb",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -7996,7 +7996,7 @@
           },
           "otherResults": [
             {
-              "hash": "c34ea99b4483bcb1343b3a31ae347159",
+              "id": "c34ea99b4483bcb1343b3a31ae347159",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qonle2hm7z4xb2p4h7mm",
@@ -8056,7 +8056,7 @@
               "jobRate": null
             },
             {
-              "hash": "d377e376832766677ac6cd9885d0fa6e",
+              "id": "d377e376832766677ac6cd9885d0fa6e",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeway57moksseysv7tmm",
@@ -8116,7 +8116,7 @@
               "jobRate": null
             },
             {
-              "hash": "399b29e8b369b90bf578d95f9d96e577",
+              "id": "399b29e8b369b90bf578d95f9d96e577",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkuwozblwlu2mevpsnmm",
@@ -8192,39 +8192,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "ebef13bcfedbd3d694347c5d4a3ea809",
+              "id": "ebef13bcfedbd3d694347c5d4a3ea809",
               "waterLevel": 1,
               "eventType": 3,
               "quotaNum": 29,
               "goldenIkuraPopNum": 55,
               "goldenIkuraNum": 55,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "5c4ec71831c3dc192d91a83f4b7c1ee4",
+              "id": "5c4ec71831c3dc192d91a83f4b7c1ee4",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 47,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "febefcdbcd691f04937b571143f14242",
+              "id": "febefcdbcd691f04937b571143f14242",
               "waterLevel": 2,
               "eventType": 4,
               "quotaNum": 34,
               "goldenIkuraPopNum": 98,
               "goldenIkuraNum": 86,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "ff68236a067c708a6285218f4b664f22",
+          "id": "ff68236a067c708a6285218f4b664f22",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -8245,7 +8245,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "a0862ed7526f489a6fe26d23dc7b0dfb",
+            "id": "a0862ed7526f489a6fe26d23dc7b0dfb",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -8291,7 +8291,7 @@
           },
           "otherResults": [
             {
-              "hash": "70ac19a7e9324417b9f263a120964d1f",
+              "id": "70ac19a7e9324417b9f263a120964d1f",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkuwozblwlu2mevpsnmm",
@@ -8351,7 +8351,7 @@
               "jobRate": null
             },
             {
-              "hash": "32510a0e24004dc2c072b376bc49cbcb",
+              "id": "32510a0e24004dc2c072b376bc49cbcb",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeway57moksseysv7tmm",
@@ -8411,7 +8411,7 @@
               "jobRate": null
             },
             {
-              "hash": "13a4d793039712706736e3b4303c3a88",
+              "id": "13a4d793039712706736e3b4303c3a88",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qonle2hm7z4xb2p4h7mm",
@@ -8487,39 +8487,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "b5c3644ada616b49e1ac1fd6d45a34dc",
+              "id": "b5c3644ada616b49e1ac1fd6d45a34dc",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 42,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "8477e06b02ea046c7b5424b3f33978e7",
+              "id": "8477e06b02ea046c7b5424b3f33978e7",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 31,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 49,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "115b0cfc407bdc299184abf758e3dc99",
+              "id": "115b0cfc407bdc299184abf758e3dc99",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 93,
               "goldenIkuraNum": 76,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "b3eb714dd2e783cfeb5534d287be717f",
+          "id": "b3eb714dd2e783cfeb5534d287be717f",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -8540,7 +8540,7 @@
           },
           "scale": [9, 1, 0],
           "myResult": {
-            "hash": "52ac629fa3123cce956c0d1b81174895",
+            "id": "52ac629fa3123cce956c0d1b81174895",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -8586,7 +8586,7 @@
           },
           "otherResults": [
             {
-              "hash": "dc9d7f51043e1aa91b4fd17067caaf46",
+              "id": "dc9d7f51043e1aa91b4fd17067caaf46",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q7irn3umrfntl5fsknmm",
@@ -8646,7 +8646,7 @@
               "jobRate": null
             },
             {
-              "hash": "5050a6ef324e017d5e284b90dcbef14a",
+              "id": "5050a6ef324e017d5e284b90dcbef14a",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeway57moksseysv7tmm",
@@ -8706,7 +8706,7 @@
               "jobRate": null
             },
             {
-              "hash": "36138da42d8387c4b7fe4b0a7a97e10b",
+              "id": "36138da42d8387c4b7fe4b0a7a97e10b",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkuwozblwlu2mevpsnmm",
@@ -8782,49 +8782,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "1b9f14adf5de225ae442e0d11ccf008a",
+              "id": "1b9f14adf5de225ae442e0d11ccf008a",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 60,
               "goldenIkuraNum": 37,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "181427dcc7d49f4398f89bfb5d3f500f",
+              "id": "181427dcc7d49f4398f89bfb5d3f500f",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 41,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "9f99e7630f9955be8da6f3d9361349ae",
+              "id": "9f99e7630f9955be8da6f3d9361349ae",
               "waterLevel": 1,
               "eventType": 5,
               "quotaNum": 34,
               "goldenIkuraPopNum": 94,
               "goldenIkuraNum": 62,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "9ec4ed91f1d89425ac03d3d74e23bae0",
+              "id": "9ec4ed91f1d89425ac03d3d74e23bae0",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 66,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "384f5b7b25e616fde887fb1d9963fbe8",
+          "id": "384f5b7b25e616fde887fb1d9963fbe8",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -8845,7 +8845,7 @@
           },
           "scale": [5, 2, 0],
           "myResult": {
-            "hash": "7f82705cd6074fca2e9ae3f657eec44e",
+            "id": "7f82705cd6074fca2e9ae3f657eec44e",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -8891,7 +8891,7 @@
           },
           "otherResults": [
             {
-              "hash": "cb9f4d0ec59ee99e944bcecea3a4a6e9",
+              "id": "cb9f4d0ec59ee99e944bcecea3a4a6e9",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qlxmn3umrfntlvphanmm",
@@ -8951,7 +8951,7 @@
               "jobRate": null
             },
             {
-              "hash": "b667ed874cead749660a289d20eed200",
+              "id": "b667ed874cead749660a289d20eed200",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qv32ssey35b53jpaqiym",
@@ -8964,7 +8964,7 @@
               "nameplate": {
                 "badges": [null, null, null],
                 "background": {
-                  "id": 1,
+                  "waveId": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -9011,7 +9011,7 @@
               "jobRate": null
             },
             {
-              "hash": "5ca49a089cef748135d4712adc8d22ad",
+              "id": "5ca49a089cef748135d4712adc8d22ad",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qqokc72jhu3narvfyomm",
@@ -9087,49 +9087,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "26324a64a1612feb1ac50b5774f02707",
+              "id": "26324a64a1612feb1ac50b5774f02707",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 48,
               "goldenIkuraNum": 30,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "6ad7dfd09fbfb0eece6d20326cc07455",
+              "id": "6ad7dfd09fbfb0eece6d20326cc07455",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 22,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 40,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "5dbb3ce8dee34b1d1a63178d2b8fb72b",
+              "id": "5dbb3ce8dee34b1d1a63178d2b8fb72b",
               "waterLevel": 1,
               "eventType": 5,
               "quotaNum": 24,
               "goldenIkuraPopNum": 79,
               "goldenIkuraNum": 35,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "0085fa2de1022f5040c5c20b942ea936",
+              "id": "0085fa2de1022f5040c5c20b942ea936",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 48,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": false
             }
           ]
         },
         {
-          "hash": "02c2bf7f9d1f1344b9fa7257cd57b5a6",
+          "id": "02c2bf7f9d1f1344b9fa7257cd57b5a6",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -9150,7 +9150,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "7e60e2d464e01c33a70ca557d5853e1b",
+            "id": "7e60e2d464e01c33a70ca557d5853e1b",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -9196,7 +9196,7 @@
           },
           "otherResults": [
             {
-              "hash": "9fd870e041461c8b263e9b540cb98cd4",
+              "id": "9fd870e041461c8b263e9b540cb98cd4",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeway57moksseysv7tmm",
@@ -9256,7 +9256,7 @@
               "jobRate": null
             },
             {
-              "hash": "4538fd4030c72722b17b81e568729952",
+              "id": "4538fd4030c72722b17b81e568729952",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qonle2hm7z4xb2p4h7mm",
@@ -9316,7 +9316,7 @@
               "jobRate": null
             },
             {
-              "hash": "a49e341908fa3bdd0c8dbc793517200d",
+              "id": "a49e341908fa3bdd0c8dbc793517200d",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkuwozblwlu2mevpsnmm",
@@ -9392,39 +9392,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "21ab8bee6ab90eb6b423fdd80f1ab1d6",
+              "id": "21ab8bee6ab90eb6b423fdd80f1ab1d6",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 52,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "a1f7590e8923d97198f9df90769602a5",
+              "id": "a1f7590e8923d97198f9df90769602a5",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 58,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "624b02fcdd0c9aea8cae18f3843b1acf",
+              "id": "624b02fcdd0c9aea8cae18f3843b1acf",
               "waterLevel": 1,
               "eventType": 1,
               "quotaNum": 33,
               "goldenIkuraPopNum": 54,
               "goldenIkuraNum": 51,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "9b62ac07dc7697f01fe1f49492f69399",
+          "id": "9b62ac07dc7697f01fe1f49492f69399",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -9445,7 +9445,7 @@
           },
           "scale": [7, 4, 0],
           "myResult": {
-            "hash": "d77efc52058b9145d09c303f3570ac54",
+            "id": "d77efc52058b9145d09c303f3570ac54",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -9491,7 +9491,7 @@
           },
           "otherResults": [
             {
-              "hash": "47cc86602485b5ad76243394546a20cb",
+              "id": "47cc86602485b5ad76243394546a20cb",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qz47larrn6qq4n3kanmm",
@@ -9551,7 +9551,7 @@
               "jobRate": null
             },
             {
-              "hash": "3be58c80f0cce317bdf218e1b3c2576c",
+              "id": "3be58c80f0cce317bdf218e1b3c2576c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qlxmn3umrfntlvphanmm",
@@ -9611,7 +9611,7 @@
               "jobRate": null
             },
             {
-              "hash": "d5f772493daaa2ae6f91070bbe4ddda6",
+              "id": "d5f772493daaa2ae6f91070bbe4ddda6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -9687,49 +9687,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "5a20eb5aca8c007a88dac888ea111099",
+              "id": "5a20eb5aca8c007a88dac888ea111099",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 66,
               "goldenIkuraNum": 61,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "7b2e5602a2bb895a2277a065e586d376",
+              "id": "7b2e5602a2bb895a2277a065e586d376",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 38,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "4ae79d6119a09117b448193f36715293",
+              "id": "4ae79d6119a09117b448193f36715293",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 48,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "e8b8e1c2dd6993eaf94da2401f118d1f",
+              "id": "e8b8e1c2dd6993eaf94da2401f118d1f",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 48,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "dd65bc628944474c72acd69883b3592f",
+          "id": "dd65bc628944474c72acd69883b3592f",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -9750,7 +9750,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "4c62917abaef385527528027705ec18f",
+            "id": "4c62917abaef385527528027705ec18f",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -9796,7 +9796,7 @@
           },
           "otherResults": [
             {
-              "hash": "c629c32bfed9a9435995d845da0f4987",
+              "id": "c629c32bfed9a9435995d845da0f4987",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qvjsm3jeoznmomuagnmm",
@@ -9856,7 +9856,7 @@
               "jobRate": null
             },
             {
-              "hash": "0271d0a7e2f4c6b0950bebb827b297b6",
+              "id": "0271d0a7e2f4c6b0950bebb827b297b6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "afdiuj7rhknjqtpmlnmm",
@@ -9916,7 +9916,7 @@
               "jobRate": null
             },
             {
-              "hash": "1e425fe339c36111448e7c934944ff04",
+              "id": "1e425fe339c36111448e7c934944ff04",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qjza523svr7w4rb5jsmm",
@@ -9992,39 +9992,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "7dc705f76b41e40e5fe8c0104530b9ee",
+              "id": "7dc705f76b41e40e5fe8c0104530b9ee",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 69,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "577aef1159e77c22455390c59a3df5ee",
+              "id": "577aef1159e77c22455390c59a3df5ee",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 32,
               "goldenIkuraPopNum": 96,
               "goldenIkuraNum": 61,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "6a3253124a40c9484eaf7074b7d6eabc",
+              "id": "6a3253124a40c9484eaf7074b7d6eabc",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 35,
               "goldenIkuraPopNum": 100,
               "goldenIkuraNum": 68,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "989ca555b27965e92023498e6a9222cd",
+          "id": "989ca555b27965e92023498e6a9222cd",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10045,7 +10045,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "757f70c40c60339c3c6ce85654dda7d4",
+            "id": "757f70c40c60339c3c6ce85654dda7d4",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10091,7 +10091,7 @@
           },
           "otherResults": [
             {
-              "hash": "09166d5c3261672bf657014e4aa9ab17",
+              "id": "09166d5c3261672bf657014e4aa9ab17",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qjcgtxcultmussb3fomm",
@@ -10151,7 +10151,7 @@
               "jobRate": null
             },
             {
-              "hash": "6145715c781fd3423a94b2406a22c44d",
+              "id": "6145715c781fd3423a94b2406a22c44d",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeway57moksseysv7tmm",
@@ -10211,7 +10211,7 @@
               "jobRate": null
             },
             {
-              "hash": "1219ef04ec4088f144c3f55c7aa23b92",
+              "id": "1219ef04ec4088f144c3f55c7aa23b92",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkuwozblwlu2mevpsnmm",
@@ -10287,39 +10287,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "1029896be68c83db7e65dde9be7989db",
+              "id": "1029896be68c83db7e65dde9be7989db",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 55,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "8dd567c97d40fda2a70c918c90178241",
+              "id": "8dd567c97d40fda2a70c918c90178241",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 90,
               "goldenIkuraNum": 52,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "3f5a3754d373ae346561c073ab7bb64e",
+              "id": "3f5a3754d373ae346561c073ab7bb64e",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 96,
               "goldenIkuraNum": 55,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "c6ed28c8405e6303df20e464024f6829",
+          "id": "c6ed28c8405e6303df20e464024f6829",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10340,7 +10340,7 @@
           },
           "scale": [10, 1, 0],
           "myResult": {
-            "hash": "752bd94d69ce445b20e85c3b3f28237d",
+            "id": "752bd94d69ce445b20e85c3b3f28237d",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10386,7 +10386,7 @@
           },
           "otherResults": [
             {
-              "hash": "daa869ce63f96f8aa393283c8e499842",
+              "id": "daa869ce63f96f8aa393283c8e499842",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q64hoyyieljlmybianmm",
@@ -10399,7 +10399,7 @@
               "nameplate": {
                 "badges": [null, null, null],
                 "background": {
-                  "id": 1,
+                  "waveId": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -10446,7 +10446,7 @@
               "jobRate": null
             },
             {
-              "hash": "14b8d90e86980a1c55abf5a8d5055f8e",
+              "id": "14b8d90e86980a1c55abf5a8d5055f8e",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "anumj4kdafo5zetyunmm",
@@ -10506,7 +10506,7 @@
               "jobRate": null
             },
             {
-              "hash": "1351d295f575f4702703834c76064af9",
+              "id": "1351d295f575f4702703834c76064af9",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -10582,49 +10582,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "88a162fa0fd52bee2cbd9f7afe4ac7ff",
+              "id": "88a162fa0fd52bee2cbd9f7afe4ac7ff",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 28,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 65,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "984cf6bbeb3f7b1349784304d115b61b",
+              "id": "984cf6bbeb3f7b1349784304d115b61b",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 57,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "03e5d5f642964c2aa9e9ecd617f5fc0b",
+              "id": "03e5d5f642964c2aa9e9ecd617f5fc0b",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 49,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "9d2d38e31bb4c19473c35a827bf684ae",
+              "id": "9d2d38e31bb4c19473c35a827bf684ae",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 54,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "e932914b4a94d1dc3ab5625d8c296050",
+          "id": "e932914b4a94d1dc3ab5625d8c296050",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10645,7 +10645,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "cfe6bd5db7b593c3d5f9d9d0ba213f22",
+            "id": "cfe6bd5db7b593c3d5f9d9d0ba213f22",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10691,7 +10691,7 @@
           },
           "otherResults": [
             {
-              "hash": "54889cc786a4e82d77d0fc732163cf21",
+              "id": "54889cc786a4e82d77d0fc732163cf21",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a5jknjzidkilo7j7snmm",
@@ -10751,7 +10751,7 @@
               "jobRate": null
             },
             {
-              "hash": "0566ada509437a460675ad87bb9b40b1",
+              "id": "0566ada509437a460675ad87bb9b40b1",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qptajpxt57ytvqg2rpmm",
@@ -10811,7 +10811,7 @@
               "jobRate": null
             },
             {
-              "hash": "11d5ad885bd9d873ab1ff8e48b10bf5c",
+              "id": "11d5ad885bd9d873ab1ff8e48b10bf5c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qiou423svr7w4bu4iomm",
@@ -10887,39 +10887,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "0763489c960b333ef36d5c56bc221dec",
+              "id": "0763489c960b333ef36d5c56bc221dec",
               "waterLevel": 1,
               "eventType": 2,
               "quotaNum": 27,
               "goldenIkuraPopNum": 76,
               "goldenIkuraNum": 72,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "45baf9219192f3891116b88a6d7660a9",
+              "id": "45baf9219192f3891116b88a6d7660a9",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 57,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "3ab3f337223dbf35a637f3a0a94d1711",
+              "id": "3ab3f337223dbf35a637f3a0a94d1711",
               "waterLevel": 1,
               "eventType": 4,
               "quotaNum": 32,
               "goldenIkuraPopNum": 76,
               "goldenIkuraNum": 52,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "e996f16ad28799ae4f80006551adb723",
+          "id": "e996f16ad28799ae4f80006551adb723",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10940,7 +10940,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "01dd0f7c0df95b546fca7270ab3d786d",
+            "id": "01dd0f7c0df95b546fca7270ab3d786d",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -10986,7 +10986,7 @@
           },
           "otherResults": [
             {
-              "hash": "777065d82435105391fd869d356f0344",
+              "id": "777065d82435105391fd869d356f0344",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -11046,7 +11046,7 @@
               "jobRate": null
             },
             {
-              "hash": "17867e0a89a9f3910bb2c893dca1df0f",
+              "id": "17867e0a89a9f3910bb2c893dca1df0f",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qlxmn3umrfntlvphanmm",
@@ -11106,7 +11106,7 @@
               "jobRate": null
             },
             {
-              "hash": "6d5d1ea4a79c54b1eac2952cf76f3ec4",
+              "id": "6d5d1ea4a79c54b1eac2952cf76f3ec4",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qqokc72jhu3narvfyomm",
@@ -11182,39 +11182,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "4db21a38b7e8c7cef5512bba62278930",
+              "id": "4db21a38b7e8c7cef5512bba62278930",
               "waterLevel": 1,
               "eventType": 3,
               "quotaNum": 27,
               "goldenIkuraPopNum": 60,
               "goldenIkuraNum": 59,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "9da6d9b192467ac26ffe1ef48d99dcab",
+              "id": "9da6d9b192467ac26ffe1ef48d99dcab",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 71,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "c54a622a4086687ced46fcf8ceefc76b",
+              "id": "c54a622a4086687ced46fcf8ceefc76b",
               "waterLevel": 1,
               "eventType": 1,
               "quotaNum": 32,
               "goldenIkuraPopNum": 54,
               "goldenIkuraNum": 50,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "c7e98d8a05ec6b266bba0d18872edce7",
+          "id": "c7e98d8a05ec6b266bba0d18872edce7",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -11235,7 +11235,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "d88d12f7992e5e8ccf7e72309f8dd546",
+            "id": "d88d12f7992e5e8ccf7e72309f8dd546",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -11281,7 +11281,7 @@
           },
           "otherResults": [
             {
-              "hash": "085b5c308413abb29876b7e8cd7b6d23",
+              "id": "085b5c308413abb29876b7e8cd7b6d23",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "anumj4kdafo5zetyunmm",
@@ -11341,7 +11341,7 @@
               "jobRate": null
             },
             {
-              "hash": "f7d87f0751b32abef90d9cfa383841b7",
+              "id": "f7d87f0751b32abef90d9cfa383841b7",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "ql2bjypciea6jlmbrtmm",
@@ -11401,7 +11401,7 @@
               "jobRate": null
             },
             {
-              "hash": "2967fc75fc4db1f3dabcf3532a86db05",
+              "id": "2967fc75fc4db1f3dabcf3532a86db05",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -11477,39 +11477,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "da242b74b0425b3f8432b54f5b9c8cf8",
+              "id": "da242b74b0425b3f8432b54f5b9c8cf8",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 69,
               "goldenIkuraNum": 32,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "a31ff44abbbce848b0fe161275a557f9",
+              "id": "a31ff44abbbce848b0fe161275a557f9",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 59,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "1935c72d4e8509f5bbae1b1835913d5b",
+              "id": "1935c72d4e8509f5bbae1b1835913d5b",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 93,
               "goldenIkuraNum": 55,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "e8e8c762057568a84273ee84324850dd",
+          "id": "e8e8c762057568a84273ee84324850dd",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -11530,7 +11530,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "4cea7cb2cd548d7a46500f064f9c646f",
+            "id": "4cea7cb2cd548d7a46500f064f9c646f",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -11576,7 +11576,7 @@
           },
           "otherResults": [
             {
-              "hash": "11624656736b7375699a50757d3b6ece",
+              "id": "11624656736b7375699a50757d3b6ece",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qlxmn3umrfntlvphanmm",
@@ -11636,7 +11636,7 @@
               "jobRate": null
             },
             {
-              "hash": "43b957446d1f923b143bb24b04144df6",
+              "id": "43b957446d1f923b143bb24b04144df6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qqokc72jhu3narvfyomm",
@@ -11696,7 +11696,7 @@
               "jobRate": null
             },
             {
-              "hash": "65897d4fbe8e7825ec36c0ce4db75beb",
+              "id": "65897d4fbe8e7825ec36c0ce4db75beb",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -11772,39 +11772,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "a46f310f7ee3cd8f499ae1fed228a2af",
+              "id": "a46f310f7ee3cd8f499ae1fed228a2af",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 56,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "4ca09452366c1808846779a3def67fcd",
+              "id": "4ca09452366c1808846779a3def67fcd",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 65,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "784c2e20d5c50ad95de70e884d48bcb2",
+              "id": "784c2e20d5c50ad95de70e884d48bcb2",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 54,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "1496e29d6b26e115b557d7fe3d799b0d",
+          "id": "1496e29d6b26e115b557d7fe3d799b0d",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -11825,7 +11825,7 @@
           },
           "scale": [8, 2, 1],
           "myResult": {
-            "hash": "a4a47c5c7592e210ddb239cdf92bc757",
+            "id": "a4a47c5c7592e210ddb239cdf92bc757",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -11871,7 +11871,7 @@
           },
           "otherResults": [
             {
-              "hash": "58db665522dc1a0d6d677a8cf1fd6a20",
+              "id": "58db665522dc1a0d6d677a8cf1fd6a20",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeway57moksseysv7tmm",
@@ -11931,7 +11931,7 @@
               "jobRate": null
             },
             {
-              "hash": "3c2c9ef4ff564780f9aeae906a270e4b",
+              "id": "3c2c9ef4ff564780f9aeae906a270e4b",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qonle2hm7z4xb2p4h7mm",
@@ -11991,7 +11991,7 @@
               "jobRate": null
             },
             {
-              "hash": "4cb165f0e16724b62878254271f1e30c",
+              "id": "4cb165f0e16724b62878254271f1e30c",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkuwozblwlu2mevpsnmm",
@@ -12067,49 +12067,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "d8f6e097a3dac5a0cd7de00ff07beee0",
+              "id": "d8f6e097a3dac5a0cd7de00ff07beee0",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 58,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "000289fce5347f08fee2b1bf1fca4ca1",
+              "id": "000289fce5347f08fee2b1bf1fca4ca1",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 40,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "df57054114f33bd54f5ab189d2c7cc14",
+              "id": "df57054114f33bd54f5ab189d2c7cc14",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 47,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "f240920c7a2509be45b1fc3c82f401ee",
+              "id": "f240920c7a2509be45b1fc3c82f401ee",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 60,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "f1d2714ff34decdec0cfc9fb95444fb6",
+          "id": "f1d2714ff34decdec0cfc9fb95444fb6",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -12130,7 +12130,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "c3763ea9044aaa6540c4b5796928bb36",
+            "id": "c3763ea9044aaa6540c4b5796928bb36",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -12176,7 +12176,7 @@
           },
           "otherResults": [
             {
-              "hash": "b2f4704498d7d929a987be50ec5144ea",
+              "id": "b2f4704498d7d929a987be50ec5144ea",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qqokc72jhu3narvfyomm",
@@ -12236,7 +12236,7 @@
               "jobRate": null
             },
             {
-              "hash": "afbf708bc0eb2731233ae0176f724563",
+              "id": "afbf708bc0eb2731233ae0176f724563",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -12296,7 +12296,7 @@
               "jobRate": null
             },
             {
-              "hash": "704e40a28e0608926be5df9221ef7f93",
+              "id": "704e40a28e0608926be5df9221ef7f93",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qlxmn3umrfntlvphanmm",
@@ -12372,39 +12372,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "9586486b0d9a5da0d9e92dbd8b1c55e7",
+              "id": "9586486b0d9a5da0d9e92dbd8b1c55e7",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 28,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 47,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "93701987797449a3203ad50a7e01c833",
+              "id": "93701987797449a3203ad50a7e01c833",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 53,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "c3b6a889a0a33d73400504933080e25b",
+              "id": "c3b6a889a0a33d73400504933080e25b",
               "waterLevel": 2,
               "eventType": 8,
               "quotaNum": 32,
               "goldenIkuraPopNum": 92,
               "goldenIkuraNum": 65,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "1ebb7a49b8177862352d498274551f7b",
+          "id": "1ebb7a49b8177862352d498274551f7b",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -12425,7 +12425,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "c6757931a0111160445a369ce17d8849",
+            "id": "c6757931a0111160445a369ce17d8849",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -12471,7 +12471,7 @@
           },
           "otherResults": [
             {
-              "hash": "e2c7aadd78f9675235e71241612c8cee",
+              "id": "e2c7aadd78f9675235e71241612c8cee",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qiou423svr7w4bu4iomm",
@@ -12531,7 +12531,7 @@
               "jobRate": null
             },
             {
-              "hash": "e95ac35755534f113bd4cc38594cf633",
+              "id": "e95ac35755534f113bd4cc38594cf633",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qptajpxt57ytvqg2rpmm",
@@ -12591,7 +12591,7 @@
               "jobRate": null
             },
             {
-              "hash": "dbf597ba9a7e63cbf66c4863debaaf18",
+              "id": "dbf597ba9a7e63cbf66c4863debaaf18",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a5jknjzidkilo7j7snmm",
@@ -12667,39 +12667,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "fdf79a9cf23b6900488a338d540919b9",
+              "id": "fdf79a9cf23b6900488a338d540919b9",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 45,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "70efa8e7399900a7d4bb67fb2bd70e50",
+              "id": "70efa8e7399900a7d4bb67fb2bd70e50",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 51,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "4a31f44bee530bdf4c3f9bb030553bc9",
+              "id": "4a31f44bee530bdf4c3f9bb030553bc9",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 53,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "b3be59c5d8f5b0c69e922f3fb9f8daa5",
+          "id": "b3be59c5d8f5b0c69e922f3fb9f8daa5",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -12720,7 +12720,7 @@
           },
           "scale": [10, 1, 0],
           "myResult": {
-            "hash": "10e687a674fd51758430c59726e56425",
+            "id": "10e687a674fd51758430c59726e56425",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -12766,7 +12766,7 @@
           },
           "otherResults": [
             {
-              "hash": "1eb52ff3964d5783dc04ac20d5466c24",
+              "id": "1eb52ff3964d5783dc04ac20d5466c24",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a5jknjzidkilo7j7snmm",
@@ -12826,7 +12826,7 @@
               "jobRate": null
             },
             {
-              "hash": "bc3357fa817d4987d3f7dbc5fadec579",
+              "id": "bc3357fa817d4987d3f7dbc5fadec579",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qiou423svr7w4bu4iomm",
@@ -12886,7 +12886,7 @@
               "jobRate": null
             },
             {
-              "hash": "11bfaa98774f3ff38ac2df3b858d4d59",
+              "id": "11bfaa98774f3ff38ac2df3b858d4d59",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qptajpxt57ytvqg2rpmm",
@@ -12962,49 +12962,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "0b28e462022a730d89d9467d02c7b2f0",
+              "id": "0b28e462022a730d89d9467d02c7b2f0",
               "waterLevel": 0,
               "eventType": 6,
               "quotaNum": 28,
               "goldenIkuraPopNum": 75,
               "goldenIkuraNum": 43,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "2aaef00915ff970602a1ea856d3b974b",
+              "id": "2aaef00915ff970602a1ea856d3b974b",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 63,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "cb7664cff4ebe78a003e2bd721459916",
+              "id": "cb7664cff4ebe78a003e2bd721459916",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 81,
               "goldenIkuraNum": 37,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "866ac4ad3bf93bd85fac0b0cb0d19aed",
+              "id": "866ac4ad3bf93bd85fac0b0cb0d19aed",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 60,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "dbf85a62b3aa7e4256127dce2552ba2d",
+          "id": "dbf85a62b3aa7e4256127dce2552ba2d",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13025,7 +13025,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "a782958727c0ee3ab714f3bfd54eb066",
+            "id": "a782958727c0ee3ab714f3bfd54eb066",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13071,7 +13071,7 @@
           },
           "otherResults": [
             {
-              "hash": "03178e44a6f9d89d851c5da2ba4d9c0e",
+              "id": "03178e44a6f9d89d851c5da2ba4d9c0e",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a5jknjzidkilo7j7snmm",
@@ -13131,7 +13131,7 @@
               "jobRate": null
             },
             {
-              "hash": "d3a40369780b221f52a3323012a2ba94",
+              "id": "d3a40369780b221f52a3323012a2ba94",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qiou423svr7w4bu4iomm",
@@ -13191,7 +13191,7 @@
               "jobRate": null
             },
             {
-              "hash": "a24d3f56f13d36f05c337c6a93b546ac",
+              "id": "a24d3f56f13d36f05c337c6a93b546ac",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qptajpxt57ytvqg2rpmm",
@@ -13267,39 +13267,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "4911d1322d6ddbf9a825be0afd84034d",
+              "id": "4911d1322d6ddbf9a825be0afd84034d",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 63,
               "goldenIkuraNum": 43,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "f840e323d2ae61c867a7144796e831e4",
+              "id": "f840e323d2ae61c867a7144796e831e4",
               "waterLevel": 1,
               "eventType": 8,
               "quotaNum": 29,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 67,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "8d1cc17f43e2900321fcf4e04dbddf84",
+              "id": "8d1cc17f43e2900321fcf4e04dbddf84",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 55,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "b0eef02d998f1fa57b5984d76615b8a3",
+          "id": "b0eef02d998f1fa57b5984d76615b8a3",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13320,7 +13320,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "ad101d17d4c8e8808a602ddcbdbf502b",
+            "id": "ad101d17d4c8e8808a602ddcbdbf502b",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13366,7 +13366,7 @@
           },
           "otherResults": [
             {
-              "hash": "124cd346d3d42ef85f0ec162b9f37e2d",
+              "id": "124cd346d3d42ef85f0ec162b9f37e2d",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qlxmn3umrfntlvphanmm",
@@ -13426,7 +13426,7 @@
               "jobRate": null
             },
             {
-              "hash": "005424407519c808e8974ef741f12da7",
+              "id": "005424407519c808e8974ef741f12da7",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qqokc72jhu3narvfyomm",
@@ -13486,7 +13486,7 @@
               "jobRate": null
             },
             {
-              "hash": "202204fe1cd8253cbad73a6ffdada3b4",
+              "id": "202204fe1cd8253cbad73a6ffdada3b4",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -13562,39 +13562,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "2fcb97d970cfdf5d619272cebb3403aa",
+              "id": "2fcb97d970cfdf5d619272cebb3403aa",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 72,
               "goldenIkuraNum": 58,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "6f4d382b04335cf92250ddabad3f4244",
+              "id": "6f4d382b04335cf92250ddabad3f4244",
               "waterLevel": 1,
               "eventType": 5,
               "quotaNum": 29,
               "goldenIkuraPopNum": 98,
               "goldenIkuraNum": 78,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "04a91460d8d6fb5babc934cfdc2760fe",
+              "id": "04a91460d8d6fb5babc934cfdc2760fe",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 66,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "5acefff629cc5fa89cec624cfa1b7937",
+          "id": "5acefff629cc5fa89cec624cfa1b7937",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13615,7 +13615,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "a874467a9224eeaa13a59b978cd51c3d",
+            "id": "a874467a9224eeaa13a59b978cd51c3d",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13661,7 +13661,7 @@
           },
           "otherResults": [
             {
-              "hash": "622a9c2877ddd1f4f24f6f1d28df6c21",
+              "id": "622a9c2877ddd1f4f24f6f1d28df6c21",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "avi75eb2l5zzjdhz3omm",
@@ -13721,7 +13721,7 @@
               "jobRate": null
             },
             {
-              "hash": "7e37c7dd5d419a02ce005be51ba39dc2",
+              "id": "7e37c7dd5d419a02ce005be51ba39dc2",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "q64hoyyieljlmybianmm",
@@ -13734,7 +13734,7 @@
               "nameplate": {
                 "badges": [null, null, null],
                 "background": {
-                  "id": 1,
+                  "waveId": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -13781,7 +13781,7 @@
               "jobRate": null
             },
             {
-              "hash": "c4ca51483af63d9f81f6b4b1c3de18ad",
+              "id": "c4ca51483af63d9f81f6b4b1c3de18ad",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "anumj4kdafo5zetyunmm",
@@ -13857,39 +13857,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "43c94a3766bd0a027a952ab59e670207",
+              "id": "43c94a3766bd0a027a952ab59e670207",
               "waterLevel": 1,
               "eventType": 5,
               "quotaNum": 28,
               "goldenIkuraPopNum": 77,
               "goldenIkuraNum": 56,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "df3bea72348aacd96c07125691a6098f",
+              "id": "df3bea72348aacd96c07125691a6098f",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 59,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "11a38f2d8f382958f5cc523d4713d402",
+              "id": "11a38f2d8f382958f5cc523d4713d402",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 33,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 41,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "442bcc7bb7562ea1f9bf073ce5a10edf",
+          "id": "442bcc7bb7562ea1f9bf073ce5a10edf",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13910,7 +13910,7 @@
           },
           "scale": [10, 2, 0],
           "myResult": {
-            "hash": "12dac0d9abc449d88f6454df554e2d93",
+            "id": "12dac0d9abc449d88f6454df554e2d93",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -13956,7 +13956,7 @@
           },
           "otherResults": [
             {
-              "hash": "2403cda6f1655058bd278ebbf7341982",
+              "id": "2403cda6f1655058bd278ebbf7341982",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "afdiuj7rhknjqtpmlnmm",
@@ -14016,7 +14016,7 @@
               "jobRate": null
             },
             {
-              "hash": "e248b939d0dca021afbad15bc23a71f2",
+              "id": "e248b939d0dca021afbad15bc23a71f2",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qjza523svr7w4rb5jsmm",
@@ -14076,7 +14076,7 @@
               "jobRate": null
             },
             {
-              "hash": "d4e6c28b24667b33c39cd8d6d59b80f5",
+              "id": "d4e6c28b24667b33c39cd8d6d59b80f5",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qvjsm3jeoznmomuagnmm",
@@ -14152,49 +14152,49 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "d6e36710c28aada57b00341918b05d33",
+              "id": "d6e36710c28aada57b00341918b05d33",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 30,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 64,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "37132bea2934ba72c85128c9a270ddfb",
+              "id": "37132bea2934ba72c85128c9a270ddfb",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 93,
               "goldenIkuraNum": 90,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "7dd061d116886d9c22189d3497e9853a",
+              "id": "7dd061d116886d9c22189d3497e9853a",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 35,
               "goldenIkuraPopNum": 87,
               "goldenIkuraNum": 65,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             },
             {
-              "hash": "272e4084bb01722e410ee8258f5a1445",
+              "id": "272e4084bb01722e410ee8258f5a1445",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": null,
               "goldenIkuraPopNum": 54,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "bd64c2eb74d0b48c2ee2152bd7586af2",
+          "id": "bd64c2eb74d0b48c2ee2152bd7586af2",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -14215,7 +14215,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "053bb9d87b7daa4b6f65d21c86e56bb2",
+            "id": "053bb9d87b7daa4b6f65d21c86e56bb2",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -14261,7 +14261,7 @@
           },
           "otherResults": [
             {
-              "hash": "abec6abad74098b9dcfa97cf24635071",
+              "id": "abec6abad74098b9dcfa97cf24635071",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qonle2hm7z4xb2p4h7mm",
@@ -14321,7 +14321,7 @@
               "jobRate": null
             },
             {
-              "hash": "ea081be9840ddf97ef310832c0c702b6",
+              "id": "ea081be9840ddf97ef310832c0c702b6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeway57moksseysv7tmm",
@@ -14381,7 +14381,7 @@
               "jobRate": null
             },
             {
-              "hash": "6faf7f2e943fb6634922f3e7618a5ce6",
+              "id": "6faf7f2e943fb6634922f3e7618a5ce6",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qkuwozblwlu2mevpsnmm",
@@ -14457,39 +14457,39 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "9b04132e42c7bcf9378c638dd51e8b34",
+              "id": "9b04132e42c7bcf9378c638dd51e8b34",
               "waterLevel": 2,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 66,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "c80cac938596c60e68723dad8451007c",
+              "id": "c80cac938596c60e68723dad8451007c",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 31,
               "goldenIkuraPopNum": 63,
               "goldenIkuraNum": 35,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "bb2ae6e4ba767086ecf7bb3e3c89ca06",
+              "id": "bb2ae6e4ba767086ecf7bb3e3c89ca06",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 34,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 51,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]
         },
         {
-          "hash": "db5df0d3dbf3ca806f3c764eba5901ec",
+          "id": "db5df0d3dbf3ca806f3c764eba5901ec",
           "id": {
             "type": "CoopHistoryDetail",
             "nplnUserId": "aipeipxt57ytvishanmm",
@@ -14510,7 +14510,7 @@
           },
           "scale": [null, null, null],
           "myResult": {
-            "hash": "0e550d659cde6dc2e1a4949c20a08717",
+            "id": "0e550d659cde6dc2e1a4949c20a08717",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "aipeipxt57ytvishanmm",
@@ -14556,7 +14556,7 @@
           },
           "otherResults": [
             {
-              "hash": "c81680a3fb94f8d7c5f84bc42ec44dca",
+              "id": "c81680a3fb94f8d7c5f84bc42ec44dca",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qiou423svr7w4bu4iomm",
@@ -14616,7 +14616,7 @@
               "jobRate": null
             },
             {
-              "hash": "55d6467c06a553f9f18817c334636eca",
+              "id": "55d6467c06a553f9f18817c334636eca",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qptajpxt57ytvqg2rpmm",
@@ -14676,7 +14676,7 @@
               "jobRate": null
             },
             {
-              "hash": "3703b8efcd39958e14a007ccfc486cbe",
+              "id": "3703b8efcd39958e14a007ccfc486cbe",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "a5jknjzidkilo7j7snmm",
@@ -14752,33 +14752,33 @@
           "scenarioCode": null,
           "waveDetails": [
             {
-              "hash": "84ee21e42692f28ee2788920471a005a",
+              "id": "84ee21e42692f28ee2788920471a005a",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 27,
               "goldenIkuraPopNum": 69,
               "goldenIkuraNum": 61,
-              "id": 1,
+              "waveId": 1,
               "isClear": true
             },
             {
-              "hash": "7d5c1f04b84ea8f475b15f91360354d8",
+              "id": "7d5c1f04b84ea8f475b15f91360354d8",
               "waterLevel": 0,
               "eventType": 0,
               "quotaNum": 29,
               "goldenIkuraPopNum": 78,
               "goldenIkuraNum": 58,
-              "id": 2,
+              "waveId": 2,
               "isClear": true
             },
             {
-              "hash": "6ed660be7ffcc8224c0e0a429c5afbfd",
+              "id": "6ed660be7ffcc8224c0e0a429c5afbfd",
               "waterLevel": 1,
               "eventType": 0,
               "quotaNum": 32,
               "goldenIkuraPopNum": 84,
               "goldenIkuraNum": 46,
-              "id": 3,
+              "waveId": 3,
               "isClear": true
             }
           ]

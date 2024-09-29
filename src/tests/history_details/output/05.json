@@ -1,21 +1,9 @@
 {
-  "hash": "e942cfa99b5e2fbd305045a96147b2d4",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "a7carxobziesqto4cnmm",
-    "playTime": "2024-07-10T07:22:25.000Z",
-    "uuid": "093c45f7-2d2f-43cf-bd24-7b0b51c16eb4"
-  },
+  "id": "e942cfa99b5e2fbd305045a96147b2d4",
   "uuid": "093c45f7-2d2f-43cf-bd24-7b0b51c16eb4",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "8686d21ce20d6d2706bec7f94cfd1747",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "a7carxobziesqto4cnmm",
-      "playTime": "2024-07-10T07:22:25.000Z",
-      "uuid": "093c45f7-2d2f-43cf-bd24-7b0b51c16eb4"
-    },
+    "id": "8686d21ce20d6d2706bec7f94cfd1747",
     "byname": "At-Work Uncle",
     "name": "オギコ",
     "nameId": "1783",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "269ffeb01fe0fb9eca7a43698c887647",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qqgokjmnyqnlcnqz4fnm",
-        "playTime": "2024-07-10T07:22:25.000Z",
-        "uuid": "093c45f7-2d2f-43cf-bd24-7b0b51c16eb4"
-      },
+      "id": "269ffeb01fe0fb9eca7a43698c887647",
       "byname": "Bursting Mountaineer",
       "name": "まー",
       "nameId": "60891",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "11ae4fbe04c96cc267725e834c964bdd",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "am4qcbysqpmoidt6pcnm",
-        "playTime": "2024-07-10T07:22:25.000Z",
-        "uuid": "093c45f7-2d2f-43cf-bd24-7b0b51c16eb4"
-      },
+      "id": "11ae4fbe04c96cc267725e834c964bdd",
       "byname": "Late-Summer Worker",
       "name": "せみせみ",
       "nameId": "4399",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "338128fd425c42be5dabc6617b666c5e",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "augjwuqok4h77fr4lomm",
-        "playTime": "2024-07-10T07:22:25.000Z",
-        "uuid": "093c45f7-2d2f-43cf-bd24-7b0b51c16eb4"
-      },
+      "id": "338128fd425c42be5dabc6617b666c5e",
       "byname": "Official-Grizzco Cat",
       "name": "あき",
       "nameId": "1302",
@@ -251,23 +221,23 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "93f23a6e812d12ed0b668c00ebde6900",
+      "id": "93f23a6e812d12ed0b668c00ebde6900",
       "waterLevel": 0,
       "eventType": 0,
       "quotaNum": 26,
       "goldenIkuraPopNum": 63,
       "goldenIkuraNum": 37,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "5f22ef2bc746bbefcfcf0902061b1da4",
+      "id": "5f22ef2bc746bbefcfcf0902061b1da4",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 28,
       "goldenIkuraPopNum": 42,
       "goldenIkuraNum": 18,
-      "id": 2,
+      "waveId": 2,
       "isClear": false
     }
   ]

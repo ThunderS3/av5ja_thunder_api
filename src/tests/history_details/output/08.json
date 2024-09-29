@@ -1,21 +1,9 @@
 {
-  "hash": "d5be60d32b0abbed99c35a0e6a8cd5ab",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "q3usp72dqoznovbi3dvm",
-    "playTime": "2024-09-10T15:57:36.000Z",
-    "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-  },
+  "id": "d5be60d32b0abbed99c35a0e6a8cd5ab",
   "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "da686d030261a2f4cb48b2f9d65f11b9",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "q3usp72dqoznovbi3dvm",
-      "playTime": "2024-09-10T15:57:36.000Z",
-      "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-    },
+    "id": "da686d030261a2f4cb48b2f9d65f11b9",
     "byname": "やわらかい若者",
     "name": "ピルクルミラクルケア",
     "nameId": "2951",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "50c34e99f1a54cccf81026f1aaa9613f",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qjss357se6tlkhphanmm",
-        "playTime": "2024-09-10T15:57:36.000Z",
-        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-      },
+      "id": "50c34e99f1a54cccf81026f1aaa9613f",
       "byname": "インドアなプログラマー",
       "name": "Goomy",
       "nameId": "1168",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "4e40d8faf8ee753592bf13a9ffe8219b",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qopsverpvsr4ds7f7omm",
-        "playTime": "2024-09-10T15:57:36.000Z",
-        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-      },
+      "id": "4e40d8faf8ee753592bf13a9ffe8219b",
       "byname": "サーモンランの気分",
       "name": "みゅしゃん",
       "nameId": "2910",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "6cd027bb59a66046b1fd8993b4fa2464",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q5jea4j2554v7x2bs7xm",
-        "playTime": "2024-09-10T15:57:36.000Z",
-        "uuid": "00d64a7b-f06f-4428-a3e9-34c0a1e5f786"
-      },
+      "id": "6cd027bb59a66046b1fd8993b4fa2464",
       "byname": "バンカラな若者",
       "name": "なおかず",
       "nameId": "1703",
@@ -251,23 +221,23 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "e049bce9a5c420d79114f2e4abb4278e",
+      "id": "e049bce9a5c420d79114f2e4abb4278e",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 22,
       "goldenIkuraPopNum": 39,
       "goldenIkuraNum": 25,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "3cd93c66e5087e49ea80330cd0f323d4",
+      "id": "3cd93c66e5087e49ea80330cd0f323d4",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 24,
       "goldenIkuraPopNum": 45,
       "goldenIkuraNum": 16,
-      "id": 2,
+      "waveId": 2,
       "isClear": false
     }
   ]

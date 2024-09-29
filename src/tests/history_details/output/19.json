@@ -1,21 +1,9 @@
 {
-  "hash": "374d451931a2e4398801d2c5ae86315b",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T15:38:26.000Z",
-    "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-  },
+  "id": "374d451931a2e4398801d2c5ae86315b",
   "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "f14b43f78139c6a44a85f23dab17102f",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T15:38:26.000Z",
-      "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-    },
+    "id": "f14b43f78139c6a44a85f23dab17102f",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "70961f4368b8038dda994545e32dce84",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-22T15:38:26.000Z",
-        "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-      },
+      "id": "70961f4368b8038dda994545e32dce84",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "87c303174cdfbe9c45883dc801dfb589",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qhjnjqyvrul6yhbckwnm",
-        "playTime": "2024-06-22T15:38:26.000Z",
-        "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-      },
+      "id": "87c303174cdfbe9c45883dc801dfb589",
       "byname": "Intuitive Spirit",
       "name": "Elfiņ Levi",
       "nameId": "2023",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "454770810bdbb51c798d039e51709a82",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "acyteio7d5tnfv2xkomm",
-        "playTime": "2024-06-22T15:38:26.000Z",
-        "uuid": "2ab99d8b-9f50-4a8e-82b7-0c47cb076537"
-      },
+      "id": "454770810bdbb51c798d039e51709a82",
       "byname": "Ink-Covered Grandma",
       "name": "ーニミ",
       "nameId": "1659",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "1fc89d933222dc252ba6eb76213d09c5",
+      "id": "1fc89d933222dc252ba6eb76213d09c5",
       "waterLevel": 2,
       "eventType": 0,
       "quotaNum": 29,
       "goldenIkuraPopNum": 78,
       "goldenIkuraNum": 40,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "2966ed5bd53ae0cde44cb40b3ae681da",
+      "id": "2966ed5bd53ae0cde44cb40b3ae681da",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 31,
       "goldenIkuraPopNum": 87,
       "goldenIkuraNum": 41,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "cd8e08a72dbcd3a82c6995205fb68c95",
+      "id": "cd8e08a72dbcd3a82c6995205fb68c95",
       "waterLevel": 0,
       "eventType": 0,
       "quotaNum": 34,
       "goldenIkuraPopNum": 57,
       "goldenIkuraNum": 26,
-      "id": 3,
+      "waveId": 3,
       "isClear": false
     }
   ]

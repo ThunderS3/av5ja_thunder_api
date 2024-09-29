@@ -1,21 +1,9 @@
 {
-  "hash": "96d88e3448f4391e6e2e4ee3cde6a396",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "agmwjnyghvzbaavt5mmm",
-    "playTime": "2024-06-09T16:48:44.000Z",
-    "uuid": "e05cec2b-f59d-4a73-89d9-a7868613bd68"
-  },
+  "id": "96d88e3448f4391e6e2e4ee3cde6a396",
   "uuid": "e05cec2b-f59d-4a73-89d9-a7868613bd68",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "0857c53001db07e4bc2bd86e748ca679",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "agmwjnyghvzbaavt5mmm",
-      "playTime": "2024-06-09T16:48:44.000Z",
-      "uuid": "e05cec2b-f59d-4a73-89d9-a7868613bd68"
-    },
+    "id": "0857c53001db07e4bc2bd86e748ca679",
     "byname": "Splatlandian Youth",
     "name": "アウラ、かいはつしろ",
     "nameId": "2626",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "755b8e71517efa440818419c2e8313ad",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "aaeanjzidkilopvlbnmm",
-        "playTime": "2024-06-09T16:48:44.000Z",
-        "uuid": "e05cec2b-f59d-4a73-89d9-a7868613bd68"
-      },
+      "id": "755b8e71517efa440818419c2e8313ad",
       "byname": "Alabaster Big Sister",
       "name": "スレンドリナ",
       "nameId": "2752",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "585cc0c6e65c3c45da6ed8a620388553",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qw7majx7ygk4p3b6anmm",
-        "playTime": "2024-06-09T16:48:44.000Z",
-        "uuid": "e05cec2b-f59d-4a73-89d9-a7868613bd68"
-      },
+      "id": "585cc0c6e65c3c45da6ed8a620388553",
       "byname": "Crusty Follower",
       "name": "xoxo",
       "nameId": "2570",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "921b1edae3733ccdff9f06f2f15e04c8",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qwpkj67zv6b3qtcdsnmm",
-        "playTime": "2024-06-09T16:48:44.000Z",
-        "uuid": "e05cec2b-f59d-4a73-89d9-a7868613bd68"
-      },
+      "id": "921b1edae3733ccdff9f06f2f15e04c8",
       "byname": "Spawning Sashimi",
       "name": "アウラ だんとうだい",
       "nameId": "5790",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "60988943cc81cb4033ca2131bcb33e93",
+      "id": "60988943cc81cb4033ca2131bcb33e93",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 30,
       "goldenIkuraPopNum": 75,
       "goldenIkuraNum": 31,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "bd1ef2aaaee0632404ae850a5688003d",
+      "id": "bd1ef2aaaee0632404ae850a5688003d",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 32,
       "goldenIkuraPopNum": 90,
       "goldenIkuraNum": 45,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "6186dde03f816e6c06b66f9e8681f53d",
+      "id": "6186dde03f816e6c06b66f9e8681f53d",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 35,
       "goldenIkuraPopNum": 85,
       "goldenIkuraNum": 32,
-      "id": 3,
+      "waveId": 3,
       "isClear": false
     }
   ]

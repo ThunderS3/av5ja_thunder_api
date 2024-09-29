@@ -1,21 +1,9 @@
 {
-  "hash": "bfbd586049d5a32beddbf6268a110fe6",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T16:41:58.000Z",
-    "uuid": "5f8c37e1-fabb-41fb-aba2-2548ad6b127e"
-  },
+  "id": "bfbd586049d5a32beddbf6268a110fe6",
   "uuid": "5f8c37e1-fabb-41fb-aba2-2548ad6b127e",
   "scale": [7, 5, 1],
   "myResult": {
-    "hash": "4648708c461edfa7a55cc7cfbbb88f92",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T16:41:58.000Z",
-      "uuid": "5f8c37e1-fabb-41fb-aba2-2548ad6b127e"
-    },
+    "id": "4648708c461edfa7a55cc7cfbbb88f92",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "ee1bf43cf753ad1b8d57cec6acf2f36c",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-22T16:41:58.000Z",
-        "uuid": "5f8c37e1-fabb-41fb-aba2-2548ad6b127e"
-      },
+      "id": "ee1bf43cf753ad1b8d57cec6acf2f36c",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "cd0e8417bd05804f2e9a524a499dcaf8",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "a3v3s3x76psxpkxhanmm",
-        "playTime": "2024-06-22T16:41:58.000Z",
-        "uuid": "5f8c37e1-fabb-41fb-aba2-2548ad6b127e"
-      },
+      "id": "cd0e8417bd05804f2e9a524a499dcaf8",
       "byname": "Lonely Mirror",
       "name": "player",
       "nameId": "2651",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "97d7016143c17b271a688cc4432afef7",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "afv4z2qltugdq2trsnmm",
-        "playTime": "2024-06-22T16:41:58.000Z",
-        "uuid": "5f8c37e1-fabb-41fb-aba2-2548ad6b127e"
-      },
+      "id": "97d7016143c17b271a688cc4432afef7",
       "byname": "Meaty Marina Fan",
       "name": "★βrαdγβεcκ",
       "nameId": "8222",
@@ -251,43 +221,43 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "c728ed0ed315f1bfab7d764ead350008",
+      "id": "c728ed0ed315f1bfab7d764ead350008",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 30,
       "goldenIkuraPopNum": 84,
       "goldenIkuraNum": 38,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "1d74354d462d12ca34bb580be8afbba5",
+      "id": "1d74354d462d12ca34bb580be8afbba5",
       "waterLevel": 0,
       "eventType": 6,
       "quotaNum": 32,
       "goldenIkuraPopNum": 93,
       "goldenIkuraNum": 41,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "c4d2f771330910bbc10b6d4cda69acda",
+      "id": "c4d2f771330910bbc10b6d4cda69acda",
       "waterLevel": 0,
       "eventType": 7,
       "quotaNum": 35,
       "goldenIkuraPopNum": 100,
       "goldenIkuraNum": 54,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     },
     {
-      "hash": "f295213e3836648ad608e834061d289d",
+      "id": "f295213e3836648ad608e834061d289d",
       "waterLevel": 0,
       "eventType": 0,
       "quotaNum": null,
       "goldenIkuraPopNum": 45,
       "goldenIkuraNum": null,
-      "id": 4,
+      "waveId": 4,
       "isClear": true
     }
   ]

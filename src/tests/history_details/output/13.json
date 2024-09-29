@@ -1,21 +1,9 @@
 {
-  "hash": "998f51770f67ad689a62c018c7b7f951",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T15:56:49.000Z",
-    "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
-  },
+  "id": "998f51770f67ad689a62c018c7b7f951",
   "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "9e1acb10dcda55fa13d22d90ff0731e0",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T15:56:49.000Z",
-      "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
-    },
+    "id": "9e1acb10dcda55fa13d22d90ff0731e0",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "ccfea6fbca6477f0c55ae142de2821e3",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "acyteio7d5tnfv2xkomm",
-        "playTime": "2024-06-22T15:56:49.000Z",
-        "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
-      },
+      "id": "ccfea6fbca6477f0c55ae142de2821e3",
       "byname": "Ink-Covered Grandma",
       "name": "ーニミ",
       "nameId": "1659",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "ddc6e86415dba8079ea0ac29f8e8adf7",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "axtvsd7eri36e4xvlrsm",
-        "playTime": "2024-06-22T15:56:49.000Z",
-        "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
-      },
+      "id": "ddc6e86415dba8079ea0ac29f8e8adf7",
       "byname": "Low-Rolling Cool Guy",
       "name": "Lín",
       "nameId": "9794",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "6297f8541b2309639d8ee8cb4a7cdced",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-22T15:56:49.000Z",
-        "uuid": "a710ff53-1bd0-4a43-895a-b4f386edee47"
-      },
+      "id": "6297f8541b2309639d8ee8cb4a7cdced",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -251,13 +221,13 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "4ba963118e12f137a9f0e7505805e603",
+      "id": "4ba963118e12f137a9f0e7505805e603",
       "waterLevel": 0,
       "eventType": 0,
       "quotaNum": 30,
       "goldenIkuraPopNum": 75,
       "goldenIkuraNum": 29,
-      "id": 1,
+      "waveId": 1,
       "isClear": false
     }
   ]
