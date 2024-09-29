@@ -37,7 +37,7 @@ export namespace CoopStage {
     Factory = '5894ed09915957be54e5b1eb58c4c52a9d5d89a99b1297e6d06eac07d47196d0',
     Section = 'e7736b82a0a9b5c4b3777676f6d2d63ac3c612f1cd63df403153e77564c98b62',
     District = '30ad09621e6e7e525a2b30fc02ad11d33aadb1aae9e8ef5bd6cca6aef3db778c',
-    /// テストデータ
-    Manbou = 'beb48d99023561355cce7d21dc1466045168ed3cd92ffbadfa6b7a0c62034ca7'
+    /// テストデータ(ヘッダー画像なので解像度が低い)
+    Manbou = 'ce5d79560bec8d71581d5233dc5ebe437b28dad99891ece0d35c4cf0c003b057'
   }
 }

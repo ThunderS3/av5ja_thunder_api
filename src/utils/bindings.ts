@@ -9,5 +9,6 @@ export type Bindings = {
   RESOURCES: KVNamespace
   RESULTS: KVNamespace
   SCHEDULES: KVNamespace
+  HISTORIES: KVNamespace
   USERS: KVNamespace
 }

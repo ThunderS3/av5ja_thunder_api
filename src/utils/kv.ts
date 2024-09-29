@@ -3,6 +3,8 @@ import { CoopStage } from '@/enums/coop/coop_stage'
 import { ImageType } from '@/enums/image_type'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
+import { CoopPlayerId } from '@/models/common/coop_player_id.dto'
+import { CoopResult, CoopResultQuery } from '@/models/coop_result.dto'
 import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
 import dayjs, { type Dayjs } from 'dayjs'
@@ -107,6 +109,27 @@ export namespace KV {
     ): Promise<void> => {}
   }
 
+  export namespace RESULT {
+    /**
+     * オリジナルのリザルト書き込み
+     * @param c
+     * @param data
+     * @returns
+     */
+
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    export const set = async (c: Context<{ Bindings: Bindings }>, data: any): Promise<void> => {
+      try {
+        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+        const myResult: any = data.histories[0].results[0].data.coopHistoryDetail.myResult
+        const id: CoopPlayerId = CoopPlayerId.parse(myResult.player.id)
+        await c.env.HISTORIES.put(`${id.nplnUserId}:${id.playTime}`, JSON.stringify(data))
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+
   export namespace SCHEDULE {
     /**
      * スケジュール読み込み
@@ -131,7 +154,7 @@ export namespace KV {
     export const set = async (c: Context<{ Bindings: Bindings }>, data: object): Promise<CoopSchedule.Response> => {
       console.info('[SET SCHEDULE]:', data)
       const schedule: CoopSchedule.Response = CoopSchedule.Response.parse(data)
-      await c.env.USERS.put(`${schedule.startTime}:${schedule.endTime}`, JSON.stringify(schedule))
+      await c.env.SCHEDULES.put(`${schedule.startTime}:${schedule.endTime}`, JSON.stringify(schedule))
       return schedule
     }
   }

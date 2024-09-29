@@ -315,13 +315,14 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
   }
 
   get assetURLs(): S3URL[] {
+    /// ここで取得するステージ画像はBanner画像なので無視する
     return Array.from(
       new Set(
         this.memberResults
           .flatMap((member) => member.weapons.map((weapon) => weapon.url))
           .concat(this.memberResults.map((member) => member.specialWeapon?.url).filter((url) => url !== null))
           .concat(this.coopHistoryDetail.enemyResults.map((result) => result.enemy.image.url))
-          .concat(this.coopHistoryDetail.coopStage.image.url)
+        // .concat(this.coopHistoryDetail.coopStage.image.url)
       )
     ).map((url) => S3URL.parse(url))
   }
