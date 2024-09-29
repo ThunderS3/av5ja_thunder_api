@@ -166,9 +166,17 @@ export namespace CoopHistoryDetail {
     })
   )
 
-  export const CoopPlayerResult = z
-    .object({
-      // id: CoopPlayerId,
+  export const CoopPlayerResult = z.preprocess(
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    (input: any) => {
+      if (typeof input.id === 'string') {
+        return input
+      }
+      input.id = createHash('md5').update(`${input.id.playTime}:${input.id.uuid}:${input.id.nplnUserId}`).digest('hex')
+      return input
+    },
+    z.object({
+      id: z.string(),
       byname: z.string(),
       name: z.string(),
       nameId: z.string(),
@@ -206,12 +214,7 @@ export namespace CoopHistoryDetail {
       jobBonus: z.number().int().min(0).max(100).nullable(),
       jobRate: z.number().min(0).max(3.25).nullable()
     })
-    .transform((data) => {
-      return {
-        id: createHash('md5').update(`${data.id.playTime}:${data.id.uuid}:${data.id.nplnUserId}`).digest('hex'),
-        ...data
-      }
-    })
+  )
 
   export const JobResult = z.object({
     failureWave: z.number().int().min(-1).max(5).nullable(),

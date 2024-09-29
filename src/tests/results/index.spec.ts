@@ -17,6 +17,7 @@ describe('CoopResultQuery', () => {
       const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
       const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
       const input_model: CoopResultQuery = new CoopResultQuery(JSON.parse(input))
+      Bun.write(path.join(__dirname, 'output', '03.json'), JSON.stringify(input_model, null, 2))
       expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output))).toBe(true)
     }
   })
