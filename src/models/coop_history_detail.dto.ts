@@ -168,7 +168,7 @@ export namespace CoopHistoryDetail {
 
   export const CoopPlayerResult = z
     .object({
-      id: CoopPlayerId,
+      // id: CoopPlayerId,
       byname: z.string(),
       name: z.string(),
       nameId: z.string(),
@@ -208,7 +208,7 @@ export namespace CoopHistoryDetail {
     })
     .transform((data) => {
       return {
-        hash: createHash('md5').update(`${data.id.playTime}:${data.id.uuid}:${data.id.nplnUserId}`).digest('hex'),
+        id: createHash('md5').update(`${data.id.playTime}:${data.id.uuid}:${data.id.nplnUserId}`).digest('hex'),
         ...data
       }
     })
@@ -221,13 +221,13 @@ export namespace CoopHistoryDetail {
   })
 
   export const WaveResult = z.object({
-    hash: z.string(),
+    id: z.string(),
     waterLevel: z.nativeEnum(CoopWaterLevel.Id),
     eventType: z.nativeEnum(CoopEvent.Id),
     quotaNum: z.number().int().min(0).nullable(),
     goldenIkuraPopNum: z.number().int().min(0),
     goldenIkuraNum: z.number().int().min(0).nullable(),
-    id: z.number().int().min(0),
+    waveId: z.number().int().min(0),
     isClear: z.boolean()
   })
 
@@ -236,7 +236,7 @@ export namespace CoopHistoryDetail {
    */
   export const Response = z
     .object({
-      id: CoopHistoryDetailId,
+      // id: CoopHistoryDetailId,
       uuid: z.string(),
       schedule: CoopSchedule.Response.optional(),
       scale: z.array(z.number().int().min(0).max(39).nullable()),
@@ -255,7 +255,7 @@ export namespace CoopHistoryDetail {
     })
     .transform((data) => {
       return {
-        hash: createHash('md5').update(`${data.playTime}:${data.uuid}`).digest('hex'),
+        id: createHash('md5').update(`${data.playTime}:${data.uuid}`).digest('hex'),
         ...data
       }
     })
@@ -315,7 +315,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
   private get waveResults(): CoopHistoryDetail.WaveResult[] {
     return this.coopHistoryDetail.waveResults.map((result) =>
       CoopHistoryDetail.WaveResult.parse({
-        hash: createHash('md5')
+        id: createHash('md5')
           .update(`${this.coopHistoryDetail.id.playTime}:${this.coopHistoryDetail.id.uuid}:${result.waveNumber}`)
           .digest('hex'),
         waterLevel: result.waterLevel,
@@ -323,7 +323,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
         quotaNum: result.deliverNorm,
         goldenIkuraPopNum: result.goldenPopCount,
         goldenIkuraNum: result.teamDeliverCount,
-        id: result.waveNumber,
+        waveId: result.waveNumber,
         isClear:
           this.coopHistoryDetail.bossResult === null
             ? this.coopHistoryDetail.resultWave === 0
