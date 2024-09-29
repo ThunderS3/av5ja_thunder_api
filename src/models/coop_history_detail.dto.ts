@@ -238,24 +238,35 @@ export namespace CoopHistoryDetail {
    * サーモンランのリザルトフォーマット
    */
   export const Response = z
-    .object({
-      // id: CoopHistoryDetailId,
-      uuid: z.string(),
-      schedule: CoopSchedule.Response.optional(),
-      scale: z.array(z.number().int().min(0).max(39).nullable()),
-      myResult: CoopHistoryDetail.CoopPlayerResult,
-      otherResults: z.array(CoopHistoryDetail.CoopPlayerResult),
-      jobResult: CoopHistoryDetail.JobResult,
-      playTime: DateTime,
-      bossCounts: z.array(z.number().int().min(0)).length(14),
-      bossKillCounts: z.array(z.number().int().min(0)).length(14),
-      dangerRate: z.number().min(0).max(3.33),
-      ikuraNum: z.number().int().min(0),
-      goldenIkuraNum: z.number().int().min(0),
-      goldenIkuraAssistNum: z.number().int().min(0),
-      scenarioCode: z.string().nullable(),
-      waveDetails: z.array(CoopHistoryDetail.WaveResult)
-    })
+    .preprocess(
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      (input: any) => {
+        if (typeof input.id === 'string') {
+          return input
+        }
+        // こちらの時間が正しいので修正する
+        input.playTime = CoopHistoryDetailId.parse(input.id).playTime
+        return input
+      },
+      z.object({
+        // id: CoopHistoryDetailId,
+        uuid: z.string(),
+        schedule: CoopSchedule.Response.optional(),
+        scale: z.array(z.number().int().min(0).max(39).nullable()),
+        myResult: CoopHistoryDetail.CoopPlayerResult,
+        otherResults: z.array(CoopHistoryDetail.CoopPlayerResult),
+        jobResult: CoopHistoryDetail.JobResult,
+        playTime: DateTime,
+        bossCounts: z.array(z.number().int().min(0)).length(14),
+        bossKillCounts: z.array(z.number().int().min(0)).length(14),
+        dangerRate: z.number().min(0).max(3.33),
+        ikuraNum: z.number().int().min(0),
+        goldenIkuraNum: z.number().int().min(0),
+        goldenIkuraAssistNum: z.number().int().min(0),
+        scenarioCode: z.string().nullable(),
+        waveDetails: z.array(CoopHistoryDetail.WaveResult)
+      })
+    )
     .transform((data) => {
       return {
         id: createHash('md5').update(`${data.playTime}:${data.uuid}`).digest('hex'),
