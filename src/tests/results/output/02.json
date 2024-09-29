@@ -15,12 +15,6 @@
       "results": [
         {
           "id": "6535158b4e92adc52457bb7d326e4d07",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T07:58:29.000Z",
-            "uuid": "08f31bed-6410-4fc4-8526-9cc8ec8c0008"
-          },
           "uuid": "08f31bed-6410-4fc4-8526-9cc8ec8c0008",
           "schedule": {
             "id": "00927f525fae5f03aa6e68816837f5c2",
@@ -36,12 +30,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "63b8aa56134b224584a78661ff3b6152",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T07:58:29.000Z",
-              "uuid": "08f31bed-6410-4fc4-8526-9cc8ec8c0008"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -82,12 +70,6 @@
           "otherResults": [
             {
               "id": "36757990aee6f521a3be3d61ef9f6ff6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avji6jn73btyjsphanmm",
-                "playTime": "2024-09-17T07:58:29.000Z",
-                "uuid": "08f31bed-6410-4fc4-8526-9cc8ec8c0008"
-              },
               "byname": "お魚好きのDNA",
               "name": "みならいバイト",
               "nameId": "1477",
@@ -195,12 +177,6 @@
       "results": [
         {
           "id": "c68cb0aa797f6791e1904577903837c2",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:35:31.000Z",
-            "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-          },
           "uuid": "48e22bad-4888-4926-8d19-935349fb9676",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -216,12 +192,6 @@
           "scale": [11, 0, 0],
           "myResult": {
             "id": "1eb7987a335d9c48e500ea819177cec1",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:35:31.000Z",
-              "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -262,12 +232,6 @@
           "otherResults": [
             {
               "id": "fdac1041cac788402462b576ad324641",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q2dvi2wdok3y5gkacnmm",
-                "playTime": "2024-09-19T00:35:31.000Z",
-                "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-              },
               "byname": "みんなのツッコミ",
               "name": "からね",
               "nameId": "3107",
@@ -322,12 +286,6 @@
             },
             {
               "id": "6721aeded713358395231992729ca02c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q5kzrtqdgmmtqvh2swmm",
-                "playTime": "2024-09-19T00:35:31.000Z",
-                "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-              },
               "byname": "Thank You For 鏡",
               "name": "ボキはさいきょう",
               "nameId": "2702",
@@ -382,19 +340,13 @@
             },
             {
               "id": "688865848a05753dcd3e23430529dc61",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "aex6ozblwlu2m474domm",
-                "playTime": "2024-09-19T00:35:31.000Z",
-                "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-              },
               "byname": "真冬の天ぷら",
               "name": "みたらし",
               "nameId": "7082",
               "nameplate": {
                 "badges": [5220000, 3101500, 6000003],
                 "background": {
-                  "waveId": 1,
+                  "id": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -500,12 +452,6 @@
         },
         {
           "id": "f0f4fc2f3acde95eac0b116728b2d56e",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T02:12:41.000Z",
-            "uuid": "fd9b3fea-a2f7-48bf-99ef-8938a154b65e"
-          },
           "uuid": "fd9b3fea-a2f7-48bf-99ef-8938a154b65e",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -521,12 +467,6 @@
           "scale": [8, 2, 1],
           "myResult": {
             "id": "3c5d7b8357e9076c7ccbf71bdd53d2de",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T02:12:41.000Z",
-              "uuid": "fd9b3fea-a2f7-48bf-99ef-8938a154b65e"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -567,12 +507,6 @@
           "otherResults": [
             {
               "id": "920e9af2e470858de7ab3d12043c4e08",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qx7tsoviv75um2h2byom",
-                "playTime": "2024-09-19T02:12:41.000Z",
-                "uuid": "fd9b3fea-a2f7-48bf-99ef-8938a154b65e"
-              },
               "byname": "煮込みシャケ",
               "name": "やまハムニダ？",
               "nameId": "9487",
@@ -627,12 +561,6 @@
             },
             {
               "id": "6b14479fbafc3c97deae39cf78aa3894",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a3d6qxobziesq3yianmm",
-                "playTime": "2024-09-19T02:12:41.000Z",
-                "uuid": "fd9b3fea-a2f7-48bf-99ef-8938a154b65e"
-              },
               "byname": "ふとんの中のオブジェ",
               "name": "えにゃぴちゃんねる",
               "nameId": "4438",
@@ -687,12 +615,6 @@
             },
             {
               "id": "c9672a2521d820b7859976e2e0df5980",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "atfygmsq5cfs7kudonmm",
-                "playTime": "2024-09-19T02:12:41.000Z",
-                "uuid": "fd9b3fea-a2f7-48bf-99ef-8938a154b65e"
-              },
               "byname": "増殖し共鳴するスルメ",
               "name": "ガラナ",
               "nameId": "1985",
@@ -805,12 +727,6 @@
         },
         {
           "id": "abbcce7bb2095abd68e54a39a591ee05",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:05:39.000Z",
-            "uuid": "9766ffe7-2be8-4ec1-ab7d-e38013c66590"
-          },
           "uuid": "9766ffe7-2be8-4ec1-ab7d-e38013c66590",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -826,12 +742,6 @@
           "scale": [8, 3, 1],
           "myResult": {
             "id": "9acfef3b97266578e89a45a33cfdc4a4",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:05:39.000Z",
-              "uuid": "9766ffe7-2be8-4ec1-ab7d-e38013c66590"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -872,12 +782,6 @@
           "otherResults": [
             {
               "id": "817bfa8e179859c3b6ca60c3a4b19ce9",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "atc6eirwzcp5waovwnmm",
-                "playTime": "2024-09-19T01:05:39.000Z",
-                "uuid": "9766ffe7-2be8-4ec1-ab7d-e38013c66590"
-              },
               "byname": "クマサン商会の従業員",
               "name": "Wisp",
               "nameId": "2644",
@@ -932,12 +836,6 @@
             },
             {
               "id": "46075817aefa6013c4476ccba82d40ae",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qsn7oa6u6is5dia2asom",
-                "playTime": "2024-09-19T01:05:39.000Z",
-                "uuid": "9766ffe7-2be8-4ec1-ab7d-e38013c66590"
-              },
               "byname": "自分だけのテッキュウ",
               "name": "マスターニャーダ",
               "nameId": "2631",
@@ -992,12 +890,6 @@
             },
             {
               "id": "fea550a3cc41051563ff35e2b443a7c5",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "albcmqn2fwgscrbyx6mm",
-                "playTime": "2024-09-19T01:05:39.000Z",
-                "uuid": "9766ffe7-2be8-4ec1-ab7d-e38013c66590"
-              },
               "byname": "電池切れの会社員",
               "name": "シャカイヂン",
               "nameId": "3135",
@@ -1110,12 +1002,6 @@
         },
         {
           "id": "d70c253b0c7ddca3fbe6cdc7c8629406",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:44:18.000Z",
-            "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-          },
           "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -1131,12 +1017,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "07e1dce6cd93f402848a24b6acf7b0e8",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:44:18.000Z",
-              "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -1177,12 +1057,6 @@
           "otherResults": [
             {
               "id": "d71c4f10c36ed22864e95081e9963459",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qz26kzvwvc27id3hanmm",
-                "playTime": "2024-09-19T01:44:18.000Z",
-                "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-              },
               "byname": "奇跡の当選者",
               "name": "かにはちねん",
               "nameId": "2472",
@@ -1237,12 +1111,6 @@
             },
             {
               "id": "a04b6510d84308c29d85a81315329e5d",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qsn7oa6u6is5dia2asom",
-                "playTime": "2024-09-19T01:44:18.000Z",
-                "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-              },
               "byname": "自分だけのテッキュウ",
               "name": "マスターニャーダ",
               "nameId": "2631",
@@ -1297,12 +1165,6 @@
             },
             {
               "id": "bd1723325b6b3feee49fe53289e525e1",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qtaciypciea6j3junnmm",
-                "playTime": "2024-09-19T01:44:18.000Z",
-                "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-              },
               "byname": "研修中の新人バイト",
               "name": "ёяisona",
               "nameId": "7137",
@@ -1405,12 +1267,6 @@
         },
         {
           "id": "8bb9cb1a437edadf4ff12186bd5d87b2",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:58:31.000Z",
-            "uuid": "b5f51656-5921-4a34-b7b8-9c9ea8eb90f2"
-          },
           "uuid": "b5f51656-5921-4a34-b7b8-9c9ea8eb90f2",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -1426,12 +1282,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "16480f1f6bc2ca2dbd0b29daecdb23cb",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:58:31.000Z",
-              "uuid": "b5f51656-5921-4a34-b7b8-9c9ea8eb90f2"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -1472,12 +1322,6 @@
           "otherResults": [
             {
               "id": "a131e7ad08e478a6c01a5fa3aa21f1ff",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "awtoeirwzcp5wi3hanmm",
-                "playTime": "2024-09-19T00:58:31.000Z",
-                "uuid": "b5f51656-5921-4a34-b7b8-9c9ea8eb90f2"
-              },
               "byname": "本日のタマゴ",
               "name": "まるたまご",
               "nameId": "2198",
@@ -1532,12 +1376,6 @@
             },
             {
               "id": "c0d2fdb9c4cf01d7edbf1356cd89accc",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a5iruox6afilfq77fnmm",
-                "playTime": "2024-09-19T00:58:31.000Z",
-                "uuid": "b5f51656-5921-4a34-b7b8-9c9ea8eb90f2"
-              },
               "byname": "異世界の記憶",
               "name": "スターマン・センゾ",
               "nameId": "2361",
@@ -1592,12 +1430,6 @@
             },
             {
               "id": "09aa7955b9c3da3a74c97a25df1063ee",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "awmhmzvwvc27itgafvmm",
-                "playTime": "2024-09-19T00:58:31.000Z",
-                "uuid": "b5f51656-5921-4a34-b7b8-9c9ea8eb90f2"
-              },
               "byname": "終わらないオオモノ",
               "name": "レモネーど",
               "nameId": "1405",
@@ -1700,12 +1532,6 @@
         },
         {
           "id": "ccdbf5aa0a484fca95aae7988f71ae07",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T02:28:25.000Z",
-            "uuid": "c14a6566-59af-4eec-856c-29f8735abf6e"
-          },
           "uuid": "c14a6566-59af-4eec-856c-29f8735abf6e",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -1721,12 +1547,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "2d6da128761cc779b98c810e766a4401",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T02:28:25.000Z",
-              "uuid": "c14a6566-59af-4eec-856c-29f8735abf6e"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -1767,12 +1587,6 @@
           "otherResults": [
             {
               "id": "3fc36213166765acd37adaafa462733a",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "atfygmsq5cfs7kudonmm",
-                "playTime": "2024-09-19T02:28:25.000Z",
-                "uuid": "c14a6566-59af-4eec-856c-29f8735abf6e"
-              },
               "byname": "増殖し共鳴するスルメ",
               "name": "ガラナ",
               "nameId": "1985",
@@ -1827,12 +1641,6 @@
             },
             {
               "id": "247d6d052e4e900a9ee54b00956f9f0b",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a3d6qxobziesq3yianmm",
-                "playTime": "2024-09-19T02:28:25.000Z",
-                "uuid": "c14a6566-59af-4eec-856c-29f8735abf6e"
-              },
               "byname": "ふとんの中のオブジェ",
               "name": "えにゃぴちゃんねる",
               "nameId": "4438",
@@ -1887,12 +1695,6 @@
             },
             {
               "id": "3de57d7da32e624ef84affe73de6f9a0",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qk2l2oxkx7ytviaqnbnm",
-                "playTime": "2024-09-19T02:28:25.000Z",
-                "uuid": "c14a6566-59af-4eec-856c-29f8735abf6e"
-              },
               "byname": "終わらないヌラネバセブンファン",
               "name": "あんず",
               "nameId": "1661",
@@ -1995,12 +1797,6 @@
         },
         {
           "id": "49c15b82c0baa061043d4f7885a97301",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T02:35:30.000Z",
-            "uuid": "9c128d82-9cac-4c89-82f4-2aa6ba9a2cdd"
-          },
           "uuid": "9c128d82-9cac-4c89-82f4-2aa6ba9a2cdd",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -2016,12 +1812,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "23ff1478d72771b2d6f37d258e3fef85",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T02:35:30.000Z",
-              "uuid": "9c128d82-9cac-4c89-82f4-2aa6ba9a2cdd"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -2062,12 +1852,6 @@
           "otherResults": [
             {
               "id": "1224210ed602feb7d82deb8092bda841",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a3d6qxobziesq3yianmm",
-                "playTime": "2024-09-19T02:35:30.000Z",
-                "uuid": "9c128d82-9cac-4c89-82f4-2aa6ba9a2cdd"
-              },
               "byname": "ふとんの中のオブジェ",
               "name": "えにゃぴちゃんねる",
               "nameId": "4438",
@@ -2122,19 +1906,13 @@
             },
             {
               "id": "9e0ac45113fdd52814740fb2dbb9eafb",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qv4o3z2uqf4kr4ahanmm",
-                "playTime": "2024-09-19T02:35:30.000Z",
-                "uuid": "9c128d82-9cac-4c89-82f4-2aa6ba9a2cdd"
-              },
               "byname": "甘えん坊な赤ちゃん",
               "name": "みみりん",
               "nameId": "1212",
               "nameplate": {
                 "badges": [null, 3003001, null],
                 "background": {
-                  "waveId": 1,
+                  "id": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -2182,12 +1960,6 @@
             },
             {
               "id": "f106941c3b727f13850effe0a98d808c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qx7tsoviv75um2h2byom",
-                "playTime": "2024-09-19T02:35:30.000Z",
-                "uuid": "9c128d82-9cac-4c89-82f4-2aa6ba9a2cdd"
-              },
               "byname": "煮込みシャケ",
               "name": "やまハムニダ？",
               "nameId": "9487",
@@ -2290,12 +2062,6 @@
         },
         {
           "id": "63c5517be792d0ca4c340821ed2ff02f",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:51:22.000Z",
-            "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-          },
           "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -2311,12 +2077,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "b48655faad796773ee3c13a4bffca7cb",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:51:22.000Z",
-              "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -2357,12 +2117,6 @@
           "otherResults": [
             {
               "id": "9ee653203c6e6240e259fe95cdd92f3e",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qz26kzvwvc27id3hanmm",
-                "playTime": "2024-09-19T01:51:22.000Z",
-                "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-              },
               "byname": "奇跡の当選者",
               "name": "かにはちねん",
               "nameId": "2472",
@@ -2417,12 +2171,6 @@
             },
             {
               "id": "262d966d66f930f00c930b3592ef4c2d",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qsn7oa6u6is5dia2asom",
-                "playTime": "2024-09-19T01:51:22.000Z",
-                "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-              },
               "byname": "自分だけのテッキュウ",
               "name": "マスターニャーダ",
               "nameId": "2631",
@@ -2477,12 +2225,6 @@
             },
             {
               "id": "7ae4cb25c4e2285548bd18020f4335b3",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a626323svr7w4zkianmm",
-                "playTime": "2024-09-19T01:51:22.000Z",
-                "uuid": "af023e59-fb67-4033-9606-9d4d9c37fdb9"
-              },
               "byname": "めちゃくちゃシオカラーズファン",
               "name": "kαge",
               "nameId": "1000",
@@ -2585,12 +2327,6 @@
         },
         {
           "id": "6327e6df2e7efc74ee3d2aceca1d9bcb",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:07:23.000Z",
-            "uuid": "33fe24ef-b463-4629-9404-342738bd2dbe"
-          },
           "uuid": "33fe24ef-b463-4629-9404-342738bd2dbe",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -2606,12 +2342,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "c5f7616bd859c357eca0abdd2b5d5fa0",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:07:23.000Z",
-              "uuid": "33fe24ef-b463-4629-9404-342738bd2dbe"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -2652,12 +2382,6 @@
           "otherResults": [
             {
               "id": "1dc5a5fae87f5471a7397ceb32e64e4e",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qual543tmcu3yjepntmm",
-                "playTime": "2024-09-19T00:07:23.000Z",
-                "uuid": "33fe24ef-b463-4629-9404-342738bd2dbe"
-              },
               "byname": "ツンツンした天使",
               "name": "-★*",
               "nameId": "2608",
@@ -2712,12 +2436,6 @@
             },
             {
               "id": "74d52341aca149095968b420fed694fe",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qasdypsazn3uicpannmm",
-                "playTime": "2024-09-19T00:07:23.000Z",
-                "uuid": "33fe24ef-b463-4629-9404-342738bd2dbe"
-              },
               "byname": "インクしたたる反復横とび",
               "name": "°",
               "nameId": "5093",
@@ -2772,12 +2490,6 @@
             },
             {
               "id": "2e01af716342ccb8d2a07e6d738f4464",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qnvegovesrnzgamqvrmm",
-                "playTime": "2024-09-19T00:07:23.000Z",
-                "uuid": "33fe24ef-b463-4629-9404-342738bd2dbe"
-              },
               "byname": "増殖するカタパッド",
               "name": "いぬのじ",
               "nameId": "2519",
@@ -2880,12 +2592,6 @@
         },
         {
           "id": "8111145365da8abec0827619ca76c5ed",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T02:21:24.000Z",
-            "uuid": "e7491c7a-d6a9-44c0-a507-04cea7f017c4"
-          },
           "uuid": "e7491c7a-d6a9-44c0-a507-04cea7f017c4",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -2901,12 +2607,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "a55b97390b502bea3f492b06371fe338",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T02:21:24.000Z",
-              "uuid": "e7491c7a-d6a9-44c0-a507-04cea7f017c4"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -2947,12 +2647,6 @@
           "otherResults": [
             {
               "id": "0588db0bd33b86573429c532bf536b0a",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qx7tsoviv75um2h2byom",
-                "playTime": "2024-09-19T02:21:24.000Z",
-                "uuid": "e7491c7a-d6a9-44c0-a507-04cea7f017c4"
-              },
               "byname": "煮込みシャケ",
               "name": "やまハムニダ？",
               "nameId": "9487",
@@ -3007,12 +2701,6 @@
             },
             {
               "id": "5ef5a7d270678a94ad2e8b7dbb5bd293",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a3d6qxobziesq3yianmm",
-                "playTime": "2024-09-19T02:21:24.000Z",
-                "uuid": "e7491c7a-d6a9-44c0-a507-04cea7f017c4"
-              },
               "byname": "ふとんの中のオブジェ",
               "name": "えにゃぴちゃんねる",
               "nameId": "4438",
@@ -3067,12 +2755,6 @@
             },
             {
               "id": "23faade5c68a72b3dc6dc49e3ae53d09",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "atfygmsq5cfs7kudonmm",
-                "playTime": "2024-09-19T02:21:24.000Z",
-                "uuid": "e7491c7a-d6a9-44c0-a507-04cea7f017c4"
-              },
               "byname": "増殖し共鳴するスルメ",
               "name": "ガラナ",
               "nameId": "1985",
@@ -3175,12 +2857,6 @@
         },
         {
           "id": "cc82df29ca6a31144877759210dc0e0d",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T02:42:39.000Z",
-            "uuid": "06530175-be82-4ffc-a27c-96c33359760d"
-          },
           "uuid": "06530175-be82-4ffc-a27c-96c33359760d",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -3196,12 +2872,6 @@
           "scale": [8, 2, 0],
           "myResult": {
             "id": "0d58710c403f2e7f6fb6a3674bb17df8",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T02:42:39.000Z",
-              "uuid": "06530175-be82-4ffc-a27c-96c33359760d"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -3242,12 +2912,6 @@
           "otherResults": [
             {
               "id": "c89bfe1d1fa55cff5dd54941ed2e0a0b",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qm5xgam6r5acpskkanmm",
-                "playTime": "2024-09-19T02:42:39.000Z",
-                "uuid": "06530175-be82-4ffc-a27c-96c33359760d"
-              },
               "byname": "満潮のからあげ",
               "name": "おげれつだいひゃっか",
               "nameId": "2804",
@@ -3302,12 +2966,6 @@
             },
             {
               "id": "a2b25fa331b57f00256de18fa44d1789",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a3d6qxobziesq3yianmm",
-                "playTime": "2024-09-19T02:42:39.000Z",
-                "uuid": "06530175-be82-4ffc-a27c-96c33359760d"
-              },
               "byname": "ふとんの中のオブジェ",
               "name": "えにゃぴちゃんねる",
               "nameId": "4438",
@@ -3362,12 +3020,6 @@
             },
             {
               "id": "689448243d8487e991109c5223961233",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qx7tsoviv75um2h2byom",
-                "playTime": "2024-09-19T02:42:39.000Z",
-                "uuid": "06530175-be82-4ffc-a27c-96c33359760d"
-              },
               "byname": "煮込みシャケ",
               "name": "やまハムニダ？",
               "nameId": "9487",
@@ -3480,12 +3132,6 @@
         },
         {
           "id": "ee99072d111038b26ea7d1cb34bd2dfd",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:44:28.000Z",
-            "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-          },
           "uuid": "48e22bad-4888-4926-8d19-935349fb9676",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -3501,12 +3147,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "b2d310bf3553359f189cd70fa0e3adff",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:44:28.000Z",
-              "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -3547,12 +3187,6 @@
           "otherResults": [
             {
               "id": "4bbb36c6a00b312512aff516e9e0241c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "am3ppcadcx77rw3hanmm",
-                "playTime": "2024-09-19T00:44:28.000Z",
-                "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-              },
               "byname": "ふつうのアルバイター",
               "name": "Lv.3",
               "nameId": "2693",
@@ -3607,12 +3241,6 @@
             },
             {
               "id": "48aa899e09a4bcb5d821d6aca2f1f03a",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q2dvi2wdok3y5gkacnmm",
-                "playTime": "2024-09-19T00:44:28.000Z",
-                "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-              },
               "byname": "みんなのツッコミ",
               "name": "からね",
               "nameId": "3107",
@@ -3667,12 +3295,6 @@
             },
             {
               "id": "f600a6b7f5b6f11f4028f324f3695f96",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a3aiidum7puiueo7jfsm",
-                "playTime": "2024-09-19T00:44:28.000Z",
-                "uuid": "48e22bad-4888-4926-8d19-935349fb9676"
-              },
               "byname": "I LOVE ダイバー",
               "name": "Sz_rin♪",
               "nameId": "1447",
@@ -3775,12 +3397,6 @@
         },
         {
           "id": "06770e689d8b8f934d34a8d967b7a945",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:28:20.000Z",
-            "uuid": "8ea67cef-2db5-4c48-a810-75d2def215ef"
-          },
           "uuid": "8ea67cef-2db5-4c48-a810-75d2def215ef",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -3796,12 +3412,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "2163206c7bd435f5112716da904346b0",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:28:20.000Z",
-              "uuid": "8ea67cef-2db5-4c48-a810-75d2def215ef"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -3842,12 +3452,6 @@
           "otherResults": [
             {
               "id": "f66d8da74b4cdd4000f03621349631a4",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "aerwjnyghvzbayfhanmm",
-                "playTime": "2024-09-19T01:28:20.000Z",
-                "uuid": "8ea67cef-2db5-4c48-a810-75d2def215ef"
-              },
               "byname": "成長中のヨコヅナ",
               "name": "Twilight",
               "nameId": "3129",
@@ -3902,12 +3506,6 @@
             },
             {
               "id": "cfc10c61adfca28692ebc6b6687a5b4c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qsn7oa6u6is5dia2asom",
-                "playTime": "2024-09-19T01:28:20.000Z",
-                "uuid": "8ea67cef-2db5-4c48-a810-75d2def215ef"
-              },
               "byname": "自分だけのテッキュウ",
               "name": "マスターニャーダ",
               "nameId": "2631",
@@ -3962,12 +3560,6 @@
             },
             {
               "id": "695fec4bbacb4cb3869df51e4bee2dda",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "amvswcyquqxwesxhanmm",
-                "playTime": "2024-09-19T01:28:20.000Z",
-                "uuid": "8ea67cef-2db5-4c48-a810-75d2def215ef"
-              },
               "byname": "カリスマカリスマ",
               "name": "きり*",
               "nameId": "2982",
@@ -4070,12 +3662,6 @@
         },
         {
           "id": "b77c2ee1c89b05f19ebe540b5f9dc8ca",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:00:19.000Z",
-            "uuid": "600d24e5-9a66-402d-b578-86f93b13085a"
-          },
           "uuid": "600d24e5-9a66-402d-b578-86f93b13085a",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -4091,12 +3677,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "8ec4a4128f89529798dfaf30e64a1b97",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:00:19.000Z",
-              "uuid": "600d24e5-9a66-402d-b578-86f93b13085a"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -4137,12 +3717,6 @@
           "otherResults": [
             {
               "id": "15bd5f46729c9ac09b68ed275a890d48",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "awkzpiurqakjn45zanmm",
-                "playTime": "2024-09-19T00:00:19.000Z",
-                "uuid": "600d24e5-9a66-402d-b578-86f93b13085a"
-              },
               "byname": "シャイニングおじさん",
               "name": "べろちゃん",
               "nameId": "6642",
@@ -4197,12 +3771,6 @@
             },
             {
               "id": "bc30df3bd7028934c7649d99dbce4b31",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ad2irxobziesqd6csnmm",
-                "playTime": "2024-09-19T00:00:19.000Z",
-                "uuid": "600d24e5-9a66-402d-b578-86f93b13085a"
-              },
               "byname": "愛にあふれたフレーバー",
               "name": " UNLUCKY",
               "nameId": "2001",
@@ -4257,12 +3825,6 @@
             },
             {
               "id": "a285d6bd95c1c8191cbe697f761b00ac",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "axrqn3umrfntl5vxhnmm",
-                "playTime": "2024-09-19T00:00:19.000Z",
-                "uuid": "600d24e5-9a66-402d-b578-86f93b13085a"
-              },
               "byname": "サーモンランの人生",
               "name": "え？",
               "nameId": "3022",
@@ -4365,12 +3927,6 @@
         },
         {
           "id": "f56bc0c68681b8378bbbdedded4cd501",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:21:20.000Z",
-            "uuid": "f2ade661-10bd-4238-93cd-5b77bea39452"
-          },
           "uuid": "f2ade661-10bd-4238-93cd-5b77bea39452",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -4386,12 +3942,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "e206f9cc6e7d1015e861c9e5c489ec46",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:21:20.000Z",
-              "uuid": "f2ade661-10bd-4238-93cd-5b77bea39452"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -4432,12 +3982,6 @@
           "otherResults": [
             {
               "id": "6cf3ddffb86b2f0f5c1fcacb187cdcb2",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "amvswcyquqxwesxhanmm",
-                "playTime": "2024-09-19T01:21:20.000Z",
-                "uuid": "f2ade661-10bd-4238-93cd-5b77bea39452"
-              },
               "byname": "カリスマカリスマ",
               "name": "きり*",
               "nameId": "2982",
@@ -4492,12 +4036,6 @@
             },
             {
               "id": "23bcb99eebb760f8f822be6d63cb02d6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qsn7oa6u6is5dia2asom",
-                "playTime": "2024-09-19T01:21:20.000Z",
-                "uuid": "f2ade661-10bd-4238-93cd-5b77bea39452"
-              },
               "byname": "自分だけのテッキュウ",
               "name": "マスターニャーダ",
               "nameId": "2631",
@@ -4552,12 +4090,6 @@
             },
             {
               "id": "0cfa084d722b9ad897418be06095982c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "aztzskgujfdm6tvfbnmm",
-                "playTime": "2024-09-19T01:21:20.000Z",
-                "uuid": "f2ade661-10bd-4238-93cd-5b77bea39452"
-              },
               "byname": "シェケナダムのボールドマーカー使い",
               "name": "memento",
               "nameId": "2532",
@@ -4660,12 +4192,6 @@
         },
         {
           "id": "8c6bb9fbc9bd9872fb3c471c47060eb6",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:35:15.000Z",
-            "uuid": "487158e3-e70b-474f-ae03-198fc8ddfd0a"
-          },
           "uuid": "487158e3-e70b-474f-ae03-198fc8ddfd0a",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -4681,12 +4207,6 @@
           "scale": [9, 1, 0],
           "myResult": {
             "id": "184f7982e5116ef0c7b5c2aee5ada6e4",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:35:15.000Z",
-              "uuid": "487158e3-e70b-474f-ae03-198fc8ddfd0a"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -4727,12 +4247,6 @@
           "otherResults": [
             {
               "id": "fdc676060b614a4e28dcc1ea733a6b49",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qtaciypciea6j3junnmm",
-                "playTime": "2024-09-19T01:35:15.000Z",
-                "uuid": "487158e3-e70b-474f-ae03-198fc8ddfd0a"
-              },
               "byname": "研修中の新人バイト",
               "name": "ёяisona",
               "nameId": "7137",
@@ -4787,12 +4301,6 @@
             },
             {
               "id": "d06d0c0f3986f1a739651a692acaf0ae",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qsn7oa6u6is5dia2asom",
-                "playTime": "2024-09-19T01:35:15.000Z",
-                "uuid": "487158e3-e70b-474f-ae03-198fc8ddfd0a"
-              },
               "byname": "自分だけのテッキュウ",
               "name": "マスターニャーダ",
               "nameId": "2631",
@@ -4847,12 +4355,6 @@
             },
             {
               "id": "19d96ac6c353b6de4bb042e906e9b227",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a4vbj4kdafo5zuyahnmm",
-                "playTime": "2024-09-19T01:35:15.000Z",
-                "uuid": "487158e3-e70b-474f-ae03-198fc8ddfd0a"
-              },
               "byname": "ただのクマ",
               "name": "りこんニキ！！",
               "nameId": "2443",
@@ -4965,12 +4467,6 @@
         },
         {
           "id": "411593a41d1bf57c7b80c3c48d978acd",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:14:23.000Z",
-            "uuid": "4b99eaff-58eb-41c8-9200-f37df0035d34"
-          },
           "uuid": "4b99eaff-58eb-41c8-9200-f37df0035d34",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -4986,12 +4482,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "b587773eb7c0561b7b70786880d04ea5",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:14:23.000Z",
-              "uuid": "4b99eaff-58eb-41c8-9200-f37df0035d34"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -5032,12 +4522,6 @@
           "otherResults": [
             {
               "id": "4341a8aa9f02b4ebd71c07b762cf7005",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ax56dio7d5tnf5voanmm",
-                "playTime": "2024-09-19T00:14:23.000Z",
-                "uuid": "4b99eaff-58eb-41c8-9200-f37df0035d34"
-              },
               "byname": "ハッピーな調味料",
               "name": "K1ZU",
               "nameId": "3106",
@@ -5092,19 +4576,13 @@
             },
             {
               "id": "e6c471738c74da4b06dc8cc87feeead0",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qdu3hmtkxzy66jfadbnm",
-                "playTime": "2024-09-19T00:14:23.000Z",
-                "uuid": "4b99eaff-58eb-41c8-9200-f37df0035d34"
-              },
               "byname": "バンカラな若者",
               "name": "なきぃ～",
               "nameId": "2820",
               "nameplate": {
                 "badges": [5211000, null, null],
                 "background": {
-                  "waveId": 1,
+                  "id": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -5152,12 +4630,6 @@
             },
             {
               "id": "144f81e4ad36e789e99c24ac69c75386",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qwbx76nhst35rypianmm",
-                "playTime": "2024-09-19T00:14:23.000Z",
-                "uuid": "4b99eaff-58eb-41c8-9200-f37df0035d34"
-              },
               "byname": "チョーシあげたいヴァリアブルローラー使い",
               "name": "ドン9:ハッア？！",
               "nameId": "4753",
@@ -5260,12 +4732,6 @@
         },
         {
           "id": "a6b521ab555ebd6fc0c90d37f4b3fc93",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:14:15.000Z",
-            "uuid": "d6b48dae-7b64-4e8b-b535-d7b703aca30a"
-          },
           "uuid": "d6b48dae-7b64-4e8b-b535-d7b703aca30a",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -5281,12 +4747,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "9634aa2e90c15080e63180e3dcb1cf5c",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:14:15.000Z",
-              "uuid": "d6b48dae-7b64-4e8b-b535-d7b703aca30a"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -5327,12 +4787,6 @@
           "otherResults": [
             {
               "id": "d2cf8f1bf7f1d60eb2e3c2ffaf23e5b9",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkq4lbzzyam5goukanmm",
-                "playTime": "2024-09-19T01:14:15.000Z",
-                "uuid": "d6b48dae-7b64-4e8b-b535-d7b703aca30a"
-              },
               "byname": "トリプルタワー",
               "name": "おしがしんだ",
               "nameId": "1609",
@@ -5387,12 +4841,6 @@
             },
             {
               "id": "bbddd12b12dce5775931892743269a17",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "abtyjfnus4hatsa6snmm",
-                "playTime": "2024-09-19T01:14:15.000Z",
-                "uuid": "d6b48dae-7b64-4e8b-b535-d7b703aca30a"
-              },
               "byname": "みんな大好きおだんご",
               "name": ":R ヨモギモチモチ",
               "nameId": "3608",
@@ -5447,12 +4895,6 @@
             },
             {
               "id": "d055bce65eebddcd569231ee786d41cb",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "asauwd4vm44hxy46nnmm",
-                "playTime": "2024-09-19T01:14:15.000Z",
-                "uuid": "d6b48dae-7b64-4e8b-b535-d7b703aca30a"
-              },
               "byname": "ざわざわするヒカリバエ",
               "name": "モグラきこえない",
               "nameId": "2143",
@@ -5555,12 +4997,6 @@
         },
         {
           "id": "c662521216bfcef9075a063cc9bcbf3e",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T02:05:41.000Z",
-            "uuid": "114e3dd7-cdab-42ea-bd9d-d46677d2d757"
-          },
           "uuid": "114e3dd7-cdab-42ea-bd9d-d46677d2d757",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -5576,12 +5012,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "372718e7643ef31905e2485ce8f57de4",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T02:05:41.000Z",
-              "uuid": "114e3dd7-cdab-42ea-bd9d-d46677d2d757"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -5622,12 +5052,6 @@
           "otherResults": [
             {
               "id": "0b01ba286f0301308da851ad16054f0c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a7rxaatzqusro2lhanmm",
-                "playTime": "2024-09-19T02:05:41.000Z",
-                "uuid": "114e3dd7-cdab-42ea-bd9d-d46677d2d757"
-              },
               "byname": "ザ・ハイドラント使い",
               "name": "Plasry_CHS",
               "nameId": "3887",
@@ -5682,12 +5106,6 @@
             },
             {
               "id": "e74633f1e77addc31240b79b66905acb",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "atfygmsq5cfs7kudonmm",
-                "playTime": "2024-09-19T02:05:41.000Z",
-                "uuid": "114e3dd7-cdab-42ea-bd9d-d46677d2d757"
-              },
               "byname": "増殖し共鳴するスルメ",
               "name": "ガラナ",
               "nameId": "1985",
@@ -5742,12 +5160,6 @@
             },
             {
               "id": "51c5766930f6451896c445bdef7a10f7",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ato3nnax573ypqltntom",
-                "playTime": "2024-09-19T02:05:41.000Z",
-                "uuid": "114e3dd7-cdab-42ea-bd9d-d46677d2d757"
-              },
               "byname": "アシストするエナジースタンド使い",
               "name": "つき",
               "nameId": "8397",
@@ -5850,12 +5262,6 @@
         },
         {
           "id": "631b0a043dd3c03e4c678c74f3ae7555",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:51:26.000Z",
-            "uuid": "dc919e5d-1115-41ec-83ee-19478d145011"
-          },
           "uuid": "dc919e5d-1115-41ec-83ee-19478d145011",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -5871,12 +5277,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "2d1c8efbd444ea0083062743450d48e5",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:51:26.000Z",
-              "uuid": "dc919e5d-1115-41ec-83ee-19478d145011"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -5917,12 +5317,6 @@
           "otherResults": [
             {
               "id": "935819b39ead4401bfd0e8a86e1c42b9",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "acusuox6afilfqnclnmm",
-                "playTime": "2024-09-19T00:51:26.000Z",
-                "uuid": "dc919e5d-1115-41ec-83ee-19478d145011"
-              },
               "byname": "増殖し共鳴するヒカリバエ",
               "name": "しけつ",
               "nameId": "6556",
@@ -5977,12 +5371,6 @@
             },
             {
               "id": "66e6ffe9b91cdc09863d574fab95c91b",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q376aawlahtwhepdfnmm",
-                "playTime": "2024-09-19T00:51:26.000Z",
-                "uuid": "dc919e5d-1115-41ec-83ee-19478d145011"
-              },
               "byname": "ゆるふわ初心者",
               "name": "Cantabile",
               "nameId": "1421",
@@ -6037,12 +5425,6 @@
             },
             {
               "id": "8a2c3fa8146d9541cc4316936a105583",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "atnvwcyquqxwekjmdnmm",
-                "playTime": "2024-09-19T00:51:26.000Z",
-                "uuid": "dc919e5d-1115-41ec-83ee-19478d145011"
-              },
               "byname": "グルメなコジャケ",
               "name": "わたみん",
               "nameId": "2388",
@@ -6145,12 +5527,6 @@
         },
         {
           "id": "87caa6e95d410cdc95fd522f2cf3e557",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T01:58:29.000Z",
-            "uuid": "6f7a0437-ab5a-4389-be4e-490265fdc666"
-          },
           "uuid": "6f7a0437-ab5a-4389-be4e-490265fdc666",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -6166,12 +5542,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "65c166b56735219c946e53ad01e97636",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T01:58:29.000Z",
-              "uuid": "6f7a0437-ab5a-4389-be4e-490265fdc666"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -6212,12 +5582,6 @@
           "otherResults": [
             {
               "id": "efa60e67ca984f1c91335c601fe6d968",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qdqsallawfh7r7a7aanm",
-                "playTime": "2024-09-19T01:58:29.000Z",
-                "uuid": "6f7a0437-ab5a-4389-be4e-490265fdc666"
-              },
               "byname": "ふわふわのネコ",
               "name": "*★Fairy☆*",
               "nameId": "2873",
@@ -6272,12 +5636,6 @@
             },
             {
               "id": "a5e27cd0f3d7239674e9c8ef838c01a8",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a7rxaatzqusro2lhanmm",
-                "playTime": "2024-09-19T01:58:29.000Z",
-                "uuid": "6f7a0437-ab5a-4389-be4e-490265fdc666"
-              },
               "byname": "ザ・ハイドラント使い",
               "name": "Plasry_CHS",
               "nameId": "3887",
@@ -6332,12 +5690,6 @@
             },
             {
               "id": "19033c24d8b52c6774454f491a55e89a",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qx7tsoviv75um2h2byom",
-                "playTime": "2024-09-19T01:58:29.000Z",
-                "uuid": "6f7a0437-ab5a-4389-be4e-490265fdc666"
-              },
               "byname": "煮込みシャケ",
               "name": "やまハムニダ？",
               "nameId": "9487",
@@ -6440,12 +5792,6 @@
         },
         {
           "id": "6573487f11cacdbe13117b596186db13",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:28:23.000Z",
-            "uuid": "7b8992c5-76ca-4543-823e-9ec49c0d18d3"
-          },
           "uuid": "7b8992c5-76ca-4543-823e-9ec49c0d18d3",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -6461,12 +5807,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "ed8bdb296bb5ed6f261782475061e5bc",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:28:23.000Z",
-              "uuid": "7b8992c5-76ca-4543-823e-9ec49c0d18d3"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -6507,12 +5847,6 @@
           "otherResults": [
             {
               "id": "73db7e1c3354f97d151a903541b584a6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "aivhxp7t65u3tjtnanmm",
-                "playTime": "2024-09-19T00:28:23.000Z",
-                "uuid": "7b8992c5-76ca-4543-823e-9ec49c0d18d3"
-              },
               "byname": "サーモンランのクラブ",
               "name": "かに2",
               "nameId": "7902",
@@ -6567,12 +5901,6 @@
             },
             {
               "id": "a838a03dd1925f974b8c784d34d0f717",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeei4vbcjzybamh3vomm",
-                "playTime": "2024-09-19T00:28:23.000Z",
-                "uuid": "7b8992c5-76ca-4543-823e-9ec49c0d18d3"
-              },
               "byname": "奇跡のテッキュウ",
               "name": "きんようがちかいよ",
               "nameId": "5850",
@@ -6627,12 +5955,6 @@
             },
             {
               "id": "48e66a8e5e58ed769813e50eac22982d",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q5vzxbbonesl2lfn5tmm",
-                "playTime": "2024-09-19T00:28:23.000Z",
-                "uuid": "7b8992c5-76ca-4543-823e-9ec49c0d18d3"
-              },
               "byname": "ふわふわのぬいぐるみ",
               "name": "ねねむいなにゃん",
               "nameId": "2149",
@@ -6735,12 +6057,6 @@
         },
         {
           "id": "589fb73513d26a514afadd38844efb27",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T03:00:05.000Z",
-            "uuid": "9611ceca-87b8-4145-938c-d856384d627e"
-          },
           "uuid": "9611ceca-87b8-4145-938c-d856384d627e",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -6756,12 +6072,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "0a3054971457185fbf54ae4f1f58ec55",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T03:00:05.000Z",
-              "uuid": "9611ceca-87b8-4145-938c-d856384d627e"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -6802,12 +6112,6 @@
           "otherResults": [
             {
               "id": "a7a0c83fafb3bb204ad10dbbde0fda6e",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ac6bpzblwlu2m4abromm",
-                "playTime": "2024-09-19T03:00:05.000Z",
-                "uuid": "9611ceca-87b8-4145-938c-d856384d627e"
-              },
               "byname": "名前のないプレイヤー",
               "name": "“BluёMoon”",
               "nameId": "1371",
@@ -6862,12 +6166,6 @@
             },
             {
               "id": "677689e0cda5a0019bb44e8d7ade1a72",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ayxxsgqmwphseqchgtnm",
-                "playTime": "2024-09-19T03:00:05.000Z",
-                "uuid": "9611ceca-87b8-4145-938c-d856384d627e"
-              },
               "byname": "静かにたたずむ節",
               "name": "さやのうた",
               "nameId": "7376",
@@ -6922,12 +6220,6 @@
             },
             {
               "id": "a0d4dc43d0485cbffdd9381e2497d344",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qartqiurqakjn4nrrpmm",
-                "playTime": "2024-09-19T03:00:05.000Z",
-                "uuid": "9611ceca-87b8-4145-938c-d856384d627e"
-              },
               "byname": "いつまでもアルバイター",
               "name": "うううう",
               "nameId": "7396",
@@ -7030,12 +6322,6 @@
         },
         {
           "id": "109a608d0ad919aad5bc4e13c5446022",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T02:52:08.000Z",
-            "uuid": "d14f3523-19c2-484f-8903-24b4b1ef112b"
-          },
           "uuid": "d14f3523-19c2-484f-8903-24b4b1ef112b",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -7051,12 +6337,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "06f9104ad8bf497c1852a37dcea6fcd0",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T02:52:08.000Z",
-              "uuid": "d14f3523-19c2-484f-8903-24b4b1ef112b"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -7097,12 +6377,6 @@
           "otherResults": [
             {
               "id": "81e1b0a7103d35e6ef36be3fa53fd273",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "agehoyyieljlmafhanmm",
-                "playTime": "2024-09-19T02:52:08.000Z",
-                "uuid": "d14f3523-19c2-484f-8903-24b4b1ef112b"
-              },
               "byname": "プルプルのイクラ",
               "name": "しゅあいかちゃんねる",
               "nameId": "2253",
@@ -7157,12 +6431,6 @@
             },
             {
               "id": "c2a264bfdc1b25b566be5f713a0d1c6c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "aklzha3ncq3g4ro2vkwm",
-                "playTime": "2024-09-19T02:52:08.000Z",
-                "uuid": "d14f3523-19c2-484f-8903-24b4b1ef112b"
-              },
               "byname": "サクサクの天ぷら",
               "name": "かなぱんく>ω<)9",
               "nameId": "1849",
@@ -7217,12 +6485,6 @@
             },
             {
               "id": "940f571ce87e603e8d5360346d9fdde4",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ag6uqqnqnytmjpnfyqmm",
-                "playTime": "2024-09-19T02:52:08.000Z",
-                "uuid": "d14f3523-19c2-484f-8903-24b4b1ef112b"
-              },
               "byname": "みんな大好きサメライド使い",
               "name": "シャチハッピー",
               "nameId": "1816",
@@ -7325,12 +6587,6 @@
         },
         {
           "id": "cdf31c0a08321ccc52bc7902cc09434e",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-19T00:21:27.000Z",
-            "uuid": "c2fe0611-6177-4f73-84e6-f64bc4f9748a"
-          },
           "uuid": "c2fe0611-6177-4f73-84e6-f64bc4f9748a",
           "schedule": {
             "id": "e90c1d6fdc151757d7e006ba6dce915d",
@@ -7346,12 +6602,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "dd572949a174645b88c260834e1d6135",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-19T00:21:27.000Z",
-              "uuid": "c2fe0611-6177-4f73-84e6-f64bc4f9748a"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -7392,12 +6642,6 @@
           "otherResults": [
             {
               "id": "d7efdf7081bf887210c1ac86ecd62a5e",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avdcixsyk5ufqorntnmm",
-                "playTime": "2024-09-19T00:21:27.000Z",
-                "uuid": "c2fe0611-6177-4f73-84e6-f64bc4f9748a"
-              },
               "byname": "クマサン商会のヴィラン",
               "name": "くうあchものがたり",
               "nameId": "3245",
@@ -7452,12 +6696,6 @@
             },
             {
               "id": "1f05bbd13e72d60be2c228d108d1ee89",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a4t7n3umrfntl5draomm",
-                "playTime": "2024-09-19T00:21:27.000Z",
-                "uuid": "c2fe0611-6177-4f73-84e6-f64bc4f9748a"
-              },
               "byname": "真っ白ないたずらっ子",
               "name": "ウーウーボ",
               "nameId": "2033",
@@ -7512,12 +6750,6 @@
             },
             {
               "id": "7e2c8eea37f81d1402488dfd510dbc88",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ax56dio7d5tnf5voanmm",
-                "playTime": "2024-09-19T00:21:27.000Z",
-                "uuid": "c2fe0611-6177-4f73-84e6-f64bc4f9748a"
-              },
               "byname": "ハッピーな調味料",
               "name": "K1ZU",
               "nameId": "3106",
@@ -7635,12 +6867,6 @@
       "results": [
         {
           "id": "3b2bb143113720d1904bdd6e5b9ab1db",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T14:08:31.000Z",
-            "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-          },
           "uuid": "c7242eb3-5881-404a-a75c-82377fe55261",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -7656,12 +6882,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "3cb5a1ff5ab9deadee9ffab5da73fc8c",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T14:08:31.000Z",
-              "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -7702,12 +6922,6 @@
           "otherResults": [
             {
               "id": "207d5535d43090d2fbb4e4064c28a34b",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qvjsm3jeoznmomuagnmm",
-                "playTime": "2024-09-18T14:08:31.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "エターナルネコ",
               "name": "めらるー",
               "nameId": "7500",
@@ -7762,12 +6976,6 @@
             },
             {
               "id": "ae16280af973e5049fe0996ca83b88ab",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "afdiuj7rhknjqtpmlnmm",
-                "playTime": "2024-09-18T14:08:31.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "寝起きの大学生",
               "name": "まにまに",
               "nameId": "3381",
@@ -7822,12 +7030,6 @@
             },
             {
               "id": "a68e3114cf30094fdb6858d37c8bfb2f",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qjza523svr7w4rb5jsmm",
-                "playTime": "2024-09-18T14:08:31.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "ビッグランの王者",
               "name": "やまだP",
               "nameId": "2745",
@@ -7930,12 +7132,6 @@
         },
         {
           "id": "3e717fb884973534b8ed79fbf6b056a2",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T08:34:07.000Z",
-            "uuid": "a297e44d-2af8-4865-9ebc-1a89a814a16b"
-          },
           "uuid": "a297e44d-2af8-4865-9ebc-1a89a814a16b",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -7951,12 +7147,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "62946f7a1947262470ba75d35e5487eb",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T08:34:07.000Z",
-              "uuid": "a297e44d-2af8-4865-9ebc-1a89a814a16b"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -7997,12 +7187,6 @@
           "otherResults": [
             {
               "id": "c34ea99b4483bcb1343b3a31ae347159",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qonle2hm7z4xb2p4h7mm",
-                "playTime": "2024-09-18T08:34:07.000Z",
-                "uuid": "a297e44d-2af8-4865-9ebc-1a89a814a16b"
-              },
               "byname": "くじ引きの当選者",
               "name": "メッサいちごしゃん",
               "nameId": "1969",
@@ -8057,12 +7241,6 @@
             },
             {
               "id": "d377e376832766677ac6cd9885d0fa6e",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeway57moksseysv7tmm",
-                "playTime": "2024-09-18T08:34:07.000Z",
-                "uuid": "a297e44d-2af8-4865-9ebc-1a89a814a16b"
-              },
               "byname": "難破船ドン・ブラコのタマヒロイ",
               "name": "まんちょうみぎひろい",
               "nameId": "1434",
@@ -8117,12 +7295,6 @@
             },
             {
               "id": "399b29e8b369b90bf578d95f9d96e577",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkuwozblwlu2mevpsnmm",
-                "playTime": "2024-09-18T08:34:07.000Z",
-                "uuid": "a297e44d-2af8-4865-9ebc-1a89a814a16b"
-              },
               "byname": "筋金入りのバイトリーダー",
               "name": "メッサケテルしゃん",
               "nameId": "1164",
@@ -8225,12 +7397,6 @@
         },
         {
           "id": "ff68236a067c708a6285218f4b664f22",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T08:26:13.000Z",
-            "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-          },
           "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -8246,12 +7412,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "a0862ed7526f489a6fe26d23dc7b0dfb",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T08:26:13.000Z",
-              "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -8292,12 +7452,6 @@
           "otherResults": [
             {
               "id": "70ac19a7e9324417b9f263a120964d1f",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkuwozblwlu2mevpsnmm",
-                "playTime": "2024-09-18T08:26:13.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "筋金入りのバイトリーダー",
               "name": "メッサケテルしゃん",
               "nameId": "1164",
@@ -8352,12 +7506,6 @@
             },
             {
               "id": "32510a0e24004dc2c072b376bc49cbcb",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeway57moksseysv7tmm",
-                "playTime": "2024-09-18T08:26:13.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "難破船ドン・ブラコのタマヒロイ",
               "name": "まんちょうみぎひろい",
               "nameId": "1434",
@@ -8412,12 +7560,6 @@
             },
             {
               "id": "13a4d793039712706736e3b4303c3a88",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qonle2hm7z4xb2p4h7mm",
-                "playTime": "2024-09-18T08:26:13.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "くじ引きの当選者",
               "name": "メッサいちごしゃん",
               "nameId": "1969",
@@ -8520,12 +7662,6 @@
         },
         {
           "id": "b3eb714dd2e783cfeb5534d287be717f",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T08:57:38.000Z",
-            "uuid": "b697edba-bc9b-4306-a961-890b9a00de27"
-          },
           "uuid": "b697edba-bc9b-4306-a961-890b9a00de27",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -8541,12 +7677,6 @@
           "scale": [9, 1, 0],
           "myResult": {
             "id": "52ac629fa3123cce956c0d1b81174895",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T08:57:38.000Z",
-              "uuid": "b697edba-bc9b-4306-a961-890b9a00de27"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -8587,12 +7717,6 @@
           "otherResults": [
             {
               "id": "dc9d7f51043e1aa91b4fd17067caaf46",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q7irn3umrfntl5fsknmm",
-                "playTime": "2024-09-18T08:57:38.000Z",
-                "uuid": "b697edba-bc9b-4306-a961-890b9a00de27"
-              },
               "byname": "大事な思い出",
               "name": "もかもか",
               "nameId": "2266",
@@ -8647,12 +7771,6 @@
             },
             {
               "id": "5050a6ef324e017d5e284b90dcbef14a",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeway57moksseysv7tmm",
-                "playTime": "2024-09-18T08:57:38.000Z",
-                "uuid": "b697edba-bc9b-4306-a961-890b9a00de27"
-              },
               "byname": "難破船ドン・ブラコのタマヒロイ",
               "name": "まんちょうみぎひろい",
               "nameId": "1434",
@@ -8707,12 +7825,6 @@
             },
             {
               "id": "36138da42d8387c4b7fe4b0a7a97e10b",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkuwozblwlu2mevpsnmm",
-                "playTime": "2024-09-18T08:57:38.000Z",
-                "uuid": "b697edba-bc9b-4306-a961-890b9a00de27"
-              },
               "byname": "筋金入りのバイトリーダー",
               "name": "メッサケテルしゃん",
               "nameId": "1164",
@@ -8825,12 +7937,6 @@
         },
         {
           "id": "384f5b7b25e616fde887fb1d9963fbe8",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T11:30:10.000Z",
-            "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-          },
           "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -8846,12 +7952,6 @@
           "scale": [5, 2, 0],
           "myResult": {
             "id": "7f82705cd6074fca2e9ae3f657eec44e",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T11:30:10.000Z",
-              "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -8892,12 +7992,6 @@
           "otherResults": [
             {
               "id": "cb9f4d0ec59ee99e944bcecea3a4a6e9",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qlxmn3umrfntlvphanmm",
-                "playTime": "2024-09-17T11:30:10.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "恋する天使",
               "name": "まい",
               "nameId": "2360",
@@ -8952,19 +8046,13 @@
             },
             {
               "id": "b667ed874cead749660a289d20eed200",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qv32ssey35b53jpaqiym",
-                "playTime": "2024-09-17T11:30:10.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "バンカラな若者",
               "name": "あ",
               "nameId": "10176",
               "nameplate": {
                 "badges": [null, null, null],
                 "background": {
-                  "waveId": 1,
+                  "id": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -9012,12 +8100,6 @@
             },
             {
               "id": "5ca49a089cef748135d4712adc8d22ad",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qqokc72jhu3narvfyomm",
-                "playTime": "2024-09-17T11:30:10.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "重いLOVE",
               "name": "みち",
               "nameId": "3364",
@@ -9130,12 +8212,6 @@
         },
         {
           "id": "02c2bf7f9d1f1344b9fa7257cd57b5a6",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T08:10:24.000Z",
-            "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-          },
           "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -9151,12 +8227,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "7e60e2d464e01c33a70ca557d5853e1b",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T08:10:24.000Z",
-              "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -9197,12 +8267,6 @@
           "otherResults": [
             {
               "id": "9fd870e041461c8b263e9b540cb98cd4",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeway57moksseysv7tmm",
-                "playTime": "2024-09-18T08:10:24.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "難破船ドン・ブラコのタマヒロイ",
               "name": "まんちょうみぎひろい",
               "nameId": "1434",
@@ -9257,12 +8321,6 @@
             },
             {
               "id": "4538fd4030c72722b17b81e568729952",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qonle2hm7z4xb2p4h7mm",
-                "playTime": "2024-09-18T08:10:24.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "くじ引きの当選者",
               "name": "メッサいちごしゃん",
               "nameId": "1969",
@@ -9317,12 +8375,6 @@
             },
             {
               "id": "a49e341908fa3bdd0c8dbc793517200d",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkuwozblwlu2mevpsnmm",
-                "playTime": "2024-09-18T08:10:24.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "筋金入りのバイトリーダー",
               "name": "メッサケテルしゃん",
               "nameId": "1164",
@@ -9425,12 +8477,6 @@
         },
         {
           "id": "9b62ac07dc7697f01fe1f49492f69399",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T11:45:33.000Z",
-            "uuid": "caac5cf8-9833-4f49-9ed6-b5286bcf8c15"
-          },
           "uuid": "caac5cf8-9833-4f49-9ed6-b5286bcf8c15",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -9446,12 +8492,6 @@
           "scale": [7, 4, 0],
           "myResult": {
             "id": "d77efc52058b9145d09c303f3570ac54",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T11:45:33.000Z",
-              "uuid": "caac5cf8-9833-4f49-9ed6-b5286bcf8c15"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -9492,12 +8532,6 @@
           "otherResults": [
             {
               "id": "47cc86602485b5ad76243394546a20cb",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qz47larrn6qq4n3kanmm",
-                "playTime": "2024-09-17T11:45:33.000Z",
-                "uuid": "caac5cf8-9833-4f49-9ed6-b5286bcf8c15"
-              },
               "byname": "転生したカブトガニ",
               "name": "ちゅんちゅんまる",
               "nameId": "1743",
@@ -9552,12 +8586,6 @@
             },
             {
               "id": "3be58c80f0cce317bdf218e1b3c2576c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qlxmn3umrfntlvphanmm",
-                "playTime": "2024-09-17T11:45:33.000Z",
-                "uuid": "caac5cf8-9833-4f49-9ed6-b5286bcf8c15"
-              },
               "byname": "恋する天使",
               "name": "まい",
               "nameId": "2360",
@@ -9612,12 +8640,6 @@
             },
             {
               "id": "d5f772493daaa2ae6f91070bbe4ddda6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-17T11:45:33.000Z",
-                "uuid": "caac5cf8-9833-4f49-9ed6-b5286bcf8c15"
-              },
               "byname": "プリプリの筋肉",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -9730,12 +8752,6 @@
         },
         {
           "id": "dd65bc628944474c72acd69883b3592f",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T14:01:28.000Z",
-            "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-          },
           "uuid": "c7242eb3-5881-404a-a75c-82377fe55261",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -9751,12 +8767,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "4c62917abaef385527528027705ec18f",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T14:01:28.000Z",
-              "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -9797,12 +8807,6 @@
           "otherResults": [
             {
               "id": "c629c32bfed9a9435995d845da0f4987",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qvjsm3jeoznmomuagnmm",
-                "playTime": "2024-09-18T14:01:28.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "エターナルネコ",
               "name": "めらるー",
               "nameId": "7500",
@@ -9857,12 +8861,6 @@
             },
             {
               "id": "0271d0a7e2f4c6b0950bebb827b297b6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "afdiuj7rhknjqtpmlnmm",
-                "playTime": "2024-09-18T14:01:28.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "寝起きの大学生",
               "name": "まにまに",
               "nameId": "3381",
@@ -9917,12 +8915,6 @@
             },
             {
               "id": "1e425fe339c36111448e7c934944ff04",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qjza523svr7w4rb5jsmm",
-                "playTime": "2024-09-18T14:01:28.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "ビッグランの王者",
               "name": "やまだP",
               "nameId": "2745",
@@ -10025,12 +9017,6 @@
         },
         {
           "id": "989ca555b27965e92023498e6a9222cd",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T08:50:08.000Z",
-            "uuid": "4679e52f-98d6-48af-8c73-7b806b854229"
-          },
           "uuid": "4679e52f-98d6-48af-8c73-7b806b854229",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -10046,12 +9032,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "757f70c40c60339c3c6ce85654dda7d4",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T08:50:08.000Z",
-              "uuid": "4679e52f-98d6-48af-8c73-7b806b854229"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -10092,12 +9072,6 @@
           "otherResults": [
             {
               "id": "09166d5c3261672bf657014e4aa9ab17",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qjcgtxcultmussb3fomm",
-                "playTime": "2024-09-18T08:50:08.000Z",
-                "uuid": "4679e52f-98d6-48af-8c73-7b806b854229"
-              },
               "byname": "Thank You For テッパン",
               "name": "KENTY",
               "nameId": "2427",
@@ -10152,12 +9126,6 @@
             },
             {
               "id": "6145715c781fd3423a94b2406a22c44d",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeway57moksseysv7tmm",
-                "playTime": "2024-09-18T08:50:08.000Z",
-                "uuid": "4679e52f-98d6-48af-8c73-7b806b854229"
-              },
               "byname": "難破船ドン・ブラコのタマヒロイ",
               "name": "まんちょうみぎひろい",
               "nameId": "1434",
@@ -10212,12 +9180,6 @@
             },
             {
               "id": "1219ef04ec4088f144c3f55c7aa23b92",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkuwozblwlu2mevpsnmm",
-                "playTime": "2024-09-18T08:50:08.000Z",
-                "uuid": "4679e52f-98d6-48af-8c73-7b806b854229"
-              },
               "byname": "筋金入りのバイトリーダー",
               "name": "メッサケテルしゃん",
               "nameId": "1164",
@@ -10320,12 +9282,6 @@
         },
         {
           "id": "c6ed28c8405e6303df20e464024f6829",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T04:26:51.000Z",
-            "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-          },
           "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -10341,12 +9297,6 @@
           "scale": [10, 1, 0],
           "myResult": {
             "id": "752bd94d69ce445b20e85c3b3f28237d",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T04:26:51.000Z",
-              "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -10387,19 +9337,13 @@
           "otherResults": [
             {
               "id": "daa869ce63f96f8aa393283c8e499842",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q64hoyyieljlmybianmm",
-                "playTime": "2024-09-18T04:26:51.000Z",
-                "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-              },
               "byname": "わかばマークの科学者",
               "name": "kimtowel",
               "nameId": "2074",
               "nameplate": {
                 "badges": [null, null, null],
                 "background": {
-                  "waveId": 1,
+                  "id": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -10447,12 +9391,6 @@
             },
             {
               "id": "14b8d90e86980a1c55abf5a8d5055f8e",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "anumj4kdafo5zetyunmm",
-                "playTime": "2024-09-18T04:26:51.000Z",
-                "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-              },
               "byname": "ふとんの中のシャケライフ",
               "name": "(-ω-*)zz…♪",
               "nameId": "1195",
@@ -10507,12 +9445,6 @@
             },
             {
               "id": "1351d295f575f4702703834c76064af9",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-18T04:26:51.000Z",
-                "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-              },
               "byname": "今日が誕生日のおかあさん",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -10625,12 +9557,6 @@
         },
         {
           "id": "e932914b4a94d1dc3ab5625d8c296050",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T12:19:02.000Z",
-            "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-          },
           "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -10646,12 +9572,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "cfe6bd5db7b593c3d5f9d9d0ba213f22",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T12:19:02.000Z",
-              "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -10692,12 +9612,6 @@
           "otherResults": [
             {
               "id": "54889cc786a4e82d77d0fc732163cf21",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a5jknjzidkilo7j7snmm",
-                "playTime": "2024-09-17T12:19:02.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐあろちゃ",
               "nameId": "2391",
@@ -10752,12 +9666,6 @@
             },
             {
               "id": "0566ada509437a460675ad87bb9b40b1",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qptajpxt57ytvqg2rpmm",
-                "playTime": "2024-09-17T12:19:02.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "すじこジャンクション跡の精霊",
               "name": "フリージア",
               "nameId": "5595",
@@ -10812,12 +9720,6 @@
             },
             {
               "id": "11d5ad885bd9d873ab1ff8e48b10bf5c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qiou423svr7w4bu4iomm",
-                "playTime": "2024-09-17T12:19:02.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐしむちゃ",
               "nameId": "1265",
@@ -10920,12 +9822,6 @@
         },
         {
           "id": "e996f16ad28799ae4f80006551adb723",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T11:08:54.000Z",
-            "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-          },
           "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -10941,12 +9837,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "01dd0f7c0df95b546fca7270ab3d786d",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T11:08:54.000Z",
-              "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -10987,12 +9877,6 @@
           "otherResults": [
             {
               "id": "777065d82435105391fd869d356f0344",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-17T11:08:54.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "プリプリの筋肉",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -11047,12 +9931,6 @@
             },
             {
               "id": "17867e0a89a9f3910bb2c893dca1df0f",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qlxmn3umrfntlvphanmm",
-                "playTime": "2024-09-17T11:08:54.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "恋する天使",
               "name": "まい",
               "nameId": "2360",
@@ -11107,12 +9985,6 @@
             },
             {
               "id": "6d5d1ea4a79c54b1eac2952cf76f3ec4",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qqokc72jhu3narvfyomm",
-                "playTime": "2024-09-17T11:08:54.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "重いLOVE",
               "name": "みち",
               "nameId": "3364",
@@ -11215,12 +10087,6 @@
         },
         {
           "id": "c7e98d8a05ec6b266bba0d18872edce7",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T04:12:03.000Z",
-            "uuid": "7e858879-9512-4f4b-b57d-e234f7b77ca5"
-          },
           "uuid": "7e858879-9512-4f4b-b57d-e234f7b77ca5",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -11236,12 +10102,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "d88d12f7992e5e8ccf7e72309f8dd546",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T04:12:03.000Z",
-              "uuid": "7e858879-9512-4f4b-b57d-e234f7b77ca5"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -11282,12 +10142,6 @@
           "otherResults": [
             {
               "id": "085b5c308413abb29876b7e8cd7b6d23",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "anumj4kdafo5zetyunmm",
-                "playTime": "2024-09-18T04:12:03.000Z",
-                "uuid": "7e858879-9512-4f4b-b57d-e234f7b77ca5"
-              },
               "byname": "ふとんの中のシャケライフ",
               "name": "(-ω-*)zz…♪",
               "nameId": "1195",
@@ -11342,12 +10196,6 @@
             },
             {
               "id": "f7d87f0751b32abef90d9cfa383841b7",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "ql2bjypciea6jlmbrtmm",
-                "playTime": "2024-09-18T04:12:03.000Z",
-                "uuid": "7e858879-9512-4f4b-b57d-e234f7b77ca5"
-              },
               "byname": "新感覚アルバイター",
               "name": "katsuoh",
               "nameId": "2212",
@@ -11402,12 +10250,6 @@
             },
             {
               "id": "2967fc75fc4db1f3dabcf3532a86db05",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-18T04:12:03.000Z",
-                "uuid": "7e858879-9512-4f4b-b57d-e234f7b77ca5"
-              },
               "byname": "今日が誕生日のおかあさん",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -11510,12 +10352,6 @@
         },
         {
           "id": "e8e8c762057568a84273ee84324850dd",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T11:15:58.000Z",
-            "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-          },
           "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -11531,12 +10367,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "4cea7cb2cd548d7a46500f064f9c646f",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T11:15:58.000Z",
-              "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -11577,12 +10407,6 @@
           "otherResults": [
             {
               "id": "11624656736b7375699a50757d3b6ece",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qlxmn3umrfntlvphanmm",
-                "playTime": "2024-09-17T11:15:58.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "恋する天使",
               "name": "まい",
               "nameId": "2360",
@@ -11637,12 +10461,6 @@
             },
             {
               "id": "43b957446d1f923b143bb24b04144df6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qqokc72jhu3narvfyomm",
-                "playTime": "2024-09-17T11:15:58.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "重いLOVE",
               "name": "みち",
               "nameId": "3364",
@@ -11697,12 +10515,6 @@
             },
             {
               "id": "65897d4fbe8e7825ec36c0ce4db75beb",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-17T11:15:58.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "プリプリの筋肉",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -11805,12 +10617,6 @@
         },
         {
           "id": "1496e29d6b26e115b557d7fe3d799b0d",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T08:17:22.000Z",
-            "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-          },
           "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -11826,12 +10632,6 @@
           "scale": [8, 2, 1],
           "myResult": {
             "id": "a4a47c5c7592e210ddb239cdf92bc757",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T08:17:22.000Z",
-              "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -11872,12 +10672,6 @@
           "otherResults": [
             {
               "id": "58db665522dc1a0d6d677a8cf1fd6a20",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeway57moksseysv7tmm",
-                "playTime": "2024-09-18T08:17:22.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "難破船ドン・ブラコのタマヒロイ",
               "name": "まんちょうみぎひろい",
               "nameId": "1434",
@@ -11932,12 +10726,6 @@
             },
             {
               "id": "3c2c9ef4ff564780f9aeae906a270e4b",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qonle2hm7z4xb2p4h7mm",
-                "playTime": "2024-09-18T08:17:22.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "くじ引きの当選者",
               "name": "メッサいちごしゃん",
               "nameId": "1969",
@@ -11992,12 +10780,6 @@
             },
             {
               "id": "4cb165f0e16724b62878254271f1e30c",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkuwozblwlu2mevpsnmm",
-                "playTime": "2024-09-18T08:17:22.000Z",
-                "uuid": "93ef9b0f-0773-49d9-a608-2be3cbbc4d10"
-              },
               "byname": "筋金入りのバイトリーダー",
               "name": "メッサケテルしゃん",
               "nameId": "1164",
@@ -12110,12 +10892,6 @@
         },
         {
           "id": "f1d2714ff34decdec0cfc9fb95444fb6",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T11:23:03.000Z",
-            "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-          },
           "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -12131,12 +10907,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "c3763ea9044aaa6540c4b5796928bb36",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T11:23:03.000Z",
-              "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -12177,12 +10947,6 @@
           "otherResults": [
             {
               "id": "b2f4704498d7d929a987be50ec5144ea",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qqokc72jhu3narvfyomm",
-                "playTime": "2024-09-17T11:23:03.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "重いLOVE",
               "name": "みち",
               "nameId": "3364",
@@ -12237,12 +11001,6 @@
             },
             {
               "id": "afbf708bc0eb2731233ae0176f724563",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-17T11:23:03.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "プリプリの筋肉",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -12297,12 +11055,6 @@
             },
             {
               "id": "704e40a28e0608926be5df9221ef7f93",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qlxmn3umrfntlvphanmm",
-                "playTime": "2024-09-17T11:23:03.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "恋する天使",
               "name": "まい",
               "nameId": "2360",
@@ -12405,12 +11157,6 @@
         },
         {
           "id": "1ebb7a49b8177862352d498274551f7b",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T12:26:02.000Z",
-            "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-          },
           "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -12426,12 +11172,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "c6757931a0111160445a369ce17d8849",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T12:26:02.000Z",
-              "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -12472,12 +11212,6 @@
           "otherResults": [
             {
               "id": "e2c7aadd78f9675235e71241612c8cee",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qiou423svr7w4bu4iomm",
-                "playTime": "2024-09-17T12:26:02.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐしむちゃ",
               "nameId": "1265",
@@ -12532,12 +11266,6 @@
             },
             {
               "id": "e95ac35755534f113bd4cc38594cf633",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qptajpxt57ytvqg2rpmm",
-                "playTime": "2024-09-17T12:26:02.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "すじこジャンクション跡の精霊",
               "name": "フリージア",
               "nameId": "5595",
@@ -12592,12 +11320,6 @@
             },
             {
               "id": "dbf597ba9a7e63cbf66c4863debaaf18",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a5jknjzidkilo7j7snmm",
-                "playTime": "2024-09-17T12:26:02.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐあろちゃ",
               "nameId": "2391",
@@ -12700,12 +11422,6 @@
         },
         {
           "id": "b3be59c5d8f5b0c69e922f3fb9f8daa5",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T12:33:05.000Z",
-            "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-          },
           "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -12721,12 +11437,6 @@
           "scale": [10, 1, 0],
           "myResult": {
             "id": "10e687a674fd51758430c59726e56425",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T12:33:05.000Z",
-              "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -12767,12 +11477,6 @@
           "otherResults": [
             {
               "id": "1eb52ff3964d5783dc04ac20d5466c24",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a5jknjzidkilo7j7snmm",
-                "playTime": "2024-09-17T12:33:05.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐあろちゃ",
               "nameId": "2391",
@@ -12827,12 +11531,6 @@
             },
             {
               "id": "bc3357fa817d4987d3f7dbc5fadec579",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qiou423svr7w4bu4iomm",
-                "playTime": "2024-09-17T12:33:05.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐしむちゃ",
               "nameId": "1265",
@@ -12887,12 +11585,6 @@
             },
             {
               "id": "11bfaa98774f3ff38ac2df3b858d4d59",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qptajpxt57ytvqg2rpmm",
-                "playTime": "2024-09-17T12:33:05.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "すじこジャンクション跡の精霊",
               "name": "フリージア",
               "nameId": "5595",
@@ -13005,12 +11697,6 @@
         },
         {
           "id": "dbf85a62b3aa7e4256127dce2552ba2d",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T12:04:55.000Z",
-            "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-          },
           "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -13026,12 +11712,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "a782958727c0ee3ab714f3bfd54eb066",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T12:04:55.000Z",
-              "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -13072,12 +11752,6 @@
           "otherResults": [
             {
               "id": "03178e44a6f9d89d851c5da2ba4d9c0e",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a5jknjzidkilo7j7snmm",
-                "playTime": "2024-09-17T12:04:55.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐあろちゃ",
               "nameId": "2391",
@@ -13132,12 +11806,6 @@
             },
             {
               "id": "d3a40369780b221f52a3323012a2ba94",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qiou423svr7w4bu4iomm",
-                "playTime": "2024-09-17T12:04:55.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐしむちゃ",
               "nameId": "1265",
@@ -13192,12 +11860,6 @@
             },
             {
               "id": "a24d3f56f13d36f05c337c6a93b546ac",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qptajpxt57ytvqg2rpmm",
-                "playTime": "2024-09-17T12:04:55.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "すじこジャンクション跡の精霊",
               "name": "フリージア",
               "nameId": "5595",
@@ -13300,12 +11962,6 @@
         },
         {
           "id": "b0eef02d998f1fa57b5984d76615b8a3",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T11:01:50.000Z",
-            "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-          },
           "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -13321,12 +11977,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "ad101d17d4c8e8808a602ddcbdbf502b",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T11:01:50.000Z",
-              "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -13367,12 +12017,6 @@
           "otherResults": [
             {
               "id": "124cd346d3d42ef85f0ec162b9f37e2d",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qlxmn3umrfntlvphanmm",
-                "playTime": "2024-09-17T11:01:50.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "恋する天使",
               "name": "まい",
               "nameId": "2360",
@@ -13427,12 +12071,6 @@
             },
             {
               "id": "005424407519c808e8974ef741f12da7",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qqokc72jhu3narvfyomm",
-                "playTime": "2024-09-17T11:01:50.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "重いLOVE",
               "name": "みち",
               "nameId": "3364",
@@ -13487,12 +12125,6 @@
             },
             {
               "id": "202204fe1cd8253cbad73a6ffdada3b4",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-17T11:01:50.000Z",
-                "uuid": "6ddd3c7f-9481-4c12-9109-4270ba0b61a9"
-              },
               "byname": "プリプリの筋肉",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -13595,12 +12227,6 @@
         },
         {
           "id": "5acefff629cc5fa89cec624cfa1b7937",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T04:19:50.000Z",
-            "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-          },
           "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -13616,12 +12242,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "a874467a9224eeaa13a59b978cd51c3d",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T04:19:50.000Z",
-              "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -13662,12 +12282,6 @@
           "otherResults": [
             {
               "id": "622a9c2877ddd1f4f24f6f1d28df6c21",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "avi75eb2l5zzjdhz3omm",
-                "playTime": "2024-09-18T04:19:50.000Z",
-                "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-              },
               "byname": "今日が誕生日のおかあさん",
               "name": "かむかむはむげん",
               "nameId": "1397",
@@ -13722,19 +12336,13 @@
             },
             {
               "id": "7e37c7dd5d419a02ce005be51ba39dc2",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "q64hoyyieljlmybianmm",
-                "playTime": "2024-09-18T04:19:50.000Z",
-                "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-              },
               "byname": "わかばマークの科学者",
               "name": "kimtowel",
               "nameId": "2074",
               "nameplate": {
                 "badges": [null, null, null],
                 "background": {
-                  "waveId": 1,
+                  "id": 1,
                   "textColor": {
                     "r": 1,
                     "g": 1,
@@ -13782,12 +12390,6 @@
             },
             {
               "id": "c4ca51483af63d9f81f6b4b1c3de18ad",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "anumj4kdafo5zetyunmm",
-                "playTime": "2024-09-18T04:19:50.000Z",
-                "uuid": "60ed0e7c-d9c7-466e-ad03-d5f942a6b032"
-              },
               "byname": "ふとんの中のシャケライフ",
               "name": "(-ω-*)zz…♪",
               "nameId": "1195",
@@ -13890,12 +12492,6 @@
         },
         {
           "id": "442bcc7bb7562ea1f9bf073ce5a10edf",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T14:15:31.000Z",
-            "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-          },
           "uuid": "c7242eb3-5881-404a-a75c-82377fe55261",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -13911,12 +12507,6 @@
           "scale": [10, 2, 0],
           "myResult": {
             "id": "12dac0d9abc449d88f6454df554e2d93",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T14:15:31.000Z",
-              "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -13957,12 +12547,6 @@
           "otherResults": [
             {
               "id": "2403cda6f1655058bd278ebbf7341982",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "afdiuj7rhknjqtpmlnmm",
-                "playTime": "2024-09-18T14:15:31.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "寝起きの大学生",
               "name": "まにまに",
               "nameId": "3381",
@@ -14017,12 +12601,6 @@
             },
             {
               "id": "e248b939d0dca021afbad15bc23a71f2",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qjza523svr7w4rb5jsmm",
-                "playTime": "2024-09-18T14:15:31.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "ビッグランの王者",
               "name": "やまだP",
               "nameId": "2745",
@@ -14077,12 +12655,6 @@
             },
             {
               "id": "d4e6c28b24667b33c39cd8d6d59b80f5",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qvjsm3jeoznmomuagnmm",
-                "playTime": "2024-09-18T14:15:31.000Z",
-                "uuid": "c7242eb3-5881-404a-a75c-82377fe55261"
-              },
               "byname": "エターナルネコ",
               "name": "めらるー",
               "nameId": "7500",
@@ -14195,12 +12767,6 @@
         },
         {
           "id": "bd64c2eb74d0b48c2ee2152bd7586af2",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-18T08:42:11.000Z",
-            "uuid": "9ad3b467-be44-4056-922d-b22aa69d0861"
-          },
           "uuid": "9ad3b467-be44-4056-922d-b22aa69d0861",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -14216,12 +12782,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "053bb9d87b7daa4b6f65d21c86e56bb2",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-18T08:42:11.000Z",
-              "uuid": "9ad3b467-be44-4056-922d-b22aa69d0861"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -14262,12 +12822,6 @@
           "otherResults": [
             {
               "id": "abec6abad74098b9dcfa97cf24635071",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qonle2hm7z4xb2p4h7mm",
-                "playTime": "2024-09-18T08:42:11.000Z",
-                "uuid": "9ad3b467-be44-4056-922d-b22aa69d0861"
-              },
               "byname": "くじ引きの当選者",
               "name": "メッサいちごしゃん",
               "nameId": "1969",
@@ -14322,12 +12876,6 @@
             },
             {
               "id": "ea081be9840ddf97ef310832c0c702b6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeway57moksseysv7tmm",
-                "playTime": "2024-09-18T08:42:11.000Z",
-                "uuid": "9ad3b467-be44-4056-922d-b22aa69d0861"
-              },
               "byname": "難破船ドン・ブラコのタマヒロイ",
               "name": "まんちょうみぎひろい",
               "nameId": "1434",
@@ -14382,12 +12930,6 @@
             },
             {
               "id": "6faf7f2e943fb6634922f3e7618a5ce6",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qkuwozblwlu2mevpsnmm",
-                "playTime": "2024-09-18T08:42:11.000Z",
-                "uuid": "9ad3b467-be44-4056-922d-b22aa69d0861"
-              },
               "byname": "筋金入りのバイトリーダー",
               "name": "メッサケテルしゃん",
               "nameId": "1164",
@@ -14490,12 +13032,6 @@
         },
         {
           "id": "db5df0d3dbf3ca806f3c764eba5901ec",
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "aipeipxt57ytvishanmm",
-            "playTime": "2024-09-17T12:12:00.000Z",
-            "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-          },
           "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704",
           "schedule": {
             "id": "f24e8915e309b95cea716691d5161c3e",
@@ -14511,12 +13047,6 @@
           "scale": [null, null, null],
           "myResult": {
             "id": "0e550d659cde6dc2e1a4949c20a08717",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "aipeipxt57ytvishanmm",
-              "playTime": "2024-09-17T12:12:00.000Z",
-              "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-            },
             "byname": "グランドフェスティバルのアオリファン",
             "name": "やまだあんなかわいい",
             "nameId": "1573",
@@ -14557,12 +13087,6 @@
           "otherResults": [
             {
               "id": "c81680a3fb94f8d7c5f84bc42ec44dca",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qiou423svr7w4bu4iomm",
-                "playTime": "2024-09-17T12:12:00.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐしむちゃ",
               "nameId": "1265",
@@ -14617,12 +13141,6 @@
             },
             {
               "id": "55d6467c06a553f9f18817c334636eca",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qptajpxt57ytvqg2rpmm",
-                "playTime": "2024-09-17T12:12:00.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "すじこジャンクション跡の精霊",
               "name": "フリージア",
               "nameId": "5595",
@@ -14677,12 +13195,6 @@
             },
             {
               "id": "3703b8efcd39958e14a007ccfc486cbe",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "a5jknjzidkilo7j7snmm",
-                "playTime": "2024-09-17T12:12:00.000Z",
-                "uuid": "1485f74e-35ca-4298-99e5-08c115c5e704"
-              },
               "byname": "グルメなネコ",
               "name": "もぐもぐあろちゃ",
               "nameId": "2391",

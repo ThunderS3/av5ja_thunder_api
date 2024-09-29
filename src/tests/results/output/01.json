@@ -13,12 +13,6 @@
       },
       "results": [
         {
-          "id": {
-            "type": "CoopHistoryDetail",
-            "nplnUserId": "a7grz65rxkvhfsbwmxmm",
-            "playTime": "2024-04-06T17:57:52.000Z",
-            "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
-          },
           "id": "a45b3f22a13149f6000218c1811d5767",
           "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee",
           "schedule": {
@@ -34,12 +28,6 @@
           "scale": [11, 2, 0],
           "myResult": {
             "id": "6dae617855fda353cb4497a125f95849",
-            "id": {
-              "type": "CoopPlayer",
-              "nplnUserId": "a7grz65rxkvhfsbwmxmm",
-              "playTime": "2024-04-06T17:57:52.000Z",
-              "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
-            },
             "byname": "Splatlandian Youth",
             "name": "アウラ のうひんしろ",
             "nameId": "1012",
@@ -80,12 +68,6 @@
           "otherResults": [
             {
               "id": "3138b358a9a7a07ad7786a33707fcb0d",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qeup3z2uqf4kru6hanmm",
-                "playTime": "2024-04-06T17:57:52.000Z",
-                "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
-              },
               "byname": "Brand-New Seafood",
               "name": "ちくわ",
               "nameId": "7069",
@@ -140,12 +122,6 @@
             },
             {
               "id": "3ba0d24f6be18c85d56f93f89f55eab4",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "qloffovesrnzgiovanmm",
-                "playTime": "2024-04-06T17:57:52.000Z",
-                "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
-              },
               "byname": "Limited-Edition Inkbrush User",
               "name": "ゲストCCCCCもち",
               "nameId": "4152",
@@ -200,12 +176,6 @@
             },
             {
               "id": "f01c934715e86a96df0221fe8f7145a9",
-              "id": {
-                "type": "CoopPlayer",
-                "nplnUserId": "agypbuve73vt3o3pnnmm",
-                "playTime": "2024-04-06T17:57:52.000Z",
-                "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
-              },
               "byname": "Big Honkin' Dried Fish",
               "name": "ねぶそく",
               "nameId": "9138",
