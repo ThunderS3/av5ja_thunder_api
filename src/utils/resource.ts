@@ -8,6 +8,7 @@ import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
 import type { Bindings } from './bindings'
+import { KV } from './kv'
 
 /**
  * リソースとしてURLを書き込む
@@ -33,6 +34,7 @@ const write_cache = async (c: Context<{ Bindings: Bindings }>, url: S3URL) => {
 
 /**
  * 指定されたエンドポイントがコールされた場合、JSONを解析してリソースのURLをキャッシュに書き込む
+ * また、送られてきた全てのリザルトのバックアップを作成する
  */
 export const resource = createMiddleware(async (c, next) => {
   const url: URL = new URL(c.req.url)
@@ -47,6 +49,7 @@ export const resource = createMiddleware(async (c, next) => {
         case 'records':
           return new CoopRecordQuery(body).assetURLs
         case 'results':
+          c.executionCtx.waitUntil(KV.RESULT.set(c, body))
           return new CoopResultQuery(body).assetURLs
         case 'histories':
           return new CoopHistoryQuery(body).assetURLs
