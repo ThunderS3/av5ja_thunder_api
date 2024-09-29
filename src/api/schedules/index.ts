@@ -5,6 +5,7 @@ import type { Bindings } from '@/utils/bindings'
 import { resource } from '@/utils/resource'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import type { Context } from 'hono'
+import dummy from './dummy.json'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -21,7 +22,6 @@ const get_schedules = async (c: Context<{ Bindings: Bindings }>): Promise<CoopSc
 app.openapi(
   createRoute({
     method: HTTPMethod.GET,
-    security: [{ AuthorizationApiKey: [] }],
     path: '/',
     tags: ['スケジュール'],
     summary: '一覧取得',
@@ -41,8 +41,8 @@ app.openapi(
     }
   }),
   async (c) => {
-    const schedules: CoopSchedule.Response[] = await get_schedules(c)
-    return c.json({ schedules: schedules })
+    // const schedules: CoopSchedule.Response[] = await get_schedules(c)
+    return c.json(z.object({ schedules: z.array(CoopSchedule.Response) }).parse(dummy))
   }
 )
 
