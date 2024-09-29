@@ -3,6 +3,7 @@ import { CoopStage } from '@/enums/coop/coop_stage'
 import { ImageType } from '@/enums/image_type'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
+import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
 import dayjs, { type Dayjs } from 'dayjs'
 import type { Context } from 'hono'
@@ -104,5 +105,34 @@ export namespace KV {
       raw_id: number,
       data: Buffer
     ): Promise<void> => {}
+  }
+
+  export namespace SCHEDULE {
+    /**
+     * スケジュール読み込み
+     * @param c
+     * @param id
+     * @returns
+     */
+    export const get = async (c: Context<{ Bindings: Bindings }>, id: string): Promise<CoopSchedule.Response> => {
+      const data: unknown | null = await c.env.SCHEDULES.get(id, { type: 'json' })
+      if (data === null) {
+        throw new HTTPException(404, { message: 'Not Found.' })
+      }
+      return CoopSchedule.Response.parse(data)
+    }
+
+    /**
+     * スケジュール書き込み
+     * @param c
+     * @param data
+     * @returns
+     */
+    export const set = async (c: Context<{ Bindings: Bindings }>, data: object): Promise<CoopSchedule.Response> => {
+      console.info('[SET SCHEDULE]:', data)
+      const schedule: CoopSchedule.Response = CoopSchedule.Response.parse(data)
+      await c.env.USERS.put(`${schedule.startTime}:${schedule.endTime}`, JSON.stringify(schedule))
+      return schedule
+    }
   }
 }
