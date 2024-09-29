@@ -1,21 +1,9 @@
 {
-  "hash": "7c3f3ad28af4f9968785f117c5aec204",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T11:21:45.000Z",
-    "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-  },
+  "id": "7c3f3ad28af4f9968785f117c5aec204",
   "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428",
   "scale": [8, 2, 0],
   "myResult": {
-    "hash": "a2d3749cd7ba379147fff420e4212dc3",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T11:21:45.000Z",
-      "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-    },
+    "id": "a2d3749cd7ba379147fff420e4212dc3",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "fb15d83bfa3f64808878afc6eb6cf195",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "alt2jnyghvzbaauzhnmm",
-        "playTime": "2024-06-22T11:21:45.000Z",
-        "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-      },
+      "id": "fb15d83bfa3f64808878afc6eb6cf195",
       "byname": "AKA Palette",
       "name": "Σ Palette",
       "nameId": "2731",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "29f8fcc4fee7f900a8b5cfa39216dfe7",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qd3ycbkmraqlpl5mwymm",
-        "playTime": "2024-06-22T11:21:45.000Z",
-        "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-      },
+      "id": "29f8fcc4fee7f900a8b5cfa39216dfe7",
       "byname": "Dapper Harlequin",
       "name": "Tamatoes",
       "nameId": "2601",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "46de17a91f16eff5b6dbad0a10e00508",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qntjfxnsmuwseqbtbomm",
-        "playTime": "2024-06-22T11:21:45.000Z",
-        "uuid": "f91570d6-fc4a-4652-b1af-6e1af5a0f428"
-      },
+      "id": "46de17a91f16eff5b6dbad0a10e00508",
       "byname": "Splendid Bird",
       "name": "Alvin",
       "nameId": "6806",
@@ -251,43 +221,43 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "578e2470ffbe69b72f7604997f17b871",
+      "id": "578e2470ffbe69b72f7604997f17b871",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 28,
       "goldenIkuraPopNum": 63,
       "goldenIkuraNum": 32,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "8d702d9832903ed844ff7e377dc0aba1",
+      "id": "8d702d9832903ed844ff7e377dc0aba1",
       "waterLevel": 2,
       "eventType": 4,
       "quotaNum": 30,
       "goldenIkuraPopNum": 77,
       "goldenIkuraNum": 62,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "a61df80b253ee84b461712691a808564",
+      "id": "a61df80b253ee84b461712691a808564",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 32,
       "goldenIkuraPopNum": 72,
       "goldenIkuraNum": 32,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     },
     {
-      "hash": "cb7d82de15877e03a25871ef63e74d31",
+      "id": "cb7d82de15877e03a25871ef63e74d31",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": null,
       "goldenIkuraPopNum": 54,
       "goldenIkuraNum": null,
-      "id": 4,
+      "waveId": 4,
       "isClear": true
     }
   ]

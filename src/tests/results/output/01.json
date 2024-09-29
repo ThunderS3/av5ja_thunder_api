@@ -19,7 +19,7 @@
             "playTime": "2024-04-06T17:57:52.000Z",
             "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee"
           },
-          "hash": "a45b3f22a13149f6000218c1811d5767",
+          "id": "a45b3f22a13149f6000218c1811d5767",
           "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee",
           "schedule": {
             "id": "103c5441a163fd2b0320751f27c9c577",
@@ -33,7 +33,7 @@
           },
           "scale": [11, 2, 0],
           "myResult": {
-            "hash": "6dae617855fda353cb4497a125f95849",
+            "id": "6dae617855fda353cb4497a125f95849",
             "id": {
               "type": "CoopPlayer",
               "nplnUserId": "a7grz65rxkvhfsbwmxmm",
@@ -79,7 +79,7 @@
           },
           "otherResults": [
             {
-              "hash": "3138b358a9a7a07ad7786a33707fcb0d",
+              "id": "3138b358a9a7a07ad7786a33707fcb0d",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qeup3z2uqf4kru6hanmm",
@@ -139,7 +139,7 @@
               "jobRate": null
             },
             {
-              "hash": "3ba0d24f6be18c85d56f93f89f55eab4",
+              "id": "3ba0d24f6be18c85d56f93f89f55eab4",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "qloffovesrnzgiovanmm",
@@ -199,7 +199,7 @@
               "jobRate": null
             },
             {
-              "hash": "f01c934715e86a96df0221fe8f7145a9",
+              "id": "f01c934715e86a96df0221fe8f7145a9",
               "id": {
                 "type": "CoopPlayer",
                 "nplnUserId": "agypbuve73vt3o3pnnmm",
@@ -280,9 +280,9 @@
               "quotaNum": 27,
               "goldenIkuraPopNum": 66,
               "goldenIkuraNum": 42,
-              "id": 1,
+              "waveId": 1,
               "isClear": true,
-              "hash": "322f97d371c376f6608523f009190877"
+              "id": "322f97d371c376f6608523f009190877"
             },
             {
               "waterLevel": 1,
@@ -290,9 +290,9 @@
               "quotaNum": 29,
               "goldenIkuraPopNum": 60,
               "goldenIkuraNum": 32,
-              "id": 2,
+              "waveId": 2,
               "isClear": true,
-              "hash": "fef00683272177d277d0873c10f8c4b2"
+              "id": "fef00683272177d277d0873c10f8c4b2"
             },
             {
               "waterLevel": 1,
@@ -300,9 +300,9 @@
               "quotaNum": 31,
               "goldenIkuraPopNum": 49,
               "goldenIkuraNum": 38,
-              "id": 3,
+              "waveId": 3,
               "isClear": true,
-              "hash": "0978e31c1e3518085537ce75f864181e"
+              "id": "0978e31c1e3518085537ce75f864181e"
             },
             {
               "waterLevel": 1,
@@ -310,9 +310,9 @@
               "quotaNum": null,
               "goldenIkuraPopNum": 30,
               "goldenIkuraNum": null,
-              "id": 4,
+              "waveId": 4,
               "isClear": true,
-              "hash": "203cacf9d982ece13f58f94f25bb071c"
+              "id": "203cacf9d982ece13f58f94f25bb071c"
             }
           ]
         }

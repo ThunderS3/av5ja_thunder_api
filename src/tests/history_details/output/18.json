@@ -1,21 +1,9 @@
 {
-  "hash": "f6dd2cc4cb2bf72b6ba284d9f204fc68",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-21T16:41:21.000Z",
-    "uuid": "5efd53d0-3a87-437e-ba01-bb080ff279a5"
-  },
+  "id": "f6dd2cc4cb2bf72b6ba284d9f204fc68",
   "uuid": "5efd53d0-3a87-437e-ba01-bb080ff279a5",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "76bc927a17ac8cb9b6d962a207a21e30",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-21T16:41:21.000Z",
-      "uuid": "5efd53d0-3a87-437e-ba01-bb080ff279a5"
-    },
+    "id": "76bc927a17ac8cb9b6d962a207a21e30",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "78723734c5677c85f31944626afa9288",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qto5iirtzr22nmt44hpm",
-        "playTime": "2024-06-21T16:41:21.000Z",
-        "uuid": "5efd53d0-3a87-437e-ba01-bb080ff279a5"
-      },
+      "id": "78723734c5677c85f31944626afa9288",
       "byname": "Gushing Stinger",
       "name": "ssszy",
       "nameId": "3215",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "12daeedc80915d8d81581ae4098e49c4",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-21T16:41:21.000Z",
-        "uuid": "5efd53d0-3a87-437e-ba01-bb080ff279a5"
-      },
+      "id": "12daeedc80915d8d81581ae4098e49c4",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "d8df65201adc29a4350b4e1e3c6f737f",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qfvhtkhlhsidrsalekom",
-        "playTime": "2024-06-21T16:41:21.000Z",
-        "uuid": "5efd53d0-3a87-437e-ba01-bb080ff279a5"
-      },
+      "id": "d8df65201adc29a4350b4e1e3c6f737f",
       "byname": "True Workhorse",
       "name": "sleeeep",
       "nameId": "1820",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "7c2af1036a93cf89588897e3c7338347",
+      "id": "7c2af1036a93cf89588897e3c7338347",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 27,
       "goldenIkuraPopNum": 66,
       "goldenIkuraNum": 37,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "e020f4abc966764b4e5592370661a4a1",
+      "id": "e020f4abc966764b4e5592370661a4a1",
       "waterLevel": 2,
       "eventType": 1,
       "quotaNum": 29,
       "goldenIkuraPopNum": 51,
       "goldenIkuraNum": 30,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "ae3c4d539266e57f524eec19cda20fbe",
+      "id": "ae3c4d539266e57f524eec19cda20fbe",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 31,
       "goldenIkuraPopNum": 69,
       "goldenIkuraNum": 30,
-      "id": 3,
+      "waveId": 3,
       "isClear": false
     }
   ]

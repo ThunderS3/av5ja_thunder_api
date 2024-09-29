@@ -1,21 +1,9 @@
 {
-  "hash": "9e481ac69ce64673575aa34a6df26e63",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-22T16:14:59.000Z",
-    "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-  },
+  "id": "9e481ac69ce64673575aa34a6df26e63",
   "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5",
   "scale": [9, 1, 0],
   "myResult": {
-    "hash": "6f8857280063ccc58391df5d4a7b0c5f",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-22T16:14:59.000Z",
-      "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-    },
+    "id": "6f8857280063ccc58391df5d4a7b0c5f",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "06e5f79a4afd566451cdf0c948959fc2",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "acyteio7d5tnfv2xkomm",
-        "playTime": "2024-06-22T16:14:59.000Z",
-        "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-      },
+      "id": "06e5f79a4afd566451cdf0c948959fc2",
       "byname": "Ink-Covered Grandma",
       "name": "ーニミ",
       "nameId": "1659",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "91c35c4ce596f94cd5ef796595305577",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "a3v3s3x76psxpkxhanmm",
-        "playTime": "2024-06-22T16:14:59.000Z",
-        "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-      },
+      "id": "91c35c4ce596f94cd5ef796595305577",
       "byname": "Lonely Mirror",
       "name": "player",
       "nameId": "2651",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "aa341e5527176ba802747387151d05c5",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-22T16:14:59.000Z",
-        "uuid": "10d5d1ce-d26b-4d99-93f9-2c9be4c2f5b5"
-      },
+      "id": "aa341e5527176ba802747387151d05c5",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -251,43 +221,43 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "5575edbf46cb45a1146285b743a6628e",
+      "id": "5575edbf46cb45a1146285b743a6628e",
       "waterLevel": 0,
       "eventType": 0,
       "quotaNum": 30,
       "goldenIkuraPopNum": 72,
       "goldenIkuraNum": 35,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "8d55cf46ace69e43c1a7e0faaa1d92e6",
+      "id": "8d55cf46ace69e43c1a7e0faaa1d92e6",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 32,
       "goldenIkuraPopNum": 75,
       "goldenIkuraNum": 40,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "db87470bb41912b0948054344e9147ae",
+      "id": "db87470bb41912b0948054344e9147ae",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 35,
       "goldenIkuraPopNum": 89,
       "goldenIkuraNum": 46,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     },
     {
-      "hash": "a5e32793560c79d8815f66d5fa97226d",
+      "id": "a5e32793560c79d8815f66d5fa97226d",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": null,
       "goldenIkuraPopNum": 63,
       "goldenIkuraNum": null,
-      "id": 4,
+      "waveId": 4,
       "isClear": true
     }
   ]

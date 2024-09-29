@@ -1,21 +1,9 @@
 {
-  "hash": "5292e34e44499047fbd3fd1374ec793c",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-21T17:12:43.000Z",
-    "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-  },
+  "id": "5292e34e44499047fbd3fd1374ec793c",
   "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "a959e1b923a33290c4fd427bd41b8c0d",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-21T17:12:43.000Z",
-      "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-    },
+    "id": "a959e1b923a33290c4fd427bd41b8c0d",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "057e2f2cbf44826d334084c650c7d7ac",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qpjbe4hvsrfu72gmgkrm",
-        "playTime": "2024-06-21T17:12:43.000Z",
-        "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-      },
+      "id": "057e2f2cbf44826d334084c650c7d7ac",
       "byname": "Fan-Favorite Maniac",
       "name": "yaoi",
       "nameId": "1892",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "88f40c556ec35d2401aef0eecbdd0033",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-21T17:12:43.000Z",
-        "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-      },
+      "id": "88f40c556ec35d2401aef0eecbdd0033",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "3bc60c721b74be387df2c542a24193c8",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "aoxyvohcadfnz2q4ulrm",
-        "playTime": "2024-06-21T17:12:43.000Z",
-        "uuid": "d18494f6-31fb-4c23-96d9-88a0c60cea33"
-      },
+      "id": "3bc60c721b74be387df2c542a24193c8",
       "byname": "Cute Magician",
       "name": "Evp-kun",
       "nameId": "1083",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "1bcddfe2a4d55c24a4587eaefc507d4a",
+      "id": "1bcddfe2a4d55c24a4587eaefc507d4a",
       "waterLevel": 2,
       "eventType": 3,
       "quotaNum": 27,
       "goldenIkuraPopNum": 60,
       "goldenIkuraNum": 51,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "fc4fb4b702ecf7c2b5ee9f4ff1438e04",
+      "id": "fc4fb4b702ecf7c2b5ee9f4ff1438e04",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 29,
       "goldenIkuraPopNum": 69,
       "goldenIkuraNum": 39,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "55d8a33fb053344f6b9edce6eb2abd67",
+      "id": "55d8a33fb053344f6b9edce6eb2abd67",
       "waterLevel": 1,
       "eventType": 3,
       "quotaNum": 31,
       "goldenIkuraPopNum": 45,
       "goldenIkuraNum": 33,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]

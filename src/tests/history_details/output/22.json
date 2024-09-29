@@ -1,21 +1,9 @@
 {
-  "hash": "e19f0d3233461f052289354c2c30a4ff",
-  "id": {
-    "type": "CoopHistoryDetail",
-    "nplnUserId": "azdswcyquqxwekbm7mmm",
-    "playTime": "2024-06-21T17:20:30.000Z",
-    "uuid": "03eb60ea-574d-4fcb-bb70-0e1946880ebd"
-  },
+  "id": "e19f0d3233461f052289354c2c30a4ff",
   "uuid": "03eb60ea-574d-4fcb-bb70-0e1946880ebd",
   "scale": [null, null, null],
   "myResult": {
-    "hash": "e374557964f56a307a3a075e3afac1d2",
-    "id": {
-      "type": "CoopPlayer",
-      "nplnUserId": "azdswcyquqxwekbm7mmm",
-      "playTime": "2024-06-21T17:20:30.000Z",
-      "uuid": "03eb60ea-574d-4fcb-bb70-0e1946880ebd"
-    },
+    "id": "e374557964f56a307a3a075e3afac1d2",
     "byname": "Charmed Daredevil",
     "name": "´ω` Waffle",
     "nameId": "3191",
@@ -55,13 +43,7 @@
   },
   "otherResults": [
     {
-      "hash": "efdf555e85db081dd2d5e6cfd181beb7",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "qtcimbzzyam5ggtdtnmm",
-        "playTime": "2024-06-21T17:20:30.000Z",
-        "uuid": "03eb60ea-574d-4fcb-bb70-0e1946880ebd"
-      },
+      "id": "efdf555e85db081dd2d5e6cfd181beb7",
       "byname": "Fledgling Rookie",
       "name": "yahari",
       "nameId": "1164",
@@ -115,13 +97,7 @@
       "jobRate": null
     },
     {
-      "hash": "754be1586e940d18bbfa08192b331fdd",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q3p32ish266yxrtipnmm",
-        "playTime": "2024-06-21T17:20:30.000Z",
-        "uuid": "03eb60ea-574d-4fcb-bb70-0e1946880ebd"
-      },
+      "id": "754be1586e940d18bbfa08192b331fdd",
       "byname": "Thank You for Playing",
       "name": "Joeèéêëēęě",
       "nameId": "1200",
@@ -175,13 +151,7 @@
       "jobRate": null
     },
     {
-      "hash": "1b713bb182076418e1c0a22df3b25fd5",
-      "id": {
-        "type": "CoopPlayer",
-        "nplnUserId": "q5qgwv3664ngwhav3xpm",
-        "playTime": "2024-06-21T17:20:30.000Z",
-        "uuid": "03eb60ea-574d-4fcb-bb70-0e1946880ebd"
-      },
+      "id": "1b713bb182076418e1c0a22df3b25fd5",
       "byname": "Diving Steel Eel",
       "name": "Yokozuna<3",
       "nameId": "2462",
@@ -251,33 +221,33 @@
   "scenarioCode": null,
   "waveDetails": [
     {
-      "hash": "4ebae425c33283b8e7d9a160f65348ed",
+      "id": "4ebae425c33283b8e7d9a160f65348ed",
       "waterLevel": 0,
       "eventType": 0,
       "quotaNum": 27,
       "goldenIkuraPopNum": 60,
       "goldenIkuraNum": 43,
-      "id": 1,
+      "waveId": 1,
       "isClear": true
     },
     {
-      "hash": "4de12c1c556c2a94b68b2d3d4f18dad0",
+      "id": "4de12c1c556c2a94b68b2d3d4f18dad0",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 29,
       "goldenIkuraPopNum": 63,
       "goldenIkuraNum": 30,
-      "id": 2,
+      "waveId": 2,
       "isClear": true
     },
     {
-      "hash": "980f6b0f4ef119aaae7c785066d7de10",
+      "id": "980f6b0f4ef119aaae7c785066d7de10",
       "waterLevel": 1,
       "eventType": 0,
       "quotaNum": 31,
       "goldenIkuraPopNum": 81,
       "goldenIkuraNum": 42,
-      "id": 3,
+      "waveId": 3,
       "isClear": true
     }
   ]
