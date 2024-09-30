@@ -72,7 +72,7 @@ app.onError((error, c) => {
   return c.json({ message: 'Internal Server Error' }, 500)
 })
 app.route('/v3/schedules', schedules)
-app.route('/v1/resources', resources)
+// app.route('/v1/resources', resources)
 app.route('/v3/results', results)
 app.route('/v1/histories', histories)
 app.route('/v1/records', records)

@@ -169,6 +169,9 @@ export namespace CoopHistoryDetail {
   export const CoopPlayerResult = z.preprocess(
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     (input: any) => {
+      if (input === null) {
+        return input
+      }
       if (typeof input.id === 'string') {
         return input
       }
@@ -241,7 +244,11 @@ export namespace CoopHistoryDetail {
     .preprocess(
       // biome-ignore lint/suspicious/noExplicitAny: <explanation>
       (input: any) => {
-        if (typeof input.id === 'string') {
+        if (input === null) {
+          return input
+        }
+        console.log(input)
+        if (typeof input === 'string') {
           return input
         }
         // こちらの時間が正しいので修正する
@@ -267,10 +274,10 @@ export namespace CoopHistoryDetail {
         waveDetails: z.array(CoopHistoryDetail.WaveResult)
       })
     )
-    .transform((data) => {
+    .transform((v) => {
       return {
-        id: createHash('md5').update(`${data.playTime}:${data.uuid}`).digest('hex'),
-        ...data
+        id: createHash('md5').update(`${v.playTime}:${v.uuid}`).digest('hex'),
+        ...v
       }
     })
 
