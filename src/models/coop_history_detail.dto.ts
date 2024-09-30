@@ -247,8 +247,7 @@ export namespace CoopHistoryDetail {
         if (input === null) {
           return input
         }
-        console.log(input)
-        if (typeof input === 'string') {
+        if (typeof input.id === 'string') {
           return input
         }
         // こちらの時間が正しいので修正する
