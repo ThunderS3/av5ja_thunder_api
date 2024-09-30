@@ -9,6 +9,7 @@ import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
 import dayjs, { type Dayjs } from 'dayjs'
 import type { Context } from 'hono'
+import { raw } from 'hono/html'
 import { HTTPException } from 'hono/http-exception'
 import { jwt, sign } from 'hono/jwt'
 import { AlgorithmTypes } from 'hono/utils/jwt/jwa'
@@ -73,7 +74,9 @@ export namespace KV {
       switch (type) {
         case ImageType.WeaponInfoMain:
           return WeaponInfoMain.Hash[
-            WeaponInfoMain.Id[raw_id % 1000 !== 900 ? raw_id - 20000 : raw_id] as keyof typeof WeaponInfoMain.Hash
+            WeaponInfoMain.Id[
+              raw_id % 1000 === 900 ? raw_id : raw_id < 0 ? raw_id : raw_id >= 20000 ? raw_id : raw_id + 20000
+            ] as keyof typeof WeaponInfoMain.Hash
           ]
         case ImageType.WeaponInfoSpecial:
           return WeaponInfoSpecial.Hash[WeaponInfoSpecial.Id[raw_id] as keyof typeof WeaponInfoSpecial.Hash]
