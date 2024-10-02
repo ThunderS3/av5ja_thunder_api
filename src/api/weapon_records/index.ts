@@ -2,7 +2,7 @@ import { HTTPMethod } from '@/enums/method'
 import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
-import { resource } from '@/utils/resource'
+import { resource } from '@/utils/middleware/resource.middleware'
 import { OpenAPIHono as Hono, createRoute } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()

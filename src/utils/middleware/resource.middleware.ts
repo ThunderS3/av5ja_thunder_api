@@ -7,8 +7,8 @@ import { StageScheduleQuery } from '@/models/stage_schedule.dto'
 import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
-import type { Bindings } from './bindings'
-import { KV } from './kv'
+import type { Bindings } from '../bindings'
+import { KV } from '../kv'
 
 /**
  * リソースとしてURLを書き込む

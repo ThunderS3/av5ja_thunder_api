@@ -19,17 +19,14 @@ const update = async (env: Bindings): Promise<void> => {
   const schedules = new CoopScheduleQuery(await response.json()).schedules
   /// スケジュールとして個別にバックアップする
   await Promise.all(schedules.map(async (schedule) => KV.SCHEDULE.set(env, schedule)))
-  console.log('[SCHEDULES]:', schedules.length)
   const cache: CoopSchedule.Response[] = z
     .object({
       schedules: z.array(CoopSchedule.Response)
     })
     .parse(await KV.CACHE.get(env, 'api.splatnet3.com/v3/schedules')).schedules
-  console.log('[CACHE]:', cache.length)
   const update_cache: CoopSchedule.Response[] = Array.from(
     new Map([...cache, ...schedules].map((obj) => [obj.id, obj])).values()
   )
-  console.log('[CACHE UPDATED]:', update_cache.length)
   await KV.CACHE.set(env, 'api.splatnet3.com/v3/schedules', { schedules: update_cache })
 }
 
@@ -39,7 +36,6 @@ export const scheduled = async (event: ScheduledController, env: Bindings, ctx: 
       ctx.waitUntil(update(env))
       break
     default:
-      ctx.waitUntil(update(env))
       break
   }
 }
