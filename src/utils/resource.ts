@@ -49,7 +49,8 @@ export const resource = createMiddleware(async (c, next) => {
         case 'records':
           return new CoopRecordQuery(body).assetURLs
         case 'results':
-          c.executionCtx.waitUntil(KV.RESULT.set(c, body))
+          // リザルトのバックアップ作成
+          c.executionCtx.waitUntil(KV.RESULT.set(c.env, body))
           return new CoopResultQuery(body).assetURLs
         case 'histories':
           return new CoopHistoryQuery(body).assetURLs

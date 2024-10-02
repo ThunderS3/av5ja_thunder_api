@@ -19,7 +19,11 @@ export namespace DiscordOAuth {
     console.info('[DISCORD TOKEN]:', token)
     const user = await get_user(c, token)
     console.info('[DISCORD USER]:', user)
-    return KV.USER.token(c, (await KV.USER.get(c, user.id)) || (await KV.USER.set(c, user)))
+    return KV.USER.token(
+      c.env,
+      new URL(c.req.url),
+      (await KV.USER.get(c.env, user.id)) || (await KV.USER.set(c.env, user))
+    )
   }
 
   /**

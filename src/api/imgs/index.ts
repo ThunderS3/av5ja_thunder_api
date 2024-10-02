@@ -31,6 +31,6 @@ app.openapi(
   }),
   async (c) => {
     const { type, raw_id } = c.req.valid('param')
-    return c.redirect(await KV.RESOURCE.get(c, type, raw_id))
+    return c.redirect(await KV.RESOURCE.get(c.env, type, raw_id))
   }
 )
