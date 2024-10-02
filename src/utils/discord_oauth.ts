@@ -16,10 +16,12 @@ export namespace DiscordOAuth {
    */
   export const create_token = async (c: Context<{ Bindings: Bindings }>, code: string): Promise<string> => {
     const token = await get_token(c, code)
-    console.info('[DISCORD TOKEN]:', token)
     const user = await get_user(c, token)
-    console.info('[DISCORD USER]:', user)
-    return KV.USER.token(c, (await KV.USER.get(c, user.id)) || (await KV.USER.set(c, user)))
+    return KV.USER.token(
+      c.env,
+      new URL(c.req.url),
+      (await KV.USER.get(c.env, user.id)) || (await KV.USER.set(c.env, user))
+    )
   }
 
   /**
@@ -99,7 +101,6 @@ export namespace DiscordOAuth {
     if (response.ok) {
       // biome-ignore lint/suspicious/noExplicitAny: <explanation>
       const data: any = await response.json()
-      console.info('[FETCH RESPONSE]:', data)
       return S.parse(data)
     }
     throw new HTTPException(response.status as StatusCode, { message: response.statusText })

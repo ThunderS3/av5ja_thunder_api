@@ -4,7 +4,8 @@ import { CoopHistoryDetail } from '@/models/coop_history_detail.dto'
 import { CoopResult, CoopResultQuery } from '@/models/coop_result.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
-import { resource } from '@/utils/resource'
+import { KV } from '@/utils/kv'
+import { resource } from '@/utils/middleware/resource.middleware'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import type { Context } from 'hono'
 import { HTTPException } from 'hono/http-exception'
@@ -45,7 +46,7 @@ app.openapi(
   async (c) => {
     c.req.valid('json')
     const body: CoopResultQuery = new CoopResultQuery(await c.req.json())
-    // // write_results(c, body.results)
+    c.executionCtx.waitUntil(Promise.all(body.results.map((result) => KV.RESULT.set(c.env, result))))
     return c.json(body)
   }
 )

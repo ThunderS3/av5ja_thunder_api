@@ -1,4 +1,4 @@
-import { OpenAPIHono as Hono, z } from '@hono/zod-openapi'
+import { OpenAPIHono as Hono } from '@hono/zod-openapi'
 import { apiReference } from '@scalar/hono-api-reference'
 import dayjs from 'dayjs'
 import timezone from 'dayjs/plugin/timezone'
@@ -23,6 +23,7 @@ import type { Bindings } from './utils/bindings'
 import { scheduled } from './utils/handler/scheduled'
 import { reference, specification } from './utils/openapi'
 
+const isProduction: boolean = process.env.NODE_ENV === 'production'
 const app = new Hono<{ Bindings: Bindings; Variables: Variables }>()
 
 app.openAPIRegistry.registerComponent('securitySchemes', 'Bearer', {
@@ -36,10 +37,8 @@ dayjs.extend(utc)
 dayjs.extend(timezone)
 dayjs.tz.setDefault('Asia/Tokyo')
 
+app.use(logger())
 app.use(csrf())
-app.get('/docs', apiReference(reference))
-app.doc('/specification', specification)
-app.notFound((c) => c.redirect('/docs'))
 app.use(
   '*',
   cors({
@@ -58,7 +57,9 @@ switch (process.env.NODE_ENV) {
     )
     break
   default:
-    app.use(logger())
+    app.get('/docs', apiReference(reference))
+    app.doc('/specification', specification)
+    app.notFound((c) => c.redirect('/docs'))
     break
 }
 app.onError((error, c) => {
@@ -70,10 +71,10 @@ app.onError((error, c) => {
     console.error(JSON.parse(error.message))
     return c.json({ message: JSON.parse(error.message), description: error.cause }, 400)
   }
-  console.error(error)
   return c.json({ message: error.message }, 500)
 })
 app.route('/v3/schedules', schedules)
+// app.route('/v1/resources', resources)
 app.route('/v3/results', results)
 app.route('/v1/histories', histories)
 app.route('/v1/records', records)

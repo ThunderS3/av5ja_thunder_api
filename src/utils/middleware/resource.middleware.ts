@@ -7,8 +7,8 @@ import { StageScheduleQuery } from '@/models/stage_schedule.dto'
 import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
-import type { Bindings } from './bindings'
-import { KV } from './kv'
+import type { Bindings } from '../bindings'
+import { KV } from '../kv'
 
 /**
  * リソースとしてURLを書き込む
@@ -49,7 +49,8 @@ export const resource = createMiddleware(async (c, next) => {
         case 'records':
           return new CoopRecordQuery(body).assetURLs
         case 'results':
-          c.executionCtx.waitUntil(KV.RESULT.set(c, body))
+          // リザルトのバックアップ作成
+          c.executionCtx.waitUntil(KV.HISTORY.set(c.env, body))
           return new CoopResultQuery(body).assetURLs
         case 'histories':
           return new CoopHistoryQuery(body).assetURLs

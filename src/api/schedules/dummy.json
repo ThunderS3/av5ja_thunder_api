@@ -1,6 +1,39 @@
 {
   "schedules": [
     {
+      "id": "42b7036defadd680ecc885b9c3d2a609",
+      "startTime": "2024-10-09T00:00:00.000Z",
+      "endTime": "2024-10-10T16:00:00.000Z",
+      "mode": "REGULAR",
+      "rule": "REGULAR",
+      "bossId": 23,
+      "stageId": 9,
+      "rareWeapons": [],
+      "weaponList": [300, 4000, 8010, 2070]
+    },
+    {
+      "id": "720c0e48ac55e9132b9577f147b4259f",
+      "startTime": "2024-10-07T08:00:00.000Z",
+      "endTime": "2024-10-09T00:00:00.000Z",
+      "mode": "REGULAR",
+      "rule": "REGULAR",
+      "bossId": 25,
+      "stageId": 7,
+      "rareWeapons": [],
+      "weaponList": [6030, 3010, 8020, 2060]
+    },
+    {
+      "id": "827f1284a5a0ceb13f2fa02176a2c03c",
+      "startTime": "2024-10-05T16:00:00.000Z",
+      "endTime": "2024-10-07T08:00:00.000Z",
+      "mode": "REGULAR",
+      "rule": "REGULAR",
+      "bossId": 30,
+      "stageId": 6,
+      "rareWeapons": [20900, 22900, 25900, 28900, 26900, 23900, 27900, 21900],
+      "weaponList": [-1, -1, -1, -1]
+    },
+    {
       "id": "db5b62b5ef92cf0e2ff80a9d22101e35",
       "startTime": "2024-10-04T00:00:00.000Z",
       "endTime": "2024-10-05T16:00:00.000Z",

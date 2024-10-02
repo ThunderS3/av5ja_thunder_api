@@ -120,7 +120,6 @@ const get_npln_user_id = async (
     })
   })
   if (response.ok) {
-    console.log('[RESPONSE]:', response.status, response.statusText)
     const histoies = new CoopHistoryQuery(await response.json()).histories
     if (histoies.length === 0) {
       throw new HTTPException(404, { message: 'Not Found' })
@@ -194,7 +193,6 @@ const get_bullet_token = async (
   if (response.ok) {
     return BulletToken.parse(await response.json())
   }
-  console.log('[BULLET TOKEN]:', response.status, response.statusText)
   throw new HTTPException(response.status as StatusCode, { message: response.statusText })
 }
 

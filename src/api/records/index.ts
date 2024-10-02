@@ -1,7 +1,7 @@
 import { HTTPMethod } from '@/enums/method'
 import { CoopRecord, CoopRecordQuery } from '@/models/coop_record.dto'
 import type { Bindings } from '@/utils/bindings'
-import { resource } from '@/utils/resource'
+import { resource } from '@/utils/middleware/resource.middleware'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()

@@ -4,6 +4,7 @@ import { Thunder } from '@/models/user.dto'
 import type { Bindings } from '@/utils/bindings'
 import { KV } from '@/utils/kv'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { HTTPException } from 'hono/http-exception'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -28,6 +29,10 @@ app.openapi(
   }),
   async (c) => {
     const { sub } = c.get('jwtPayload')
-    return c.json(await KV.USER.get(c, sub))
+    const user: Thunder.User | null = await KV.USER.get(c.env, sub)
+    if (user === null) {
+      throw new HTTPException(404, { message: 'Not Found.' })
+    }
+    return c.json(user)
   }
 )
