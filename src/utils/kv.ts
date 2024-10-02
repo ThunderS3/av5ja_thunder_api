@@ -4,10 +4,11 @@ import { ImageType } from '@/enums/image_type'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { CoopPlayerId } from '@/models/common/coop_player_id.dto'
+import { CoopHistoryDetail } from '@/models/coop_history_detail.dto'
+import type { CoopResult } from '@/models/coop_result.dto'
 import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
 import dayjs, { type Dayjs } from 'dayjs'
-import type { Context } from 'hono'
 import { HTTPException } from 'hono/http-exception'
 import { jwt, sign } from 'hono/jwt'
 import { AlgorithmTypes } from 'hono/utils/jwt/jwa'
@@ -16,6 +17,9 @@ import type { Bindings } from './bindings'
 import dummy from './handler/dummy.json'
 
 export namespace KV {
+  /**
+   * ユーザー情報を保存するためのKV
+   */
   export namespace USER {
     /**
      * ユーザーデータの読み込み
@@ -68,6 +72,9 @@ export namespace KV {
     }
   }
 
+  /**
+   * アセットのURLを保存するためのKV
+   */
   export namespace RESOURCE {
     const find_hash = (type: ImageType, raw_id: number): string | undefined => {
       switch (type) {
@@ -105,7 +112,10 @@ export namespace KV {
     export const set = async (env: Bindings, path: string, raw_id: number, data: Buffer): Promise<void> => {}
   }
 
-  export namespace RESULT {
+  /**
+   * オリジナルのリザルト保存するためのKV
+   */
+  export namespace HISTORY {
     /**
      * オリジナルのリザルト書き込み
      * @param c
@@ -115,14 +125,43 @@ export namespace KV {
 
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     export const set = async (env: Bindings, data: any): Promise<void> => {
-      try {
-        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-        const myResult: any = data.histories[0].results[0].data.coopHistoryDetail.myResult
-        const id: CoopPlayerId = CoopPlayerId.parse(myResult.player.id)
-        await env.HISTORIES.put(`${id.nplnUserId}:${id.playTime}`, JSON.stringify(data))
-      } catch (error) {
-        console.error(error)
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      const myResult: any = data.histories[0].results[0].data.coopHistoryDetail.myResult
+      const id: CoopPlayerId = CoopPlayerId.parse(myResult.player.id)
+      await env.HISTORIES.put(`${id.nplnUserId}:${id.playTime}`, JSON.stringify(data))
+    }
+  }
+
+  /**
+   * 変換に成功したリザルトを保存するためのKV
+   */
+  export namespace RESULT {
+    /**
+     * 変換後のデータ書き込み
+     * @param c
+     * @param result
+     * @returns
+     */
+
+    export const set = async (env: Bindings, result: CoopHistoryDetail.Response): Promise<void> => {
+      await env.RESULTS.put(`${result.myResult.nplnUserId}:${result.playTime}`, JSON.stringify(result))
+    }
+
+    export const get = async (env: Bindings, id: string): Promise<CoopHistoryDetail.Response> => {
+      const data: unknown | null = await env.RESULTS.get(id, { type: 'json' })
+      if (data === null) {
+        throw new HTTPException(404, { message: 'Not Found.' })
       }
+      return CoopHistoryDetail.Response.parse(data)
+    }
+
+    export const list = async (
+      env: Bindings,
+      npln_user_id: string,
+      cursor: string | undefined,
+      limit: number
+    ): Promise<KVNamespaceListResult<string, string>> => {
+      return await env.RESULTS.list({ prefix: npln_user_id, cursor: cursor, limit: limit })
     }
   }
 
