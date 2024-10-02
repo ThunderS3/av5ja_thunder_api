@@ -13,6 +13,7 @@ import { jwt, sign } from 'hono/jwt'
 import { AlgorithmTypes } from 'hono/utils/jwt/jwa'
 import { v4 as uuidv4 } from 'uuid'
 import type { Bindings } from './bindings'
+import dummy from './handler/dummy.json'
 
 export namespace KV {
   export namespace USER {
@@ -161,12 +162,12 @@ export namespace KV {
      * @param id
      * @returns
      */
-    export const get = async (c: Context<{ Bindings: Bindings }>, id: string): Promise<CoopSchedule.Response> => {
-      const data: unknown | null = await c.env.CACHES.get(id, { type: 'json' })
+    export const get = async (env: Bindings, id: string): Promise<unknown> => {
+      const data: unknown | null = await env.CACHES.get(id, { type: 'json' })
       if (data === null) {
-        throw new HTTPException(404, { message: 'Not Found.' })
+        return dummy
       }
-      return CoopSchedule.Response.parse(data)
+      return data
     }
 
     /**
@@ -175,13 +176,9 @@ export namespace KV {
      * @param data
      * @returns
      */
-    export const set = async (
-      c: Context<{ Bindings: Bindings }>,
-      schedule: CoopSchedule.Response
-    ): Promise<CoopSchedule.Response> => {
-      console.info('[SET SCHEDULE]:', schedule)
-      await c.env.SCHEDULES.put(`${schedule.startTime}:${schedule.endTime}`, JSON.stringify(schedule))
-      return schedule
+    export const set = async (env: Bindings, key: string, data: unknown): Promise<void> => {
+      await env.CACHES.put(key, JSON.stringify(data))
+      return
     }
   }
 }
