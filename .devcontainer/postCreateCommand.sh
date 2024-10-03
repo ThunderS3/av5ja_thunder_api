@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-sudo chown -R bun:bun node_modules
-bun install --frozen-lockfile
+sudo chown -R vscode:vscode node_modules
+vscode install --frozen-lockfile

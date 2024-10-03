@@ -46,44 +46,44 @@ app.openapi(
   }
 )
 
-app.openapi(
-  createRoute({
-    method: HTTPMethod.POST,
-    security: [{ AuthorizationApiKey: [] }],
-    middleware: [resource],
-    deprecated: true,
-    path: '/',
-    tags: ['スケジュール'],
-    summary: '一覧取得',
-    description: 'スケジュール一覧を追加します',
-    request: {
-      body: {
-        content: {
-          'application/json': {
-            schema: StageSchedule.Request
-          }
-        }
-      }
-    },
-    responses: {
-      200: {
-        content: {
-          'application/json': {
-            schema: z.object({
-              schedules: z.array(CoopSchedule.Response)
-            })
-          }
-        },
-        description: 'スケジュール一覧'
-      }
-    }
-  }),
-  async (c) => {
-    c.req.valid('json')
-    const body: StageScheduleQuery = new StageScheduleQuery(await c.req.json())
-    return c.json(body)
-  }
-)
+// app.openapi(
+//   createRoute({
+//     method: HTTPMethod.POST,
+//     security: [{ AuthorizationApiKey: [] }],
+//     middleware: [resource],
+//     deprecated: true,
+//     path: '/',
+//     tags: ['スケジュール'],
+//     summary: '一覧取得',
+//     description: 'スケジュール一覧を追加します',
+//     request: {
+//       body: {
+//         content: {
+//           'application/json': {
+//             schema: StageSchedule.Request
+//           }
+//         }
+//       }
+//     },
+//     responses: {
+//       200: {
+//         content: {
+//           'application/json': {
+//             schema: z.object({
+//               schedules: z.array(CoopSchedule.Response)
+//             })
+//           }
+//         },
+//         description: 'スケジュール一覧'
+//       }
+//     }
+//   }),
+//   async (c) => {
+//     c.req.valid('json')
+//     const body: StageScheduleQuery = new StageScheduleQuery(await c.req.json())
+//     return c.json(body)
+//   }
+// )
 
 // app.openapi(
 //   createRoute({

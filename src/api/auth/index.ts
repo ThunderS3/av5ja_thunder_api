@@ -33,7 +33,7 @@ app.openapi(
     method: HTTPMethod.POST,
     path: '/_gtoken',
     tags: ['トークン'],
-    summary: 'IDトークン',
+    summary: '取得',
     description: '認証用のトークンを発行します',
     request: {
       body: {
@@ -70,7 +70,7 @@ app.openapi(
     method: HTTPMethod.GET,
     path: '/callback',
     tags: ['トークン'],
-    summary: 'アカウント作成',
+    summary: '認証',
     description: 'Discord OAuth2を利用してアカウントを作成します',
     request: {
       query: z.object({
