@@ -1,7 +1,7 @@
 {
   "name": "thunder_api",
   "version": "6.0.0",
-  "description": "SplatNet3から取得したJSONをパースしてSplatNet2形式などの扱いやすいフォーマットに変換してくれるAPIです",
+  "description": "SplatNet3から取得したJSONをパースしてSplatNet2形式などの扱いやすいフォーマットに変換するAPIです",
   "author": "@tkgstrator",
   "private": true,
   "license": "MIT",
@@ -11,14 +11,14 @@
     }
   },
   "scripts": {
-    "dev": "wrangler dev --test-scheduled --port 18787",
+    "dev": "wrangler dev --test-scheduled",
     "start": "bun dist/index.js",
     "prepare": "husky",
     "deploy": "bunx wrangler deploy",
     "deploy:dev": "bunx wrangler deploy --env dev"
   },
   "dependencies": {
-    "@scalar/hono-api-reference": "^0.5.149",
+    "@scalar/hono-api-reference": "^0.5.150",
     "dayjs": "^1.11.13",
     "hono": "^4.6.3",
     "lodash": "^4.17.21",
@@ -30,9 +30,9 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/cz-commitlint": "^19.5.0",
-    "@hono/zod-openapi": "^0.16.2",
+    "@hono/zod-openapi": "^0.16.3",
     "@types/bun": "^1.1.10",
-    "@types/lodash": "^4.17.9",
+    "@types/lodash": "^4.17.10",
     "@types/node": "^22.7.4",
     "@types/uuid": "^10.0.0",
     "commitizen": "^4.3.1",
