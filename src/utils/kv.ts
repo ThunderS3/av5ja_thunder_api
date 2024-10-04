@@ -79,11 +79,7 @@ export namespace KV {
     const find_hash = (type: ImageType, raw_id: number): string | undefined => {
       switch (type) {
         case ImageType.WeaponInfoMain:
-          return WeaponInfoMain.Hash[
-            WeaponInfoMain.Id[
-              raw_id % 1000 === 900 ? raw_id : raw_id < 0 ? raw_id : raw_id >= 20000 ? raw_id : raw_id + 20000
-            ] as keyof typeof WeaponInfoMain.Hash
-          ]
+          return WeaponInfoMain.Hash[WeaponInfoMain.Id[raw_id] as keyof typeof WeaponInfoMain.Hash]
         case ImageType.WeaponInfoSpecial:
           return WeaponInfoSpecial.Hash[WeaponInfoSpecial.Id[raw_id] as keyof typeof WeaponInfoSpecial.Hash]
         case ImageType.StageInfo:
