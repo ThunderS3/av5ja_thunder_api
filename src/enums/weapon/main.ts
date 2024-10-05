@@ -161,10 +161,12 @@ export namespace WeaponInfoMain {
  */
 export const Hash2Id = (hash: WeaponInfoMain.Hash | string): WeaponInfoMain.Id => {
   return WeaponInfoMain.Id[
-    Object.entries(WeaponInfoMain.Hash).find(([, value]) => value === hash)?.[0] ?? WeaponInfoMain.Id.Dummy
+    (Object.entries(WeaponInfoMain.Hash).find(
+      ([, value]): boolean => value === hash
+    )?.[0] as keyof typeof WeaponInfoMain.Id) ?? WeaponInfoMain.Id.Dummy
   ]
 }
 
 export const Id2Hash = (id: WeaponInfoMain.Id | number): WeaponInfoMain.Hash => {
-  return WeaponInfoMain.Hash[WeaponInfoMain.Id[id]]
+  return WeaponInfoMain.Hash[WeaponInfoMain.Id[id] as keyof typeof WeaponInfoMain.Hash]
 }

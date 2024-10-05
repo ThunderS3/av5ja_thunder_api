@@ -8,5 +8,6 @@ export enum ImageType {
   // UIInfo = 'ui_img',
   StageInfo = 'stage_img',
   // NamePlateBgInfo = 'npl_img',
-  EnemyInfo = 'enemy_img'
+  EnemyInfo = 'enemy_img',
+  UIImg = 'ui_img'
 }
