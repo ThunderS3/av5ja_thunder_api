@@ -8,6 +8,7 @@ import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { Species } from '@/enums/weapon/species'
 import { z } from '@hono/zod-openapi'
+import { has } from 'lodash'
 import { CoopData } from './common/coop_data.dto'
 import { CoopGradeModel } from './common/coop_grade.dto'
 import { CoopHistoryDetailId } from './common/coop_history_detail_id.dto'
@@ -21,16 +22,14 @@ import { WeaponInfoMainHash } from './common/weapon_hash.dto'
 import { CoopSchedule } from './coop_schedule.dto'
 import type { ResourceQuery } from './resource.interface'
 
-const BossResultModel = z
-  .object({
-    hasDefeatBoss: z.boolean(),
-    boss: z
-      .object({
-        id: RawId(CoopBossInfo.Id)
-      })
-      .merge(ImageURL)
-  })
-  .nullable()
+const BossResultModel = z.object({
+  hasDefeatBoss: z.boolean(),
+  boss: z
+    .object({
+      id: RawId(CoopBossInfo.Id)
+    })
+    .merge(ImageURL)
+})
 
 const EnemyModel = z
   .object({
@@ -137,7 +136,7 @@ const ScaleModel = z
 const CoopHistoryDetailModel = z.object({
   afterGrade: CoopGradeModel,
   afterGradePoint: z.number().int().min(0).max(999).nullable(),
-  bossResult: BossResultModel,
+  bossResult: BossResultModel.nullable(),
   bossResults: z.array(BossResultModel).nullable(),
   coopStage: CoopStageModel,
   dangerRate: z.number().min(0).max(3.33),
@@ -237,6 +236,11 @@ export namespace CoopHistoryDetail {
     isClear: z.boolean()
   })
 
+  export const BossResult = z.object({
+    bossId: z.nativeEnum(CoopBossInfo.Id),
+    hasDefeatBoss: z.boolean()
+  })
+
   /**
    * サーモンランのリザルトフォーマット
    */
@@ -262,6 +266,7 @@ export namespace CoopHistoryDetail {
         myResult: CoopHistoryDetail.CoopPlayerResult,
         otherResults: z.array(CoopHistoryDetail.CoopPlayerResult),
         jobResult: CoopHistoryDetail.JobResult,
+        bossResult: z.array(BossResult).nullable(),
         playTime: DateTime,
         bossCounts: z.array(z.number().int().min(0)).length(14),
         bossKillCounts: z.array(z.number().int().min(0)).length(14),
@@ -280,6 +285,7 @@ export namespace CoopHistoryDetail {
       }
     })
 
+  export type BossResult = z.infer<typeof BossResult>
   export type CoopPlayerResult = z.infer<typeof CoopPlayerResult>
   export type JobResult = z.infer<typeof JobResult>
   export type WaveResult = z.infer<typeof WaveResult>
@@ -331,6 +337,21 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
         // .concat(this.coopHistoryDetail.coopStage.image.url)
       )
     ).map((url) => S3URL.parse(url))
+  }
+
+  private get bossResult(): CoopHistoryDetail.BossResult | null {
+    if (this.coopHistoryDetail.bossResults === null) {
+      return null
+    }
+    return z
+      .array(CoopHistoryDetail.BossResult)
+      .nullable()
+      .parse(
+        this.coopHistoryDetail.bossResults.map((result) => ({
+          bossId: result.boss.id,
+          hasDefeatBoss: result.hasDefeatBoss
+        }))
+      )
   }
 
   private get waveResults(): CoopHistoryDetail.WaveResult[] {

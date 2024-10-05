@@ -5,6 +5,7 @@ export type Bindings = {
   DISCORD_CLIENT_SECRET: string
   DISCORD_GUILD_ID: string
   DISCORD_REDIRECT_URI: string
+  DATABASE_URL: string
   JWT_SECRET_KEY: string
   RESOURCES: KVNamespace
   RESULTS: KVNamespace

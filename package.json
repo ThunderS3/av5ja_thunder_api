@@ -18,6 +18,8 @@
     "deploy:dev": "bunx wrangler deploy --env dev"
   },
   "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "@prisma/extension-accelerate": "^1.2.1",
     "@scalar/hono-api-reference": "^0.5.150",
     "dayjs": "^1.11.13",
     "hono": "^4.6.3",
