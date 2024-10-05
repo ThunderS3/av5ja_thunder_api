@@ -238,7 +238,7 @@ export namespace CoopHistoryDetail {
 
   export const BossResult = z.object({
     bossId: z.nativeEnum(CoopBossInfo.Id),
-    hasDefeatBoss: z.boolean()
+    isDefeated: z.boolean()
   })
 
   /**
@@ -266,7 +266,7 @@ export namespace CoopHistoryDetail {
         myResult: CoopHistoryDetail.CoopPlayerResult,
         otherResults: z.array(CoopHistoryDetail.CoopPlayerResult),
         jobResult: CoopHistoryDetail.JobResult,
-        bossResult: z.array(BossResult).nullable(),
+        bossResults: z.array(BossResult).nullable(),
         playTime: DateTime,
         bossCounts: z.array(z.number().int().min(0)).length(14),
         bossKillCounts: z.array(z.number().int().min(0)).length(14),
@@ -312,6 +312,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
       scenarioCode: this.coopHistoryDetail.scenarioCode,
       dangerRate: this.coopHistoryDetail.dangerRate,
       myResult: this.myResult,
+      bossResults: this.bossResults,
       otherResults: this.otherResults,
       jobResult: this.jobResult,
       waveDetails: this.waveResults
@@ -339,7 +340,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
     ).map((url) => S3URL.parse(url))
   }
 
-  private get bossResult(): CoopHistoryDetail.BossResult | null {
+  private get bossResults(): CoopHistoryDetail.BossResult[] | null {
     if (this.coopHistoryDetail.bossResults === null) {
       return null
     }
@@ -349,7 +350,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
       .parse(
         this.coopHistoryDetail.bossResults.map((result) => ({
           bossId: result.boss.id,
-          hasDefeatBoss: result.hasDefeatBoss
+          isDefeated: result.hasDefeatBoss
         }))
       )
   }
@@ -383,7 +384,7 @@ export class CoopHistoryDetailQuery implements ResourceQuery {
       failureWave: this.coopHistoryDetail.resultWave === 0 ? null : this.coopHistoryDetail.resultWave,
       isClear: this.coopHistoryDetail.resultWave === 0,
       bossId: this.coopHistoryDetail.bossResult?.boss.id || null,
-      isBossDefeated: this.coopHistoryDetail.bossResult?.hasDefeatBoss || null
+      isBossDefeated: this.coopHistoryDetail.bossResult?.hasDefeatBoss ?? null
     })
   }
 
