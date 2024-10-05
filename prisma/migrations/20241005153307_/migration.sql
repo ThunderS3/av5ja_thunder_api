@@ -1,24 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `Player` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Result` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Schedule` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Wave` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-DROP TABLE "Player";
-
--- DropTable
-DROP TABLE "Result";
-
--- DropTable
-DROP TABLE "Schedule";
-
--- DropTable
-DROP TABLE "Wave";
-
 -- CreateTable
 CREATE TABLE "schedules" (
     "id" CHAR(32) NOT NULL,
@@ -55,9 +34,13 @@ CREATE TABLE "results" (
     "is_clear" BOOLEAN NOT NULL,
     "failure_wave" SMALLINT,
     "is_boss_defeated" BOOLEAN,
+    "is_giant_defeated" BOOLEAN,
+    "is_rope_defeated" BOOLEAN,
+    "is_jaw_defeated" BOOLEAN,
     "scenario_code" TEXT,
     "createdAt" DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATE NOT NULL,
+    "schedule_id" CHAR(32) NOT NULL,
 
     CONSTRAINT "results_pkey" PRIMARY KEY ("id")
 );
@@ -76,6 +59,7 @@ CREATE TABLE "waves" (
     "is_clear" BOOLEAN NOT NULL,
     "createdAt" DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATE NOT NULL,
+    "result_id" CHAR(32) NOT NULL,
 
     CONSTRAINT "waves_pkey" PRIMARY KEY ("id")
 );
@@ -112,6 +96,7 @@ CREATE TABLE "players" (
     "special_count" SMALLINT[],
     "createdAt" DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATE NOT NULL,
+    "result_id" CHAR(32) NOT NULL,
 
     CONSTRAINT "players_pkey" PRIMARY KEY ("id")
 );
@@ -132,6 +117,12 @@ CREATE INDEX "schedules_rule_idx" ON "schedules"("rule");
 CREATE INDEX "results_is_clear_idx" ON "results"("is_clear");
 
 -- CreateIndex
+CREATE INDEX "waves_water_level_event_type_idx" ON "waves"("water_level", "event_type");
+
+-- CreateIndex
+CREATE INDEX "waves_is_clear_idx" ON "waves"("is_clear");
+
+-- CreateIndex
 CREATE INDEX "players_npln_user_id_idx" ON "players"("npln_user_id");
 
 -- CreateIndex
@@ -142,3 +133,12 @@ CREATE INDEX "players_ikura_num_idx" ON "players"("ikura_num");
 
 -- CreateIndex
 CREATE INDEX "players_golden_ikura_num_idx" ON "players"("golden_ikura_num");
+
+-- AddForeignKey
+ALTER TABLE "results" ADD CONSTRAINT "results_schedule_id_fkey" FOREIGN KEY ("schedule_id") REFERENCES "schedules"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "waves" ADD CONSTRAINT "waves_result_id_fkey" FOREIGN KEY ("result_id") REFERENCES "results"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "players" ADD CONSTRAINT "players_result_id_fkey" FOREIGN KEY ("result_id") REFERENCES "results"("id") ON DELETE CASCADE ON UPDATE CASCADE;

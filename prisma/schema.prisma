@@ -27,6 +27,8 @@ model Schedule {
   createdAt   DateTime  @default(now()) @db.Date
   updatedAt   DateTime  @updatedAt @db.Date
 
+  results Result[] @relation("results")
+
   @@index([stageId])
   @@index([bossId])
   @@index([mode])
@@ -59,6 +61,11 @@ model Result {
   createdAt            DateTime @default(now()) @db.Date
   updatedAt            DateTime @updatedAt @db.Date
 
+  schedule   Schedule @relation("results", fields: [scheduleId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  scheduleId String   @map("schedule_id") @db.Char(32)
+  players    Player[] @relation("players")
+  waves      Wave[]   @relation("waves")
+
   @@index([isClear])
   @@map("results")
 }
@@ -76,7 +83,11 @@ model Wave {
   isClear           Boolean  @map("is_clear") @db.Boolean
   createdAt         DateTime @default(now()) @db.Date
   updatedAt         DateTime @updatedAt @db.Date
+  result            Result   @relation("waves", fields: [resultId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  resultId          String   @map("result_id") @db.Char(32)
 
+  @@index([waterLevel, eventType])
+  @@index([isClear])
   @@map("waves")
 }
 
@@ -111,6 +122,8 @@ model Player {
   specialCount         Int[]    @map("special_count") @db.SmallInt
   createdAt            DateTime @default(now()) @db.Date
   updatedAt            DateTime @updatedAt @db.Date
+  result               Result   @relation("players", fields: [resultId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  resultId             String   @map("result_id") @db.Char(32)
 
   @@index([nplnUserId])
   @@index([name])

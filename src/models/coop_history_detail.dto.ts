@@ -261,7 +261,7 @@ export namespace CoopHistoryDetail {
       z.object({
         // id: CoopHistoryDetailId,
         uuid: z.string(),
-        schedule: CoopSchedule.Response.optional(),
+        schedule: CoopSchedule.Response,
         scale: z.array(z.number().int().min(0).max(39).nullable()),
         myResult: CoopHistoryDetail.CoopPlayerResult,
         otherResults: z.array(CoopHistoryDetail.CoopPlayerResult),

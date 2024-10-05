@@ -41,17 +41,12 @@ export class CoopResultQuery implements ResourceQuery {
 
   constructor(data: object) {
     this.request = CoopResult.Request.parse(data)
-    this.response = CoopResult.Response.parse({
-      histories: this.request.histories.map((history) => ({
-        schedule: CoopSchedule.Response.parse(history.schedule),
-        results: history.results.map((result) => {
-          return {
-            ...new CoopHistoryDetailQuery(result).result,
-            schedule: history.schedule
-          }
-        })
-      }))
-    })
+    // this.response = {
+    //   histories: this.request.histories.map((history) => ({
+    //     schedule: history.schedule,
+    //     results: history.results.map((result) => new CoopHistoryDetailQuery(result).result)
+    //   }))
+    // }
   }
 
   toJSON(): CoopResult.Response {

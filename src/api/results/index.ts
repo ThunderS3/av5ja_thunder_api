@@ -48,6 +48,7 @@ app.openapi(
     c.req.valid('json')
     const body: CoopResultQuery = new CoopResultQuery(await c.req.json())
     c.executionCtx.waitUntil(Promise.all(body.results.map((result) => KV.RESULT.set(c.env, result))))
+    // await Promise.all(body.results.map((result) => Prisma.create(c, result)))
     return c.json(body)
   }
 )
