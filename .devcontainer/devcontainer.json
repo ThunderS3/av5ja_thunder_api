@@ -42,7 +42,8 @@
         "amazonwebservices.codewhisperer-for-command-line-companion",
         "bierner.markdown-preview-github-styles",
         "bierner.markdown-mermaid",
-        "jebbs.markdown-extended"
+        "jebbs.markdown-extended",
+        "Prisma.prisma"
       ],
       "settings": {
         "betterTypeScriptErrors.prettify": true,

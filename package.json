@@ -39,6 +39,7 @@
     "commitlint": "^19.5.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
+    "prisma": "^5.20.0",
     "rimraf": "^6.0.1",
     "wrangler": "3.79.0"
   },
