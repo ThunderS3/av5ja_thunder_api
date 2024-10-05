@@ -1,5 +1,6 @@
 import { ImageType } from '@/enums/image_type'
 import { HTTPMethod } from '@/enums/method'
+import { UIImg } from '@/enums/ui_img/ui_img'
 import type { Bindings } from '@/utils/bindings'
 import { KV } from '@/utils/kv'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'

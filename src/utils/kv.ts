@@ -1,6 +1,7 @@
 import { CoopBossInfo, CoopEnemyInfo } from '@/enums/coop/coop_enemy'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { ImageType } from '@/enums/image_type'
+import { UIImg } from '@/enums/ui_img/ui_img'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { CoopPlayerId } from '@/models/common/coop_player_id.dto'
@@ -114,17 +115,22 @@ export namespace KV {
   export namespace HISTORY {
     /**
      * オリジナルのリザルト書き込み
+     * waitUntilで実行されることを想定しているためエラーをログとして表示する
      * @param c
      * @param data
      * @returns
      */
-
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     export const set = async (env: Bindings, data: any): Promise<void> => {
-      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-      const myResult: any = data.histories[0].results[0].data.coopHistoryDetail.myResult
-      const id: CoopPlayerId = CoopPlayerId.parse(myResult.player.id)
-      await env.HISTORIES.put(`${id.nplnUserId}:${id.playTime}`, JSON.stringify(data))
+      try {
+        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+        const myResult: any = data.histories[0].results[0].data.coopHistoryDetail.myResult
+        const id: CoopPlayerId = CoopPlayerId.parse(myResult.player.id)
+        console.info('[SET HISTORY]:', id.playTime, '-->', id.nplnUserId)
+        await env.HISTORIES.put(`${id.nplnUserId}:${id.playTime}`, JSON.stringify(data))
+      } catch (error) {
+        console.error('[SET HISTORY]:', error)
+      }
     }
   }
 
@@ -134,13 +140,19 @@ export namespace KV {
   export namespace RESULT {
     /**
      * 変換後のデータ書き込み
+     * waitUntilで実行されることを想定しているためエラーをログとして表示する
      * @param c
      * @param result
      * @returns
      */
 
     export const set = async (env: Bindings, result: CoopHistoryDetail.Response): Promise<void> => {
-      await env.RESULTS.put(`${result.myResult.nplnUserId}:${result.playTime}`, JSON.stringify(result))
+      try {
+        console.info('[SET RESULT]:', result.playTime, '-->', result.myResult.nplnUserId)
+        await env.RESULTS.put(`${result.myResult.nplnUserId}:${result.playTime}`, JSON.stringify(result))
+      } catch (error) {
+        console.error('[SET RESULT]:', error)
+      }
     }
 
     export const get = async (env: Bindings, id: string): Promise<CoopHistoryDetail.Response> => {
@@ -183,8 +195,8 @@ export namespace KV {
      * @returns
      */
     export const set = async (env: Bindings, data: object): Promise<CoopSchedule.Response> => {
-      console.info('[SET SCHEDULE]:', data)
       const schedule: CoopSchedule.Response = CoopSchedule.Response.parse(data)
+      console.info('[SET SCHEDULE]:', schedule.startTime, '-->', schedule.endTime)
       await env.SCHEDULES.put(`${schedule.startTime}:${schedule.endTime}`, JSON.stringify(schedule))
       return schedule
     }
