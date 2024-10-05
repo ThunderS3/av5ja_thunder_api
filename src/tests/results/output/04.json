@@ -1,0 +1,18 @@
+{
+  "histories": [
+    {
+      "schedule": {
+        "id": "38d8a983c2957048bb5c327163878d26",
+        "startTime": "2024-09-07T00:00:00.000Z",
+        "endTime": "2024-09-09T00:00:00.000Z",
+        "mode": "REGULAR",
+        "rule": "BIG_RUN",
+        "bossId": null,
+        "stageId": 107,
+        "rareWeapons": [],
+        "weaponList": [-2, -2, -2, -2]
+      },
+      "results": []
+    }
+  ]
+}

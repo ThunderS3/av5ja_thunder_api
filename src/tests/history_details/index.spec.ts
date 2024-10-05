@@ -2,6 +2,7 @@ import { describe, expect, it, test } from 'bun:test'
 import { readFileSync, readdirSync, writeFile, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { CoopHistoryDetailQuery } from '@/models/coop_history_detail.dto'
+import { diff } from 'deep-diff'
 
 describe('CoopHistoryDetailQuery', () => {
   test('Validity', () => {
@@ -18,7 +19,7 @@ describe('CoopHistoryDetailQuery', () => {
       const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
       const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
       const input_model: CoopHistoryDetailQuery = new CoopHistoryDetailQuery(JSON.parse(input))
-      // console.log(JSON.stringify(input_model, null, 2))
+      console.log(diff(JSON.parse(JSON.stringify(input_model)), JSON.parse(output)))
       expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output))).toBe(true)
     }
   })

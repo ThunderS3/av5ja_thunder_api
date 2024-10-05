@@ -211,6 +211,7 @@
     "bossId": null,
     "isBossDefeated": null
   },
+  "bossResults": null,
   "playTime": "2024-06-22T15:31:19.000Z",
   "bossCounts": [9, 13, 5, 11, 14, 4, 8, 8, 8, 1, 9, 0, 0, 0],
   "bossKillCounts": [9, 12, 4, 11, 14, 4, 3, 7, 7, 1, 9, 0, 0, 0],

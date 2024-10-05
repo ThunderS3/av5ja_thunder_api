@@ -2,6 +2,7 @@ import { describe, expect, it, test } from 'bun:test'
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { CoopResultQuery } from '@/models/coop_result.dto'
+import { diff } from 'deep-diff'
 
 describe('CoopResultQuery', () => {
   test('Validity', () => {
@@ -17,7 +18,7 @@ describe('CoopResultQuery', () => {
       const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
       const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
       const input_model: CoopResultQuery = new CoopResultQuery(JSON.parse(input))
-      Bun.write(path.join(__dirname, 'output', '03.json'), JSON.stringify(input_model, null, 2))
+      console.log(diff(JSON.parse(JSON.stringify(input_model)), JSON.parse(output)))
       expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output))).toBe(true)
     }
   })
