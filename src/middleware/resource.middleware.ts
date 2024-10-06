@@ -1,5 +1,6 @@
 import { HTTPMethod } from '@/enums/method'
 import { S3URL } from '@/models/common/s3_url.dto'
+import { KV } from '@/utils/kv'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
 import type { Bindings } from '../utils/bindings'
@@ -39,8 +40,17 @@ const update_cache = async (c: Context<{ Bindings: Bindings }>) => {
  * JSONを正規表現で検索してURLを抽出する
  */
 export const resource = createMiddleware(async (c, next) => {
+  const url: URL = new URL(c.req.url)
+  console.log(url.pathname)
   if (c.req.method.toLowerCase() === HTTPMethod.POST) {
     c.executionCtx.waitUntil(update_cache(c))
+  }
+  switch (url.pathname) {
+    case '/v3/results':
+      c.executionCtx.waitUntil(KV.HISTORY.set(c.env, await c.req.json()))
+      break
+    default:
+      break
   }
   await next()
 })
