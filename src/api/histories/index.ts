@@ -1,5 +1,5 @@
 import { HTTPMethod } from '@/enums/method'
-import { CoopHistory, CoopHistoryQuery } from '@/models/coop_history.dto'
+import { CoopHistoryQuery } from '@/models/coop_history.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
 import { resource } from '@/utils/middleware/resource.middleware'
@@ -20,7 +20,7 @@ app.openapi(
       body: {
         content: {
           'application/json': {
-            schema: CoopHistory.Request.openapi({
+            schema: CoopHistoryQuery.CoopResult.openapi({
               description: 'CoopHistoryQuery'
             })
           }
@@ -30,17 +30,17 @@ app.openapi(
     responses: {
       200: {
         content: {
-          'application/json': {
-            schema: CoopHistory.Response
-          }
+          // 'application/json': {
+          //   schema: CoopHistory.Response
+          // }
         },
         description: 'リザルト一覧'
       },
-      ...BadRequestResponse()
+      ...BadRequestResponse
     }
   }),
   async (c) => {
-    c.req.valid('json')
-    return c.json(new CoopHistoryQuery(await c.req.json()))
+    const body = c.req.valid('json')
+    return c.json(body)
   }
 )

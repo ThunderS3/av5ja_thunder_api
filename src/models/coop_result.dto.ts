@@ -1,69 +1,109 @@
+import { CoopBossInfo } from '@/enums/coop/coop_enemy'
+import { CoopEvent } from '@/enums/coop/coop_event'
+import { CoopGrade } from '@/enums/coop/coop_grade'
+import { CoopWaterLevel } from '@/enums/coop/coop_water_level'
+import { WeaponInfoMain } from '@/enums/weapon/main'
+import { WeaponInfoSpecial } from '@/enums/weapon/special'
+import { Species } from '@/enums/weapon/species'
 import { z } from '@hono/zod-openapi'
-import { CoopHistoryDetailId } from './common/coop_history_detail_id.dto'
-import { S3URL } from './common/s3_url.dto'
-import { CoopHistory } from './coop_history.dto'
-import { CoopHistoryDetail, CoopHistoryDetailQuery } from './coop_history_detail.dto'
-import { CoopSchedule } from './coop_schedule.dto'
-import type { ResourceQuery } from './resource.interface'
+import { CoopHistoryDetailQuery } from './coop_history_detail.dto'
+import { CoopScheduleQuery } from './stage_schedule.dto'
 
-export namespace CoopResult {
-  /**
-   * この型で受け付けるだけで内部的なパースは実行しない
-   */
-  export const Request = z.object({
+export namespace CoopResultQuery {
+  export const CoopHistory = z.object({
     histories: z.array(
       z.object({
-        schedule: z.record(z.any()),
-        results: z.array(z.record(z.any()))
+        schedule: CoopScheduleQuery.Schedule,
+        results: z.array(CoopHistoryDetailQuery.CoopHistoryDetail)
       })
     )
   })
 
-  /**
-   * 実質的なレスポンスの型
-   */
-  export const Response = z.object({
-    histories: z.array(
-      z.object({
-        schedule: CoopSchedule.Response,
-        results: z.array(CoopHistoryDetail.Response)
+  const Nameplate = z.object({
+    badges: z.array(z.number().int().nullable()).length(3),
+    background: z.object({
+      id: z.number().int(),
+      textColor: z.object({
+        r: z.number().min(0).max(1),
+        g: z.number().min(0).max(1),
+        b: z.number().min(0).max(1),
+        a: z.number().min(0).max(1)
       })
-    )
+    })
   })
 
-  export type Request = z.infer<typeof Request>
-  export type Response = z.infer<typeof Response>
-}
+  const WaveResult = z.object({
+    id: z.string().length(32),
+    waveId: z.number().int().min(0).max(4),
+    waterLevel: z.nativeEnum(CoopWaterLevel.Id),
+    eventType: z.nativeEnum(CoopEvent.Id),
+    quotaNum: z.number().int().min(0).nullable(),
+    goldenIkuraNum: z.number().int().min(0).nullable(),
+    goldenIkuraPopNum: z.number().int().min(0),
+    isClear: z.boolean()
+  })
 
-export class CoopResultQuery implements ResourceQuery {
-  private readonly request: CoopResult.Request
-  private readonly response: CoopResult.Response
+  const MemberResult = z.object({
+    id: z.string().length(32),
+    name: z.string(),
+    byname: z.string(),
+    nameId: z.string(),
+    nameplate: Nameplate,
+    uniform: z.number().int(),
+    species: z.nativeEnum(Species),
+    weaponList: z.array(z.nativeEnum(WeaponInfoMain.Id)),
+    nplnUserId: z.string().length(20),
+    specialId: z.nativeEnum(WeaponInfoSpecial.Id).nullable(),
+    ikuraNum: z.number().int().min(0),
+    goldenIkuraNum: z.number().int().min(0),
+    goldenIkuraAssistNum: z.number().int().min(0),
+    helpCount: z.number().int().min(0),
+    deadCount: z.number().int().min(0),
+    bossKillCountsTotal: z.number().int().min(0),
+    isMyself: z.boolean(),
+    smellMeter: z.number().int().min(0).max(5).nullable(),
+    jobRate: z.number().min(0).nullable(),
+    jobBonus: z.number().int().min(0).max(100).nullable(),
+    jobScore: z.number().int().min(0).nullable(),
+    kumaPoint: z.number().int().min(0).nullable(),
+    gradeId: z.nativeEnum(CoopGrade.Id).nullable(),
+    gradePoint: z.number().int().min(0).max(999).nullable(),
+    bossKillCounts: z.array(z.number().int().min(0).nullable()).length(14),
+    specialCounts: z.array(z.number().int().min(0).nullable())
+  })
 
-  constructor(data: object) {
-    this.request = CoopResult.Request.parse(data)
-    // this.response = {
-    //   histories: this.request.histories.map((history) => ({
-    //     schedule: history.schedule,
-    //     results: history.results.map((result) => new CoopHistoryDetailQuery(result).result)
-    //   }))
-    // }
-  }
+  const JobResult = z.object({
+    failureWave: z.number().int().min(0).max(4).nullable(),
+    isClear: z.boolean(),
+    bossId: z.nativeEnum(CoopBossInfo.Id).nullable(),
+    isBossDefeated: z.boolean().nullable()
+  })
 
-  toJSON(): CoopResult.Response {
-    return this.response
-  }
+  const BossResult = z
+    .object({
+      bossId: z.nativeEnum(CoopBossInfo.Id),
+      isBossDefeated: z.boolean()
+    })
+    .nullable()
 
-  get results(): CoopHistoryDetail.Response[] {
-    return this.response.histories.flatMap((history) => history.results)
-  }
+  export const CoopResult = z.object({
+    id: z.string().length(32),
+    uuid: z.string().uuid(),
+    scale: z.array(z.number().int().min(0).max(39).nullable()),
+    myResult: MemberResult,
+    otherResults: z.array(MemberResult),
+    waveDetails: z.array(WaveResult),
+    bossCounts: z.array(z.number().int().min(0).nullable()).length(14),
+    bossKillCounts: z.array(z.number().int().min(0).nullable()).length(14),
+    playTime: z.string().datetime(),
+    goldenIkuraNum: z.number().int().min(0),
+    ikuraNum: z.number().int().min(0),
+    dangerRate: z.number().min(0).max(3.33),
+    scenarioCode: z.string().nullable(),
+    bossResults: z.array(BossResult).nullable(),
+    jobResult: JobResult
+  })
 
-  get assetURLs(): S3URL[] {
-    return Array.from(
-      new Set(
-        this.request.histories.flatMap((history) =>
-          history.results.flatMap((result) => new CoopHistoryDetailQuery(result).assetURLs.map((url) => url.raw_value))
-        )
-      )
-    ).map((url) => S3URL.parse(url))
-  }
+  export type CoopResult = z.infer<typeof CoopResult>
+  export type CoopHistory = z.infer<typeof CoopHistory>
 }

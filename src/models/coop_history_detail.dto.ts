@@ -24,6 +24,7 @@ import { CoopPlayerId } from './common/coop_player_id.dto'
 import { RawId, RawInt } from './common/raw_id.dto'
 import { ImageURL } from './common/s3_url.dto'
 import { WeaponInfoMainId } from './common/weapon_hash.dto'
+import { CoopResultQuery } from './coop_result.dto'
 // import { has } from 'lodash'
 // import { CoopData } from './common/coop_data.dto'
 // import { CoopGradeModel } from './common/coop_grade.dto'
@@ -714,81 +715,79 @@ export namespace CoopHistoryDetailQuery {
           specialCounts: v.waveResults.map((result) => result.specialCounts)
         }))
     })
-  ).transform((v) => {
-    return {
-      toJSON: () => ({
-        id: createHash('md5')
-          .update(`${v.data.coopHistoryDetail.id.playTime}:${v.data.coopHistoryDetail.id.uuid}`)
-          .digest('hex'),
-        uuid: v.data.coopHistoryDetail.id.uuid,
-        scale: v.data.coopHistoryDetail.scale,
-        myResult: {
-          ...v.data.coopHistoryDetail.myResult,
-          isMyself: true,
-          smellMeter: v.data.coopHistoryDetail.smellMeter,
-          jobRate: v.data.coopHistoryDetail.jobRate,
-          jobBonus: v.data.coopHistoryDetail.jobBonus,
-          jobScore: v.data.coopHistoryDetail.jobScore,
-          kumaPoint: v.data.coopHistoryDetail.jobPoint,
-          gradeId: v.data.coopHistoryDetail.afterGrade.id,
-          gradePoint: v.data.coopHistoryDetail.afterGradePoint,
-          bossKillCounts: v.data.coopHistoryDetail.enemyResults.bossKillCounts,
-          specialCounts: v.data.coopHistoryDetail.specialCounts.flatMap(
-            (count) => countBy(count)[v.data.coopHistoryDetail.myResult.specialId] || 0
-          )
-        },
-        otherResults: v.data.coopHistoryDetail.memberResults.map((result) => ({
-          ...result,
-          isMyself: false,
-          smellMeter: null,
-          jobRate: null,
-          jobBonus: null,
-          jobScore: null,
-          kumaPoint: null,
-          gradeId: null,
-          gradePoint: null,
-          bossKillCounts: Array.from({ length: 14 }, () => null),
-          specialCounts: v.data.coopHistoryDetail.specialCounts.flatMap(
-            (count) => countBy(count)[result.specialId] || 0
-          )
-        })),
-        waveDetails: v.data.coopHistoryDetail.waveResults.map((result) => ({
-          id: createHash('md5')
-            .update(`${v.data.coopHistoryDetail.id.playTime}:${v.data.coopHistoryDetail.id.uuid}:${result.waveId}`)
-            .digest('hex'),
-          isClear:
-            v.data.coopHistoryDetail.bossResult === null
-              ? v.data.coopHistoryDetail.resultWave === 0
-                ? true
-                : result.waveId < v.data.coopHistoryDetail.resultWave
-              : result.waveId < v.data.coopHistoryDetail.waveResults.length
-                ? true
-                : v.data.coopHistoryDetail.bossResult.isBossDefeated,
-          waveId: result.waveId,
-          waterLevel: result.waterLevel,
-          eventType: result.eventType,
-          quotaNum: result.quotaNum,
-          goldenIkuraPopNum: result.goldenIkuraPopNum,
-          goldenIkuraNum: result.goldenIkuraNum
-        })),
-        bossCounts: v.data.coopHistoryDetail.enemyResults.bossCounts,
-        bossKillCounts: v.data.coopHistoryDetail.enemyResults.teamBossKillCounts,
-        playTime: v.data.coopHistoryDetail.id.playTime,
-        // bossId: v.data.coopHistoryDetail.boss.id,
-        goldenIkuraNum: v.data.coopHistoryDetail.goldenIkuraNum,
-        goldenIkuraAssistNum: v.data.coopHistoryDetail.goldenIkuraAssistNum,
-        ikuraNum: v.data.coopHistoryDetail.ikuraNum,
-        dangerRate: v.data.coopHistoryDetail.dangerRate,
-        scenarioCode: v.data.coopHistoryDetail.scenarioCode,
-        // bossResult: v.data.coopHistoryDetail.bossResult,
-        bossResults: v.data.coopHistoryDetail.bossResults,
-        jobResult: {
-          failureWave: v.data.coopHistoryDetail.resultWave === 0 ? null : v.data.coopHistoryDetail.resultWave,
-          isClear: v.data.coopHistoryDetail.resultWave === 0,
-          bossId: v.data.coopHistoryDetail.bossResult?.bossId || null,
-          isBossDefeated: v.data.coopHistoryDetail.bossResult?.isBossDefeated ?? null
-        }
-      })
-    }
-  })
+  )
+    .transform((v) => v.data.coopHistoryDetail)
+    .transform((v) => ({
+      id: createHash('md5').update(`${v.id.playTime}:${v.id.uuid}`).digest('hex'),
+      uuid: v.id.uuid,
+      scale: v.scale,
+      myResult: {
+        ...v.myResult,
+        isMyself: true,
+        smellMeter: v.smellMeter,
+        jobRate: v.jobRate,
+        jobBonus: v.jobBonus,
+        jobScore: v.jobScore,
+        kumaPoint: v.jobPoint,
+        gradeId: v.afterGrade.id,
+        gradePoint: v.afterGradePoint,
+        bossKillCounts: v.enemyResults.bossKillCounts,
+        specialCounts: v.specialCounts.flatMap((count) => countBy(count)[v.myResult.specialId] || 0)
+      },
+      otherResults: v.memberResults.map((result) => ({
+        ...result,
+        isMyself: false,
+        smellMeter: null,
+        jobRate: null,
+        jobBonus: null,
+        jobScore: null,
+        kumaPoint: null,
+        gradeId: null,
+        gradePoint: null,
+        bossKillCounts: Array.from({ length: 14 }, () => null),
+        specialCounts: v.specialCounts.flatMap((count) => countBy(count)[result.specialId] || 0)
+      })),
+      waveDetails: v.waveResults.map((result) => ({
+        id: createHash('md5').update(`${v.id.playTime}:${v.id.uuid}:${result.waveId}`).digest('hex'),
+        isClear:
+          v.bossResult === null
+            ? v.resultWave === 0
+              ? true
+              : result.waveId < v.resultWave
+            : result.waveId < v.waveResults.length
+              ? true
+              : v.bossResult.isBossDefeated,
+        waveId: result.waveId,
+        waterLevel: result.waterLevel,
+        eventType: result.eventType,
+        quotaNum: result.quotaNum,
+        goldenIkuraPopNum: result.goldenIkuraPopNum,
+        goldenIkuraNum: result.goldenIkuraNum
+      })),
+      bossCounts: v.enemyResults.bossCounts,
+      bossKillCounts: v.enemyResults.teamBossKillCounts,
+      playTime: v.id.playTime,
+      // bossId: v.data.coopHistoryDetail.boss.id,
+      goldenIkuraNum: v.goldenIkuraNum,
+      goldenIkuraAssistNum: v.goldenIkuraAssistNum,
+      ikuraNum: v.ikuraNum,
+      dangerRate: v.dangerRate,
+      scenarioCode: v.scenarioCode,
+      // bossResult: v.data.coopHistoryDetail.bossResult,
+      bossResults: v.bossResults,
+      jobResult: {
+        failureWave: v.resultWave === 0 ? null : v.resultWave,
+        isClear: v.resultWave === 0,
+        bossId: v.bossResult?.bossId || null,
+        isBossDefeated: v.bossResult?.isBossDefeated ?? null
+      }
+    }))
+    .transform((v) => {
+      return {
+        ...v,
+        toJSON: () => v
+      }
+    })
+
+  export type CoopHistoryDetail = z.infer<typeof CoopHistoryDetail>
 }

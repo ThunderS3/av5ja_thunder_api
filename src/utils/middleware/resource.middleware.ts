@@ -3,8 +3,6 @@ import { S3URL } from '@/models/common/s3_url.dto'
 import { CoopHistoryQuery } from '@/models/coop_history.dto'
 import { CoopRecordQuery } from '@/models/coop_record.dto'
 import { CoopResultQuery } from '@/models/coop_result.dto'
-import { StageScheduleQuery } from '@/models/stage_schedule.dto'
-import { WeaponRecord, WeaponRecordQuery } from '@/models/weapon_record.dto'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
 import type { Bindings } from '../bindings'
@@ -43,22 +41,23 @@ export const resource = createMiddleware(async (c, next) => {
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     const body: any = await c.req.json()
     const assetURLs: S3URL[] = (() => {
-      switch (lastPath) {
-        case 'weapon_records':
-          return new WeaponRecordQuery(body).assetURLs
-        case 'records':
-          return new CoopRecordQuery(body).assetURLs
-        case 'results':
-          // リザルトのバックアップ作成
-          c.executionCtx.waitUntil(KV.HISTORY.set(c.env, body))
-          return new CoopResultQuery(body).assetURLs
-        case 'histories':
-          return new CoopHistoryQuery(body).assetURLs
-        case 'schedules':
-          return new StageScheduleQuery(body).assetURLs
-        default:
-          return []
-      }
+      return []
+      // switch (lastPath) {
+      //   case 'weapon_records':
+      //     return new WeaponRecordQuery(body).assetURLs
+      //   case 'records':
+      //     return new CoopRecordQuery(body).assetURLs
+      //   case 'results':
+      //     // リザルトのバックアップ作成
+      //     c.executionCtx.waitUntil(KV.HISTORY.set(c.env, body))
+      //     return new CoopResultQuery(body).assetURLs
+      //   case 'histories':
+      //     return new CoopHistoryQuery(body).assetURLs
+      //   case 'schedules':
+      //     return new StageScheduleQuery(body).assetURLs
+      //   default:
+      //     return []
+      // }
     })()
     c.executionCtx.waitUntil(Promise.all(assetURLs.map((url) => write_cache(c, url))))
   }

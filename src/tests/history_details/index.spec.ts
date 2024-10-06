@@ -23,7 +23,7 @@ describe('CoopHistoryDetailQuery', () => {
         console.error(JSON.stringify(CoopHistoryDetailQuery.CoopHistoryDetail.parse(JSON.parse(input)), null, 2))
         console.error(file, difference)
       }
-      // expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output))).toBe(true)
+      expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output))).toBe(true)
     }
   })
 })

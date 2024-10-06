@@ -31,7 +31,7 @@ export const app = new Hono<{ Bindings: Bindings }>()
 //       204: {
 //         description: 'ブキ記録'
 //       },
-//       ...BadRequestResponse()
+//       ...BadRequestResponse
 //     }
 //   }),
 //   async (c) => {
