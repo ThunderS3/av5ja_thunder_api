@@ -41,10 +41,10 @@ app.openapi(
   }),
   async (c) => {
     const body: CoopResultQuery.CoopHistory = c.req.valid('json')
-    // console.log(body.histories.map((history) => history.results))
-    c.executionCtx.waitUntil(
-      Promise.all(body.histories.flatMap((history) => history.results).map((result) => KV.RESULT.set(c.env, result)))
+    const results: CoopResultQuery.CoopResult[] = body.histories.flatMap((history) =>
+      history.results.map((result) => CoopResultQuery.CoopResult.parse(result))
     )
+    c.executionCtx.waitUntil(Promise.all(results.map((result) => KV.RESULT.set(c.env, result))))
     // await Promise.all(body.results.map((result) => Prisma.create(c, result)))
     return c.json(body)
   }
