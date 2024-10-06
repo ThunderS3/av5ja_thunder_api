@@ -2,6 +2,7 @@ import { CoopBossInfo, CoopEnemyInfo } from '@/enums/coop/coop_enemy'
 import { CoopGrade } from '@/enums/coop/coop_grade'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { CoopTrophy } from '@/enums/coop/coop_trophy'
+import { sortedJSON } from '@/utils/sorted'
 import { z } from '@hono/zod-openapi'
 import { CoopData } from './common/coop_data.dto'
 import { DateTime } from './common/datetime.dto'
@@ -129,7 +130,7 @@ export namespace CoopRecordQuery {
     }))
     .transform((v) => ({
       ...v,
-      toJSON: () => v
+      toJSON: () => sortedJSON(v)
     }))
 
   export type CoorRecord = z.infer<typeof CoorRecord>

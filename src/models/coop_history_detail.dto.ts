@@ -6,6 +6,7 @@ import { CoopRule } from '@/enums/coop/coop_rule'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { Species } from '@/enums/weapon/species'
+import { sortedJSON } from '@/utils/sorted'
 import { z } from '@hono/zod-openapi'
 import { countBy } from 'lodash'
 import { CoopData } from './common/coop_data.dto'
@@ -266,12 +267,10 @@ export namespace CoopHistoryDetailQuery {
         isBossDefeated: v.bossResult?.isBossDefeated ?? null
       }
     }))
-    .transform((v) => {
-      return {
-        ...v,
-        toJSON: () => v
-      }
-    })
+    .transform((v) => ({
+      ...v,
+      toJSON: () => sortedJSON(v)
+    }))
 
   export type CoopHistoryDetail = z.infer<typeof CoopHistoryDetail>
 }

@@ -3,6 +3,7 @@ import { CoopMode } from '@/enums/coop/coop_mode'
 import { CoopRule } from '@/enums/coop/coop_rule'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { WeaponInfoMain } from '@/enums/weapon/main'
+import { sortedJSON } from '@/utils/sorted'
 import { z } from '@hono/zod-openapi'
 import { DateTime } from './common/datetime.dto'
 

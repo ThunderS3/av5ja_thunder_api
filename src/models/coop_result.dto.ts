@@ -5,19 +5,36 @@ import { CoopWaterLevel } from '@/enums/coop/coop_water_level'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { Species } from '@/enums/weapon/species'
+import { sortedJSON } from '@/utils/sorted'
 import { z } from '@hono/zod-openapi'
 import { CoopHistoryDetailQuery } from './coop_history_detail.dto'
 import { CoopScheduleQuery } from './stage_schedule.dto'
 
 export namespace CoopResultQuery {
-  export const CoopHistory = z.object({
-    histories: z.array(
-      z.object({
-        schedule: CoopScheduleQuery.Schedule,
-        results: z.array(CoopHistoryDetailQuery.CoopHistoryDetail)
-      })
-    )
-  })
+  export const CoopHistory = z
+    .object({
+      histories: z.array(
+        z
+          .object({
+            schedule: CoopScheduleQuery.Schedule,
+            results: z.array(CoopHistoryDetailQuery.CoopHistoryDetail)
+          })
+          .transform((v) => ({
+            schedule: v.schedule,
+            results: v.results.map((result) =>
+              sortedJSON({
+                ...{ schedule: v.schedule },
+                ...result.toJSON()
+              })
+            )
+          }))
+          .transform((v) => v)
+      )
+    })
+    .transform((v) => ({
+      ...v,
+      toJSON: () => v
+    }))
 
   const Nameplate = z.object({
     badges: z.array(z.number().int().nullable()).length(3),

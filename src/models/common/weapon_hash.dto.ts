@@ -27,7 +27,6 @@ export const WeaponInfoMainId = z
     })
   })
   .transform((v) => {
-    console.log('[WEAPON INFO MAIN]:', v)
     const object: [string, WeaponInfoMain.Hash] | undefined = Object.entries(WeaponInfoMain.Hash).find(
       ([_, value]) => value === v.image.url.key
     )

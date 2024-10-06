@@ -12,7 +12,6 @@ export const RawId = <T extends z.EnumLike>(S: T) =>
       .string()
       .base64()
       .transform((v) => {
-        console.log('[RAW ID]:', v)
         const pattern: RegExp = /-([0-9-]+)$/
         const match: RegExpMatchArray | null = atob(v).match(pattern)
         if (match === null) {
@@ -32,7 +31,6 @@ export const RawInt = z.object({
     .string()
     .base64()
     .transform((v) => {
-      console.log('[RAW INT]:', v)
       const pattern: RegExp = /-([0-9-]+)$/
       const match: RegExpMatchArray | null = atob(v).match(pattern)
       if (match === null) {
