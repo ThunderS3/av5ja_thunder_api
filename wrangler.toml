@@ -20,6 +20,7 @@ head_sampling_rate = 1
 [triggers]
 crons = ["*/30 * * * *"]
 
+# ステージング環境
 [env.dev]
 workers_dev = true
 kv_namespaces = [
@@ -30,6 +31,8 @@ kv_namespaces = [
   { binding = "CACHES", id = "bbbe36203fcb4f62b93e4eade0e23e73", preview_id = "b7db71d6af57495db2229664d086aef6" },
   { binding = "HISTORIES", id = "2cacefebaf9c43cb9e8b5f742e1ba852", preview_id = "1d365df342844affae4c81dbbebad1e0" },
 ]
+
+[env.dev.vars]
 
 [env.dev.observability]
 enabled = true
