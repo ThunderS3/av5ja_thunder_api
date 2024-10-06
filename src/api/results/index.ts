@@ -4,6 +4,7 @@ import { CoopResultQuery } from '@/models/coop_result.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
 import { KV } from '@/utils/kv'
+import { Prisma } from '@/utils/prisma'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()
@@ -45,7 +46,7 @@ app.openapi(
       history.results.map((result) => CoopResultQuery.CoopResult.parse(result))
     )
     c.executionCtx.waitUntil(Promise.all(results.map((result) => KV.RESULT.set(c.env, result))))
-    // await Promise.all(body.results.map((result) => Prisma.create(c, result)))
+    c.executionCtx.waitUntil(Promise.all(results.map((result) => Prisma.create(c, result))))
     return c.json(body)
   }
 )

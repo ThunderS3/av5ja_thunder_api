@@ -86,7 +86,7 @@ export namespace CoopResultQuery {
     gradeId: z.nativeEnum(CoopGrade.Id).nullable(),
     gradePoint: z.number().int().min(0).max(999).nullable(),
     bossKillCounts: z.array(z.number().int().min(0).nullable()).length(14),
-    specialCounts: z.array(z.number().int().min(0).nullable())
+    specialCounts: z.array(z.number().int().min(0))
   })
 
   const JobResult = z.object({
@@ -96,12 +96,10 @@ export namespace CoopResultQuery {
     isBossDefeated: z.boolean().nullable()
   })
 
-  const BossResult = z
-    .object({
-      bossId: z.nativeEnum(CoopBossInfo.Id),
-      isBossDefeated: z.boolean()
-    })
-    .nullable()
+  const BossResult = z.object({
+    bossId: z.nativeEnum(CoopBossInfo.Id),
+    isBossDefeated: z.boolean()
+  })
 
   export const CoopResult = z.object({
     id: z.string().length(32),
@@ -110,15 +108,17 @@ export namespace CoopResultQuery {
     myResult: MemberResult,
     otherResults: z.array(MemberResult),
     waveDetails: z.array(WaveResult),
-    bossCounts: z.array(z.number().int().min(0).nullable()).length(14),
-    bossKillCounts: z.array(z.number().int().min(0).nullable()).length(14),
+    bossCounts: z.array(z.number().int().min(0)).length(14),
+    bossKillCounts: z.array(z.number().int().min(0)).length(14),
     playTime: z.string().datetime(),
     goldenIkuraNum: z.number().int().min(0),
+    goldenIkuraAssistNum: z.number().int().min(0),
     ikuraNum: z.number().int().min(0),
     dangerRate: z.number().min(0).max(3.33),
     scenarioCode: z.string().nullable(),
     bossResults: z.array(BossResult).nullable(),
-    jobResult: JobResult
+    jobResult: JobResult,
+    schedule: CoopScheduleQuery.Schedule
   })
 
   export type CoopResult = z.infer<typeof CoopResult>

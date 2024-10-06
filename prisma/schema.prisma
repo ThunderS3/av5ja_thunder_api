@@ -39,7 +39,7 @@ model Schedule {
 model Result {
   id                   String   @id @db.Char(32)
   uuid                 String   @map("uuid") @db.Uuid
-  playTime             DateTime @map("play_time") @db.Date
+  playTime             DateTime @map("play_time") @db.Timestamp(3)
   bossCounts           Int[]    @map("boss_counts") @db.SmallInt
   bossKillCounts       Int[]    @map("boss_kill_counts") @db.SmallInt
   ikuraNum             Int      @map("ikura_num") @db.SmallInt
@@ -58,8 +58,8 @@ model Result {
   isRopeDefeated       Boolean? @map("is_rope_defeated") @db.Boolean
   isJawDefeated        Boolean? @map("is_jaw_defeated") @db.Boolean
   scenarioCode         String?  @map("scenario_code")
-  createdAt            DateTime @default(now()) @db.Date
-  updatedAt            DateTime @updatedAt @db.Date
+  createdAt            DateTime @default(now()) @db.Timestamp(3)
+  updatedAt            DateTime @updatedAt @db.Timestamp(3)
 
   schedule   Schedule @relation("results", fields: [scheduleId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   scheduleId String   @map("schedule_id") @db.Char(32)
@@ -73,7 +73,7 @@ model Result {
 model Wave {
   id                String   @id @db.Char(32)
   uuid              String   @map("uuid") @db.Uuid
-  playTime          DateTime @map("play_time") @db.Date
+  playTime          DateTime @map("play_time") @db.Timestamp(3)
   waveId            Int      @map("wave_id") @db.SmallInt
   waterLevel        Int      @map("water_level") @db.SmallInt
   eventType         Int      @map("event_type") @db.SmallInt
@@ -81,8 +81,8 @@ model Wave {
   goldenIkuraPopNum Int      @map("golden_ikura_pop_num") @db.SmallInt
   quotaNum          Int?     @map("quota_num") @db.SmallInt
   isClear           Boolean  @map("is_clear") @db.Boolean
-  createdAt         DateTime @default(now()) @db.Date
-  updatedAt         DateTime @updatedAt @db.Date
+  createdAt         DateTime @default(now()) @db.Timestamp(3)
+  updatedAt         DateTime @updatedAt @db.Timestamp(3)
   result            Result   @relation("waves", fields: [resultId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   resultId          String   @map("result_id") @db.Char(32)
 
@@ -92,38 +92,39 @@ model Wave {
 }
 
 model Player {
-  id                   String   @id @db.Char(32)
-  uuid                 String   @map("uuid") @db.Uuid
-  nplnUserId           String   @map("npln_user_id") @db.Char(20)
-  playTime             DateTime @map("play_time") @db.Date
+  id                   String    @id @db.Char(32)
+  uuid                 String    @map("uuid") @db.Uuid
+  nplnUserId           String    @map("npln_user_id") @db.Char(20)
+  playTime             DateTime  @map("play_time") @db.Timestamp(3)
   name                 String
-  byname               String   @map("by_name")
-  nameId               String   @map("name_id")
+  byname               String    @map("by_name")
+  nameId               String    @map("name_id")
   badges               Int[]
-  nameplateId          Int      @map("nameplate") @db.SmallInt
-  textColor            Int[]    @map("text_color")
-  uniform              Int      @db.SmallInt
-  bossKillCountsTotal  Int      @map("boss_kill_counts_total") @db.SmallInt
-  bossKillCounts       Int[]    @map("boss_kill_counts") @db.SmallInt
-  deadCount            Int      @map("dead_count") @db.SmallInt
-  helpCount            Int      @map("help_count") @db.SmallInt
-  ikuraNum             Int      @map("ikura_num") @db.SmallInt
-  goldenIkuraNum       Int      @map("golden_ikura_num") @db.SmallInt
-  goldenIkuraAssistNum Int      @map("golden_ikura_assist_num") @db.SmallInt
-  jobBonus             Int?     @map("job_bonus_rate") @db.SmallInt
-  jobRate              Int      @map("job_rate") @db.SmallInt
-  jobScore             Int?     @map("job_score") @db.SmallInt
-  kumaPoint            Int?     @map("kuma_point") @db.SmallInt
-  gradeId              Int?     @map("grade_id") @db.SmallInt
-  gradePoint           Int?     @map("grade_point") @db.SmallInt
-  smellMeter           Int?     @map("smell_meter") @db.SmallInt
+  nameplate            Int
+  textColor            Decimal[] @map("text_color")
+  uniform              Int       @db.SmallInt
+  bossKillCountsTotal  Int       @map("boss_kill_counts_total") @db.SmallInt
+  bossKillCounts       Int[]     @map("boss_kill_counts") @db.SmallInt
+  deadCount            Int       @map("dead_count") @db.SmallInt
+  helpCount            Int       @map("help_count") @db.SmallInt
+  ikuraNum             Int       @map("ikura_num") @db.SmallInt
+  goldenIkuraNum       Int       @map("golden_ikura_num") @db.SmallInt
+  goldenIkuraAssistNum Int       @map("golden_ikura_assist_num") @db.SmallInt
+  jobBonus             Int?      @map("job_bonus_rate") @db.SmallInt
+  jobRate              Decimal?  @map("job_rate") @db.Decimal(3, 2)
+  jobScore             Int?      @map("job_score") @db.SmallInt
+  kumaPoint            Int?      @map("kuma_point") @db.SmallInt
+  gradeId              Int?      @map("grade_id") @db.SmallInt
+  gradePoint           Int?      @map("grade_point") @db.SmallInt
+  smellMeter           Int?      @map("smell_meter") @db.SmallInt
   species              String
-  specialId            Int?     @map("special_id") @db.SmallInt
-  specialCount         Int[]    @map("special_count") @db.SmallInt
-  createdAt            DateTime @default(now()) @db.Date
-  updatedAt            DateTime @updatedAt @db.Date
-  result               Result   @relation("players", fields: [resultId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  resultId             String   @map("result_id") @db.Char(32)
+  specialId            Int?      @map("special_id") @db.SmallInt
+  specialCounts        Int[]     @map("special_count") @db.SmallInt
+  weaponList           Int[]     @map("weapon_list") @db.SmallInt
+  createdAt            DateTime  @default(now()) @db.Timestamp(3)
+  updatedAt            DateTime  @updatedAt @db.Timestamp(3)
+  result               Result    @relation("players", fields: [resultId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  resultId             String    @map("result_id") @db.Char(32)
 
   @@index([nplnUserId])
   @@index([name])
