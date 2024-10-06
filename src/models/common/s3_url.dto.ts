@@ -7,6 +7,7 @@ import dayjs from 'dayjs'
 export const S3URL = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   (input: any) => {
+    if (input === null) return input
     const url: URL = new URL(input)
     const expires: string | null = url.searchParams.get('Expires')
     const expires_in: number = expires === null ? 0 : Number.parseInt(expires, 10)

@@ -28,15 +28,15 @@ app.openapi(
       }
     },
     responses: {
-      200: {
-        content: {
-          // 'application/json': {
-          //   schema: CoopHistory.Response
-          // }
-        },
-        description: 'リザルト一覧'
-      },
-      ...BadRequestResponse
+      // 200: {
+      //   content: {
+      //     // 'application/json': {
+      //     //   schema: CoopHistory.Response
+      //     // }
+      //   },
+      //   description: 'リザルト一覧'
+      // },
+      // ...BadRequestResponse
     }
   }),
   async (c) => {

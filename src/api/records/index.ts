@@ -1,5 +1,6 @@
 import { HTTPMethod } from '@/enums/method'
 import { CoopRecordQuery } from '@/models/coop_record.dto'
+import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
 import { resource } from '@/utils/middleware/resource.middleware'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
@@ -29,11 +30,12 @@ app.openapi(
       201: {
         content: {
           // 'application/json': {
-          // schema: CoopRecordQuery.Response
+          //   schema: CoopRecordQuery.CoorRecord
           // }
         },
         description: 'サーモンラン記録'
-      }
+      },
+      ...BadRequestResponse
     }
   }),
   async (c) => {

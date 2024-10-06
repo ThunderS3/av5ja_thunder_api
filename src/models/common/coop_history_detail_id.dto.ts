@@ -4,6 +4,7 @@ import dayjs from 'dayjs'
 export const CoopHistoryDetailId = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   (input: any) => {
+    if (input === null) return input
     if (typeof input !== 'string') {
       return input
     }
