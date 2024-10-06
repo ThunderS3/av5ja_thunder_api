@@ -26,24 +26,19 @@ export const RawId = <T extends z.EnumLike>(S: T) =>
  * @param S
  * @returns
  */
-export const RawInt = z.preprocess(
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  (input: any) => {
-    const pattern: RegExp = /-([0-9-]+)$/
-    const match: RegExpMatchArray | null = atob(input as string).match(pattern)
-    if (match === null) {
-      return input
-    }
-    const value: number = Number.parseInt(match[1], 10)
-    if (Number.isNaN(value)) {
-      return input
-    }
-    return value
-  },
-  z.object({
-    id: z.number().int()
-  })
-)
+export const RawInt = z.object({
+  id: z
+    .string()
+    .base64()
+    .transform((v) => {
+      const pattern: RegExp = /-([0-9-]+)$/
+      const match: RegExpMatchArray | null = atob(v).match(pattern)
+      if (match === null) {
+        throw new HTTPException(400, { message: `Invalid Base64 String ${v}` })
+      }
+      return z.number().int().parse(Number.parseInt(match[1], 10))
+    })
+})
 
 export type RawInt = z.infer<typeof RawInt>
 export type RawId<T extends z.EnumLike> = z.infer<ReturnType<typeof RawId<T>>>

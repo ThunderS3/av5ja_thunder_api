@@ -240,15 +240,15 @@
           "bossResults": [
             {
               "bossId": 23,
-              "isDefeated": true
+              "isBossDefeated": true
             },
             {
               "bossId": 24,
-              "isDefeated": true
+              "isBossDefeated": true
             },
             {
               "bossId": 25,
-              "isDefeated": true
+              "isBossDefeated": true
             }
           ],
           "playTime": "2024-09-08T17:46:14.000Z",
