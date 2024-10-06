@@ -1,12 +1,8 @@
 import { HTTPMethod } from '@/enums/method'
 import { S3URL } from '@/models/common/s3_url.dto'
-import { CoopHistoryQuery } from '@/models/coop_history.dto'
-import { CoopRecordQuery } from '@/models/coop_record.dto'
-import { CoopResultQuery } from '@/models/coop_result.dto'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
 import type { Bindings } from '../bindings'
-import { KV } from '../kv'
 
 /**
  * リソースとしてURLを書き込む
@@ -22,44 +18,29 @@ const write_cache = async (c: Context<{ Bindings: Bindings }>, url: S3URL) => {
   if (cache === null) {
     console.info('[RESOURCE CREATE]:', null, '-->', url.version, url.key)
     await c.env.RESOURCES.put(url.key, url.raw_value, { expiration: url.expiration })
+    return
   }
   const data: S3URL = S3URL.parse(cache)
   if (data.expiration < url.expiration || data.version < url.version) {
     console.info('[RESOURCE UPDATE]:', data.version, '-->', url.version, url.key)
     await c.env.RESOURCES.put(url.key, url.raw_value, { expiration: url.expiration })
+    return
   }
 }
 
+const update_cache = async (c: Context<{ Bindings: Bindings }>) => {
+  const body: string = await c.req.text()
+  const pattern: RegExp = /https:\/\/api\.lp1\.av5ja\.srv\.nintendo\.net\/resources\/prod[^\s"]*/g
+  const urls: S3URL[] = Array.from(new Set(body.match(pattern) || [])).map((url) => S3URL.parse(url))
+  await Promise.all(urls.map((url) => write_cache(c, url)))
+}
+
 /**
- * 指定されたエンドポイントがコールされた場合、JSONを解析してリソースのURLをキャッシュに書き込む
- * また、送られてきた全てのリザルトのバックアップを作成する
+ * JSONを正規表現で検索してURLを抽出する
  */
 export const resource = createMiddleware(async (c, next) => {
-  const url: URL = new URL(c.req.url)
-  const lastPath: string = url.pathname.split('/').slice(-1)[0]
   if (c.req.method.toLowerCase() === HTTPMethod.POST) {
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-    const body: any = await c.req.json()
-    const assetURLs: S3URL[] = (() => {
-      return []
-      // switch (lastPath) {
-      //   case 'weapon_records':
-      //     return new WeaponRecordQuery(body).assetURLs
-      //   case 'records':
-      //     return new CoopRecordQuery(body).assetURLs
-      //   case 'results':
-      //     // リザルトのバックアップ作成
-      //     c.executionCtx.waitUntil(KV.HISTORY.set(c.env, body))
-      //     return new CoopResultQuery(body).assetURLs
-      //   case 'histories':
-      //     return new CoopHistoryQuery(body).assetURLs
-      //   case 'schedules':
-      //     return new StageScheduleQuery(body).assetURLs
-      //   default:
-      //     return []
-      // }
-    })()
-    c.executionCtx.waitUntil(Promise.all(assetURLs.map((url) => write_cache(c, url))))
+    c.executionCtx.waitUntil(update_cache(c))
   }
   await next()
 })
