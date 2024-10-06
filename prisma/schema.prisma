@@ -14,6 +14,24 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+enum Rule {
+  REGULAR
+  BIG_RUN
+  TEAM_CONTEST
+}
+
+enum Mode {
+  REGULAR
+  LIMITED
+  PRIVATE_CUSTOM
+  PRIVATE_SCENARIO
+}
+
+enum Species {
+  INKLING
+  OCTOLING
+}
+
 model Schedule {
   id          String    @id @db.Char(32)
   startTime   DateTime? @map("start_time") @db.Date
@@ -21,8 +39,8 @@ model Schedule {
   stageId     Int?      @map("stage_id") @db.SmallInt
   bossId      Int?      @map("boss_id") @db.SmallInt
   weaponList  Int[]     @map("weapon_list") @db.SmallInt
-  mode        String
-  rule        String
+  mode        Mode
+  rule        Rule
   rareWeapons Int[]     @map("rare_weapons") @db.SmallInt
   createdAt   DateTime  @default(now()) @db.Date
   updatedAt   DateTime  @updatedAt @db.Date
@@ -117,7 +135,7 @@ model Player {
   gradeId              Int?      @map("grade_id") @db.SmallInt
   gradePoint           Int?      @map("grade_point") @db.SmallInt
   smellMeter           Int?      @map("smell_meter") @db.SmallInt
-  species              String
+  species              Species
   specialId            Int?      @map("special_id") @db.SmallInt
   specialCounts        Int[]     @map("special_count") @db.SmallInt
   weaponList           Int[]     @map("weapon_list") @db.SmallInt
