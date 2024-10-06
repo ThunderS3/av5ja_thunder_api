@@ -1,8 +1,8 @@
 import { HTTPMethod } from '@/enums/method'
+import { resource } from '@/middleware/resource.middleware'
 import { CoopHistoryQuery } from '@/models/coop_history.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
-import { resource } from '@/utils/middleware/resource.middleware'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 
 export const app = new Hono<{ Bindings: Bindings }>()
@@ -28,15 +28,15 @@ app.openapi(
       }
     },
     responses: {
-      // 200: {
-      //   content: {
-      //     // 'application/json': {
-      //     //   schema: CoopHistory.Response
-      //     // }
-      //   },
-      //   description: 'リザルト一覧'
-      // },
-      // ...BadRequestResponse
+      200: {
+        content: {
+          // 'application/json': {
+          //     //   schema: CoopHistory.Response
+          //     // }
+        },
+        description: 'リザルト一覧'
+      },
+      ...BadRequestResponse
     }
   }),
   async (c) => {

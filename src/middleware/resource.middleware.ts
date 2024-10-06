@@ -2,7 +2,7 @@ import { HTTPMethod } from '@/enums/method'
 import { S3URL } from '@/models/common/s3_url.dto'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
-import type { Bindings } from '../bindings'
+import type { Bindings } from '../utils/bindings'
 
 /**
  * リソースとしてURLを書き込む
