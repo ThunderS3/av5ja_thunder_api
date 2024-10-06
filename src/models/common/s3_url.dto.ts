@@ -1,6 +1,9 @@
 import { z } from '@hono/zod-openapi'
 import dayjs from 'dayjs'
 
+/**
+ * AWS S3のURLをパースする
+ */
 export const S3URL = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   (input: any) => {
@@ -33,11 +36,11 @@ export const S3URL = z.preprocess(
   })
 )
 
-export const S3ImageURL = z.object({
+export const ImageURL = z.object({
   image: z.object({
     url: S3URL
   })
 })
 
 export type S3URL = z.infer<typeof S3URL>
-export type S3ImageURL = z.infer<typeof S3ImageURL>
+export type ImageURL = z.infer<typeof ImageURL>

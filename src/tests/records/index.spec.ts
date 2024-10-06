@@ -8,7 +8,8 @@ describe('CoopRecordQuery', () => {
     const files: string[] = readdirSync(path.join(__dirname, 'input')).filter((file) => file.endsWith('.json'))
     for (const file of files) {
       const data: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
-      expect(() => new CoopRecordQuery(JSON.parse(data))).not.toThrow()
+      expect(() => CoopRecordQuery.CoorRecord.parse(JSON.parse(data))).not.toThrow()
+      // console.log(JSON.stringify(CoopRecordQuery.CoorRecord.parse(JSON.parse(data)), null, 2))
     }
   })
   test('Equality', () => {
@@ -16,7 +17,7 @@ describe('CoopRecordQuery', () => {
     for (const file of files) {
       const input: string = readFileSync(path.join(__dirname, 'input', file), { encoding: 'utf8' })
       const output: string = readFileSync(path.join(__dirname, 'output', file), { encoding: 'utf8' })
-      const input_model: CoopRecordQuery = new CoopRecordQuery(JSON.parse(input))
+      const input_model = CoopRecordQuery.CoorRecord.parse(JSON.parse(input))
       expect(Bun.deepEquals(JSON.parse(JSON.stringify(input_model)), JSON.parse(output), false)).toBe(true)
     }
   })
