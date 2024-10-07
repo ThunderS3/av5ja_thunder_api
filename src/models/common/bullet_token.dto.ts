@@ -1,4 +1,4 @@
-import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { z } from '@hono/zod-openapi'
 
 export const BulletToken = z.object({
   bulletToken: z.string(),

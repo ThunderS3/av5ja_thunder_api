@@ -1,9 +1,13 @@
 import { z } from '@hono/zod-openapi'
 import dayjs from 'dayjs'
 
+/**
+ * AWS S3のURLをパースする
+ */
 export const S3URL = z.preprocess(
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   (input: any) => {
+    if (input === null) return input
     const url: URL = new URL(input)
     const expires: string | null = url.searchParams.get('Expires')
     const expires_in: number = expires === null ? 0 : Number.parseInt(expires, 10)
@@ -33,11 +37,11 @@ export const S3URL = z.preprocess(
   })
 )
 
-export const S3ImageURL = z.object({
+export const ImageURL = z.object({
   image: z.object({
     url: S3URL
   })
 })
 
 export type S3URL = z.infer<typeof S3URL>
-export type S3ImageURL = z.infer<typeof S3ImageURL>
+export type ImageURL = z.infer<typeof ImageURL>

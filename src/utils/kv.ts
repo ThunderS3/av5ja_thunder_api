@@ -1,12 +1,12 @@
 import { CoopBossInfo, CoopEnemyInfo } from '@/enums/coop/coop_enemy'
 import { CoopStage } from '@/enums/coop/coop_stage'
 import { ImageType } from '@/enums/image_type'
-import { UIImg } from '@/enums/ui_img/ui_img'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { CoopPlayerId } from '@/models/common/coop_player_id.dto'
-import { CoopHistoryDetail } from '@/models/coop_history_detail.dto'
-import type { CoopResult } from '@/models/coop_result.dto'
+import { CoopHistoryQuery } from '@/models/coop_history.dto'
+import { CoopHistoryDetailQuery } from '@/models/coop_history_detail.dto'
+import type { CoopResultQuery } from '@/models/coop_result.dto'
 import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
 import dayjs, { type Dayjs } from 'dayjs'
@@ -146,7 +146,7 @@ export namespace KV {
      * @returns
      */
 
-    export const set = async (env: Bindings, result: CoopHistoryDetail.Response): Promise<void> => {
+    export const set = async (env: Bindings, result: CoopResultQuery.CoopResult): Promise<void> => {
       try {
         console.info('[SET RESULT]:', result.playTime, '-->', result.myResult.nplnUserId)
         await env.RESULTS.put(`${result.myResult.nplnUserId}:${result.playTime}`, JSON.stringify(result))

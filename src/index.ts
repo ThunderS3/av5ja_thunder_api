@@ -18,12 +18,10 @@ import { app as results } from './api/results'
 import { app as schedules } from './api/schedules'
 import { app as users } from './api/users'
 import { app as version } from './api/version'
-import { app as weapon_records } from './api/weapon_records'
 import type { Bindings } from './utils/bindings'
 import { scheduled } from './utils/handler/scheduled'
 import { reference, specification } from './utils/openapi'
 
-const isProduction: boolean = process.env.NODE_ENV === 'production'
 const app = new Hono<{ Bindings: Bindings; Variables: Variables }>()
 
 app.openAPIRegistry.registerComponent('securitySchemes', 'Bearer', {
@@ -71,14 +69,13 @@ app.onError((error, c) => {
     console.error(JSON.parse(error.message))
     return c.json({ message: JSON.parse(error.message), description: error.cause }, 400)
   }
+  console.error(error.message)
   return c.json({ message: error.message }, 500)
 })
 app.route('/v3/schedules', schedules)
-// app.route('/v1/resources', resources)
 app.route('/v3/results', results)
 app.route('/v1/histories', histories)
 app.route('/v1/records', records)
-app.route('/v1/weapon_records', weapon_records)
 app.route('/v1/version', version)
 app.route('/v1/auth', auth)
 app.route('/v1/users', users)
