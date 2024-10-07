@@ -131,3 +131,5 @@ export namespace CoopResultQuery {
   export type CoopResult = z.infer<typeof CoopResult>
   export type CoopHistory<T extends z.ZodTypeAny> = z.infer<T>
 }
+
+export type CoopResult = z.infer<typeof CoopResultQuery.CoopResult>

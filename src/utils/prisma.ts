@@ -1,4 +1,4 @@
-import type { CoopResultQuery } from '@/models/coop_result.dto'
+import type { CoopResult, CoopResultQuery } from '@/models/coop_result.dto'
 import type { CoopScheduleQuery } from '@/models/stage_schedule.dto'
 import type { z } from '@hono/zod-openapi'
 import { PrismaClient } from '@prisma/client/edge'
@@ -50,17 +50,15 @@ export namespace Prisma {
   export namespace RESULT {
     export const create = async (
       c: Context<{ Bindings: Bindings }>,
-      data: CoopResultQuery.CoopHistory<CoopResult>
+      data: CoopResultQuery.CoopHistory<z.ZodTypeAny>
     ): Promise<void> => {
       const prisma = Prisma(c)
       // スケジュールだけ先に書き込む
-      const schedules: CoopScheduleQuery.Schedule[] = data.histories.map(
-        (history: CoopResultQuery.CoopHistory<CoopResult>) => history.schedule
-      )
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      const schedules: CoopScheduleQuery.Schedule[] = data.histories.map((history: any) => history.schedule)
       console.info(await SCHEDULE.create(prisma, schedules))
-      const results: CoopResultQuery.CoopResult[] = data.histories.flatMap(
-        (history: CoopResultQuery.CoopHistory<CoopResult>) => history.results
-      )
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      const results: CoopResultQuery.CoopResult[] = data.histories.flatMap((history: any) => history.results)
       console.info(await Promise.all(results.map((result) => upsert(prisma, result))))
       await prisma.$disconnect()
     }
