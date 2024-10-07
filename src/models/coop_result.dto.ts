@@ -11,30 +11,31 @@ import { CoopHistoryDetailQuery } from './coop_history_detail.dto'
 import { CoopScheduleQuery } from './stage_schedule.dto'
 
 export namespace CoopResultQuery {
-  export const CoopHistory = z
-    .object({
-      histories: z.array(
-        z
-          .object({
-            schedule: CoopScheduleQuery.Schedule,
-            results: z.array(CoopHistoryDetailQuery.CoopHistoryDetail)
-          })
-          .transform((v) => ({
-            schedule: v.schedule,
-            results: v.results.map((result) =>
-              sortedJSON({
-                ...{ schedule: v.schedule },
-                ...result.toJSON()
-              })
-            )
-          }))
-          .transform((v) => v)
-      )
-    })
-    .transform((v) => ({
-      ...v,
-      toJSON: () => v
-    }))
+  export const CoopHistory = <T extends z.ZodTypeAny>(S: T) =>
+    z
+      .object({
+        histories: z.array(
+          z
+            .object({
+              schedule: CoopScheduleQuery.Schedule,
+              results: z.array(S)
+            })
+            .transform((v) => ({
+              schedule: v.schedule,
+              results: v.results.map((result) =>
+                sortedJSON({
+                  ...{ schedule: v.schedule },
+                  ...result.toJSON()
+                })
+              )
+            }))
+            .transform((v) => v)
+        )
+      })
+      .transform((v) => ({
+        ...v,
+        toJSON: () => v
+      }))
 
   const Nameplate = z.object({
     badges: z.array(z.number().int().nullable()).length(3),
@@ -90,7 +91,7 @@ export namespace CoopResultQuery {
   })
 
   const JobResult = z.object({
-    failureWave: z.number().int().min(0).max(4).nullable(),
+    failureWave: z.number().int().min(-1).max(4).nullable(),
     isClear: z.boolean(),
     bossId: z.nativeEnum(CoopBossInfo.Id).nullable(),
     isBossDefeated: z.boolean().nullable()
@@ -101,26 +102,32 @@ export namespace CoopResultQuery {
     isBossDefeated: z.boolean()
   })
 
-  export const CoopResult = z.object({
-    id: z.string().length(32),
-    uuid: z.string().uuid(),
-    scale: z.array(z.number().int().min(0).max(39).nullable()),
-    myResult: MemberResult,
-    otherResults: z.array(MemberResult),
-    waveDetails: z.array(WaveResult),
-    bossCounts: z.array(z.number().int().min(0)).length(14),
-    bossKillCounts: z.array(z.number().int().min(0)).length(14),
-    playTime: z.string().datetime(),
-    goldenIkuraNum: z.number().int().min(0),
-    goldenIkuraAssistNum: z.number().int().min(0),
-    ikuraNum: z.number().int().min(0),
-    dangerRate: z.number().min(0).max(3.33),
-    scenarioCode: z.string().nullable(),
-    bossResults: z.array(BossResult).nullable(),
-    jobResult: JobResult,
-    schedule: CoopScheduleQuery.Schedule
-  })
+  export const CoopResult = z
+    .object({
+      id: z.string().length(32),
+      uuid: z.string().uuid(),
+      schedule: CoopScheduleQuery.Schedule,
+      scale: z.array(z.number().int().min(0).max(39).nullable()),
+      myResult: MemberResult,
+      otherResults: z.array(MemberResult),
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      waveDetails: z.preprocess((input: any) => (input === null ? [] : input), z.array(WaveResult)),
+      bossCounts: z.array(z.number().int().min(0)).length(14),
+      bossKillCounts: z.array(z.number().int().min(0)).length(14),
+      playTime: z.string().datetime(),
+      goldenIkuraNum: z.number().int().min(0),
+      goldenIkuraAssistNum: z.number().int().min(0),
+      ikuraNum: z.number().int().min(0),
+      dangerRate: z.number().min(0).max(3.33),
+      scenarioCode: z.string().nullable(),
+      bossResults: z.array(BossResult).nullable(),
+      jobResult: JobResult
+    })
+    .transform((v) => ({
+      ...v,
+      toJSON: () => v
+    }))
 
   export type CoopResult = z.infer<typeof CoopResult>
-  export type CoopHistory = z.infer<typeof CoopHistory>
+  export type CoopHistory<T extends z.ZodTypeAny> = z.infer<T>
 }
