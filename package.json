@@ -13,8 +13,8 @@
   "scripts": {
     "deploy": "wrangler deploy --env dev",
     "dev": "wrangler dev --test-scheduled",
-    "generate": "generate --no-engine",
-    "migrate": "migrate dev",
+    "generate": "prisma generate --no-engine",
+    "migrate": "prisma migrate dev",
     "prepare": "husky",
     "reset": "migrate reset",
     "start": "bun dist/index.js"
