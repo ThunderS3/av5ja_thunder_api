@@ -120,8 +120,11 @@ app.openapi(
     if (user === null || user.npln_user_id === null) {
       throw new HTTPException(404, { message: 'Not Found.' })
     }
-    console.log(user.npln_user_id)
-    const list = await KV.RESULT.list(c.env, user.npln_user_id, 10)
-    return c.json(list)
+    const list = await KV.RESULT.list(c.env, user.npln_user_id, 200)
+    const keys: string[] = list.keys.map((key) => key.name)
+    const results = (await Promise.allSettled(keys.map((key) => KV.RESULT.get(c.env, key)))).filter(
+      (result) => result.status === 'fulfilled'
+    )
+    return c.json({ results: results.map((result) => result.value), count: results.length })
   }
 )
