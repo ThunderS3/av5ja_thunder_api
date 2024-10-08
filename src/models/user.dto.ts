@@ -26,7 +26,7 @@ export namespace Thunder {
     jti: z.string().uuid(),
     nbf: z.number().min(0),
     sub: z.string(),
-    typ: z.enum(['access_token']),
+    typ: z.enum(['access_token', 'id_token']),
     usr: User
   })
 
