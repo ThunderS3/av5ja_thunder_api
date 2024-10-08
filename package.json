@@ -11,16 +11,18 @@
     }
   },
   "scripts": {
+    "deploy": "wrangler deploy --env dev",
     "dev": "wrangler dev --test-scheduled",
-    "start": "bun dist/index.js",
+    "generate": "generate --no-engine",
+    "migrate": "migrate dev",
     "prepare": "husky",
-    "deploy": "bunx wrangler deploy",
-    "deploy:dev": "bunx wrangler deploy --env dev"
+    "reset": "migrate reset",
+    "start": "bun dist/index.js"
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
     "@prisma/extension-accelerate": "^1.2.1",
-    "@scalar/hono-api-reference": "^0.5.150",
+    "@scalar/hono-api-reference": "^0.5.152",
     "dayjs": "^1.11.13",
     "hono": "^4.6.3",
     "lodash": "^4.17.21",

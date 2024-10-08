@@ -86,6 +86,7 @@ export namespace Prisma {
           gold: result.scale === null ? null : result.scale[2],
           isClear: result.jobResult.isClear,
           failureWave: result.jobResult.failureWave,
+          bossId: result.jobResult.bossId,
           isBossDefeated: result.jobResult.isBossDefeated,
           isGiantDefeated: bossResults[0],
           isRopeDefeated: bossResults[1],

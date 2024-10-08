@@ -101,7 +101,12 @@ app.openapi(
     middleware: [bearerToken],
     summary: '一覧詳細',
     description: 'リザルト一覧詳細を返します',
-    request: {},
+    request: {
+      query: z.object({
+        limit: z.number().int().min(1).max(100).default(50),
+        cursor: z.string().optional()
+      })
+    },
     responses: {
       200: {
         content: {
@@ -116,15 +121,25 @@ app.openapi(
   }),
   async (c) => {
     const { sub } = c.get('jwtPayload')
+    const { limit, cursor } = c.req.valid('query')
     const user = await KV.USER.get(c.env, sub)
-    if (user === null || user.npln_user_id === null) {
+    if (user === null) {
       throw new HTTPException(404, { message: 'Not Found.' })
     }
-    const list = await KV.RESULT.list(c.env, user.npln_user_id, 200)
+    if (user.membership === false && cursor !== undefined) {
+      throw new HTTPException(403, { message: 'Forbidden.' })
+    }
+    const list = await KV.RESULT.list(c.env, user.npln_user_id, limit, cursor)
     const keys: string[] = list.keys.map((key) => key.name)
     const results = (await Promise.allSettled(keys.map((key) => KV.RESULT.get(c.env, key)))).filter(
       (result) => result.status === 'fulfilled'
     )
-    return c.json({ results: results.map((result) => result.value), count: results.length })
+    return c.json({
+      results: results.map((result) => result.value),
+      count: results.length,
+      complete: list.list_complete,
+      // @ts-ignore
+      cursor: list.cursor
+    })
   }
 )

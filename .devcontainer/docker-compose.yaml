@@ -1,13 +1,16 @@
 services:
-  node:
+  hono:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 18787:8787
+      - 18787:18787
     volumes:
       - node_modules:/home/vscode/app/node_modules
       - ../:/home/vscode/app:cached
+    networks:
+      - default
+      - thunder
     tty: true
     stdin_open: true
 
@@ -27,3 +30,7 @@ volumes:
   node_modules:
   postgres_data:
     driver: local
+
+networks:
+  thunder:
+    external: true
