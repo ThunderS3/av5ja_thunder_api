@@ -88,7 +88,7 @@ app.openapi(
       history.results.map((result) => CoopResultQuery.CoopResult.parse(result))
     )
     c.executionCtx.waitUntil(Promise.all(results.map((result) => KV.RESULT.set(c.env, result))))
-    c.executionCtx.waitUntil(Prisma.RESULT.create(c, body))
+    // c.executionCtx.waitUntil(Prisma.RESULT.create(c, body))
     return c.json(body)
   }
 )
