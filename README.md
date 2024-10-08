@@ -2,26 +2,23 @@
 
 スプラトゥーン3におけるイカリング3から取得できるサーモンランのJSONを送信すると, 利用しやすい形式に変換してくれるAPIです.
 
-### 機能
+### エンドポイント
 
-- [x] `/v3/schedules`
-  - BCATで配信されている最新のスケジュールまでを返します.
-- [x] `/v1/weapon_records`
-  - `CoopWeaponRecordQuery`のデータを受け取ってフォーマットしたJSONを返します
-- [x] `/v1/records`
-  - `CoopRecordQuery`のデータを受け取ってフォーマットしたJSONを返します.
-- [x] `/v1/histories`
-  - `CoopHistoryQuery`のデータを受け取ってフォーマットしたJSONを返します.
-- [x] `/v3/results`
-  - `CoopHistoryDetailQuery`と`CoopHistoryQuery`を組み合わせたデータを受け取ってフォーマットしたJSONを返します.
+#### `v1/version`
 
-### フォーマット
+「スプラトゥーン3, Nintendo Switch Online, SplatNet3」のそれぞれの最新のバージョンを返します.
 
-返ってくるJSONのフォーマットです.
+```json
+{
+    "game": "9.1.0",
+    "app": "2.10.1",
+    "web": "6.0.0-30a1464a"
+}
+```
 
 #### `v3/schedules`
 
-スケジュール情報はGETリクエストのみなので送信するフォーマットはありません.
+サーモンランのスケジュール情報を返します.
 
 ```json
 [
@@ -44,24 +41,501 @@
 ]
 ```
 
-#### `/v1/histories`
+#### `v1/histories`
 
-`CoopHistoryQuery`のレスポンスをそのまま送信すると以下の形式のレスポンスが得られます.
+`CoopHistoryQuery`のレスポンスを受け取ってフォーマットして返します.
 
 ```json
+{
+  "histories": [
+    {
+      "schedule": {
+        "id": "bd92b39d10208169d2b9e61648e82926",
+        "startTime": "2024-03-09T00:00:00.000Z",
+        "endTime": "2024-03-11T00:00:00.000Z",
+        "mode": "REGULAR",
+        "rule": "BIG_RUN",
+        "stageId": 106,
+        "rareWeapons": [],
+        "weaponList": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "results": [
+        {
+          "type": "CoopHistoryDetail",
+          "nplnUserId": "a7grz65rxkvhfsbwmxmm",
+          "playTime": "2024-03-10T15:33:21.000Z",
+          "uuid": "6c7f0304-de90-49d2-9cff-d428d9d74acf"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-#### `/v3/results`
+#### `v3/results`
+
+`v1/histories`の`results`に`CoopHistoryDetailQuery`のレスポンスを埋め込んでPOSTするとSplatNet2形式に変換したデータを返します.
 
 ```json
+{
+  "histories": [
+    {
+      "schedule": {
+        "id": "24a943851703ade14563cbbbd17e6e39",
+        "startTime": "2024-04-06T16:00:00.000Z",
+        "endTime": "2024-04-08T08:00:00.000Z",
+        "mode": "REGULAR",
+        "rule": "REGULAR",
+        "bossId": null,
+        "stageId": 9,
+        "rareWeapons": [],
+        "weaponList": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "results": [
+        // CoopHistoryDetailQuery
+      ]
+    }
+  ]
+}
+```
+
+得られるレスポンス例は以下のようなフォーマットです.
+
+```json
+{
+    "histories": [
+        {
+            "schedule": {
+                "id": "24a943851703ade14563cbbbd17e6e39",
+                "startTime": "2024-04-06T16:00:00.000Z",
+                "endTime": "2024-04-08T08:00:00.000Z",
+                "mode": "REGULAR",
+                "rule": "REGULAR",
+                "bossId": null,
+                "stageId": 9,
+                "weaponList": [
+                    -1,
+                    -1,
+                    -1,
+                    -1
+                ],
+                "rareWeapons": []
+            },
+            "results": [
+                {
+                    "bossCounts": [
+                        3,
+                        6,
+                        8,
+                        4,
+                        5,
+                        3,
+                        8,
+                        2,
+                        10,
+                        3,
+                        8,
+                        0,
+                        0,
+                        0
+                    ],
+                    "bossKillCounts": [
+                        3,
+                        2,
+                        7,
+                        4,
+                        4,
+                        3,
+                        8,
+                        2,
+                        9,
+                        3,
+                        8,
+                        0,
+                        0,
+                        0
+                    ],
+                    "bossResults": null,
+                    "dangerRate": 2.35,
+                    "goldenIkuraAssistNum": 17,
+                    "goldenIkuraNum": 112,
+                    "id": "a45b3f22a13149f6000218c1811d5767",
+                    "ikuraNum": 3932,
+                    "jobResult": {
+                        "failureWave": null,
+                        "isClear": true,
+                        "bossId": 24,
+                        "isBossDefeated": true
+                    },
+                    "myResult": {
+                        "id": "6dae617855fda353cb4497a125f95849",
+                        "name": "XXXXXXXXXXXXXXXX",
+                        "byname": "Splatlandian Youth",
+                        "nameId": "1012",
+                        "nameplate": {
+                            "badges": [
+                                null,
+                                null,
+                                null
+                            ],
+                            "background": {
+                                "id": 1,
+                                "textColor": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1,
+                                    "a": 1
+                                }
+                            }
+                        },
+                        "uniform": 1,
+                        "species": "INKLING",
+                        "weaponList": [
+                            3050,
+                            1120,
+                            4010,
+                            27900
+                        ],
+                        "nplnUserId": "a7grz65rxkvhfsbwmxmm",
+                        "specialId": 20010,
+                        "ikuraNum": 867,
+                        "goldenIkuraNum": 21,
+                        "goldenIkuraAssistNum": 11,
+                        "helpCount": 0,
+                        "deadCount": 2,
+                        "bossKillCountsTotal": 11,
+                        "isMyself": true,
+                        "smellMeter": 5,
+                        "jobRate": 2.5,
+                        "jobBonus": 100,
+                        "jobScore": 131,
+                        "kumaPoint": 427,
+                        "gradeId": 8,
+                        "gradePoint": 210,
+                        "bossKillCounts": [
+                            1,
+                            1,
+                            2,
+                            0,
+                            0,
+                            0,
+                            3,
+                            0,
+                            0,
+                            3,
+                            1,
+                            0,
+                            0,
+                            0
+                        ],
+                        "specialCounts": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    "otherResults": [
+                        {
+                            "id": "3138b358a9a7a07ad7786a33707fcb0d",
+                            "name": "XXXXXXXXXXXXXXXX",
+                            "byname": "Brand-New Seafood",
+                            "nameId": "7069",
+                            "nameplate": {
+                                "badges": [
+                                    null,
+                                    6000003,
+                                    6000002
+                                ],
+                                "background": {
+                                    "id": 971,
+                                    "textColor": {
+                                        "r": 0.149019599,
+                                        "g": 0.00784313772,
+                                        "b": 0.117647097,
+                                        "a": 1
+                                    }
+                                }
+                            },
+                            "uniform": 16,
+                            "species": "INKLING",
+                            "weaponList": [
+                                7010,
+                                2060,
+                                60,
+                                22900
+                            ],
+                            "nplnUserId": "xxxxxxxxxxxxxxxxxxxx",
+                            "specialId": 20014,
+                            "ikuraNum": 938,
+                            "goldenIkuraNum": 24,
+                            "goldenIkuraAssistNum": 2,
+                            "helpCount": 0,
+                            "deadCount": 2,
+                            "bossKillCountsTotal": 18,
+                            "isMyself": false,
+                            "smellMeter": null,
+                            "jobRate": null,
+                            "jobBonus": null,
+                            "jobScore": null,
+                            "kumaPoint": null,
+                            "gradeId": null,
+                            "gradePoint": null,
+                            "bossKillCounts": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "specialCounts": [
+                                0,
+                                0,
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "id": "3ba0d24f6be18c85d56f93f89f55eab4",
+                            "name": "XXXXXXXXXXXXXXXX",
+                            "byname": "Limited-Edition Inkbrush User",
+                            "nameId": "4152",
+                            "nameplate": {
+                                "badges": [
+                                    1011010,
+                                    1011110,
+                                    1011210
+                                ],
+                                "background": {
+                                    "id": 11008,
+                                    "textColor": {
+                                        "r": 0,
+                                        "g": 0,
+                                        "b": 0,
+                                        "a": 1
+                                    }
+                                }
+                            },
+                            "uniform": 8,
+                            "species": "INKLING",
+                            "weaponList": [
+                                20900,
+                                4020,
+                                25900,
+                                2030
+                            ],
+                            "nplnUserId": "xxxxxxxxxxxxxxxxxxxx",
+                            "specialId": 20012,
+                            "ikuraNum": 1569,
+                            "goldenIkuraNum": 30,
+                            "goldenIkuraAssistNum": 2,
+                            "helpCount": 2,
+                            "deadCount": 2,
+                            "bossKillCountsTotal": 12,
+                            "isMyself": false,
+                            "smellMeter": null,
+                            "jobRate": null,
+                            "jobBonus": null,
+                            "jobScore": null,
+                            "kumaPoint": null,
+                            "gradeId": null,
+                            "gradePoint": null,
+                            "bossKillCounts": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "specialCounts": [
+                                1,
+                                0,
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "id": "f01c934715e86a96df0221fe8f7145a9",
+                            "name": "XXXXXXXXXXXXXXXX",
+                            "byname": "Big Honkin' Dried Fish",
+                            "nameId": "9138",
+                            "nameplate": {
+                                "badges": [
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "background": {
+                                    "id": 863,
+                                    "textColor": {
+                                        "r": 0.0901999995,
+                                        "g": 0.0705899969,
+                                        "b": 0.0705899969,
+                                        "a": 1
+                                    }
+                                }
+                            },
+                            "uniform": 14,
+                            "species": "INKLING",
+                            "weaponList": [
+                                30,
+                                27900,
+                                50,
+                                8010
+                            ],
+                            "nplnUserId": "xxxxxxxxxxxxxxxxxxxx",
+                            "specialId": 20017,
+                            "ikuraNum": 558,
+                            "goldenIkuraNum": 38,
+                            "goldenIkuraAssistNum": 2,
+                            "helpCount": 4,
+                            "deadCount": 0,
+                            "bossKillCountsTotal": 12,
+                            "isMyself": false,
+                            "smellMeter": null,
+                            "jobRate": null,
+                            "jobBonus": null,
+                            "jobScore": null,
+                            "kumaPoint": null,
+                            "gradeId": null,
+                            "gradePoint": null,
+                            "bossKillCounts": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "specialCounts": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ]
+                        }
+                    ],
+                    "playTime": "2024-04-06T17:57:52.000Z",
+                    "scale": [
+                        11,
+                        2,
+                        0
+                    ],
+                    "scenarioCode": null,
+                    "schedule": {
+                        "id": "24a943851703ade14563cbbbd17e6e39",
+                        "startTime": "2024-04-06T16:00:00.000Z",
+                        "endTime": "2024-04-08T08:00:00.000Z",
+                        "mode": "REGULAR",
+                        "rule": "REGULAR",
+                        "bossId": null,
+                        "stageId": 9,
+                        "weaponList": [
+                            -1,
+                            -1,
+                            -1,
+                            -1
+                        ],
+                        "rareWeapons": []
+                    },
+                    "uuid": "06b30acf-9729-4bd5-96ad-3191dd266dee",
+                    "waveDetails": [
+                        {
+                            "id": "322f97d371c376f6608523f009190877",
+                            "isClear": true,
+                            "waveId": 1,
+                            "waterLevel": 0,
+                            "eventType": 0,
+                            "quotaNum": 27,
+                            "goldenIkuraPopNum": 66,
+                            "goldenIkuraNum": 42
+                        },
+                        {
+                            "id": "fef00683272177d277d0873c10f8c4b2",
+                            "isClear": true,
+                            "waveId": 2,
+                            "waterLevel": 1,
+                            "eventType": 0,
+                            "quotaNum": 29,
+                            "goldenIkuraPopNum": 60,
+                            "goldenIkuraNum": 32
+                        },
+                        {
+                            "id": "0978e31c1e3518085537ce75f864181e",
+                            "isClear": true,
+                            "waveId": 3,
+                            "waterLevel": 1,
+                            "eventType": 4,
+                            "quotaNum": 31,
+                            "goldenIkuraPopNum": 49,
+                            "goldenIkuraNum": 38
+                        },
+                        {
+                            "id": "203cacf9d982ece13f58f94f25bb071c",
+                            "isClear": true,
+                            "waveId": 4,
+                            "waterLevel": 1,
+                            "eventType": 0,
+                            "quotaNum": null,
+                            "goldenIkuraPopNum": 30,
+                            "goldenIkuraNum": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### `/v1/records`
 
-`CoopRecordQuery`のレスポンスをそのまま送信すると以下の形式のレスポンスが得られます.
+`CoopRecordQuery`のレスポンスを送るとフォーマットして返します.
 
 ```json
 {
+  "enemyRecords": [
+    {
+      "enemyId": 4,
+      "count": 3175
+    }
+  ],
   "stageRecords": [
     {
       "startTime": null,
@@ -73,32 +547,68 @@
       "stageId": 2,
       "trophy": null
     }
-  ],
-  "enemyRecords": [
-    {
-      "count": 3175,
-      "enemyId": 4
-    },
-    {
-      "count": 0,
-      "enemyId": 30
-    }
-  ],
-  "assetURLs": []
+  ]
 }
 ```
 
-`enemyRecords`にオオモノシャケとオカシラシャケの両方のデータが含まれます.
+#### `/v1/auth/id_token`
 
-#### `/v1/weapon_records`
+Discord OAuth2を利用してユーザー登録を行い, IDトークンを返します.
 
-`CoopWeaponRecordQuery`のレスポンスをそのまま送信すると以下の形式のレスポンスが得られます.
+#### `/v1/auth/access_token`
+
+有効な`GameWebToken`と`nplnUserId`を送信してアクセストークンを返します.
+
+無効あるいは期限切れの`GameWebToken`を送信した場合, エラーが返ります.
+
+このアクセストークンを利用することで自身のデータにアクセスすることができます.
+
+IDトークン及びアクセストークンは以下のフォーマットのJSONのJSON Web Tokenです.
 
 ```json
 {
-  "assetURLs": []
+  "aud": "6633677291552768",
+  "exp": 1729744526,
+  "iat": 1727152526,
+  "iss": "localhost",
+  "jti": "879b8ecf-a66d-438a-a745-dcc7db6f8c15",
+  "membership": true,
+  "nbf": 1727152526,
+  "npln_user_id": "a7grz65rxkvhfsbwmxmm",
+  "nsa_id": "3f89c3791c43ea57",
+  "typ": "id_token"
 }
 ```
+
+- `aud`
+    - APIサービス名で`6633677291552768`が固定値で与えられます.
+- `exp`
+    - トークンの有効期限を表すUnix時間です.
+- `iat`
+    - トークンの発酵時間を表すUnix時間です.
+- `iss`
+    - トークンを発行したサーバーの識別子です.
+    - 開発環境では`localhost`が返ります.
+- `jti`
+    - トークンの一意識別子です. UUID形式で与えられます.
+- `membership`
+    - Nintendo Switch Onlineのメンバーシップが有効であるかどうかの真理値.
+- `sub`
+    - DiscordのユーザーID
+- `cus`
+    - StripeのユーザーID
+- `nbf`
+    - トークンが有効になる時間を表すUnix時間です.
+- `npln_user_id`
+    - あなたのNPLNサーバーにおけるユーザーIDです.
+    - この値はあなたと遊んだすべてのユーザーが確認することができる公開情報です
+- `nsa_id`
+    - Nintendo Service Account IDです.
+    - この値はあなたとフレンドであるすべてのユーザーが確認することができる公開情報です
+- `typ`
+    - トークンの種類を返します
+    - `id_token`または`access_token`が入ります
+
 
 ### ワークフロー
 
