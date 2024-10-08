@@ -6,8 +6,8 @@ export namespace Thunder {
       id: z.string(),
       avatar: z.string(),
       username: z.string(),
-      nsa_id: z.string().nullable().default(null),
-      npln_user_id: z.string().nullable().default(null),
+      nsa_id: z.string(),
+      npln_user_id: z.string(),
       membership: z.boolean().default(false),
       expires_in: z.number().nullable().default(null)
     })

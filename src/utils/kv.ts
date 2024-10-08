@@ -6,7 +6,7 @@ import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { CoopPlayerId } from '@/models/common/coop_player_id.dto'
 import { CoopHistoryQuery } from '@/models/coop_history.dto'
 import { CoopHistoryDetailQuery } from '@/models/coop_history_detail.dto'
-import type { CoopResultQuery } from '@/models/coop_result.dto'
+import { CoopResultQuery } from '@/models/coop_result.dto'
 import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
 import dayjs, { type Dayjs } from 'dayjs'
@@ -156,19 +156,19 @@ export namespace KV {
       }
     }
 
-    export const get = async (env: Bindings, id: string): Promise<CoopHistoryDetail.Response> => {
+    export const get = async (env: Bindings, id: string): Promise<CoopResultQuery.CoopResult> => {
       const data: unknown | null = await env.RESULTS.get(id, { type: 'json' })
       if (data === null) {
         throw new HTTPException(404, { message: 'Not Found.' })
       }
-      return CoopHistoryDetail.Response.parse(data)
+      return CoopResultQuery.CoopResult.parse(data)
     }
 
     export const list = async (
       env: Bindings,
       npln_user_id: string,
-      cursor: string | undefined,
-      limit: number
+      limit: number,
+      cursor: string | undefined = undefined
     ): Promise<KVNamespaceListResult<string, string>> => {
       return await env.RESULTS.list({ prefix: npln_user_id, cursor: cursor, limit: limit })
     }

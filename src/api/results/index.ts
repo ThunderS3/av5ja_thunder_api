@@ -1,4 +1,5 @@
 import { HTTPMethod } from '@/enums/method'
+import { bearerToken } from '@/middleware/bearer_token.middleware'
 import { resource } from '@/middleware/resource.middleware'
 import { CoopHistoryDetailQuery } from '@/models/coop_history_detail.dto'
 import { CoopResultQuery } from '@/models/coop_result.dto'
@@ -7,6 +8,7 @@ import type { Bindings } from '@/utils/bindings'
 import { KV } from '@/utils/kv'
 import { Prisma } from '@/utils/prisma'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
+import { HTTPException } from 'hono/http-exception'
 
 export const app = new Hono<{ Bindings: Bindings }>()
 
@@ -96,6 +98,7 @@ app.openapi(
     method: HTTPMethod.GET,
     path: '/',
     tags: ['リザルト'],
+    middleware: [bearerToken],
     summary: '一覧詳細',
     description: 'リザルト一覧詳細を返します',
     request: {},
@@ -112,8 +115,13 @@ app.openapi(
     }
   }),
   async (c) => {
-    // const prisma = Prisma(c.env.DATABASE_URL)
-    // console.log(prisma)
-    return c.json({})
+    const { sub } = c.get('jwtPayload')
+    const user = await KV.USER.get(c.env, sub)
+    if (user === null || user.npln_user_id === null) {
+      throw new HTTPException(404, { message: 'Not Found.' })
+    }
+    console.log(user.npln_user_id)
+    const list = await KV.RESULT.list(c.env, user.npln_user_id, 10)
+    return c.json(list)
   }
 )
