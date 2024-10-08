@@ -34,7 +34,7 @@ app.openapi(
   }),
   async (c) => {
     const { code, state } = c.req.valid('query')
-    console.log(state)
+    console.log(code, state)
     const token: string = await DiscordOAuth.create_token(c, code, state.nsaId, state.nplnUserId)
     // setCookie(c, 'iksm_session', token, {
     //   httpOnly: true,

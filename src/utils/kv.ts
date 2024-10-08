@@ -55,13 +55,7 @@ export namespace KV {
      * @param data
      * @returns
      */
-    export const token = (
-      env: Bindings,
-      nsaId: string,
-      nplnUserId: string,
-      url: URL,
-      data: object
-    ): Promise<string> => {
+    export const token = (env: Bindings, url: URL, data: object): Promise<string> => {
       const user: Thunder.User = Thunder.User.parse(data)
       const current_time: Dayjs = dayjs()
       const token: Thunder.Token = Thunder.Token.parse({
@@ -73,7 +67,7 @@ export namespace KV {
         nbf: current_time.unix(),
         sub: user.id,
         typ: 'id_token',
-        usr: { ...user, ...{ nsa_id: nsaId, npln_user_id: nplnUserId } }
+        usr: user
       })
       console.debug('[ID TOKEN]:', token)
       return sign(token, env.JWT_SECRET_KEY, AlgorithmTypes.HS256)
