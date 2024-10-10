@@ -5,7 +5,8 @@ import { CoopHistoryDetailQuery } from '@/models/coop_history_detail.dto'
 import { CoopResultQuery } from '@/models/coop_result.dto'
 import { BadRequestResponse } from '@/utils/bad_request.response'
 import type { Bindings } from '@/utils/bindings'
-import { KV } from '@/utils/kv'
+import { KV } from '@/utils/cloudflare/kv'
+import { R2 } from '@/utils/cloudflare/r2'
 import { Prisma } from '@/utils/prisma'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import { HTTPException } from 'hono/http-exception'
@@ -103,7 +104,7 @@ app.openapi(
     description: 'リザルト一覧詳細を返します',
     request: {
       query: z.object({
-        limit: z.number().int().min(1).max(100).default(50),
+        limit: z.number().int().min(1).max(10).default(5),
         cursor: z.string().optional()
       })
     },
@@ -120,26 +121,14 @@ app.openapi(
     }
   }),
   async (c) => {
-    const { sub } = c.get('jwtPayload')
+    const { usr } = c.get('jwtPayload')
     const { limit, cursor } = c.req.valid('query')
-    const user = await KV.USER.get(c.env, sub)
-    if (user === null) {
-      throw new HTTPException(404, { message: 'Not Found.' })
-    }
-    if (user.membership === false && cursor !== undefined) {
+    if (usr.membership === false && cursor !== undefined) {
       throw new HTTPException(403, { message: 'Forbidden.' })
     }
-    const list = await KV.RESULT.list(c.env, user.npln_user_id, limit, cursor)
-    const keys: string[] = list.keys.map((key) => key.name)
-    const results = (await Promise.allSettled(keys.map((key) => KV.RESULT.get(c.env, key)))).filter(
-      (result) => result.status === 'fulfilled'
-    )
-    return c.json({
-      results: results.map((result) => result.value),
-      count: results.length,
-      complete: list.list_complete,
-      // @ts-ignore
-      cursor: list.cursor
-    })
+    const object: R2Objects = await R2.RESULT.list(c.env, usr.npln_user_id, limit, cursor)
+    const histories = await R2.RESULT.get_all(c.env, object)
+    // @ts-ignore
+    return c.json({ histories, truncated: object.truncated, cursor: object.cursor })
   }
 )

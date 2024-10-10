@@ -12,4 +12,5 @@ export type Bindings = {
   SCHEDULES: KVNamespace
   HISTORIES: KVNamespace
   USERS: KVNamespace
+  BACKUPS: R2Bucket
 }

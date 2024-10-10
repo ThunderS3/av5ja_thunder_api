@@ -5,7 +5,7 @@ import type { Context } from 'hono'
 import { HTTPException } from 'hono/http-exception'
 import type { StatusCode } from 'hono/utils/http-status'
 import type { Bindings } from './bindings'
-import { KV } from './kv'
+import { KV } from './cloudflare/kv'
 
 export namespace DiscordOAuth {
   /**
