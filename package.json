@@ -11,16 +11,18 @@
     }
   },
   "scripts": {
+    "deploy": "wrangler deploy --env dev",
     "dev": "wrangler dev --test-scheduled",
-    "start": "bun dist/index.js",
+    "generate": "prisma generate --no-engine",
+    "migrate": "prisma migrate dev",
     "prepare": "husky",
-    "deploy": "bunx wrangler deploy",
-    "deploy:dev": "bunx wrangler deploy --env dev"
+    "reset": "migrate reset",
+    "start": "bun dist/index.js"
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
     "@prisma/extension-accelerate": "^1.2.1",
-    "@scalar/hono-api-reference": "^0.5.150",
+    "@scalar/hono-api-reference": "^0.5.152",
     "dayjs": "^1.11.13",
     "hono": "^4.6.3",
     "lodash": "^4.17.21",
@@ -28,15 +30,15 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
-    "@cloudflare/workers-types": "^4.20240925.0",
+    "@cloudflare/workers-types": "^4.20241004.0",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/cz-commitlint": "^19.5.0",
-    "@hono/zod-openapi": "^0.16.3",
+    "@hono/zod-openapi": "^0.16.4",
     "@types/bun": "^1.1.10",
     "@types/deep-diff": "^1.0.5",
     "@types/lodash": "^4.17.10",
-    "@types/node": "^22.7.4",
+    "@types/node": "^22.7.5",
     "@types/uuid": "^10.0.0",
     "commitizen": "^4.3.1",
     "commitlint": "^19.5.0",
@@ -45,7 +47,7 @@
     "lint-staged": "^15.2.10",
     "prisma": "^5.20.0",
     "rimraf": "^6.0.1",
-    "wrangler": "3.79.0"
+    "wrangler": "3.80.1"
   },
   "module": "index.ts",
   "type": "module",

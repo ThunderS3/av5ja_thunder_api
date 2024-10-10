@@ -3,6 +3,7 @@ main = "src/index.ts"
 compatibility_flags = ["nodejs_compat"]
 compatibility_date = "2024-09-02"
 send_metrics = true
+logpush = true
 
 kv_namespaces = [
   { binding = "RESULTS", id = "c7c2262b7c3e4bf9af607b726cf84a53", preview_id = "cfeae1893020481485a576951982db42" },
@@ -31,6 +32,7 @@ kv_namespaces = [
   { binding = "CACHES", id = "bbbe36203fcb4f62b93e4eade0e23e73", preview_id = "b7db71d6af57495db2229664d086aef6" },
   { binding = "HISTORIES", id = "2cacefebaf9c43cb9e8b5f742e1ba852", preview_id = "1d365df342844affae4c81dbbebad1e0" },
 ]
+logpush = true
 
 [env.dev.vars]
 
@@ -40,4 +42,4 @@ head_sampling_rate = 1
 
 [dev]
 ip = "0.0.0.0"
-port = 8787
+port = 18787

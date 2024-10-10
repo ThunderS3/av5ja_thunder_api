@@ -1,7 +1,7 @@
 {
   "name": "Thunder API",
   "dockerComposeFile": ["docker-compose.yaml"],
-  "service": "node",
+  "service": "hono",
   "workspaceFolder": "/home/vscode/app",
   "shutdownAction": "stopCompose",
   "remoteUser": "vscode",

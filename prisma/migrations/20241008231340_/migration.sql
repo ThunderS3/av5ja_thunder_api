@@ -42,6 +42,7 @@ CREATE TABLE "results" (
     "gold" SMALLINT,
     "is_clear" BOOLEAN NOT NULL,
     "failure_wave" SMALLINT,
+    "boss_id" SMALLINT,
     "is_boss_defeated" BOOLEAN,
     "is_giant_defeated" BOOLEAN,
     "is_rope_defeated" BOOLEAN,

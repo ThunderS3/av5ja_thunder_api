@@ -6,8 +6,8 @@ export namespace Thunder {
       id: z.string(),
       avatar: z.string(),
       username: z.string(),
-      nsa_id: z.string().nullable().default(null),
-      npln_user_id: z.string().nullable().default(null),
+      nsa_id: z.string(),
+      npln_user_id: z.string(),
       membership: z.boolean().default(false),
       expires_in: z.number().nullable().default(null)
     })
@@ -26,7 +26,7 @@ export namespace Thunder {
     jti: z.string().uuid(),
     nbf: z.number().min(0),
     sub: z.string(),
-    typ: z.enum(['access_token']),
+    typ: z.enum(['access_token', 'id_token']),
     usr: User
   })
 

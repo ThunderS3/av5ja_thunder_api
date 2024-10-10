@@ -14,13 +14,18 @@ export namespace DiscordOAuth {
    * @param code
    * @returns
    */
-  export const create_token = async (c: Context<{ Bindings: Bindings }>, code: string): Promise<string> => {
-    const token = await get_token(c, code)
-    const user = await get_user(c, token)
-    return KV.USER.token(
+  export const create_token = async (
+    c: Context<{ Bindings: Bindings }>,
+    code: string,
+    nsaId: string,
+    nplnUserId: string
+  ): Promise<string> => {
+    const user: Discord.User = await get_user(c, await get_token(c, code))
+
+    return await KV.USER.token(
       c.env,
       new URL(c.req.url),
-      (await KV.USER.get(c.env, user.id)) || (await KV.USER.set(c.env, user))
+      await KV.USER.set(c.env, { ...user, nsa_id: nsaId, npln_user_id: nplnUserId })
     )
   }
 
@@ -103,6 +108,7 @@ export namespace DiscordOAuth {
       const data: any = await response.json()
       return S.parse(data)
     }
+    console.error(response)
     throw new HTTPException(response.status as StatusCode, { message: response.statusText })
   }
 }

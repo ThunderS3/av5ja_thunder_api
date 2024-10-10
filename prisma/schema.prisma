@@ -71,6 +71,7 @@ model Result {
   gold                 Int?     @db.SmallInt
   isClear              Boolean  @map("is_clear") @db.Boolean
   failureWave          Int?     @map("failure_wave") @db.SmallInt
+  bossId               Int?     @map("boss_id") @db.SmallInt
   isBossDefeated       Boolean? @map("is_boss_defeated") @db.Boolean
   isGiantDefeated      Boolean? @map("is_giant_defeated") @db.Boolean
   isRopeDefeated       Boolean? @map("is_rope_defeated") @db.Boolean
