@@ -34,6 +34,16 @@ kv_namespaces = [
 ]
 logpush = true
 
+[[r2_buckets]]
+binding = "BACKUPS"
+bucket_name = "thunder"
+preview_bucket_name = "thunder-preview"
+
+[[env.dev.r2_buckets]]
+binding = "BACKUPS"
+bucket_name = "thunder"
+preview_bucket_name = "thunder-preview"
+
 [env.dev.vars]
 
 [env.dev.observability]

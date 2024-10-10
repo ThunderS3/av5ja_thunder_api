@@ -4,8 +4,6 @@ import { ImageType } from '@/enums/image_type'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { CoopPlayerId } from '@/models/common/coop_player_id.dto'
-import { CoopHistoryQuery } from '@/models/coop_history.dto'
-import { CoopHistoryDetailQuery } from '@/models/coop_history_detail.dto'
 import { CoopResultQuery } from '@/models/coop_result.dto'
 import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
@@ -14,8 +12,8 @@ import { HTTPException } from 'hono/http-exception'
 import { jwt, sign } from 'hono/jwt'
 import { AlgorithmTypes } from 'hono/utils/jwt/jwa'
 import { v4 as uuidv4 } from 'uuid'
-import type { Bindings } from './bindings'
-import dummy from './handler/dummy.json'
+import type { Bindings } from '../bindings'
+import dummy from '../handler/dummy.json'
 
 export namespace KV {
   /**
@@ -60,7 +58,7 @@ export namespace KV {
       const current_time: Dayjs = dayjs()
       const token: Thunder.Token = Thunder.Token.parse({
         aud: env.DISCORD_CLIENT_ID,
-        exp: current_time.add(12, 'hour').unix(),
+        exp: current_time.add(365, 'days').unix(),
         iat: current_time.unix(),
         iss: url.hostname,
         jti: uuidv4(),

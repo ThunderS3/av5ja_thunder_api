@@ -1,6 +1,6 @@
 import { HTTPMethod } from '@/enums/method'
 import { S3URL } from '@/models/common/s3_url.dto'
-import { KV } from '@/utils/kv'
+import { KV } from '@/utils/cloudflare/kv'
 import type { Context } from 'hono'
 import { createMiddleware } from 'hono/factory'
 import type { Bindings } from '../utils/bindings'

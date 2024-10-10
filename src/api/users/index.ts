@@ -2,7 +2,7 @@ import { HTTPMethod } from '@/enums/method'
 import { bearerToken } from '@/middleware/bearer_token.middleware'
 import { Thunder } from '@/models/user.dto'
 import type { Bindings } from '@/utils/bindings'
-import { KV } from '@/utils/kv'
+import { KV } from '@/utils/cloudflare/kv'
 import { OpenAPIHono as Hono, createRoute, z } from '@hono/zod-openapi'
 import { HTTPException } from 'hono/http-exception'
 
