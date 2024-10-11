@@ -4,15 +4,18 @@ import { ImageType } from '@/enums/image_type'
 import { WeaponInfoMain } from '@/enums/weapon/main'
 import { WeaponInfoSpecial } from '@/enums/weapon/special'
 import { CoopPlayerId } from '@/models/common/coop_player_id.dto'
+import type { Discord } from '@/models/common/discord_token.dto'
 import { CoopResultQuery } from '@/models/coop_result.dto'
 import { CoopSchedule } from '@/models/coop_schedule.dto'
 import { Thunder } from '@/models/user.dto'
 import dayjs, { type Dayjs } from 'dayjs'
+import type { Context } from 'hono'
 import { HTTPException } from 'hono/http-exception'
 import { jwt, sign } from 'hono/jwt'
 import { AlgorithmTypes } from 'hono/utils/jwt/jwa'
 import { v4 as uuidv4 } from 'uuid'
 import type { Bindings } from '../bindings'
+import { DiscordOAuth } from '../discord_oauth'
 import dummy from '../handler/dummy.json'
 
 export namespace KV {
@@ -26,7 +29,7 @@ export namespace KV {
      * @param id
      * @returns
      */
-    export const get = async (env: Bindings, id: string): Promise<Thunder.User | null> => {
+    const get = async (env: Bindings, id: string): Promise<Thunder.User | null> => {
       const data: unknown | null = await env.USERS.get(id, { type: 'json' })
       if (data === null) {
         return null
@@ -40,35 +43,76 @@ export namespace KV {
      * @param data
      * @returns
      */
-    export const set = async (env: Bindings, data: object): Promise<Thunder.User> => {
-      console.info('[SET USER]:', data)
-      const user: Thunder.User = Thunder.User.parse(data)
+    const set = async (
+      env: Bindings,
+      data: Discord.User,
+      nsa_id: string,
+      npln_user_id: string
+    ): Promise<Thunder.User> => {
+      const user: Thunder.User = Thunder.User.parse({
+        ...data,
+        nsa_id: nsa_id,
+        npln_user_id: npln_user_id
+      })
       await env.USERS.put(user.id, JSON.stringify(user))
       return user
     }
 
+    export const token = async (
+      c: Context<{ Bindings: Bindings }>,
+      data: Discord.User,
+      nsa_id: string,
+      npln_user_id: string
+    ): Promise<DiscordOAuth.Token> => {
+      const user: Thunder.User = await set(c.env, data, nsa_id, npln_user_id)
+      return DiscordOAuth.Token.parse({
+        access_token: await sign_access_token(c, user),
+        refresh_token: await sign_refresh_token(c, user)
+      })
+    }
+
     /**
-     * ユーザーデータからトークンを生成
+     * ユーザーデータからアクセストークンを生成
      * @param c
      * @param data
      * @returns
      */
-    export const token = (env: Bindings, url: URL, data: object): Promise<string> => {
-      const user: Thunder.User = Thunder.User.parse(data)
+    const sign_access_token = async (c: Context<{ Bindings: Bindings }>, user: Thunder.User): Promise<string> => {
       const current_time: Dayjs = dayjs()
-      const token: Thunder.Token = Thunder.Token.parse({
-        aud: env.DISCORD_CLIENT_ID,
-        exp: current_time.add(365, 'days').unix(),
+      const payload: Thunder.Token = Thunder.Token.parse({
+        aud: c.env.DISCORD_CLIENT_ID,
+        exp: current_time.add(12, 'hours').unix(),
         iat: current_time.unix(),
-        iss: url.hostname,
+        iss: new URL(c.req.url).hostname,
         jti: uuidv4(),
         nbf: current_time.unix(),
         sub: user.id,
-        typ: 'id_token',
+        typ: 'access_token',
         usr: user
       })
-      console.debug('[ID TOKEN]:', token)
-      return sign(token, env.JWT_SECRET_KEY, AlgorithmTypes.HS256)
+      console.debug('[ACCESS TOKEN]:', payload)
+      return sign(payload, c.env.JWT_SECRET_KEY, AlgorithmTypes.HS256)
+    }
+
+    /**
+     * ユーザーデータからリフレッシュトークンを生成
+     * @param env
+     * @param url
+     * @param data
+     */
+    const sign_refresh_token = async (c: Context<{ Bindings: Bindings }>, user: Thunder.User): Promise<string> => {
+      const current_time: Dayjs = dayjs()
+      const payload: Thunder.Token = Thunder.Token.parse({
+        aud: c.env.DISCORD_CLIENT_ID,
+        exp: current_time.add(90, 'days').unix(),
+        iat: current_time.unix(),
+        jti: uuidv4(),
+        nbf: current_time.unix(),
+        sub: user.id,
+        typ: 'refresh_token'
+      })
+      console.debug('[REFRESH TOKEN]:', payload)
+      return sign(payload, c.env.JWT_SECRET_KEY, AlgorithmTypes.HS256)
     }
   }
 

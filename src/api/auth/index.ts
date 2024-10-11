@@ -34,28 +34,35 @@ app.openapi(
   }),
   async (c) => {
     const { code, state } = c.req.valid('query')
-    console.log(code, state)
-    const token: string = await DiscordOAuth.create_token(c, code, state.nsaId, state.nplnUserId)
+    const token: DiscordOAuth.Token = await DiscordOAuth.create_token(c, code, state.nsaId, state.nplnUserId)
     // setCookie(c, 'iksm_session', token, {
     //   httpOnly: true,
     //   secure: true,
     //   sameSite: 'Lax'
     // })
-    return c.redirect(`npf5f8ee15ea46f2ea1://auth#access_token=${token}`)
+    return c.redirect(
+      `npf5f8ee15ea46f2ea1://auth#access_token=${token.access_token}&refresh_token=${token.refresh_token}`
+    )
   }
 )
 
 app.openapi(
   createRoute({
     method: HTTPMethod.POST,
-    path: '/access_token',
+    path: '/refresh_token',
     tags: ['トークン'],
-    summary: 'アクセストークン',
-    description: 'Discord OAuth2を利用してアカウントを作成します',
+    summary: 'リフレッシュトークン',
+    description: 'リフレッシュトークンを利用してアクセストークンを更新します',
     request: {
-      query: z.object({
-        code: z.string()
-      })
+      body: {
+        content: {
+          'application/json': {
+            schema: z.object({
+              refreshToken: z.string()
+            })
+          }
+        }
+      }
     },
     responses: {
       302: {
@@ -64,7 +71,7 @@ app.openapi(
     }
   }),
   async (c) => {
-    const { code } = c.req.valid('query')
+    const { refreshToken } = c.req.valid('json')
     const token: string = await DiscordOAuth.create_token(c, code)
     setCookie(c, 'iksm_session', token, {
       httpOnly: true,

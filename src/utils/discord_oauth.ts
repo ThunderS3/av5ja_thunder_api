@@ -1,6 +1,6 @@
 import { HTTPMethod } from '@/enums/method'
 import { Discord } from '@/models/common/discord_token.dto'
-import type { z } from '@hono/zod-openapi'
+import { z } from '@hono/zod-openapi'
 import type { Context } from 'hono'
 import { HTTPException } from 'hono/http-exception'
 import type { StatusCode } from 'hono/utils/http-status'
@@ -8,8 +8,14 @@ import type { Bindings } from './bindings'
 import { KV } from './cloudflare/kv'
 
 export namespace DiscordOAuth {
+  export const Token = z.object({
+    access_token: z.string(),
+    refresh_token: z.string()
+  })
+  export type Token = z.infer<typeof Token>
+
   /**
-   * 既にユーザーがいればそのユーザーのデータを, なければ新規作成して返す
+   * アクセストークンとリフレッシュトークンを返す
    * @param c
    * @param code
    * @returns
@@ -17,16 +23,12 @@ export namespace DiscordOAuth {
   export const create_token = async (
     c: Context<{ Bindings: Bindings }>,
     code: string,
-    nsaId: string,
-    nplnUserId: string
-  ): Promise<string> => {
-    const user: Discord.User = await get_user(c, await get_token(c, code))
-
-    return await KV.USER.token(
-      c.env,
-      new URL(c.req.url),
-      await KV.USER.set(c.env, { ...user, nsa_id: nsaId, npln_user_id: nplnUserId })
-    )
+    nsa_id: string,
+    npln_user_id: string
+  ): Promise<DiscordOAuth.Token> => {
+    const token: Discord.Token = await get_token(c, code)
+    const user: Discord.User = await get_user(c, token)
+    return await KV.USER.token(c, user, nsa_id, npln_user_id)
   }
 
   /**
